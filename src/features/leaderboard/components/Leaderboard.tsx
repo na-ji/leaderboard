@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import { red, blue, yellow } from '@mui/material/colors';
 import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 import { Team, Trainer } from '@/types/model';
 import { getLightTeamColor } from '@/utils/team-colors';
@@ -72,6 +72,11 @@ const ColoredTeamRowsContainer = styled(Box)`
 
 export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
   const router = useRouter();
+
+  useEffect(() => {
+    router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].trainer_id)}`);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <ColoredTeamRowsContainer>
