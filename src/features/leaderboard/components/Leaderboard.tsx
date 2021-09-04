@@ -13,7 +13,7 @@ const columns: GridColDef[] = [
   {
     field: 'trainer_id',
     headerName: 'Rank',
-    width: 50,
+    width: 90,
     sortable: false,
     type: 'number',
     valueGetter: (params: GridValueGetterParams) => {
@@ -22,32 +22,37 @@ const columns: GridColDef[] = [
   },
   {
     field: 'name',
-    headerName: 'Trainer',
     flex: 1,
+    headerName: 'Trainer',
+    minWidth: 150,
   },
   {
     field: 'level',
-    headerName: 'Level',
-    type: 'number',
     flex: 1,
+    headerName: 'Level',
+    minWidth: 120,
+    type: 'number',
   },
   {
     field: 'xp',
-    headerName: 'XP',
-    type: 'number',
     flex: 1,
+    headerName: 'XP',
+    minWidth: 120,
+    type: 'number',
   },
   {
     field: 'battles_won',
-    headerName: 'Battles won',
-    type: 'number',
     flex: 1,
+    headerName: 'Battles won',
+    minWidth: 160,
+    type: 'number',
   },
   {
     field: 'caught_pokemon',
-    headerName: 'Caught Pokémon',
-    type: 'number',
     flex: 1,
+    headerName: 'Caught Pokémon',
+    minWidth: 200,
+    type: 'number',
   },
 ];
 
