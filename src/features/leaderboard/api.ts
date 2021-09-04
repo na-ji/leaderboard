@@ -9,6 +9,6 @@ export const getLeaderboard = async (): Promise<Trainer[]> => {
 
   return (rows as unknown as Trainer[]).map<Trainer>((row) => ({
     ...row,
-    last_seen: row.last_seen.toString(),
+    last_seen: (row.last_seen as unknown as Date).getTime(),
   }));
 };

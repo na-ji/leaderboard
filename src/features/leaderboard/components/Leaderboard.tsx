@@ -1,9 +1,11 @@
 import Box from '@mui/material/Box';
+import styled from 'styled-components';
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { red, blue, yellow } from '@mui/material/colors';
+import { useRouter } from 'next/router';
 
 import { Team, Trainer } from '@/types/model';
-import styled from 'styled-components';
+import { getLightTeamColor } from '@/utils/team-colors';
 
 interface LeaderboardProps {
   trainers: Trainer[];
@@ -58,17 +60,19 @@ const columns: GridColDef[] = [
 
 const ColoredTeamRowsContainer = styled(Box)`
   .team-${Team.MYSTIC} {
-    background-color: ${blue[200]};
+    background-color: ${getLightTeamColor(Team.MYSTIC)};
   }
   .team-${Team.VALOR} {
-    background-color: ${red[200]};
+    background-color: ${getLightTeamColor(Team.VALOR)};
   }
   .team-${Team.INSTINCT} {
-    background-color: ${yellow[200]};
+    background-color: ${getLightTeamColor(Team.INSTINCT)};
   }
 `;
 
 export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
+  const router = useRouter();
+
   return (
     <ColoredTeamRowsContainer>
       <DataGrid
@@ -77,6 +81,7 @@ export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
         getRowClassName={(params) => `team-${params.row.team}`}
         getRowId={(row) => row.trainer_id}
         hideFooter
+        onRowClick={(params) => router.push(`/profile/${params.row.trainer_id}`)}
         rows={trainers}
       />
     </ColoredTeamRowsContainer>
