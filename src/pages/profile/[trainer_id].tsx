@@ -36,8 +36,6 @@ export const getStaticProps: GetStaticProps<ProfileProps, { trainer_id: string }
   const { getTrainerProfile } = await import('@/features/profile/api');
   const trainer = await getTrainerProfile(params.trainer_id);
 
-  console.log({ trainer });
-
   if (!trainer) {
     return { notFound: true };
   }

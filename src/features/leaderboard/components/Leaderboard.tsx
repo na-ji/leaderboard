@@ -81,7 +81,7 @@ export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
         getRowClassName={(params) => `team-${params.row.team}`}
         getRowId={(row) => row.trainer_id}
         hideFooter
-        onRowClick={(params) => router.push(`/profile/${params.row.trainer_id}`)}
+        onRowClick={(params) => router.push(`/profile/${encodeURIComponent(params.row.trainer_id)}`)}
         rows={trainers}
       />
     </ColoredTeamRowsContainer>
