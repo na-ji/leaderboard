@@ -68,6 +68,7 @@
     "@types/react": "17.0.19",
     "@types/styled-components": "^5.1.13",
     "babel-plugin-formatjs": "^10.3.8",
+    "babel-plugin-styled-components": "^1.13.2",
     "commitizen": "^4.2.4",
     "cz-conventional-commit": "^1.0.6",
     "eslint": "7.32.0",
