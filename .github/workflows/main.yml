@@ -26,6 +26,8 @@ jobs:
           key: next-cache
       - name: Install dependencies
         run: npm ci --prefer-offline
+        env:
+          HUSKY: 0
       - name: Build app
         run: npm run build
         env:
@@ -38,4 +40,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: 0
         run: npx semantic-release
