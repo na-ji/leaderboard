@@ -1,0 +1,41 @@
+name: Build & release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    name: Build & release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+          cache: npm
+      - name: Cache next js build output
+        uses: actions/cache@v2
+        with:
+          path: |
+            .next/cache
+            node_modules/.cache
+          key: next-cache
+      - name: Install dependencies
+        run: npm ci --prefer-offline
+      - name: Build app
+        run: npm run build
+        env:
+          DB_DATABASE_NAME: ${{ secrets.DB_DATABASE_NAME }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_USER: ${{ secrets.DB_USER }}
+      - name: Lint
+        run: npm run lint
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
