@@ -1,11 +1,11 @@
 import Container from '@mui/material/Container';
 import Head from 'next/head';
-import type { NextPage, GetStaticPaths } from 'next';
+import type { NextPage, GetStaticPaths, GetStaticPathsResult } from 'next';
 import { useIntl } from 'react-intl';
 
 import { Trainer } from '@/types/model';
 import { Profile } from '@/features/profile';
-import { wrapStaticPropsWithLocale } from '@/utils/i18n';
+import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 
 interface ProfileProps {
   trainer?: Trainer;
@@ -64,7 +64,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const trainers = await getLeaderboard();
 
   return {
-    paths: trainers.slice(0, 100).map((trainer) => ({ params: { trainer_id: trainer.trainer_id } })),
+    paths: trainers.slice(0, 100).reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
+      Object.values(SupportedLocale).forEach((locale) => {
+        paths.push({ params: { trainer_id: trainer.trainer_id }, locale });
+      });
+
+      return paths;
+    }, []),
     fallback: true,
   };
 };

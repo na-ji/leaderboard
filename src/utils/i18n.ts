@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 
 export enum SupportedLocale {
-  EN = 'en-BG',
+  EN = 'en',
   FR = 'fr',
 }
 
