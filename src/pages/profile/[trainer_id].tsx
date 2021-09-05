@@ -41,8 +41,8 @@ export const getStaticProps: GetStaticProps<ProfileProps, { trainer_id: string }
 
   return {
     props: { trainer },
-    // rebuild at most every hour
-    revalidate: 3600,
+    // rebuild at most every 30 minutes
+    revalidate: 1800,
   };
 };
 
