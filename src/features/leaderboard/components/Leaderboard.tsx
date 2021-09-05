@@ -60,6 +60,10 @@ const columns: GridColDef[] = [
 ];
 
 const ColoredTeamRowsContainer = styled(Box)`
+  [class^='team']:hover {
+    cursor: pointer;
+  }
+
   .team-${Team.MYSTIC} {
     background-color: ${getLightTeamColor(Team.MYSTIC)};
   }
