@@ -1,7 +1,6 @@
 import Container from '@mui/material/Container';
 import Head from 'next/head';
 import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
-import Typography from '@mui/material/Typography';
 
 import { Trainer } from '@/types/model';
 import { Profile } from '@/features/profile';

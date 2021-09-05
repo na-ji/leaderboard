@@ -12,11 +12,13 @@ interface I18nProps {
   >;
 }
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const wrapStaticPropsWithLocale =
   <Props extends { [key: string]: any } = { [key: string]: any }, Query extends ParsedUrlQuery = ParsedUrlQuery>(
     pageGetStaticProps: GetStaticProps<Props, Query>,
   ): GetStaticProps<Props & I18nProps, Query> =>
   async (context) => {
+    /* eslint-enable @typescript-eslint/no-explicit-any */
     const pageStaticProps = await pageGetStaticProps(context);
 
     if ('notFound' in pageStaticProps || 'redirect' in pageStaticProps) {

@@ -9,7 +9,7 @@ interface BadgeProps {
   value: number;
 }
 
-export const BadgeIcon = ({ badge, value }: BadgeProps): JSX.Element => (
+export const BadgeIcon = ({ badge }: BadgeProps): JSX.Element => (
   <S.BadgeContainer>
     <Image src={BadgeFrame} alt="frame" layout="fill" />
     {badge in badgeToAssetId && (

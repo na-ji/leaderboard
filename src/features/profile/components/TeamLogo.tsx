@@ -5,7 +5,7 @@ import { Team } from '@/types/model';
 import { getDarkTeamColor } from '@/utils/team-colors';
 import { Instinct, Mystic, Valor } from '@/features/profile/components/icons';
 
-const teamToLogo = (team: Team): JSXElementConstructor<{}> => {
+const teamToLogo = (team: Team): JSXElementConstructor<Record<string, unknown>> => {
   switch (team) {
     case Team.VALOR:
       return Valor;
