@@ -1,11 +1,12 @@
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
-import { DataGrid, GridColDef, GridValueGetterParams, GridSortModel } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridValueGetterParams, GridSortModel, frFR, GridLocaleText } from '@mui/x-data-grid';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 import { Team, Trainer } from '@/types/model';
 import { getLightTeamColor } from '@/utils/team-colors';
+import { SupportedLocale } from '@/utils/i18n';
 
 interface LeaderboardProps {
   trainers: Trainer[];
@@ -73,6 +74,12 @@ const ColoredTeamRowsContainer = styled(Box)`
 export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
   const router = useRouter();
 
+  const { locale } = router;
+  let localeText: Partial<GridLocaleText> = {};
+  if (locale === SupportedLocale.FR && 'components' in frFR) {
+    localeText = frFR.components.MuiDataGrid.defaultProps.localeText;
+  }
+
   const [sortModel, setSortModel] = useState<GridSortModel>([{ field: 'xp', sort: 'desc' }]);
 
   useEffect(() => {
@@ -88,6 +95,7 @@ export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
         getRowClassName={(params) => `team-${params.row.team}`}
         getRowId={(row) => row.trainer_id}
         hideFooter
+        localeText={localeText}
         onRowClick={(params) => router.push(`/profile/${encodeURIComponent(params.row.trainer_id)}`)}
         onSortModelChange={(model) => setSortModel(model)}
         rows={trainers}

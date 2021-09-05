@@ -1,8 +1,13 @@
 import { GetStaticProps } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 
+export enum SupportedLocale {
+  EN = 'en-BG',
+  FR = 'fr',
+}
+
 interface I18nProps {
-  locale?: string;
+  locale?: SupportedLocale;
   messages: Record<
     string,
     Array<{
@@ -25,7 +30,7 @@ export const wrapStaticPropsWithLocale =
       return pageStaticProps;
     }
 
-    const { locale } = context;
+    const locale = context.locale as SupportedLocale | undefined;
     const [simpleLocale] = locale ? locale.split('-') : ['en'];
     const messages = (await import(`@/i18n/compiled-lang/${simpleLocale}.json`)).default as I18nProps['messages'];
 
