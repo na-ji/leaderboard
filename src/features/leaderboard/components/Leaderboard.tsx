@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
-import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridValueGetterParams, GridSortModel } from '@mui/x-data-grid';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Team, Trainer } from '@/types/model';
 import { getLightTeamColor } from '@/utils/team-colors';
@@ -73,6 +73,8 @@ const ColoredTeamRowsContainer = styled(Box)`
 export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
   const router = useRouter();
 
+  const [sortModel, setSortModel] = useState<GridSortModel>([{ field: 'xp', sort: 'desc' }]);
+
   useEffect(() => {
     router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].trainer_id)}`);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -87,7 +89,10 @@ export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
         getRowId={(row) => row.trainer_id}
         hideFooter
         onRowClick={(params) => router.push(`/profile/${encodeURIComponent(params.row.trainer_id)}`)}
+        onSortModelChange={(model) => setSortModel(model)}
         rows={trainers}
+        sortingOrder={['desc', 'asc']}
+        sortModel={sortModel}
       />
     </ColoredTeamRowsContainer>
   );
