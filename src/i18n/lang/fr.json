@@ -1,4 +1,36 @@
 {
+  "/QraCb": {
+    "defaultMessage": "Médailles",
+    "description": "Subtitle in the profile page"
+  },
+  "1//nJO": {
+    "defaultMessage": "{gblRating, number}",
+    "description": "GBL rating line in the profile page"
+  },
+  "9HzRoL": {
+    "defaultMessage": "Niveau {level}",
+    "description": "Level line in the profile page"
+  },
+  "MmC1e+": {
+    "defaultMessage": "{battlesWon, number} combats gagnés",
+    "description": "Battle won line in the profile page"
+  },
+  "NGXzup": {
+    "defaultMessage": "Informations générales",
+    "description": "Subtitle in the profile page"
+  },
+  "Pj5Al+": {
+    "defaultMessage": "Rang {gblRank} sur la Ligue de Combat GO",
+    "description": "GBL rank line in the profile page"
+  },
+  "SKR+e5": {
+    "defaultMessage": "Dernière mise à jour le {date, date, short} à {date, time, short}",
+    "description": "Last updated line in the profile page"
+  },
+  "cXT0f/": {
+    "defaultMessage": "Profil de {name}",
+    "description": "Profile page title"
+  },
   "cqiZAt": {
     "defaultMessage": "Classement",
     "description": "Index page title"

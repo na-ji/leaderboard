@@ -1,4 +1,36 @@
 {
+  "/QraCb": {
+    "defaultMessage": "Medals",
+    "description": "Subtitle in the profile page"
+  },
+  "1//nJO": {
+    "defaultMessage": "GBL rating of {gblRating}",
+    "description": "GBL rating line in the profile page"
+  },
+  "9HzRoL": {
+    "defaultMessage": "Level {level}",
+    "description": "Level line in the profile page"
+  },
+  "MmC1e+": {
+    "defaultMessage": "{battlesWon, number} battles won",
+    "description": "Battle won line in the profile page"
+  },
+  "NGXzup": {
+    "defaultMessage": "General information",
+    "description": "Subtitle in the profile page"
+  },
+  "Pj5Al+": {
+    "defaultMessage": "GBL rank {gblRank}",
+    "description": "GBL rank line in the profile page"
+  },
+  "SKR+e5": {
+    "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
+    "description": "Last updated line in the profile page"
+  },
+  "cXT0f/": {
+    "defaultMessage": "{name}'s Profile",
+    "description": "Profile page title"
+  },
   "cqiZAt": {
     "defaultMessage": "Leaderboard",
     "description": "Index page title"
