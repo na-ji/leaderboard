@@ -4,5 +4,6 @@
     "host": "@@DB_HOST",
     "password": "@@DB_PASSWORD",
     "user": "@@DB_USER"
-  }
+  },
+  "defaultLocale": "@@DEFAULT_LOCALE"
 }
