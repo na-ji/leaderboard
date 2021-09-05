@@ -6,4 +6,8 @@ module.exports = {
   webpack: (config) => {
     return NodeConfigTSPlugin(config);
   },
+  i18n: {
+    locales: ['en-GB', 'fr'],
+    defaultLocale: 'en-GB',
+  },
 };

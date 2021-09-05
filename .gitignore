@@ -37,3 +37,6 @@ yarn-error.log*
 config/Config.d.ts
 config/**/*.json
 !config/default.json
+
+# React intl
+src/i18n/compiled-lang

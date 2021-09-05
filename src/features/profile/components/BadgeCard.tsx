@@ -10,7 +10,7 @@ interface BadgeProps {
 }
 
 export const BadgeCard = ({ badge, value }: BadgeProps): JSX.Element => (
-  <Card sx={{ maxWidth: 345 }}>
+  <Card sx={{ minWidth: 275 }}>
     <CardHeader
       avatar={<BadgeIcon badge={badge} value={value} />}
       title={badge}
