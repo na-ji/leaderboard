@@ -27,6 +27,262 @@
     "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
     "description": "Last updated line in the profile page"
   },
+  "badge_7_day_streaks": {
+    "defaultMessage": "7 day streaks",
+    "description": "Badge 7_DAY_STREAKS"
+  },
+  "badge_berries_fed": {
+    "defaultMessage": "Berries fed",
+    "description": "Badge BERRIES_FED"
+  },
+  "badge_best_buddies": {
+    "defaultMessage": "Best buddies",
+    "description": "Badge BEST_BUDDIES"
+  },
+  "badge_best_friends": {
+    "defaultMessage": "Best friends",
+    "description": "Badge BEST_FRIENDS"
+  },
+  "badge_caught_at_lure": {
+    "defaultMessage": "Caught at lure",
+    "description": "Badge CAUGHT_AT_LURE"
+  },
+  "badge_caught_bug": {
+    "defaultMessage": "Bug",
+    "description": "Badge CAUGHT_BUG"
+  },
+  "badge_caught_dark": {
+    "defaultMessage": "Dark",
+    "description": "Badge CAUGHT_DARK"
+  },
+  "badge_caught_dragon": {
+    "defaultMessage": "Dragon",
+    "description": "Badge CAUGHT_DRAGON"
+  },
+  "badge_caught_electric": {
+    "defaultMessage": "Electric",
+    "description": "Badge CAUGHT_ELECTRIC"
+  },
+  "badge_caught_fairy": {
+    "defaultMessage": "Fairy",
+    "description": "Badge CAUGHT_FAIRY"
+  },
+  "badge_caught_fighting": {
+    "defaultMessage": "Fighting",
+    "description": "Badge CAUGHT_FIGHTING"
+  },
+  "badge_caught_fire": {
+    "defaultMessage": "Fire",
+    "description": "Badge CAUGHT_FIRE"
+  },
+  "badge_caught_flying": {
+    "defaultMessage": "Flying",
+    "description": "Badge CAUGHT_FLYING"
+  },
+  "badge_caught_ghost": {
+    "defaultMessage": "Ghost",
+    "description": "Badge CAUGHT_GHOST"
+  },
+  "badge_caught_grass": {
+    "defaultMessage": "Grass",
+    "description": "Badge CAUGHT_GRASS"
+  },
+  "badge_caught_ground": {
+    "defaultMessage": "Ground",
+    "description": "Badge CAUGHT_GROUND"
+  },
+  "badge_caught_ice": {
+    "defaultMessage": "Ice",
+    "description": "Badge CAUGHT_ICE"
+  },
+  "badge_caught_normal": {
+    "defaultMessage": "Normal",
+    "description": "Badge CAUGHT_NORMAL"
+  },
+  "badge_caught_poison": {
+    "defaultMessage": "Poison",
+    "description": "Badge CAUGHT_POISON"
+  },
+  "badge_caught_pokemon": {
+    "defaultMessage": "Caught pokemon",
+    "description": "Badge CAUGHT_POKEMON"
+  },
+  "badge_caught_psychic": {
+    "defaultMessage": "Psychic",
+    "description": "Badge CAUGHT_PSYCHIC"
+  },
+  "badge_caught_rock": {
+    "defaultMessage": "Rock",
+    "description": "Badge CAUGHT_ROCK"
+  },
+  "badge_caught_steel": {
+    "defaultMessage": "Steel",
+    "description": "Badge CAUGHT_STEEL"
+  },
+  "badge_caught_water": {
+    "defaultMessage": "Water",
+    "description": "Badge CAUGHT_WATER"
+  },
+  "badge_collections_done": {
+    "defaultMessage": "Collections done",
+    "description": "Badge COLLECTIONS_DONE"
+  },
+  "badge_dex_gen_1": {
+    "defaultMessage": "Gen 1",
+    "description": "Badge DEX_GEN_1"
+  },
+  "badge_dex_gen_2": {
+    "defaultMessage": "Gen 2",
+    "description": "Badge DEX_GEN_2"
+  },
+  "badge_dex_gen_3": {
+    "defaultMessage": "Gen 3",
+    "description": "Badge DEX_GEN_3"
+  },
+  "badge_dex_gen_4": {
+    "defaultMessage": "Gen 4",
+    "description": "Badge DEX_GEN_4"
+  },
+  "badge_dex_gen_5": {
+    "defaultMessage": "Gen 5",
+    "description": "Badge DEX_GEN_5"
+  },
+  "badge_dex_gen_6": {
+    "defaultMessage": "Gen 6",
+    "description": "Badge DEX_GEN_6"
+  },
+  "badge_dex_gen_7": {
+    "defaultMessage": "Dex gen 7",
+    "description": "Badge DEX_GEN_7"
+  },
+  "badge_dex_gen_8": {
+    "defaultMessage": "Dex gen 8",
+    "description": "Badge DEX_GEN_8"
+  },
+  "badge_evolved": {
+    "defaultMessage": "Evolved",
+    "description": "Badge EVOLVED"
+  },
+  "badge_giovanni_defeated": {
+    "defaultMessage": "Giovanni defeated",
+    "description": "Badge GIOVANNI_DEFEATED"
+  },
+  "badge_grunts_defeated": {
+    "defaultMessage": "Grunts defeated",
+    "description": "Badge GRUNTS_DEFEATED"
+  },
+  "badge_gym_battles_won": {
+    "defaultMessage": "Gym battles won",
+    "description": "Badge GYM_BATTLES_WON"
+  },
+  "badge_hatched": {
+    "defaultMessage": "Hatched",
+    "description": "Badge HATCHED"
+  },
+  "badge_hours_defended": {
+    "defaultMessage": "Hours defended",
+    "description": "Badge HOURS_DEFENDED"
+  },
+  "badge_km_walked": {
+    "defaultMessage": "Km walked",
+    "description": "Badge KM_WALKED"
+  },
+  "badge_league_great_won": {
+    "defaultMessage": "Great league won",
+    "description": "Badge LEAGUE_GREAT_WON"
+  },
+  "badge_league_master_won": {
+    "defaultMessage": "Master league won",
+    "description": "Badge LEAGUE_MASTER_WON"
+  },
+  "badge_league_ultra_won": {
+    "defaultMessage": "Ultra league won",
+    "description": "Badge LEAGUE_ULTRA_WON"
+  },
+  "badge_legendary_raids_won": {
+    "defaultMessage": "Legendary raids won",
+    "description": "Badge LEGENDARY_RAIDS_WON"
+  },
+  "badge_mega_evos": {
+    "defaultMessage": "Mega evolutions",
+    "description": "Badge MEGA_EVOS"
+  },
+  "badge_normal_raids_won": {
+    "defaultMessage": "Normal raids won",
+    "description": "Badge NORMAL_RAIDS_WON"
+  },
+  "badge_photobombs": {
+    "defaultMessage": "Photobombs",
+    "description": "Badge PHOTOBOMBS"
+  },
+  "badge_pikachu_caught": {
+    "defaultMessage": "Pikachu caught",
+    "description": "Badge PIKACHU_CAUGHT"
+  },
+  "badge_purified": {
+    "defaultMessage": "Purified",
+    "description": "Badge PURIFIED"
+  },
+  "badge_quests": {
+    "defaultMessage": "Quests",
+    "description": "Badge QUESTS"
+  },
+  "badge_raid_achievements": {
+    "defaultMessage": "Raid achievements",
+    "description": "Badge RAID_ACHIEVEMENTS"
+  },
+  "badge_raids_with_friends": {
+    "defaultMessage": "Raids with friends",
+    "description": "Badge RAIDS_WITH_FRIENDS"
+  },
+  "badge_stops_spun": {
+    "defaultMessage": "Stops spun",
+    "description": "Badge STOPS_SPUN"
+  },
+  "badge_trade_km": {
+    "defaultMessage": "Trade km",
+    "description": "Badge TRADE_KM"
+  },
+  "badge_trades": {
+    "defaultMessage": "Trades",
+    "description": "Badge TRADES"
+  },
+  "badge_trainers_referred": {
+    "defaultMessage": "Trainers referred",
+    "description": "Badge TRAINERS_REFERRED"
+  },
+  "badge_trainings_won": {
+    "defaultMessage": "Trainings won",
+    "description": "Badge TRAININGS_WON"
+  },
+  "badge_unique_mega_evos": {
+    "defaultMessage": "Unique mega evolutions",
+    "description": "Badge UNIQUE_MEGA_EVOS"
+  },
+  "badge_unique_raid_bosses": {
+    "defaultMessage": "Unique raid bosses",
+    "description": "Badge UNIQUE_RAID_BOSSES"
+  },
+  "badge_unique_stops_spun": {
+    "defaultMessage": "Unique stops spun",
+    "description": "Badge UNIQUE_STOPS_SPUN"
+  },
+  "badge_unique_unown": {
+    "defaultMessage": "Unique Unown",
+    "description": "Badge UNIQUE_UNOWN"
+  },
+  "badge_wayfarer_agreements": {
+    "defaultMessage": "Wayfarer agreements",
+    "description": "Badge WAYFARER_AGREEMENTS"
+  },
+  "badge_xl_karps": {
+    "defaultMessage": "XL Magikarp",
+    "description": "Badge XL_KARPS"
+  },
+  "badge_xs_rats": {
+    "defaultMessage": "XS Rattata",
+    "description": "Badge XS_RATS"
+  },
   "cXT0f/": {
     "defaultMessage": "{name}'s Profile",
     "description": "Profile page title"
