@@ -291,6 +291,30 @@
     "defaultMessage": "Classement",
     "description": "Index page title"
   },
+  "leaderboard_header.battles_won": {
+    "defaultMessage": "Combats gagnés",
+    "description": "Leaderboard battles won column header"
+  },
+  "leaderboard_header.caught_pokemon": {
+    "defaultMessage": "Attrapés",
+    "description": "Leaderboard caught pokemon column header"
+  },
+  "leaderboard_header.level": {
+    "defaultMessage": "Niveau",
+    "description": "Leaderboard level column header"
+  },
+  "leaderboard_header.name": {
+    "defaultMessage": "Dresseur",
+    "description": "Leaderboard trainer column header"
+  },
+  "leaderboard_header.rank": {
+    "defaultMessage": "Rang",
+    "description": "Leaderboard rank column header"
+  },
+  "leaderboard_header.xp": {
+    "defaultMessage": "PX",
+    "description": "Leaderboard xp column header"
+  },
   "t5Ktnw": {
     "defaultMessage": "Classement Pokémon Go",
     "description": "Index page meta description"
