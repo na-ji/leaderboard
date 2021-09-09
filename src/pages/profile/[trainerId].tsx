@@ -24,9 +24,9 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
         { name: initialTrainer.name },
       )
     : '';
-  const { trainer_id } = useRouter().query;
+  const { trainerId } = useRouter().query;
 
-  const { data: trainer } = useSWR<Trainer>(`/api/trainers/${trainer_id}`, { fallbackData: initialTrainer });
+  const { data: trainer } = useSWR<Trainer>(`/api/trainers/${trainerId}`, { fallbackData: initialTrainer });
 
   return (
     <>
@@ -35,7 +35,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
           <Head>
             <title key="title">{title}</title>
             <meta key="description" name="description" content={title} />
-            <link key="preload" rel="preload" href={`/api/trainers/${trainer_id}`} as="fetch" crossOrigin="anonymous" />
+            <link key="preload" rel="preload" href={`/api/trainers/${trainerId}`} as="fetch" crossOrigin="anonymous" />
           </Head>
           <Container maxWidth={false}>
             <Profile trainer={trainer} />
@@ -46,13 +46,13 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
   );
 };
 
-export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainer_id: string }>(async ({ params }) => {
+export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainerId: string }>(async ({ params }) => {
   if (!params) {
     return { notFound: true };
   }
 
   const { getTrainerProfile } = await import('@/features/profile/api');
-  const trainer = await getTrainerProfile(params.trainer_id);
+  const trainer = await getTrainerProfile(params.trainerId);
 
   if (!trainer) {
     return { notFound: true };
@@ -72,7 +72,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: trainers.slice(0, 100).reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
       Object.values(SupportedLocale).forEach((locale) => {
-        paths.push({ params: { trainer_id: trainer.trainer_id }, locale });
+        paths.push({ params: { trainerId: trainer.trainer_id }, locale });
       });
 
       return paths;
