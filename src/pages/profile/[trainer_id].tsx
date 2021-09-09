@@ -1,27 +1,32 @@
 import Container from '@mui/material/Container';
 import Head from 'next/head';
 import type { NextPage, GetStaticPaths, GetStaticPathsResult } from 'next';
+import useSWR from 'swr';
 import { useIntl } from 'react-intl';
+import { useRouter } from 'next/router';
 
 import { Trainer } from '@/types/model';
 import { Profile } from '@/features/profile';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 
 interface ProfileProps {
-  trainer?: Trainer;
+  initialTrainer?: Trainer;
 }
 
-const ProfilePage: NextPage<ProfileProps> = ({ trainer }) => {
+const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
   const intl = useIntl();
-  const title = trainer
+  const title = initialTrainer
     ? intl.formatMessage(
         {
           defaultMessage: "{name}'s Profile",
           description: 'Profile page title',
         },
-        { name: trainer.name },
+        { name: initialTrainer.name },
       )
     : '';
+  const { trainer_id } = useRouter().query;
+
+  const { data: trainer } = useSWR<Trainer>(`/api/trainers/${trainer_id}`, { fallbackData: initialTrainer });
 
   return (
     <>
@@ -30,6 +35,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ trainer }) => {
           <Head>
             <title key="title">{title}</title>
             <meta key="description" name="description" content={title} />
+            <link key="preload" rel="preload" href={`/api/trainers/${trainer_id}`} as="fetch" crossOrigin="anonymous" />
           </Head>
           <Container maxWidth={false}>
             <Profile trainer={trainer} />
@@ -53,7 +59,7 @@ export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainer_
   }
 
   return {
-    props: { trainer },
+    props: { initialTrainer: trainer },
     // rebuild at most every 30 minutes
     revalidate: 1800,
   };

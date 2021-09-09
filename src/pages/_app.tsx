@@ -2,6 +2,9 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import { IntlProvider } from 'react-intl';
+import { SWRConfig } from 'swr';
+
+import { fetcher } from '@/utils/fetcher';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
@@ -10,7 +13,14 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <CssBaseline />
-      <Component {...pageProps} />
+      <SWRConfig
+        value={{
+          fetcher,
+          refreshInterval: 30000,
+        }}
+      >
+        <Component {...pageProps} />
+      </SWRConfig>
     </IntlProvider>
   );
 }
