@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { DataGrid, GridColDef, GridValueGetterParams, GridSortModel, frFR, GridLocaleText } from '@mui/x-data-grid';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
 
-import { Team, Trainer } from '@/types/model';
 import { getLightTeamColor } from '@/utils/team-colors';
 import { SupportedLocale } from '@/utils/i18n';
-import { defineMessages, useIntl } from 'react-intl';
+import { Team, Trainer } from '@/types';
 
 interface LeaderboardProps {
   trainers: Trainer[];

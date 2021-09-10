@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { Trainer } from '@/types/model';
 import { getTrainerProfile } from '@/features/profile/api';
+import { Trainer } from '@/types';
 
 interface ApiError {
   code: number;

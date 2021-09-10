@@ -1,5 +1,5 @@
-import { Trainer } from '@/types/model';
 import { connectToDatabase } from '@/database';
+import { Trainer } from '@/types';
 
 export const getTrainerProfile = async (trainerId: string): Promise<Trainer | undefined> => {
   const connection = await connectToDatabase();

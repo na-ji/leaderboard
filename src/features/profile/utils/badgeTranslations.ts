@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl';
 
-import { Badge } from '@/types/model';
+import { Badge } from '@/types';
 
 export const badgeTranslations = defineMessages({
   [Badge.KM_WALKED]: {

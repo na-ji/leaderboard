@@ -5,9 +5,9 @@ import useSWR from 'swr';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 
-import { Trainer } from '@/types/model';
 import { Profile } from '@/features/profile';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
+import { Trainer } from '@/types';
 
 interface ProfileProps {
   initialTrainer?: Trainer;

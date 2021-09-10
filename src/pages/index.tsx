@@ -5,9 +5,9 @@ import Typography from '@mui/material/Typography';
 import useSWR from 'swr';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import { Trainer } from '@/types/model';
 import { Leaderboard } from '@/features/leaderboard';
 import { wrapStaticPropsWithLocale } from '@/utils/i18n';
+import { Trainer } from '@/types';
 
 interface HomeProps {
   initialTrainers: Trainer[];

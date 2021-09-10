@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { Trainer } from '@/types/model';
 import { getLeaderboard } from '@/features/leaderboard/api';
+import { Trainer } from '@/types';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse<Trainer[]>): Promise<void> => {

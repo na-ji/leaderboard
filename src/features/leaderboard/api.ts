@@ -1,5 +1,5 @@
-import { Trainer } from '@/types/model';
 import { connectToDatabase } from '@/database';
+import { Trainer } from '@/types';
 
 export const getLeaderboard = async (): Promise<Trainer[]> => {
   const connection = await connectToDatabase();

@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import { useIntl } from 'react-intl';
 
-import { Badge } from '@/types/model';
+import { Badge } from '@/types';
 import { BadgeIcon } from '@/features/profile/components/BadgeIcon';
 import { badgeTranslations } from '@/features/profile/utils/badgeTranslations';
 

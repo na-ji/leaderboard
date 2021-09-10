@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import type { JSXElementConstructor } from 'react';
 
-import { Team } from '@/types/model';
 import { getDarkTeamColor } from '@/utils/team-colors';
 import { Instinct, Mystic, Valor } from '@/features/profile/components/icons';
+import { Team } from '@/types';
 
 const teamToLogo = (team: Team): JSXElementConstructor<Record<string, unknown>> => {
   switch (team) {

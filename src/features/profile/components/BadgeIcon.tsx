@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Image from 'next/image';
 
-import { Badge, badgeToAssetId } from '@/types/model';
-import BadgeFrame from '../../../../public/badges/frames/badge_ring_3.png';
+import BadgeFrame from '@/../public/badges/frames/badge_ring_3.png';
+import { Badge } from '@/types';
+import { badgeToAssetId } from '@/features/profile/utils/badgeToAssetId';
 
 interface BadgeProps {
   badge: Badge;

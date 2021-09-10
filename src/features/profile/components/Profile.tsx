@@ -1,11 +1,11 @@
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import { Badge, Trainer } from '@/types/model';
 import { FormattedMessage } from 'react-intl';
 
-import { TeamLogo } from '@/features/profile/components/TeamLogo';
-import { getDarkTeamColor } from '@/utils/team-colors';
+import { Badge, Trainer } from '@/types';
 import { BadgeCard } from '@/features/profile/components/BadgeCard';
+import { getDarkTeamColor } from '@/utils/team-colors';
+import { TeamLogo } from '@/features/profile/components/TeamLogo';
 
 interface ProfileProps {
   trainer: Trainer;

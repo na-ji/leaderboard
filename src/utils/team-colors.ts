@@ -1,5 +1,5 @@
-import { Team } from '@/types/model';
 import { red, blue, yellow } from '@mui/material/colors';
+import { Team } from '@/types';
 
 export const getLightTeamColor = (team: Team): string => {
   switch (team) {
