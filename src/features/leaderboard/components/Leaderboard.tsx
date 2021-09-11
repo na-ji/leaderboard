@@ -137,7 +137,16 @@ export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
         hideFooter
         localeText={localeText}
         onRowClick={(params) => router.push(`/profile/${encodeURIComponent(params.row.trainer_id)}`)}
-        onSortModelChange={(model) => setSortModel(model)}
+        onSortModelChange={(model) => {
+          if (
+            model.length !== sortModel.length ||
+            model.some(
+              (gridSortItem) => gridSortItem.field !== sortModel[0].field || gridSortItem.sort !== sortModel[0].sort,
+            )
+          ) {
+            setSortModel(model);
+          }
+        }}
         rows={trainers}
         sortingOrder={['desc', 'asc']}
         sortModel={sortModel}
