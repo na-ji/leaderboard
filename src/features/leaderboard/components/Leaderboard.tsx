@@ -1,62 +1,20 @@
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
-import { DataGrid, GridColDef, GridValueGetterParams, GridSortModel, frFR, GridLocaleText } from '@mui/x-data-grid';
-import { useRouter } from 'next/router';
+import { DataGrid, frFR, GridLocaleText, GridSortModel } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
-import { defineMessages, useIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
+import { useRouter } from 'next/router';
 
+import { columnHeaderTranslations } from '@/features/leaderboard/lang';
+import { ColumnsType } from '@/features/leaderboard/components/columnDefinitions';
 import { getLightTeamColor } from '@/utils/team-colors';
 import { SupportedLocale } from '@/utils/i18n';
 import { Team, Trainer } from '@/types';
 
-interface LeaderboardProps {
+export interface LeaderboardProps {
   trainers: Trainer[];
+  columns: ColumnsType;
 }
-
-const columns: Array<
-  GridColDef & {
-    field: Extract<keyof Trainer, 'trainer_id' | 'name' | 'level' | 'xp' | 'battles_won' | 'caught_pokemon'>;
-  }
-> = [
-  {
-    field: 'trainer_id',
-    width: 90,
-    sortable: false,
-    type: 'number',
-    valueGetter: (params: GridValueGetterParams) => {
-      return params.api.getRowIndex(params.id) + 1;
-    },
-  },
-  {
-    field: 'name',
-    flex: 1,
-    minWidth: 150,
-  },
-  {
-    field: 'level',
-    flex: 1,
-    minWidth: 130,
-    type: 'number',
-  },
-  {
-    field: 'xp',
-    flex: 1,
-    minWidth: 120,
-    type: 'number',
-  },
-  {
-    field: 'battles_won',
-    flex: 1,
-    minWidth: 200,
-    type: 'number',
-  },
-  {
-    field: 'caught_pokemon',
-    flex: 1,
-    minWidth: 200,
-    type: 'number',
-  },
-];
 
 const ColoredTeamRowsContainer = styled(Box)`
   [class^='team']:hover {
@@ -74,40 +32,7 @@ const ColoredTeamRowsContainer = styled(Box)`
   }
 `;
 
-export const columnHeaderTranslations = defineMessages({
-  trainer_id: {
-    id: 'leaderboard_header.rank',
-    defaultMessage: 'Rank',
-    description: 'Leaderboard rank column header',
-  },
-  name: {
-    id: 'leaderboard_header.name',
-    defaultMessage: 'Trainer',
-    description: 'Leaderboard trainer column header',
-  },
-  level: {
-    id: 'leaderboard_header.level',
-    defaultMessage: 'Level',
-    description: 'Leaderboard level column header',
-  },
-  xp: {
-    id: 'leaderboard_header.xp',
-    defaultMessage: 'XP',
-    description: 'Leaderboard xp column header',
-  },
-  battles_won: {
-    id: 'leaderboard_header.battles_won',
-    defaultMessage: 'Battles won',
-    description: 'Leaderboard battles won column header',
-  },
-  caught_pokemon: {
-    id: 'leaderboard_header.caught_pokemon',
-    defaultMessage: 'Pokémon caught',
-    description: 'Leaderboard caught pokemon column header',
-  },
-});
-
-export const Leaderboard = ({ trainers }: LeaderboardProps): JSX.Element => {
+export const Leaderboard = ({ trainers, columns }: LeaderboardProps): JSX.Element => {
   const router = useRouter();
   const intl = useIntl();
 

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import useSWR from 'swr';
 import { FormattedMessage, useIntl } from 'react-intl';
 
-import { Leaderboard } from '@/features/leaderboard';
+import { OverallLeaderboards } from '@/features/leaderboard';
 import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 import { Trainer } from '@/types';
 
@@ -36,7 +36,7 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
         <Typography variant="h3" gutterBottom component="div">
           <FormattedMessage defaultMessage="Leaderboard" description="Index page title" />
         </Typography>
-        {Array.isArray(trainers) && <Leaderboard trainers={trainers} />}
+        {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
       </Container>
     </>
   );

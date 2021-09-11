@@ -1,1 +1,1 @@
-export * from './components/Leaderboard';
+export * from './components/OverallLeaderboards';
