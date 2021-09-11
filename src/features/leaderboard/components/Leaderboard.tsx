@@ -14,6 +14,7 @@ import { Team, Trainer } from '@/types';
 export interface LeaderboardProps {
   trainers: Trainer[];
   columns: ColumnsType;
+  defaultSort: ColumnsType[0]['field'];
 }
 
 const ColoredTeamRowsContainer = styled(Box)`
@@ -32,7 +33,7 @@ const ColoredTeamRowsContainer = styled(Box)`
   }
 `;
 
-export const Leaderboard = ({ trainers, columns }: LeaderboardProps): JSX.Element => {
+export const Leaderboard = ({ trainers, columns, defaultSort }: LeaderboardProps): JSX.Element => {
   const router = useRouter();
   const intl = useIntl();
 
@@ -42,7 +43,7 @@ export const Leaderboard = ({ trainers, columns }: LeaderboardProps): JSX.Elemen
     localeText = frFR.components.MuiDataGrid.defaultProps.localeText;
   }
 
-  const [sortModel, setSortModel] = useState<GridSortModel>([{ field: 'xp', sort: 'desc' }]);
+  const [sortModel, setSortModel] = useState<GridSortModel>([{ field: defaultSort, sort: 'desc' }]);
 
   useEffect(() => {
     router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].trainer_id)}`);
@@ -55,7 +56,12 @@ export const Leaderboard = ({ trainers, columns }: LeaderboardProps): JSX.Elemen
         autoHeight
         columns={columns.map((column) => ({
           ...column,
-          headerName: intl.formatMessage(columnHeaderTranslations[column.field]),
+          headerName:
+            column.field in columnHeaderTranslations
+              ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-ignore
+                intl.formatMessage(columnHeaderTranslations[column.field])
+              : column.field,
         }))}
         getRowClassName={(params) => `team-${params.row.team}`}
         getRowId={(row) => row.trainer_id}

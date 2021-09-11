@@ -4,7 +4,7 @@ import { Trainer } from '@/types';
 
 export type ColumnsType = Array<
   GridColDef & {
-    field: Extract<keyof Trainer, 'trainer_id' | 'name' | 'level' | 'xp' | 'battles_won' | 'caught_pokemon'>;
+    field: keyof Trainer | 'total_raids';
   }
 >;
 

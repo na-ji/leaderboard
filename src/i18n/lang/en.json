@@ -11,6 +11,14 @@
     "defaultMessage": "Level {level}",
     "description": "Level line in the profile page"
   },
+  "AgaA1s": {
+    "defaultMessage": "Battles",
+    "description": "Battles leaderboards title"
+  },
+  "K/Gmya": {
+    "defaultMessage": "Types",
+    "description": "Types leaderboard title"
+  },
   "MmC1e+": {
     "defaultMessage": "{battlesWon, number} battles won",
     "description": "Battle won line in the profile page"
@@ -23,9 +31,21 @@
     "defaultMessage": "GBL rank {gblRank}",
     "description": "GBL rank line in the profile page"
   },
+  "Px/bnb": {
+    "defaultMessage": "Raids",
+    "description": "Raids leaderboard title"
+  },
   "SKR+e5": {
     "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
     "description": "Last updated line in the profile page"
+  },
+  "X+pFuG": {
+    "defaultMessage": "Gyms",
+    "description": "Gyms leaderboard title"
+  },
+  "b950ya": {
+    "defaultMessage": "Pokédex",
+    "description": "Pokédex leaderboard title"
   },
   "badge_7_day_streaks": {
     "defaultMessage": "7 day streaks",
@@ -291,13 +311,105 @@
     "defaultMessage": "Leaderboard",
     "description": "Index page title"
   },
+  "jyjtCj": {
+    "defaultMessage": "General",
+    "description": "General leaderboard title"
+  },
   "leaderboard_header.battles_won": {
     "defaultMessage": "Battles won",
     "description": "Leaderboard battles won column header"
   },
+  "leaderboard_header.berries_fed": {
+    "defaultMessage": "Berries",
+    "description": "Leaderboard berries column header"
+  },
   "leaderboard_header.caught_pokemon": {
-    "defaultMessage": "Pokémon caught",
+    "defaultMessage": "Caught",
     "description": "Leaderboard caught pokemon column header"
+  },
+  "leaderboard_header.dex_gen1": {
+    "defaultMessage": "Gen 1",
+    "description": "Leaderboard gen 1 column header"
+  },
+  "leaderboard_header.dex_gen2": {
+    "defaultMessage": "Gen 2",
+    "description": "Leaderboard gen 2 column header"
+  },
+  "leaderboard_header.dex_gen3": {
+    "defaultMessage": "Gen 3",
+    "description": "Leaderboard gen 3 column header"
+  },
+  "leaderboard_header.dex_gen4": {
+    "defaultMessage": "Gen 4",
+    "description": "Leaderboard gen 4 column header"
+  },
+  "leaderboard_header.dex_gen5": {
+    "defaultMessage": "Gen 5",
+    "description": "Leaderboard gen 5 column header"
+  },
+  "leaderboard_header.dex_gen6": {
+    "defaultMessage": "Gen 6",
+    "description": "Leaderboard gen 6 column header"
+  },
+  "leaderboard_header.dex_gen7": {
+    "defaultMessage": "Gen 7",
+    "description": "Leaderboard gen 7 column header"
+  },
+  "leaderboard_header.dex_gen8": {
+    "defaultMessage": "Gen 8",
+    "description": "Leaderboard gen 8 column header"
+  },
+  "leaderboard_header.evolved": {
+    "defaultMessage": "Evolved",
+    "description": "Leaderboard evolved column header"
+  },
+  "leaderboard_header.gbl_rank": {
+    "defaultMessage": "GBL Rank",
+    "description": "Leaderboard gbl rank column header"
+  },
+  "leaderboard_header.gbl_rating": {
+    "defaultMessage": "GBL rating",
+    "description": "Leaderboard gbl rating column header"
+  },
+  "leaderboard_header.giovanni_defeated": {
+    "defaultMessage": "Giovanni",
+    "description": "Leaderboard giovanni defeated column header"
+  },
+  "leaderboard_header.grunts_defeated": {
+    "defaultMessage": "Grunts",
+    "description": "Leaderboard grunts defeated column header"
+  },
+  "leaderboard_header.gym_battles_won": {
+    "defaultMessage": "Battles",
+    "description": "Leaderboard battles won column header"
+  },
+  "leaderboard_header.hatched": {
+    "defaultMessage": "Hatched",
+    "description": "Leaderboard eggs hatched column header"
+  },
+  "leaderboard_header.hours_defended": {
+    "defaultMessage": "Hours",
+    "description": "Leaderboard hours defended column header"
+  },
+  "leaderboard_header.km_walked": {
+    "defaultMessage": "KM",
+    "description": "Leaderboard km waled column header"
+  },
+  "leaderboard_header.league_great_won": {
+    "defaultMessage": "Great",
+    "description": "Leaderboard great league column header"
+  },
+  "leaderboard_header.league_master_won": {
+    "defaultMessage": "Master",
+    "description": "Leaderboard master league column header"
+  },
+  "leaderboard_header.league_ultra_won": {
+    "defaultMessage": "Ultra",
+    "description": "Leaderboard ultra league column header"
+  },
+  "leaderboard_header.legendary_raids_won": {
+    "defaultMessage": "Legendary",
+    "description": "Leaderboard legendary raids column header"
   },
   "leaderboard_header.level": {
     "defaultMessage": "Level",
@@ -307,16 +419,88 @@
     "defaultMessage": "Trainer",
     "description": "Leaderboard trainer column header"
   },
+  "leaderboard_header.normal_raids_won": {
+    "defaultMessage": "Normal",
+    "description": "Leaderboard normal raids column header"
+  },
+  "leaderboard_header.pikachu_caught": {
+    "defaultMessage": "Pikachu",
+    "description": "Leaderboard pikachu caught column header"
+  },
+  "leaderboard_header.purified": {
+    "defaultMessage": "Purified",
+    "description": "Leaderboard purified column header"
+  },
+  "leaderboard_header.quests": {
+    "defaultMessage": "Quests",
+    "description": "Leaderboard quests column header"
+  },
+  "leaderboard_header.raid_achievements": {
+    "defaultMessage": "Achievements",
+    "description": "Leaderboard raid achievements column header"
+  },
+  "leaderboard_header.raids_with_friends": {
+    "defaultMessage": "With friends",
+    "description": "Leaderboard with friends raids column header"
+  },
   "leaderboard_header.rank": {
     "defaultMessage": "Rank",
     "description": "Leaderboard rank column header"
+  },
+  "leaderboard_header.stops_spun": {
+    "defaultMessage": "Pokéstops",
+    "description": "Leaderboard Pokéstops spun column header"
+  },
+  "leaderboard_header.total_raids": {
+    "defaultMessage": "Total",
+    "description": "Leaderboard total raids column header"
+  },
+  "leaderboard_header.trades": {
+    "defaultMessage": "Trades",
+    "description": "Leaderboard evolved column header"
+  },
+  "leaderboard_header.trainings_won": {
+    "defaultMessage": "Trainings",
+    "description": "Leaderboard trainings won column header"
+  },
+  "leaderboard_header.unique_raid_bosses": {
+    "defaultMessage": "Unique",
+    "description": "Leaderboard unique raids column header"
+  },
+  "leaderboard_header.unique_unown": {
+    "defaultMessage": "Unown",
+    "description": "Leaderboard unique unown column header"
+  },
+  "leaderboard_header.xl_karps": {
+    "defaultMessage": "Magikarp",
+    "description": "Leaderboard magikarp column header"
   },
   "leaderboard_header.xp": {
     "defaultMessage": "XP",
     "description": "Leaderboard xp column header"
   },
+  "leaderboard_header.xs_rats": {
+    "defaultMessage": "Rattata",
+    "description": "Leaderboard rattata column header"
+  },
+  "m8XKTs": {
+    "defaultMessage": "PVP",
+    "description": "PVP leaderboard title"
+  },
   "t5Ktnw": {
     "defaultMessage": "Pokémon Go Leaderboard",
     "description": "Index page meta description"
+  },
+  "uyrNDD": {
+    "defaultMessage": "Collection",
+    "description": "Collection leaderboards title"
+  },
+  "whxSyO": {
+    "defaultMessage": "Team Rocket",
+    "description": "Team Rocket leaderboard title"
+  },
+  "xmUh29": {
+    "defaultMessage": "Specific",
+    "description": "Specific leaderboard title"
   }
 }
