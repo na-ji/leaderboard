@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+
 import { Badge } from '@/types';
 
 export const columnHeaderTranslations = defineMessages({
