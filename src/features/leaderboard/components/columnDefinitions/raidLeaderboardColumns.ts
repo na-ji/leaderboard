@@ -16,13 +16,13 @@ export const raidLeaderboardColumns: ColumnsType = [
   {
     field: 'normal_raids_won',
     flex: 1,
-    minWidth: 140,
+    minWidth: 145,
     type: 'number',
   },
   {
     field: 'legendary_raids_won',
     flex: 1,
-    minWidth: 160,
+    minWidth: 165,
     type: 'number',
   },
   {

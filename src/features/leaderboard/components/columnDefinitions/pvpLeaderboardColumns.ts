@@ -35,7 +35,7 @@ export const pvpLeaderboardColumns: ColumnsType = [
   {
     field: 'trainings_won',
     flex: 1,
-    minWidth: 150,
+    minWidth: 180,
     type: 'number',
   },
 ];

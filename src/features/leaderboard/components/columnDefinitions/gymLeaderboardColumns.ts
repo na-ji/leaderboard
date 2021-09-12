@@ -5,7 +5,7 @@ export const gymLeaderboardColumns: ColumnsType = [
   {
     field: 'gym_battles_won',
     flex: 1,
-    minWidth: 130,
+    minWidth: 150,
     type: 'number',
   },
   {

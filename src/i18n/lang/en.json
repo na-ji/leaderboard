@@ -67,81 +67,9 @@
     "defaultMessage": "Caught at lure",
     "description": "Badge CAUGHT_AT_LURE"
   },
-  "badge_caught_bug": {
-    "defaultMessage": "Bug",
-    "description": "Badge CAUGHT_BUG"
-  },
-  "badge_caught_dark": {
-    "defaultMessage": "Dark",
-    "description": "Badge CAUGHT_DARK"
-  },
-  "badge_caught_dragon": {
-    "defaultMessage": "Dragon",
-    "description": "Badge CAUGHT_DRAGON"
-  },
-  "badge_caught_electric": {
-    "defaultMessage": "Electric",
-    "description": "Badge CAUGHT_ELECTRIC"
-  },
-  "badge_caught_fairy": {
-    "defaultMessage": "Fairy",
-    "description": "Badge CAUGHT_FAIRY"
-  },
-  "badge_caught_fighting": {
-    "defaultMessage": "Fighting",
-    "description": "Badge CAUGHT_FIGHTING"
-  },
-  "badge_caught_fire": {
-    "defaultMessage": "Fire",
-    "description": "Badge CAUGHT_FIRE"
-  },
-  "badge_caught_flying": {
-    "defaultMessage": "Flying",
-    "description": "Badge CAUGHT_FLYING"
-  },
-  "badge_caught_ghost": {
-    "defaultMessage": "Ghost",
-    "description": "Badge CAUGHT_GHOST"
-  },
-  "badge_caught_grass": {
-    "defaultMessage": "Grass",
-    "description": "Badge CAUGHT_GRASS"
-  },
-  "badge_caught_ground": {
-    "defaultMessage": "Ground",
-    "description": "Badge CAUGHT_GROUND"
-  },
-  "badge_caught_ice": {
-    "defaultMessage": "Ice",
-    "description": "Badge CAUGHT_ICE"
-  },
-  "badge_caught_normal": {
-    "defaultMessage": "Normal",
-    "description": "Badge CAUGHT_NORMAL"
-  },
-  "badge_caught_poison": {
-    "defaultMessage": "Poison",
-    "description": "Badge CAUGHT_POISON"
-  },
   "badge_caught_pokemon": {
     "defaultMessage": "Caught pokemon",
     "description": "Badge CAUGHT_POKEMON"
-  },
-  "badge_caught_psychic": {
-    "defaultMessage": "Psychic",
-    "description": "Badge CAUGHT_PSYCHIC"
-  },
-  "badge_caught_rock": {
-    "defaultMessage": "Rock",
-    "description": "Badge CAUGHT_ROCK"
-  },
-  "badge_caught_steel": {
-    "defaultMessage": "Steel",
-    "description": "Badge CAUGHT_STEEL"
-  },
-  "badge_caught_water": {
-    "defaultMessage": "Water",
-    "description": "Badge CAUGHT_WATER"
   },
   "badge_collections_done": {
     "defaultMessage": "Collections done",
@@ -490,6 +418,78 @@
   "t5Ktnw": {
     "defaultMessage": "Pokémon Go Leaderboard",
     "description": "Index page meta description"
+  },
+  "type_bug": {
+    "defaultMessage": "Bug",
+    "description": "Pokémon type BUG"
+  },
+  "type_dark": {
+    "defaultMessage": "Dark",
+    "description": "Pokémon type DARK"
+  },
+  "type_dragon": {
+    "defaultMessage": "Dragon",
+    "description": "Pokémon type DRAGON"
+  },
+  "type_electric": {
+    "defaultMessage": "Electric",
+    "description": "Pokémon type ELECTRIC"
+  },
+  "type_fairy": {
+    "defaultMessage": "Fairy",
+    "description": "Pokémon type FAIRY"
+  },
+  "type_fighting": {
+    "defaultMessage": "Fighting",
+    "description": "Pokémon type FIGHTING"
+  },
+  "type_fire": {
+    "defaultMessage": "Fire",
+    "description": "Pokémon type FIRE"
+  },
+  "type_flying": {
+    "defaultMessage": "Flying",
+    "description": "Pokémon type FLYING"
+  },
+  "type_ghost": {
+    "defaultMessage": "Ghost",
+    "description": "Pokémon type GHOST"
+  },
+  "type_grass": {
+    "defaultMessage": "Grass",
+    "description": "Pokémon type GRASS"
+  },
+  "type_ground": {
+    "defaultMessage": "Ground",
+    "description": "Pokémon type GROUND"
+  },
+  "type_ice": {
+    "defaultMessage": "Ice",
+    "description": "Pokémon type ICE"
+  },
+  "type_normal": {
+    "defaultMessage": "Normal",
+    "description": "Pokémon type NORMAL"
+  },
+  "type_poison": {
+    "defaultMessage": "Poison",
+    "description": "Pokémon type POISON"
+  },
+  "type_psychic": {
+    "defaultMessage": "Psychic",
+    "description": "Pokémon type PSYCHIC"
+  },
+  "type_rock": {
+    "defaultMessage": "Rock",
+    "description": "Pokémon type ROCK"
+  },
+  "type_steel": {
+    "defaultMessage": "Steel",
+    "description": "Pokémon type STEEL"
+  },
+  "type_water": {
+    "defaultMessage": "Water",
+    "description": "Pokémon type WATER"
   },
   "uyrNDD": {
     "defaultMessage": "Collection",

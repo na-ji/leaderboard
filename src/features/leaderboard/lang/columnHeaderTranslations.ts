@@ -1,7 +1,5 @@
 import { defineMessages } from 'react-intl';
 
-import { Badge } from '@/types';
-
 export const columnHeaderTranslations = defineMessages({
   trainer_id: {
     id: 'leaderboard_header.rank',
@@ -213,94 +211,94 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Rattata',
     description: 'Leaderboard rattata column header',
   },
-  [Badge.CAUGHT_NORMAL]: {
-    id: 'badge_caught_normal',
+  caught_normal: {
+    id: 'type_normal',
     defaultMessage: 'Normal',
-    description: 'Badge CAUGHT_NORMAL',
+    description: 'Pokémon type NORMAL',
   },
-  [Badge.CAUGHT_FIGHTING]: {
-    id: 'badge_caught_fighting',
+  caught_fighting: {
+    id: 'type_fighting',
     defaultMessage: 'Fighting',
-    description: 'Badge CAUGHT_FIGHTING',
+    description: 'Pokémon type FIGHTING',
   },
-  [Badge.CAUGHT_FLYING]: {
-    id: 'badge_caught_flying',
+  caught_flying: {
+    id: 'type_flying',
     defaultMessage: 'Flying',
-    description: 'Badge CAUGHT_FLYING',
+    description: 'Pokémon type FLYING',
   },
-  [Badge.CAUGHT_POISON]: {
-    id: 'badge_caught_poison',
+  caught_poison: {
+    id: 'type_poison',
     defaultMessage: 'Poison',
-    description: 'Badge CAUGHT_POISON',
+    description: 'Pokémon type POISON',
   },
-  [Badge.CAUGHT_GROUND]: {
-    id: 'badge_caught_ground',
+  caught_ground: {
+    id: 'type_ground',
     defaultMessage: 'Ground',
-    description: 'Badge CAUGHT_GROUND',
+    description: 'Pokémon type GROUND',
   },
-  [Badge.CAUGHT_ROCK]: {
-    id: 'badge_caught_rock',
+  caught_rock: {
+    id: 'type_rock',
     defaultMessage: 'Rock',
-    description: 'Badge CAUGHT_ROCK',
+    description: 'Pokémon type ROCK',
   },
-  [Badge.CAUGHT_BUG]: {
-    id: 'badge_caught_bug',
+  caught_bug: {
+    id: 'type_bug',
     defaultMessage: 'Bug',
-    description: 'Badge CAUGHT_BUG',
+    description: 'Pokémon type BUG',
   },
-  [Badge.CAUGHT_GHOST]: {
-    id: 'badge_caught_ghost',
+  caught_ghost: {
+    id: 'type_ghost',
     defaultMessage: 'Ghost',
-    description: 'Badge CAUGHT_GHOST',
+    description: 'Pokémon type GHOST',
   },
-  [Badge.CAUGHT_STEEL]: {
-    id: 'badge_caught_steel',
+  caught_steel: {
+    id: 'type_steel',
     defaultMessage: 'Steel',
-    description: 'Badge CAUGHT_STEEL',
+    description: 'Pokémon type STEEL',
   },
-  [Badge.CAUGHT_FIRE]: {
-    id: 'badge_caught_fire',
+  caught_fire: {
+    id: 'type_fire',
     defaultMessage: 'Fire',
-    description: 'Badge CAUGHT_FIRE',
+    description: 'Pokémon type FIRE',
   },
-  [Badge.CAUGHT_WATER]: {
-    id: 'badge_caught_water',
+  caught_water: {
+    id: 'type_water',
     defaultMessage: 'Water',
-    description: 'Badge CAUGHT_WATER',
+    description: 'Pokémon type WATER',
   },
-  [Badge.CAUGHT_GRASS]: {
-    id: 'badge_caught_grass',
+  caught_grass: {
+    id: 'type_grass',
     defaultMessage: 'Grass',
-    description: 'Badge CAUGHT_GRASS',
+    description: 'Pokémon type GRASS',
   },
-  [Badge.CAUGHT_ELECTRIC]: {
-    id: 'badge_caught_electric',
+  caught_electric: {
+    id: 'type_electric',
     defaultMessage: 'Electric',
-    description: 'Badge CAUGHT_ELECTRIC',
+    description: 'Pokémon type ELECTRIC',
   },
-  [Badge.CAUGHT_PSYCHIC]: {
-    id: 'badge_caught_psychic',
+  caught_psychic: {
+    id: 'type_psychic',
     defaultMessage: 'Psychic',
-    description: 'Badge CAUGHT_PSYCHIC',
+    description: 'Pokémon type PSYCHIC',
   },
-  [Badge.CAUGHT_ICE]: {
-    id: 'badge_caught_ice',
+  caught_ice: {
+    id: 'type_ice',
     defaultMessage: 'Ice',
-    description: 'Badge CAUGHT_ICE',
+    description: 'Pokémon type ICE',
   },
-  [Badge.CAUGHT_DRAGON]: {
-    id: 'badge_caught_dragon',
+  caught_dragon: {
+    id: 'type_dragon',
     defaultMessage: 'Dragon',
-    description: 'Badge CAUGHT_DRAGON',
+    description: 'Pokémon type DRAGON',
   },
-  [Badge.CAUGHT_DARK]: {
-    id: 'badge_caught_dark',
+  caught_dark: {
+    id: 'type_dark',
     defaultMessage: 'Dark',
-    description: 'Badge CAUGHT_DARK',
+    description: 'Pokémon type DARK',
   },
-  [Badge.CAUGHT_FAIRY]: {
-    id: 'badge_caught_fairy',
+  caught_fairy: {
+    id: 'type_fairy',
     defaultMessage: 'Fairy',
-    description: 'Badge CAUGHT_FAIRY',
+    description: 'Pokémon type FAIRY',
   },
 });

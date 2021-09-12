@@ -41,13 +41,13 @@ export const typeLeaderboardColumns: ColumnsType = [
   {
     field: 'caught_bug',
     flex: 1,
-    minWidth: 130,
+    minWidth: 140,
     type: 'number',
   },
   {
     field: 'caught_ghost',
     flex: 1,
-    minWidth: 130,
+    minWidth: 140,
     type: 'number',
   },
   {
@@ -101,7 +101,7 @@ export const typeLeaderboardColumns: ColumnsType = [
   {
     field: 'caught_dark',
     flex: 1,
-    minWidth: 130,
+    minWidth: 150,
     type: 'number',
   },
   {
