@@ -6,8 +6,9 @@ import useSWR from 'swr';
 import { FormattedMessage, useIntl } from 'react-intl';
 
 import { OverallLeaderboards } from '@/features/leaderboard';
-import { wrapStaticPropsWithLocale } from '@/utils/i18n';
+import { PageTitle } from '@/components/PageTitle';
 import { Trainer } from '@/types';
+import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 
 interface HomeProps {
   initialTrainers: Trainer[];
@@ -32,6 +33,9 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
         <meta key="description" name="description" content={description} />
         <link key="preload" rel="preload" href="/api/trainers" as="fetch" crossOrigin="anonymous" />
       </Head>
+      <PageTitle>
+        <FormattedMessage defaultMessage="Leaderboard" description="Index page title" />
+      </PageTitle>
       <Container maxWidth={false}>
         <Typography variant="h3" gutterBottom component="div">
           <FormattedMessage defaultMessage="Leaderboard" description="Index page title" />

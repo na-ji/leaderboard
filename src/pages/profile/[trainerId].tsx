@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 import { Profile } from '@/features/profile';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 import { Trainer } from '@/types';
+import { PageTitle } from '@/components/PageTitle';
 
 interface ProfileProps {
   initialTrainer?: Trainer;
@@ -37,6 +38,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
             <meta key="description" name="description" content={title} />
             <link key="preload" rel="preload" href={`/api/trainers/${trainerId}`} as="fetch" crossOrigin="anonymous" />
           </Head>
+          <PageTitle>{title}</PageTitle>
           <Container maxWidth={false}>
             <Profile trainer={trainer} />
           </Container>

@@ -8,6 +8,7 @@ import { SWRConfig } from 'swr';
 
 import { fetcher } from '@/utils/fetcher';
 import { Auth } from '@/features/auth';
+import { Layout } from '@/components/Layout';
 
 const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element => {
   return (
@@ -23,13 +24,15 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): J
             refreshInterval: 30000,
           }}
         >
-          {config.enableAuth ? (
-            <Auth>
+          <Layout>
+            {config.enableAuth ? (
+              <Auth>
+                <Component {...pageProps} />
+              </Auth>
+            ) : (
               <Component {...pageProps} />
-            </Auth>
-          ) : (
-            <Component {...pageProps} />
-          )}
+            )}
+          </Layout>
         </SWRConfig>
       </IntlProvider>
     </SessionProvider>
