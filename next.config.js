@@ -35,4 +35,7 @@ module.exports = {
     locales: supportedLocales,
     defaultLocale,
   },
+  env: {
+    NEXTAUTH_URL: config.applicationURL,
+  },
 };

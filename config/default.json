@@ -5,5 +5,12 @@
     "password": "@@DB_PASSWORD",
     "user": "@@DB_USER"
   },
-  "defaultLocale": "@@DEFAULT_LOCALE"
+  "defaultLocale": "@@DEFAULT_LOCALE",
+  "applicationURL": "@@APPLICATION_URL",
+  "enableAuth": false,
+  "secret": "ChangeThisToARandomString",
+  "discord": {
+    "clientId": "@@DISCORD_CLIENT_ID",
+    "clientSecret": "@@DISCORD_CLIENT_SECRET"
+  }
 }
