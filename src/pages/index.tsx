@@ -47,8 +47,8 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
 };
 
 export const getStaticProps = wrapStaticPropsWithLocale<HomeProps>(async () => {
-  const { getLeaderboard } = await import('@/features/leaderboard/api');
-  const trainers = await getLeaderboard();
+  const { getOverallLeaderboard } = await import('@/features/leaderboard/api');
+  const trainers = await getOverallLeaderboard();
 
   return {
     props: { initialTrainers: trainers },

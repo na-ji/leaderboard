@@ -68,8 +68,8 @@ export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainerI
 });
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { getLeaderboard } = await import('@/features/leaderboard/api');
-  const trainers = await getLeaderboard();
+  const { getOverallLeaderboard } = await import('@/features/leaderboard/api');
+  const trainers = await getOverallLeaderboard();
 
   return {
     paths: trainers.slice(0, 100).reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
