@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getTrainerProfile } from '@/features/profile/api';
 import { Trainer } from '@/types';
-import { isUserNotLoggedIn } from '@/utils/apiGuard';
+import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
 
 interface ApiError {
   code: number;
