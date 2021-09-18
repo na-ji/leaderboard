@@ -2,10 +2,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getOverallLeaderboard } from '@/features/leaderboard/api';
 import { Trainer } from '@/types';
+import { isUserNotLoggedIn } from '@/utils/apiGuard';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default async (req: NextApiRequest, res: NextApiResponse<Trainer[]>): Promise<void> => {
+export default async (request: NextApiRequest, response: NextApiResponse<Trainer[]>): Promise<void> => {
+  if (await isUserNotLoggedIn(request, response)) {
+    return;
+  }
+
   const trainers = await getOverallLeaderboard();
 
-  res.status(200).json(trainers);
+  response.status(200).json(trainers);
 };

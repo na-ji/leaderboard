@@ -1,10 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { getPeriodLeaderboard, PeriodLeaderboard } from '@/features/leaderboard/api';
+import { isUserNotLoggedIn } from '@/utils/apiGuard';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default async (req: NextApiRequest, res: NextApiResponse<PeriodLeaderboard>): Promise<void> => {
+export default async (request: NextApiRequest, response: NextApiResponse<PeriodLeaderboard>): Promise<void> => {
+  if (await isUserNotLoggedIn(request, response)) {
+    return;
+  }
+
   const periodLeaderboard = await getPeriodLeaderboard();
 
-  res.status(200).json(periodLeaderboard);
+  response.status(200).json(periodLeaderboard);
 };
