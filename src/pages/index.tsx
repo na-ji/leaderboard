@@ -35,9 +35,7 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
       </Head>
       <PageTitle>{title}</PageTitle>
       <Container maxWidth={false}>
-        <Typography variant="h3" gutterBottom component="div">
-          {title}
-        </Typography>
+        <Typography variant="h3">{title}</Typography>
         {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
       </Container>
     </>
