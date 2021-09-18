@@ -1,8 +1,9 @@
 {
   "database": {
-    "name": "@@DB_DATABASE_NAME",
     "host": "@@DB_HOST",
+    "name": "@@DB_DATABASE_NAME",
     "password": "@@DB_PASSWORD",
+    "port": "@@DB_PORT",
     "user": "@@DB_USER"
   },
   "defaultLocale": "@@DEFAULT_LOCALE",
