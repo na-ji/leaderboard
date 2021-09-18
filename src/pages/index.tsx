@@ -3,7 +3,7 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 import Typography from '@mui/material/Typography';
 import useSWR from 'swr';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 
 import { OverallLeaderboards } from '@/features/leaderboard';
 import { PageTitle } from '@/components/PageTitle';
@@ -21,7 +21,7 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
     description: 'Index page meta description',
   });
   const title = intl.formatMessage({
-    defaultMessage: 'Leaderboard',
+    defaultMessage: 'General leaderboard',
     description: 'Index page title',
   });
   const { data: trainers } = useSWR<Trainer[]>('/api/trainers', { fallbackData: initialTrainers });
@@ -33,12 +33,10 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
         <meta key="description" name="description" content={description} />
         <link key="preload" rel="preload" href="/api/trainers" as="fetch" crossOrigin="anonymous" />
       </Head>
-      <PageTitle>
-        <FormattedMessage defaultMessage="Leaderboard" description="Index page title" />
-      </PageTitle>
+      <PageTitle>{title}</PageTitle>
       <Container maxWidth={false}>
         <Typography variant="h3" gutterBottom component="div">
-          <FormattedMessage defaultMessage="Leaderboard" description="Index page title" />
+          {title}
         </Typography>
         {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
       </Container>

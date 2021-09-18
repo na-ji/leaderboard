@@ -7,9 +7,21 @@
     "defaultMessage": "{gblRating, number}",
     "description": "GBL rating line in the profile page"
   },
+  "7kbB5s": {
+    "defaultMessage": "Classement {period}",
+    "description": "Period leaderboard title"
+  },
   "9HzRoL": {
     "defaultMessage": "Niveau {level}",
     "description": "Level line in the profile page"
+  },
+  "9jdj/d": {
+    "defaultMessage": "Classement général",
+    "description": "Index page title"
+  },
+  "A68Z7x": {
+    "defaultMessage": "Classement du jour",
+    "description": "Day leaderboard link in drawer"
   },
   "AgaA1s": {
     "defaultMessage": "Combats",
@@ -35,9 +47,17 @@
     "defaultMessage": "Raids",
     "description": "Raids leaderboard title"
   },
+  "RnS/Qw": {
+    "defaultMessage": "Classement général",
+    "description": "General leaderboard link in drawer"
+  },
   "SKR+e5": {
     "defaultMessage": "Dernière mise à jour le {date, date, short} à {date, time, short}",
     "description": "Last updated line in the profile page"
+  },
+  "V4w7Jo": {
+    "defaultMessage": "Pas de données :(",
+    "description": "Error message when leaderboard is not available"
   },
   "X+pFuG": {
     "defaultMessage": "Arènes",
@@ -235,9 +255,9 @@
     "defaultMessage": "Profil de {name}",
     "description": "Profile page title"
   },
-  "cqiZAt": {
-    "defaultMessage": "Classement",
-    "description": "Index page title"
+  "fNPruO": {
+    "defaultMessage": "Classement de la semaine",
+    "description": "Week leaderboard link in drawer"
   },
   "jyjtCj": {
     "defaultMessage": "Général",
@@ -414,6 +434,22 @@
   "m8XKTs": {
     "defaultMessage": "PVP",
     "description": "PVP leaderboard title"
+  },
+  "period_leaderboard.last_day": {
+    "defaultMessage": "du jour",
+    "description": "Last day period"
+  },
+  "period_leaderboard.last_month": {
+    "defaultMessage": "du mois",
+    "description": "Last day period"
+  },
+  "period_leaderboard.last_week": {
+    "defaultMessage": "de la semaine",
+    "description": "Last day period"
+  },
+  "qw3fld": {
+    "defaultMessage": "Classement du mois",
+    "description": "Month leaderboard link in drawer"
   },
   "t5Ktnw": {
     "defaultMessage": "Classement Pokémon Go",

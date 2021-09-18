@@ -93,12 +93,53 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
         <Divider />
         <List>
           <Link href="/" passHref>
-            <ListItem button component="a" onClick={() => handleDrawerClose()}>
+            <ListItem button component="a" onClick={handleDrawerClose}>
               <ListItemIcon>
                 <LeaderboardIcon />
               </ListItemIcon>
               <ListItemText
-                primary={<FormattedMessage defaultMessage="Leaderboard" description="Index page title" />}
+                primary={
+                  <FormattedMessage
+                    defaultMessage="General leaderboard"
+                    description="General leaderboard link in drawer"
+                  />
+                }
+              />
+            </ListItem>
+          </Link>
+          <Link href="/leaderboard/day" passHref>
+            <ListItem button component="a" onClick={handleDrawerClose}>
+              <ListItemIcon>
+                <LeaderboardIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <FormattedMessage defaultMessage="Day leaderboard" description="Day leaderboard link in drawer" />
+                }
+              />
+            </ListItem>
+          </Link>
+          <Link href="/leaderboard/week" passHref>
+            <ListItem button component="a" onClick={handleDrawerClose}>
+              <ListItemIcon>
+                <LeaderboardIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <FormattedMessage defaultMessage="Week leaderboard" description="Week leaderboard link in drawer" />
+                }
+              />
+            </ListItem>
+          </Link>
+          <Link href="/leaderboard/month" passHref>
+            <ListItem button component="a" onClick={handleDrawerClose}>
+              <ListItemIcon>
+                <LeaderboardIcon />
+              </ListItemIcon>
+              <ListItemText
+                primary={
+                  <FormattedMessage defaultMessage="Month leaderboard" description="Month leaderboard link in drawer" />
+                }
               />
             </ListItem>
           </Link>

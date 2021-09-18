@@ -76,3 +76,11 @@ export interface Trainer {
   caught_dark?: number;
   caught_fairy?: number;
 }
+
+export interface PeriodTrainer extends Trainer {
+  date: string;
+}
+
+export interface RawPeriodTrainer extends Trainer {
+  date: Date;
+}
