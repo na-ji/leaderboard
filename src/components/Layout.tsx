@@ -13,9 +13,13 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
+import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { Avatar } from '@mui/material';
+import { config } from 'node-config-ts';
 import { FormattedMessage } from 'react-intl';
+import { signOut, useSession } from 'next-auth/react';
 import { styled, useTheme } from '@mui/material/styles';
 import { useState } from 'react';
 
@@ -46,12 +50,13 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: 'flex-end',
+  justifyContent: 'space-between',
 }));
 
 export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => {
   const theme = useTheme();
   const [open, setOpen] = useState(false);
+  const { data: session, status } = useSession();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -86,6 +91,16 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
         open={open}
       >
         <DrawerHeader>
+          {status === 'authenticated' && typeof session?.trainerName === 'string' && (
+            <div style={{ padding: 16, transition: '0.3s' }}>
+              {session?.user?.image && (
+                <Avatar sx={{ width: 60, height: 60, transition: '0.3s' }} src={session.user.image} />
+              )}
+              <Typography variant={'h6'} noWrap>
+                {session.trainerName}
+              </Typography>
+            </div>
+          )}
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
@@ -143,6 +158,14 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
               />
             </ListItem>
           </Link>
+          {config.enableAuth && (
+            <ListItem button component="a" onClick={() => signOut()}>
+              <ListItemIcon>
+                <PowerSettingsNewIcon />
+              </ListItemIcon>
+              <ListItemText primary={<FormattedMessage defaultMessage="Logout" description="Logout button" />} />
+            </ListItem>
+          )}
         </List>
       </Drawer>
       <Main>
