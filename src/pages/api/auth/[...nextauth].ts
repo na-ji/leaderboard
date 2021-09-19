@@ -4,13 +4,13 @@ import NextAuth from 'next-auth';
 import { config } from 'node-config-ts';
 import { TypeORMLegacyAdapter } from '@next-auth/typeorm-legacy-adapter';
 
-import { connectionString } from '@/database';
+import { leaderboardConnectionString } from '@/database';
 import { getTrainerName } from '@/features/auth/api';
 
 export default NextAuth({
   secret: config.secret,
   adapter: config.enableAuth
-    ? TypeORMLegacyAdapter({ type: 'mysql', url: connectionString, synchronize: true }, { entities })
+    ? TypeORMLegacyAdapter({ type: 'mysql', url: leaderboardConnectionString, synchronize: true }, { entities })
     : undefined,
   session: {
     jwt: true,

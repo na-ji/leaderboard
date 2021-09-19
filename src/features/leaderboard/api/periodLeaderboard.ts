@@ -1,4 +1,4 @@
-import { pool } from '@/database';
+import { leaderboardPool } from '@/database';
 import { PeriodTrainer, RawPeriodTrainer } from '@/types';
 import { formatDate } from '@/features/leaderboard/utils';
 
@@ -93,7 +93,7 @@ export interface PeriodLeaderboard {
 }
 
 export const getPeriodLeaderboard = async (): Promise<PeriodLeaderboard> => {
-  const [rows] = await pool.execute(periodLeaderboardQuery);
+  const [rows] = await leaderboardPool.execute(periodLeaderboardQuery);
 
   const trainers = (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
     ...row,

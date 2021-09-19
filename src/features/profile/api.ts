@@ -1,8 +1,8 @@
-import { pool } from '@/database';
+import { madPool } from '@/database';
 import { Trainer } from '@/types';
 
 export const getTrainerProfile = async (trainerId: string): Promise<Trainer | undefined> => {
-  const [rows] = await pool.execute('SELECT * FROM `cev_trainer` WHERE `trainer_id` = ? ORDER BY `xp` DESC;', [
+  const [rows] = await madPool.execute('SELECT * FROM `cev_trainer` WHERE `trainer_id` = ? ORDER BY `xp` DESC;', [
     trainerId,
   ]);
 
