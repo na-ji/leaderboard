@@ -63,6 +63,10 @@
     "defaultMessage": "Arènes",
     "description": "Gyms leaderboard title"
   },
+  "Xl2OHD": {
+    "defaultMessage": "Déconnexion",
+    "description": "Logout button"
+  },
   "b950ya": {
     "defaultMessage": "Pokédex",
     "description": "Pokédex leaderboard title"
