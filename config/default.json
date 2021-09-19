@@ -21,5 +21,6 @@
   "discord": {
     "clientId": "@@DISCORD_CLIENT_ID",
     "clientSecret": "@@DISCORD_CLIENT_SECRET"
-  }
+  },
+  "numberOfTrainerProfileToPrebuild": 30
 }

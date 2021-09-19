@@ -9,6 +9,7 @@ import { Profile } from '@/features/profile';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 import { Trainer } from '@/types';
 import { PageTitle } from '@/components/PageTitle';
+import { config } from 'node-config-ts';
 
 interface ProfileProps {
   initialTrainer?: Trainer;
@@ -72,13 +73,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const trainers = await getOverallLeaderboard();
 
   return {
-    paths: trainers.slice(0, 100).reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
-      Object.values(SupportedLocale).forEach((locale) => {
-        paths.push({ params: { trainerId: trainer.trainer_id }, locale });
-      });
+    paths: trainers
+      .slice(0, config.numberOfTrainerProfileToPrebuild ?? 30)
+      .reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
+        Object.values(SupportedLocale).forEach((locale) => {
+          paths.push({ params: { trainerId: trainer.trainer_id }, locale });
+        });
 
-      return paths;
-    }, []),
+        return paths;
+      }, []),
     fallback: true,
   };
 };
