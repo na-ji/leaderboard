@@ -1,6 +1,8 @@
-import { leaderboardPool } from '@/database';
-import { PeriodTrainer, RawPeriodTrainer } from '@/types';
+import { config } from 'node-config-ts';
+
 import { formatDate } from '@/features/leaderboard/utils';
+import { PeriodTrainer, RawPeriodTrainer } from '@/types';
+import { pool } from '@/database';
 
 const periodLeaderboardQuery = `
   SELECT trainer_history.date                                              AS date,
@@ -78,8 +80,8 @@ const periodLeaderboardQuery = `
          trainer.caught_dark         - trainer_history.caught_dark         AS caught_dark,
          trainer.caught_fairy        - trainer_history.caught_fairy        AS caught_fairy
   FROM   cev_trainer trainer
-             JOIN   trainer_data trainer_history
-                    ON     trainer.trainer_id = trainer_history.trainer_id
+  JOIN   ${config.database.leaderboardDatabase}.trainer_data trainer_history
+    ON   trainer.trainer_id = trainer_history.trainer_id
   WHERE  trainer_history.date = CURDATE() - INTERVAL 1 DAY
      OR  trainer_history.date = CURDATE() - INTERVAL 7 DAY
      OR  trainer_history.date = CURDATE() - INTERVAL 30 DAY
@@ -93,7 +95,7 @@ export interface PeriodLeaderboard {
 }
 
 export const getPeriodLeaderboard = async (): Promise<PeriodLeaderboard> => {
-  const [rows] = await leaderboardPool.execute(periodLeaderboardQuery);
+  const [rows] = await pool.execute(periodLeaderboardQuery);
 
   const trainers = (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
     ...row,

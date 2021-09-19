@@ -1,17 +1,11 @@
 {
-  "madDatabase": {
-    "host": "@@MAD_DB_HOST",
-    "name": "@@MAD_DB_DATABASE_NAME",
-    "password": "@@MAD_DB_PASSWORD",
-    "port": "@@MAD_DB_PORT",
-    "user": "@@MAD_DB_USER"
-  },
-  "leaderboardDatabase": {
-    "host": "@@LEADERBOARD_DB_HOST",
-    "name": "@@LEADERBOARD_DB_DATABASE_NAME",
-    "password": "@@LEADERBOARD_DB_PASSWORD",
-    "port": "@@LEADERBOARD_DB_PORT",
-    "user": "@@LEADERBOARD_DB_USER"
+  "database": {
+    "host": "@@DB_HOST",
+    "madDatabase": "@@DB_MAD_DATABASE_NAME",
+    "leaderboardDatabase": "@@DB_LEADERBOARD_DATABASE_NAME",
+    "password": "@@DB_PASSWORD",
+    "port": "@@DB_PORT",
+    "user": "@@DB_USER"
   },
   "defaultLocale": "@@DEFAULT_LOCALE",
   "applicationURL": "@@APPLICATION_URL",
