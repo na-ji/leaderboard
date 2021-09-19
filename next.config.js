@@ -11,6 +11,7 @@ if (supportedLocales.includes(config.defaultLocale)) {
 }
 
 console.log(`Default locale: ${defaultLocale}`);
+console.log(`Environment: ${process.env.NODE_ENV}`);
 
 /** @type {import('next').NextConfig} */
 module.exports = {
