@@ -39,4 +39,8 @@ module.exports = {
   env: {
     NEXTAUTH_URL: config.applicationURL,
   },
+  experimental: {
+    cpus: 1,
+    workerThreads: 1,
+  },
 };
