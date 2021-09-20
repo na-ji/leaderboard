@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
 import { DataGrid, frFR, GridLocaleText, GridSortModel } from '@mui/x-data-grid';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
 
@@ -44,11 +44,6 @@ export const Leaderboard = ({ trainers, columns, defaultSort }: LeaderboardProps
   }
 
   const [sortModel, setSortModel] = useState<GridSortModel>([{ field: defaultSort, sort: 'desc' }]);
-
-  useEffect(() => {
-    router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].trainer_id)}`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <ColoredTeamRowsContainer>

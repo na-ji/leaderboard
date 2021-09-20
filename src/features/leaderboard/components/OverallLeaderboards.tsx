@@ -1,6 +1,8 @@
-import { FormattedMessage } from 'react-intl';
-
 import Typography from '@mui/material/Typography';
+import { FormattedMessage } from 'react-intl';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 import {
   dexLeaderboardColumns,
   generalLeaderboardColumns,
@@ -15,6 +17,15 @@ import { Leaderboard } from '@/features/leaderboard/components/Leaderboard';
 import { Trainer } from '@/types';
 
 export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.Element => {
+  const router = useRouter();
+
+  useEffect(() => {
+    if (trainers.length > 0) {
+      void router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].trainer_id)}`);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <Typography variant="h4">
