@@ -44,6 +44,7 @@ export const Leaderboard = ({ trainers, columns, defaultSort }: LeaderboardProps
   }
 
   const [sortModel, setSortModel] = useState<GridSortModel>([{ field: defaultSort, sort: 'desc' }]);
+  const [pageSize, setPageSize] = useState<number>(10);
 
   return (
     <ColoredTeamRowsContainer>
@@ -60,8 +61,8 @@ export const Leaderboard = ({ trainers, columns, defaultSort }: LeaderboardProps
         }))}
         getRowClassName={(params) => `team-${params.row.team}`}
         getRowId={(row) => row.trainer_id}
-        hideFooter
         localeText={localeText}
+        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
         onRowClick={(params) => router.push(`/profile/${encodeURIComponent(params.row.trainer_id)}`)}
         onSortModelChange={(model) => {
           if (
@@ -73,7 +74,9 @@ export const Leaderboard = ({ trainers, columns, defaultSort }: LeaderboardProps
             setSortModel(model);
           }
         }}
+        pageSize={pageSize}
         rows={trainers}
+        rowsPerPageOptions={[10, 20, 30]}
         sortingOrder={['desc', 'asc']}
         sortModel={sortModel}
       />
