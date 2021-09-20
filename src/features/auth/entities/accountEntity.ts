@@ -51,7 +51,7 @@ export class AccountEntity {
   @Column({ type: 'varchar', nullable: true })
   oauth_token!: string | null;
 
-  @ManyToOne(() => UserEntity, (user) => user.accounts, {
+  @ManyToOne('UserEntity', 'accounts', {
     createForeignKeyConstraints: true,
   })
   user!: UserEntity;

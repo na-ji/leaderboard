@@ -24,9 +24,9 @@ export class UserEntity {
   @Column({ type: 'varchar', nullable: true })
   trainerId!: string | null;
 
-  @OneToMany(() => SessionEntity, (session) => session.userId)
+  @OneToMany('SessionEntity', 'userId')
   sessions!: SessionEntity[];
 
-  @OneToMany(() => AccountEntity, (account) => account.userId)
+  @OneToMany('AccountEntity', 'userId')
   accounts!: AccountEntity[];
 }

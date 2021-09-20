@@ -17,6 +17,6 @@ export class SessionEntity {
   @Column({ transformer: transformer.date })
   expires!: string;
 
-  @ManyToOne(() => UserEntity, (user) => user.sessions)
+  @ManyToOne('UserEntity', 'sessions')
   user!: UserEntity;
 }
