@@ -28,7 +28,9 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
     : '';
   const { trainerId } = useRouter().query;
 
-  const { data: trainer } = useSWR<Trainer>(`/api/trainers/${trainerId}`, { fallbackData: initialTrainer });
+  const { data: trainer } = useSWR<Trainer>(`/api/trainers/${encodeURIComponent(trainerId as string)}`, {
+    fallbackData: initialTrainer,
+  });
 
   return (
     <>
@@ -37,7 +39,13 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
           <Head>
             <title key="title">{title}</title>
             <meta key="description" name="description" content={title} />
-            <link key="preload" rel="preload" href={`/api/trainers/${trainerId}`} as="fetch" crossOrigin="anonymous" />
+            <link
+              key="preload"
+              rel="preload"
+              href={`/api/trainers/${encodeURIComponent(trainerId as string)}`}
+              as="fetch"
+              crossOrigin="anonymous"
+            />
           </Head>
           <PageTitle>{title}</PageTitle>
           <Container maxWidth={false}>
