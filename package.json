@@ -88,19 +88,16 @@
     "node": ">= 14"
   },
   "resolutions": {
-    "@material-ui/core": "npm:@mui/material@5.0.0-rc.0",
-    "@material-ui/styles": "npm:@mui/styles@5.0.0-rc.0",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.0.0-rc.0"
   },
   "dependencies": {
-    "@material-ui/core": "npm:@mui/material@5.0.0-rc.0",
-    "@material-ui/styles": "npm:@mui/styles@5.0.0-rc.0",
     "@mui/icons-material": "^5.0.0-rc.0",
     "@mui/material": "^5.0.0-rc.0",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.0.0-rc.0",
     "@mui/styled-engine-sc": "^5.0.0-rc.0",
-    "@mui/x-data-grid": "^4.0.0",
     "@next-auth/typeorm-legacy-adapter": "^0.1.2-next.8",
+    "ag-grid-community": "^26.0.0",
+    "ag-grid-react": "^26.0.0",
     "mysql2": "^2.3.0",
     "next": "11.1.2",
     "next-auth": "^4.0.0-beta.2",

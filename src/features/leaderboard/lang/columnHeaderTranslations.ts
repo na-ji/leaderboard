@@ -6,6 +6,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Rank',
     description: 'Leaderboard rank column header',
   },
+  rank: {
+    id: 'leaderboard_header.rank',
+    defaultMessage: 'Rank',
+    description: 'Leaderboard rank column header',
+  },
   name: {
     id: 'leaderboard_header.name',
     defaultMessage: 'Trainer',

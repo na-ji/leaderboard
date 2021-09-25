@@ -263,6 +263,34 @@
     "defaultMessage": "Classement de la semaine",
     "description": "Week leaderboard link in drawer"
   },
+  "grid.firstPage": {
+    "defaultMessage": "Première page",
+    "description": "Pagination indicator"
+  },
+  "grid.lastPage": {
+    "defaultMessage": "Dernière page",
+    "description": "Pagination indicator"
+  },
+  "grid.nextPage": {
+    "defaultMessage": "Page suivante",
+    "description": "Pagination indicator"
+  },
+  "grid.of": {
+    "defaultMessage": "sur",
+    "description": "Pagination indicator"
+  },
+  "grid.page": {
+    "defaultMessage": "Page",
+    "description": "Pagination indicator"
+  },
+  "grid.previousPage": {
+    "defaultMessage": "Page précédente",
+    "description": "Pagination indicator"
+  },
+  "grid.to": {
+    "defaultMessage": "à",
+    "description": "Pagination indicator"
+  },
   "jyjtCj": {
     "defaultMessage": "Général",
     "description": "General leaderboard title"

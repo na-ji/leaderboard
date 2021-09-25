@@ -1,26 +1,17 @@
-import { GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+import type { ValueGetterParams } from 'ag-grid-community/dist/lib/entities/colDef';
 
 import { Trainer } from '@/types';
 
-export type ColumnsType = Array<
-  GridColDef & {
-    field: keyof Trainer | 'total_raids';
-  }
->;
+export type ColumnsType = Array<{
+  field: keyof Trainer | 'total_raids';
+  minWidth?: number;
+  type?: 'number';
+  valueGetter?: ({ data }: ValueGetterParams) => number | string;
+}>;
 
 export const commonColumns: ColumnsType = [
   {
-    field: 'trainer_id',
-    width: 90,
-    sortable: false,
-    type: 'number',
-    valueGetter: (params: GridValueGetterParams): number => {
-      return params.api.getRowIndex(params.id) + 1;
-    },
-  },
-  {
     field: 'name',
-    flex: 1,
     minWidth: 150,
   },
 ];
