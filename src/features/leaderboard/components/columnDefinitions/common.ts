@@ -1,4 +1,4 @@
-import type { ValueGetterParams } from 'ag-grid-community/dist/lib/entities/colDef';
+import type { ValueGetterParams } from '@ag-grid-community/core';
 
 import { Trainer } from '@/types';
 

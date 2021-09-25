@@ -1,9 +1,10 @@
-import 'ag-grid-community/dist/styles/ag-grid.css';
-import 'ag-grid-community/dist/styles/ag-theme-material.css';
+import '@ag-grid-community/core/dist/styles/ag-grid.css';
+import '@ag-grid-community/core/dist/styles/ag-theme-material.css';
 import Box from '@mui/material/Box';
 import styled from 'styled-components';
-import type { AgGridEvent } from 'ag-grid-community/dist/lib/events';
-import { AgGridColumn, AgGridReact } from 'ag-grid-react';
+import type { AgGridEvent } from '@ag-grid-community/core';
+import { AgGridColumn, AgGridReact } from '@ag-grid-community/react';
+import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 import { memo } from 'react';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
@@ -82,6 +83,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
             ? intl.formatMessage(agGridTranslations[key as keyof typeof agGridTranslations])
             : defaultValue;
         }}
+        modules={[ClientSideRowModelModule]}
         onGridReady={autoSizeColumns}
         onPaginationChanged={autoSizeColumns}
         onRowClicked={({ data }) => router.push(`/profile/${encodeURIComponent(data.trainer_id)}`)}

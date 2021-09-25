@@ -1,4 +1,4 @@
-import { ValueGetterParams } from 'ag-grid-community/dist/lib/entities/colDef';
+import type { ValueGetterParams } from '@ag-grid-community/core';
 
 import { ColumnsType, commonColumns } from '@/features/leaderboard/components/columnDefinitions/common';
 
