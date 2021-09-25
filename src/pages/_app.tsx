@@ -21,7 +21,7 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): J
         <SWRConfig
           value={{
             fetcher,
-            refreshInterval: 30000,
+            refreshInterval: 30 * 60 * 1000,
           }}
         >
           <Layout>
