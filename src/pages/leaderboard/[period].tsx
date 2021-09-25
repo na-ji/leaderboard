@@ -10,9 +10,10 @@ import { OverallLeaderboards } from '@/features/leaderboard';
 import { PageTitle } from '@/components/PageTitle';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 import type { PeriodLeaderboard } from '@/features/leaderboard/api';
+import { PeriodTrainer } from '@/types';
 
 interface PeriodLeaderboardProps {
-  initialPeriodLeaderboard?: PeriodLeaderboard;
+  initialTrainers?: PeriodTrainer[];
   period: keyof PeriodLeaderboard;
 }
 
@@ -34,7 +35,7 @@ const periodTranslations = defineMessages({
   },
 });
 
-const PeriodLeaderboardPage: NextPage<PeriodLeaderboardProps> = ({ initialPeriodLeaderboard, period }) => {
+const PeriodLeaderboardPage: NextPage<PeriodLeaderboardProps> = ({ initialTrainers, period }) => {
   const intl = useIntl();
   const description = intl.formatMessage({
     defaultMessage: 'Pokémon Go Leaderboard',
@@ -49,17 +50,22 @@ const PeriodLeaderboardPage: NextPage<PeriodLeaderboardProps> = ({ initialPeriod
       period: intl.formatMessage(periodTranslations[period]),
     },
   );
-  const { data: periodLeaderboard } = useSWR<PeriodLeaderboard>('/api/period-leaderboard', {
-    fallbackData: initialPeriodLeaderboard,
+  const { data: trainers } = useSWR<PeriodTrainer[]>(`/api/period-leaderboard/${period}`, {
+    fallbackData: initialTrainers,
   });
-  const trainers = periodLeaderboard?.[period];
 
   return (
     <>
       <Head>
         <title key="title">{title}</title>
         <meta key="description" name="description" content={description} />
-        <link key="preload" rel="preload" href="/api/period-leaderboard" as="fetch" crossOrigin="anonymous" />
+        <link
+          key="preload"
+          rel="preload"
+          href={`/api/period-leaderboard/${period}`}
+          as="fetch"
+          crossOrigin="anonymous"
+        />
       </Head>
       <PageTitle>{title}</PageTitle>
       <Container maxWidth={false}>
@@ -92,11 +98,12 @@ export const getStaticProps = wrapStaticPropsWithLocale<PeriodLeaderboardProps, 
 
     const { getPeriodLeaderboard } = await import('@/features/leaderboard/api');
     const periodLeaderboard = await getPeriodLeaderboard();
+    const period = Paths[params.period];
 
     return {
       props: {
-        initialPeriodLeaderboard: periodLeaderboard,
-        period: Paths[params.period],
+        initialTrainers: periodLeaderboard[period] ?? [],
+        period: period,
       },
       // rebuild at most every 30 minutes
       revalidate: 1800,
