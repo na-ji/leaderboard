@@ -6,7 +6,7 @@
     "build": "npm run i18n:compile && next build && npm run build:server",
     "build:server": "tsc --project tsconfig.server.json",
     "commit": "git-cz",
-    "dev": "ts-node --project tsconfig.server.json server/index.ts",
+    "dev": "cross-env NODE_ENV=development ts-node --project tsconfig.server.json server/index.ts",
     "i18n:compile": "formatjs compile-folder --ast src/i18n/lang src/i18n/compiled-lang",
     "i18n:extract": "formatjs extract 'src/**/*.{js,ts,tsx}' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file src/i18n/lang/en.json",
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
