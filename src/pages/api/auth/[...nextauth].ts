@@ -6,6 +6,7 @@ import { TypeORMLegacyAdapter } from '@next-auth/typeorm-legacy-adapter';
 import * as entities from '@/features/auth/entities';
 import { getTrainerName } from '@/features/auth/api';
 import { leaderboardConnectionString } from '@/database';
+import { userHasAccess } from '@/features/auth/api/discord';
 
 export default NextAuth({
   secret: config.secret,
@@ -19,17 +20,21 @@ export default NextAuth({
     DiscordProvider({
       clientId: config.discord.clientId,
       clientSecret: config.discord.clientSecret,
+      authorization: 'https://discord.com/api/oauth2/authorize?scope=identify+email+guilds',
     }),
   ],
   callbacks: {
-    async signIn() {
-      // TODO: check guild/server
-      return true;
+    async signIn({ account }) {
+      return userHasAccess(account.access_token, account.providerAccountId);
     },
-    async jwt({ token, user }) {
+    async jwt({ token, user, profile }) {
       if (user?.trainerId) {
         token.trainerId = user.trainerId;
         token.trainerName = await getTrainerName(`${token.trainerId}`);
+      }
+
+      if (profile?.id) {
+        token.discordId = profile.id;
       }
 
       return token;
@@ -38,6 +43,7 @@ export default NextAuth({
       if (token.trainerId) {
         session.trainerId = token.trainerId;
         session.trainerName = token.trainerName;
+        session.discordId = token.discordId;
       }
 
       return session;

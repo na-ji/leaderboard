@@ -12,7 +12,7 @@ export const Auth = ({ children }: { children: JSX.Element }): JSX.Element => {
     }
 
     if (!isUser) {
-      signIn();
+      void signIn('discord');
     }
   }, [isUser, loading]);
 

@@ -15,7 +15,10 @@
   "trainerCode": "XXXX XXXX XXXX",
   "discord": {
     "clientId": "@@DISCORD_CLIENT_ID",
-    "clientSecret": "@@DISCORD_CLIENT_SECRET"
+    "clientSecret": "@@DISCORD_CLIENT_SECRET",
+    "guildId": "@@DISCORD_GUILD_ID",
+    "botToken": "@@DISCORD_BOT_TOKEN",
+    "roleId": "@@DISCORD_ROLE_ID"
   },
   "numberOfTrainerProfileToPrebuild": 30
 }

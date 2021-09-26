@@ -8,10 +8,10 @@ Simple app displaying a leaderboard of Pokémon Go trainers.
 - [x] Day, week and month leaderboards
 - [x] Basic profile page
 - [x] Basic discord authentication
+- [x] Limit auth to member of guild
+- [x] Limit auth to guild member having role
 - [ ] Advanced profile page, with charts
 - [ ] Registration flow where the player has to tell his trainer name
-- [ ] Limit auth to member of guild
-- [ ] Limit auth to guild member having role
 
 ### Requirements
 
@@ -45,5 +45,5 @@ npm run start
 | enableAuth                       | false   | Whether the site is public or not                                                                                                                                                                                                 |
 | secret                           | -       | Put a random string, needed to secure the authentication                                                                                                                                                                          |
 | trainerCode                      | -       | The trainer code of the bot                                                                                                                                                                                                       |
-| discord                          | -       | Discord Client ID and Client Secret to run the authentication. Mandatory if auth is enabled                                                                                                                                       |
-| numberOfTrainerProfileToPrebuild | 50      | The pages are statically rendered, but for the trainer profile to reduce the load you can pre-render them.                                                                                                                        |
+| numberOfTrainerProfileToPrebuild | 50      | The pages are statically rendered on demand, but for the trainer profile to reduce the load you can pre-render them.                                                                                                              |
+| discord                          | -       | Discord authentication options. If you want to only check for guild membership, then fill `clientId`, `clientSecret` and `guildId`. If you also want to check role, you need to create a bot and fill `botToken` and `roleId`     |
