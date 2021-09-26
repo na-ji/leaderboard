@@ -5,6 +5,7 @@ import { createServer } from 'http';
 import { job } from 'cron';
 
 import { createTrainerHistoryTable, updateTrainerHistory } from './database';
+import { logger } from './logger';
 
 const isDev = process.env.NODE_ENV !== 'production';
 const nextApp = next({ dev: isDev });
@@ -23,10 +24,10 @@ async function bootstrap() {
     createServer((request, response) => {
       nextHandler(request, response);
     }).listen(port, () => {
-      console.log(`> Ready on http://localhost:${port}`);
+      logger.info(`> Ready on http://localhost:${port}`);
     });
   } catch (err) {
-    console.error(err);
+    logger.fatal(err);
   }
 }
 

@@ -15,7 +15,7 @@
     "prebuild": "node-config-ts",
     "prepare": "husky install",
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
-    "start": "cross-env NODE_ENV=production node dist/index.js"
+    "start": "cross-env NODE_ENV=production node dist/server/index.js"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -112,6 +112,7 @@
     "sharp": "^0.29.1",
     "styled-components": "^5.3.1",
     "swr": "^1.0.0",
+    "tslog": "^3.2.2",
     "typeorm": "^0.2.37"
   },
   "devDependencies": {

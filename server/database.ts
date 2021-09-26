@@ -1,4 +1,5 @@
 import { pool } from '../src/database';
+import { logger } from './logger';
 
 const schemaCreationQuery = `
     CREATE TABLE IF NOT EXISTS \`pogo_leaderboard_trainer_history\`
@@ -94,11 +95,11 @@ const schemaUpdateQuery = `
 `;
 
 export const createTrainerHistoryTable = async (): Promise<void> => {
-  console.log('## Creating leaderboard table if needed');
+  logger.info('Creating leaderboard table if needed');
   await pool.execute(schemaCreationQuery);
 };
 
 export const updateTrainerHistory = async (): Promise<void> => {
-  console.log('## Updating trainer data');
+  logger.info('Updating trainer data');
   await pool.execute(schemaUpdateQuery);
 };
