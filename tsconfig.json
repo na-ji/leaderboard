@@ -14,13 +14,14 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "node-config-ts": ["./config/Config.d.ts"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es5"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "config/**/*", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "server/**/*.ts"]
 }

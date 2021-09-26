@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "isolatedModules": false,
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "noEmit": false,
+    "outDir": "dist",
+    "target": "es2020"
+  },
+  "include": ["config/**/*", "server/**/*.ts"],
+  "exclude": ["node_modules"]
+}

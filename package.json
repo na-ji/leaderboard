@@ -3,9 +3,10 @@
   "version": "3.4.0",
   "private": true,
   "scripts": {
-    "build": "npm run i18n:compile && next build",
+    "build": "npm run i18n:compile && next build && npm run build:server",
+    "build:server": "tsc --project tsconfig.server.json",
     "commit": "git-cz",
-    "dev": "next dev",
+    "dev": "ts-node --project tsconfig.server.json server/index.ts",
     "i18n:compile": "formatjs compile-folder --ast src/i18n/lang src/i18n/compiled-lang",
     "i18n:extract": "formatjs extract 'src/**/*.{js,ts,tsx}' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file src/i18n/lang/en.json",
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
@@ -14,7 +15,7 @@
     "prebuild": "node-config-ts",
     "prepare": "husky install",
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
-    "start": "next start"
+    "start": "cross-env NODE_ENV=production node dist/index.js"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -129,6 +130,7 @@
     "babel-plugin-styled-components": "^1.13.2",
     "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
     "cz-conventional-commit": "^1.0.6",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
@@ -138,6 +140,7 @@
     "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "semantic-release": "^17.4.7",
+    "ts-node": "^10.2.1",
     "typescript": "4.4.2",
     "webpack-stats-plugin": "^1.0.3"
   }

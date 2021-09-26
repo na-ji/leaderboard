@@ -1,4 +1,5 @@
 {
+  "port": 3000,
   "database": {
     "host": "@@DB_HOST",
     "madDatabase": "@@DB_MAD_DATABASE_NAME",
