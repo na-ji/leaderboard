@@ -431,6 +431,10 @@
     "defaultMessage": "Pokéstops",
     "description": "Leaderboard Pokéstops spun column header"
   },
+  "leaderboard_header.total_dex": {
+    "defaultMessage": "Total",
+    "description": "Leaderboard total pokedex column header"
+  },
   "leaderboard_header.total_raids": {
     "defaultMessage": "Total",
     "description": "Leaderboard total raids column header"

@@ -66,6 +66,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Trades',
     description: 'Leaderboard evolved column header',
   },
+  total_dex: {
+    id: 'leaderboard_header.total_dex',
+    defaultMessage: 'Total',
+    description: 'Leaderboard total pokedex column header',
+  },
   dex_gen1: {
     id: 'leaderboard_header.dex_gen1',
     defaultMessage: 'Gen 1',

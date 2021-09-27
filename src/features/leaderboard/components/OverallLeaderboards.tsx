@@ -89,7 +89,7 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
         <Typography variant="h5">
           <FormattedMessage defaultMessage="Pokédex" description="Pokédex leaderboard title" />
         </Typography>
-        <Leaderboard trainers={trainers} columns={dexLeaderboardColumns} defaultSort="dex_gen1" />
+        <Leaderboard trainers={trainers} columns={dexLeaderboardColumns} defaultSort="total_dex" />
         <Typography variant="h5">
           <FormattedMessage defaultMessage="Specific" description="Specific leaderboard title" />
         </Typography>
