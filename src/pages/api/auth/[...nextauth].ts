@@ -24,8 +24,12 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async signIn({ account }) {
-      return userHasAccess(account.access_token, account.providerAccountId);
+    async signIn({ account, profile }) {
+      return userHasAccess(
+        `${profile.username}#${profile.discriminator}`,
+        account.access_token,
+        account.providerAccountId,
+      );
     },
     async jwt({ token, user, profile }) {
       if (user?.trainerId) {
