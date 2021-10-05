@@ -59,7 +59,7 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           alias-domains: |
-            {{BRANCH}}.pogo-leaderboard.vercel.app
+            {{BRANCH}}-pogo-leaderboard.vercel.app
       - uses: amondnet/vercel-action@v20
         if: ${{ github.event_name == 'pull_request' }}
         with:
@@ -68,4 +68,4 @@ jobs:
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           alias-domains: |
-            pr-{{PR_NUMBER}}.pogo-leaderboard.vercel.app
+            pr-{{PR_NUMBER}}-pogo-leaderboard.vercel.app
