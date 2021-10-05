@@ -50,3 +50,22 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
         run: npx semantic-release
+      - uses: amondnet/vercel-action@v20
+        if: ${{ github.event_name == 'push' }}
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          alias-domains: |
+            {{BRANCH}}.pogo-leaderboard.vercel.app
+      - uses: amondnet/vercel-action@v20
+        if: ${{ github.event_name == 'pull_request' }}
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          alias-domains: |
+            pr-{{PR_NUMBER}}.pogo-leaderboard.vercel.app
