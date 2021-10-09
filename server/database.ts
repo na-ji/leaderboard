@@ -1,8 +1,10 @@
+import { config } from 'node-config-ts';
+
 import { pool } from '../src/database';
 import { logger } from './logger';
 
 const schemaCreationQuery = `
-    CREATE TABLE IF NOT EXISTS \`pogo_leaderboard_trainer_history\`
+    CREATE TABLE IF NOT EXISTS ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
     (
         \`date\`                date                                    NOT NULL DEFAULT curdate(),
         \`RPL\`                 smallint(6)                             NOT NULL,
@@ -88,7 +90,7 @@ const schemaCreationQuery = `
 
 const schemaUpdateQuery = `
     INSERT ignore
-    INTO   pogo_leaderboard_trainer_history (date, rpl, NAME, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, trainer_id, gbl_rank, gbl_rating, special_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, 7_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy)
+    INTO   ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history (date, rpl, NAME, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, trainer_id, gbl_rank, gbl_rating, special_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, 7_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy)
     SELECT curdate(), 60, NAME, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, trainer_id, gbl_rank, gbl_rating, special_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, 7_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy
     FROM   cev_trainer
     WHERE  trainer_id IS NOT NULL;
