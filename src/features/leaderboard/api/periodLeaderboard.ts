@@ -82,9 +82,15 @@ const periodLeaderboardQuery = `
   FROM   cev_trainer trainer
   JOIN   ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history trainer_history
     ON   trainer.trainer_id = trainer_history.trainer_id
-  WHERE  trainer_history.date = CURDATE() - INTERVAL 1 DAY
-     OR  trainer_history.date = CURDATE() - INTERVAL 7 DAY
-     OR  trainer_history.date = CURDATE() - INTERVAL 30 DAY
+   AND   trainer_history.date =
+         (
+                SELECT   sub_trainer_history.date
+                FROM     ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history sub_trainer_history
+                WHERE    sub_trainer_history.date >= curdate() - INTERVAL __INTERVAL__ DAY
+                AND      sub_trainer_history.trainer_id = trainer.trainer_id
+                ORDER BY sub_trainer_history.date
+                LIMIT 1
+         )
   ORDER BY date DESC, trainer_id;
 `;
 
@@ -94,30 +100,29 @@ export interface PeriodLeaderboard {
   lastMonth?: PeriodTrainer[];
 }
 
-export const getPeriodLeaderboard = async (): Promise<PeriodLeaderboard> => {
-  const [rows] = await pool.execute(periodLeaderboardQuery);
+const intervals = {
+  lastDay: 1,
+  lastWeek: 7,
+  lastMonth: 30,
+};
 
-  const trainers = (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
+const executePeriodQuery = async (interval: number): Promise<PeriodTrainer[]> => {
+  const [rows] = await pool.execute(periodLeaderboardQuery.replace('__INTERVAL__', `${interval}`));
+
+  return (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
     ...row,
     date: formatDate(row.date),
     last_seen: (row.last_seen as unknown as Date).getTime(),
   }));
+};
 
-  const uniqDate = Array.from(new Set(trainers.map((trainer) => trainer.date)));
-  const now = new Date(formatDate(new Date()));
+export const getPeriodLeaderboard = async (): Promise<PeriodLeaderboard> => {
+  const leaderboard: PeriodLeaderboard = {};
 
-  return uniqDate.reduce<PeriodLeaderboard>((leaderboard, date) => {
-    const numberOfDays = (now.getTime() - new Date(date).getTime()) / (1000 * 3600 * 24);
-    const filteredTrainers = trainers.filter((trainer) => trainer.date === date);
+  for (const key in intervals) {
+    const interval = key as keyof typeof intervals;
+    leaderboard[interval] = await executePeriodQuery(intervals[interval]);
+  }
 
-    if (numberOfDays === 1) {
-      leaderboard.lastDay = filteredTrainers;
-    } else if (numberOfDays === 7) {
-      leaderboard.lastWeek = filteredTrainers;
-    } else if (numberOfDays === 30) {
-      leaderboard.lastMonth = filteredTrainers;
-    }
-
-    return leaderboard;
-  }, {});
+  return leaderboard;
 };
