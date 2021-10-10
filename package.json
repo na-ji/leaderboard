@@ -89,21 +89,22 @@
     "node": ">= 14"
   },
   "resolutions": {
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.0.0-rc.0"
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.0.3"
   },
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^26.1.0",
     "@ag-grid-community/core": "^26.1.0",
     "@ag-grid-community/react": "^26.1.0",
-    "@mui/icons-material": "^5.0.0-rc.0",
-    "@mui/material": "^5.0.0-rc.0",
-    "@mui/styled-engine-sc": "^5.0.0-rc.0",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/material": "^5.0.3",
+    "@mui/styled-engine-sc": "^5.0.3",
     "@next-auth/typeorm-legacy-adapter": "^0.1.2-next.8",
     "cron": "^1.8.2",
     "discord-api-types": "^0.23.1",
     "mysql2": "^2.3.0",
     "next": "11.1.2",
     "next-auth": "^4.0.0-beta.2",
+    "next-transpile-modules": "^8.0.0",
     "node-config-ts": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
