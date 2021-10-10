@@ -15,7 +15,8 @@
     "noEmit": true,
     "paths": {
       "@/*": ["src/*"],
-      "node-config-ts": ["./config/Config.d.ts"]
+      "node-config-ts": ["./config/Config.d.ts"],
+      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

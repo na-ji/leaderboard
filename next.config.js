@@ -2,6 +2,7 @@
 const { config } = require('node-config-ts');
 const { NodeConfigTSPlugin } = require('node-config-ts/webpack');
 const { StatsWriterPlugin } = require('webpack-stats-plugin');
+const path = require('path');
 
 const supportedLocales = ['en', 'fr'];
 let defaultLocale = 'en';
@@ -29,6 +30,8 @@ module.exports = {
         },
       }),
     );
+
+    config.resolve.alias['@mui/styled-engine'] = path.join(__dirname, 'node_modules', '@mui/styled-engine-sc');
 
     return NodeConfigTSPlugin(config);
   },
