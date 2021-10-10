@@ -22,6 +22,8 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): J
           value={{
             fetcher,
             refreshInterval: 30 * 60 * 1000,
+            revalidateOnMount: true,
+            revalidateIfStale: true,
           }}
         >
           <Layout>

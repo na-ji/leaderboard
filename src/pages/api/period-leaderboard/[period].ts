@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getPeriodLeaderboard, PeriodLeaderboard } from '@/features/leaderboard/api';
 import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
 import { PeriodTrainer } from '@/types';
+import { setCacheControlHeader } from '@/utils/apiCacheControl';
 
 interface ApiError {
   code: number;
@@ -17,6 +18,7 @@ export default async (
   if (await isUserNotLoggedIn(request, response)) {
     return;
   }
+  setCacheControlHeader(response);
 
   const { period } = request.query;
 

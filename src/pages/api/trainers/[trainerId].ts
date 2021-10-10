@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getTrainerProfile } from '@/features/profile/api';
 import { Trainer } from '@/types';
 import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
+import { setCacheControlHeader } from '@/utils/apiCacheControl';
 
 interface ApiError {
   code: number;
@@ -14,6 +15,7 @@ export default async (request: NextApiRequest, response: NextApiResponse<Trainer
   if (await isUserNotLoggedIn(request, response)) {
     return;
   }
+  setCacheControlHeader(response);
 
   const { trainerId } = request.query;
 

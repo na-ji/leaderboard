@@ -10,6 +10,7 @@ export const isUserNotLoggedIn = async (request: NextApiRequest, response: NextA
   const session = await getSession({ req: request });
 
   if (!session) {
+    response.setHeader('Cache-Control', 'no-store, max-age=0');
     response.status(401).send('please log in :/');
     response.end();
 
