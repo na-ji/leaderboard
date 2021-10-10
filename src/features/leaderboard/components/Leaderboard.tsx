@@ -22,7 +22,7 @@ export interface LeaderboardProps {
 }
 
 const ColoredTeamRowsContainer = styled(Box)`
-  height: 545px;
+  height: 593px;
   width: 100%;
 
   .ag-row:hover {
