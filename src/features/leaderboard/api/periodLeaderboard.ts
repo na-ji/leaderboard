@@ -100,13 +100,14 @@ export interface PeriodLeaderboard {
   lastMonth?: PeriodTrainer[];
 }
 
-const intervals = {
+export const periodIntervals = {
   lastDay: 1,
   lastWeek: 7,
   lastMonth: 30,
 };
 
-const executePeriodQuery = async (interval: number): Promise<PeriodTrainer[]> => {
+export const getPeriodTrainers = async (period: keyof PeriodLeaderboard): Promise<PeriodTrainer[]> => {
+  const interval = periodIntervals[period];
   const [rows] = await pool.execute(periodLeaderboardQuery.replace('__INTERVAL__', `${interval}`));
 
   return (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
@@ -119,9 +120,9 @@ const executePeriodQuery = async (interval: number): Promise<PeriodTrainer[]> =>
 export const getPeriodLeaderboard = async (): Promise<PeriodLeaderboard> => {
   const leaderboard: PeriodLeaderboard = {};
 
-  for (const key in intervals) {
-    const interval = key as keyof typeof intervals;
-    leaderboard[interval] = await executePeriodQuery(intervals[interval]);
+  for (const key in periodIntervals) {
+    const period = key as keyof typeof periodIntervals;
+    leaderboard[period] = await getPeriodTrainers(period);
   }
 
   return leaderboard;

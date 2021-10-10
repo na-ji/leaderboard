@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { getPeriodLeaderboard, PeriodLeaderboard } from '@/features/leaderboard/api';
+import { getPeriodTrainers, periodIntervals, PeriodLeaderboard } from '@/features/leaderboard/api';
 import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
 import { PeriodTrainer } from '@/types';
 import { setCacheControlHeader } from '@/utils/apiCacheControl';
@@ -22,17 +22,12 @@ export default async (
 
   const { period } = request.query;
 
-  if (typeof period !== 'string') {
+  if (typeof period !== 'string' || !(period in periodIntervals)) {
     response.status(400).json({ code: 400, message: 'bad request' });
     return;
   }
 
-  const periodLeaderboard = await getPeriodLeaderboard();
+  const periodTrainers = await getPeriodTrainers(period as keyof PeriodLeaderboard);
 
-  if (!(period in periodLeaderboard)) {
-    response.status(400).json({ code: 400, message: 'bad request' });
-    return;
-  }
-
-  response.status(200).json(periodLeaderboard[period as keyof PeriodLeaderboard] ?? []);
+  response.status(200).json(periodTrainers ?? []);
 };
