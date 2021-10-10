@@ -99,7 +99,7 @@
     "@mui/material": "^5.0.0-rc.0",
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.0.0-rc.0",
     "@mui/styled-engine-sc": "^5.0.0-rc.0",
-    "@next-auth/typeorm-legacy-adapter": "^0.1.2-next.8",
+    "@next-auth/typeorm-legacy-adapter": "^0.1.4",
     "cron": "^1.8.2",
     "discord-api-types": "^0.23.1",
     "mysql2": "^2.3.0",
