@@ -13,9 +13,16 @@ const nextHandler = nextApp.getRequestHandler();
 const port = config.port || parseInt(process.env.PORT ?? '3000');
 
 // update leaderboard every day at 23:58
-job('0 58 23 * * *', () => {
-  void updateTrainerHistory();
-}).start();
+logger.info(`Current timezone used for the cron: "${Intl.DateTimeFormat().resolvedOptions().timeZone}"`);
+job(
+  '0 58 23 * * *',
+  () => {
+    void updateTrainerHistory();
+  },
+  null,
+  true,
+  Intl.DateTimeFormat().resolvedOptions().timeZone,
+);
 
 async function bootstrap() {
   try {
