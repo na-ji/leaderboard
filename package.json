@@ -116,7 +116,7 @@
     "typeorm": "^0.2.37"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
+    "@babel/core": "^7.15.8",
     "@babel/plugin-proposal-decorators": "^7.15.4",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
