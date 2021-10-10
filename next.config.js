@@ -17,6 +17,7 @@ console.log(`Environment: ${process.env.NODE_ENV}`);
 /** @type {import('next').NextConfig} */
 module.exports = {
   reactStrictMode: true,
+  poweredByHeader: false,
   webpack: (config) => {
     config.plugins.push(
       new StatsWriterPlugin({
