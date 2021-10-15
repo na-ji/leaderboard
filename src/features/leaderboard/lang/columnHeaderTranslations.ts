@@ -231,6 +231,56 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Rattata',
     description: 'Leaderboard rattata column header',
   },
+  trade_km: {
+    id: 'leaderboard_header.trade_km',
+    defaultMessage: 'Trade KM',
+    description: 'Leaderboard Trade KM column header',
+  },
+  collections_done: {
+    id: 'leaderboard_header.collections_done',
+    defaultMessage: 'Collections',
+    description: 'Leaderboard collections column header',
+  },
+  best_buddies: {
+    id: 'leaderboard_header.best_buddies',
+    defaultMessage: 'Best buddies',
+    description: 'Leaderboard best buddies column header',
+  },
+  mega_evos: {
+    id: 'leaderboard_header.mega_evos',
+    defaultMessage: 'Mega evolutions',
+    description: 'Leaderboard Mega evolutions column header',
+  },
+  unique_mega_evos: {
+    id: 'leaderboard_header.unique_mega_evos',
+    defaultMessage: 'Unique mega',
+    description: 'Leaderboard unique Mega evolutions column header',
+  },
+  '7_day_streaks': {
+    id: 'leaderboard_header.7_day_streaks',
+    defaultMessage: '7 day streaks',
+    description: 'Leaderboard 7 day streaks column header',
+  },
+  caught_at_lure: {
+    id: 'leaderboard_header.caught_at_lure',
+    defaultMessage: 'Caught at lure',
+    description: 'Leaderboard caught at lure column header',
+  },
+  wayfarer_agreements: {
+    id: 'leaderboard_header.wayfarer_agreements',
+    defaultMessage: 'Wayfarer',
+    description: 'Leaderboard wayfarer agreements column header',
+  },
+  trainers_referred: {
+    id: 'leaderboard_header.trainers_referred',
+    defaultMessage: 'Trainers referred',
+    description: 'Leaderboard Trainers referred column header',
+  },
+  photobombs: {
+    id: 'leaderboard_header.photobombs',
+    defaultMessage: 'Photobombs',
+    description: 'Leaderboard Photobombs column header',
+  },
   caught_normal: {
     id: 'type_normal',
     defaultMessage: 'Normal',

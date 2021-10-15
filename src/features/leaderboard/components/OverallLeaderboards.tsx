@@ -10,6 +10,7 @@ import {
   dexLeaderboardColumns,
   generalLeaderboardColumns,
   gymLeaderboardColumns,
+  miscellaneousLeaderboardColumns,
   pvpLeaderboardColumns,
   raidLeaderboardColumns,
   rocketLeaderboardColumns,
@@ -66,6 +67,10 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
           <FormattedMessage defaultMessage="General" description="General leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={generalLeaderboardColumns} defaultSort="xp" />
+        <Typography variant="h5">
+          <FormattedMessage defaultMessage="Miscellaneous" description="Miscellaneous leaderboard title" />
+        </Typography>
+        <Leaderboard trainers={trainers} columns={miscellaneousLeaderboardColumns} defaultSort="trade_km" />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Typography variant="h5">
@@ -97,7 +102,7 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
         <Typography variant="h5">
           <FormattedMessage defaultMessage="Types" description="Types leaderboard title" />
         </Typography>
-        <Leaderboard trainers={trainers} columns={typeLeaderboardColumns} defaultSort="caught_normal" />{' '}
+        <Leaderboard trainers={trainers} columns={typeLeaderboardColumns} defaultSort="caught_normal" />
       </TabPanel>
     </Box>
   );

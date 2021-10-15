@@ -47,6 +47,10 @@
     "defaultMessage": "Raids",
     "description": "Raids leaderboard title"
   },
+  "R3FVKv": {
+    "defaultMessage": "Miscellaneous",
+    "description": "Miscellaneous leaderboard title"
+  },
   "RnS/Qw": {
     "defaultMessage": "General leaderboard",
     "description": "General leaderboard link in drawer"
@@ -295,6 +299,10 @@
     "defaultMessage": "General",
     "description": "General leaderboard title"
   },
+  "leaderboard_header.7_day_streaks": {
+    "defaultMessage": "7 day streaks",
+    "description": "Leaderboard 7 day streaks column header"
+  },
   "leaderboard_header.battles_won": {
     "defaultMessage": "Battles won",
     "description": "Leaderboard battles won column header"
@@ -303,13 +311,25 @@
     "defaultMessage": "Berries",
     "description": "Leaderboard berries column header"
   },
+  "leaderboard_header.best_buddies": {
+    "defaultMessage": "Best buddies",
+    "description": "Leaderboard best buddies column header"
+  },
   "leaderboard_header.best_friends": {
     "defaultMessage": "Best friends",
     "description": "Leaderboard best friends column header"
   },
+  "leaderboard_header.caught_at_lure": {
+    "defaultMessage": "Caught at lure",
+    "description": "Leaderboard caught at lure column header"
+  },
   "leaderboard_header.caught_pokemon": {
     "defaultMessage": "Caught",
     "description": "Leaderboard caught pokemon column header"
+  },
+  "leaderboard_header.collections_done": {
+    "defaultMessage": "Collections",
+    "description": "Leaderboard collections column header"
   },
   "leaderboard_header.dex_gen1": {
     "defaultMessage": "Gen 1",
@@ -399,6 +419,10 @@
     "defaultMessage": "Level",
     "description": "Leaderboard level column header"
   },
+  "leaderboard_header.mega_evos": {
+    "defaultMessage": "Mega evolutions",
+    "description": "Leaderboard Mega evolutions column header"
+  },
   "leaderboard_header.name": {
     "defaultMessage": "Trainer",
     "description": "Leaderboard trainer column header"
@@ -406,6 +430,10 @@
   "leaderboard_header.normal_raids_won": {
     "defaultMessage": "Normal",
     "description": "Leaderboard normal raids column header"
+  },
+  "leaderboard_header.photobombs": {
+    "defaultMessage": "Photobombs",
+    "description": "Leaderboard Photobombs column header"
   },
   "leaderboard_header.pikachu_caught": {
     "defaultMessage": "Pikachu",
@@ -443,13 +471,25 @@
     "defaultMessage": "Total",
     "description": "Leaderboard total raids column header"
   },
+  "leaderboard_header.trade_km": {
+    "defaultMessage": "Trade distance",
+    "description": "Leaderboard Trade KM column header"
+  },
   "leaderboard_header.trades": {
     "defaultMessage": "Trades",
     "description": "Leaderboard trades column header"
   },
+  "leaderboard_header.trainers_referred": {
+    "defaultMessage": "Trainers referred",
+    "description": "Leaderboard Trainers referred column header"
+  },
   "leaderboard_header.trainings_won": {
     "defaultMessage": "Trainings",
     "description": "Leaderboard trainings won column header"
+  },
+  "leaderboard_header.unique_mega_evos": {
+    "defaultMessage": "Unique mega",
+    "description": "Leaderboard unique Mega evolutions column header"
   },
   "leaderboard_header.unique_raid_bosses": {
     "defaultMessage": "Unique",
@@ -462,6 +502,10 @@
   "leaderboard_header.unique_unown": {
     "defaultMessage": "Unown",
     "description": "Leaderboard unique unown column header"
+  },
+  "leaderboard_header.wayfarer_agreements": {
+    "defaultMessage": "Wayfarer",
+    "description": "Leaderboard wayfarer agreements column header"
   },
   "leaderboard_header.xl_karps": {
     "defaultMessage": "Magikarp",

@@ -2,6 +2,7 @@ export * from './common';
 export * from './dexLeaderboardColumns';
 export * from './generalLeaderboardColumns';
 export * from './gymLeaderboardColumns';
+export * from './miscellaneousLeaderboardColumns';
 export * from './pvpLeaderboardColumns';
 export * from './raidLeaderboardColumns';
 export * from './rocketLeaderboardColumns';
