@@ -124,7 +124,7 @@
     "@formatjs/cli": "^4.3.1",
     "@semantic-release/git": "^10.0.0",
     "@types/cron": "^1.7.3",
-    "@types/node": "^16.10.4",
+    "@types/node": "^16.11.0",
     "@types/react": "17.0.29",
     "@types/react-dom": "^17.0.9",
     "@types/styled-components": "^5.1.15",
