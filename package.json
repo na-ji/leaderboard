@@ -96,7 +96,7 @@
     "@ag-grid-community/core": "^26.1.0",
     "@ag-grid-community/react": "^26.1.0",
     "@mui/icons-material": "^5.0.3",
-    "@mui/material": "^5.0.3",
+    "@mui/material": "^5.0.4",
     "@mui/styled-engine-sc": "^5.0.3",
     "@next-auth/typeorm-legacy-adapter": "^0.1.2-next.17",
     "cron": "^1.8.2",
