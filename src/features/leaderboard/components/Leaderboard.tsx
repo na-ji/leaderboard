@@ -107,8 +107,8 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
                   intl.formatMessage(columnHeaderTranslations[column.field])
                 : column.field
             }
+            initialSort={column.field === defaultSort ? 'desc' : undefined}
             key={index}
-            sort={column.field === defaultSort ? 'desc' : undefined}
             sortable={true}
             suppressMovable={true}
             valueFormatter={column.type === 'number' ? ({ value }) => intl.formatNumber(value) : undefined}
