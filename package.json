@@ -1,6 +1,6 @@
 {
   "name": "pogo-leaderboard",
-  "version": "4.4.4",
+  "version": "4.5.0",
   "private": true,
   "scripts": {
     "build": "npm run i18n:compile && cross-env NODE_ENV=production next build && npm run build:server",
