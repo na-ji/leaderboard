@@ -25,6 +25,11 @@ export const generalLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
+    field: 'unique_stops_spun',
+    minWidth: 200,
+    type: 'number',
+  },
+  {
     field: 'km_walked',
     minWidth: 110,
     type: 'number',
@@ -54,6 +59,11 @@ export const generalLeaderboardColumns: ColumnsType = [
   },
   {
     field: 'battles_won',
+    minWidth: 200,
+    type: 'number',
+  },
+  {
+    field: 'best_friends',
     minWidth: 200,
     type: 'number',
   },

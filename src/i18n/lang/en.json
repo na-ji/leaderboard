@@ -303,6 +303,10 @@
     "defaultMessage": "Berries",
     "description": "Leaderboard berries column header"
   },
+  "leaderboard_header.best_friends": {
+    "defaultMessage": "Best friends",
+    "description": "Leaderboard best friends column header"
+  },
   "leaderboard_header.caught_pokemon": {
     "defaultMessage": "Caught",
     "description": "Leaderboard caught pokemon column header"
@@ -441,7 +445,7 @@
   },
   "leaderboard_header.trades": {
     "defaultMessage": "Trades",
-    "description": "Leaderboard evolved column header"
+    "description": "Leaderboard trades column header"
   },
   "leaderboard_header.trainings_won": {
     "defaultMessage": "Trainings",
@@ -450,6 +454,10 @@
   "leaderboard_header.unique_raid_bosses": {
     "defaultMessage": "Unique",
     "description": "Leaderboard unique raids column header"
+  },
+  "leaderboard_header.unique_stops_spun": {
+    "defaultMessage": "Unique Pokéstops",
+    "description": "Leaderboard Unique Pokéstops spun column header"
   },
   "leaderboard_header.unique_unown": {
     "defaultMessage": "Unown",

@@ -63,7 +63,7 @@ const autoSizeColumns = ({ api, columnApi }: AgGridEvent): void => {
   const windowWidth = window.innerWidth ?? 100;
   const ratio = windowWidth / numberOfColumns;
 
-  if (ratio <= 120) {
+  if (ratio <= 128) {
     return columnApi.autoSizeAllColumns();
   }
 

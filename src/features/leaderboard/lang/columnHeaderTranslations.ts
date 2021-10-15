@@ -41,6 +41,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Pokéstops',
     description: 'Leaderboard Pokéstops spun column header',
   },
+  unique_stops_spun: {
+    id: 'leaderboard_header.unique_stops_spun',
+    defaultMessage: 'Unique Pokéstops',
+    description: 'Leaderboard Unique Pokéstops spun column header',
+  },
   km_walked: {
     id: 'leaderboard_header.km_walked',
     defaultMessage: 'KM',
@@ -64,7 +69,12 @@ export const columnHeaderTranslations = defineMessages({
   trades: {
     id: 'leaderboard_header.trades',
     defaultMessage: 'Trades',
-    description: 'Leaderboard evolved column header',
+    description: 'Leaderboard trades column header',
+  },
+  best_friends: {
+    id: 'leaderboard_header.best_friends',
+    defaultMessage: 'Best friends',
+    description: 'Leaderboard best friends column header',
   },
   total_dex: {
     id: 'leaderboard_header.total_dex',
