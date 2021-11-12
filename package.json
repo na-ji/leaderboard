@@ -89,15 +89,15 @@
     "node": ">= 14"
   },
   "resolutions": {
-    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.0.3"
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.1.0"
   },
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^26.1.0",
     "@ag-grid-community/core": "^26.1.0",
     "@ag-grid-community/react": "^26.1.0",
-    "@mui/icons-material": "^5.0.5",
+    "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.0.4",
-    "@mui/styled-engine-sc": "^5.0.3",
+    "@mui/styled-engine-sc": "^5.1.0",
     "@next-auth/typeorm-legacy-adapter": "^0.1.2-next.17",
     "cron": "^1.8.2",
     "discord-api-types": "^0.24.0",
