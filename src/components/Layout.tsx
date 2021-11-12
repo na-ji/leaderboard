@@ -44,6 +44,8 @@ const AppBar = styled(MuiAppBar, {
   }),
 }));
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
