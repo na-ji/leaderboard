@@ -120,7 +120,7 @@
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-decorators": "^7.16.0",
     "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@formatjs/cli": "^4.4.0",
     "@semantic-release/git": "^10.0.0",
     "@types/cron": "^1.7.3",
