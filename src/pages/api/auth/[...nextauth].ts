@@ -14,7 +14,7 @@ export default NextAuth({
     ? TypeORMLegacyAdapter({ type: 'mysql', url: leaderboardConnectionString, synchronize: true }, { entities })
     : undefined,
   session: {
-    jwt: true,
+    strategy: 'jwt',
   },
   providers: [
     DiscordProvider({
