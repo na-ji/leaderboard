@@ -12,6 +12,8 @@ const nextApp = next({ dev: isDev });
 const nextHandler = nextApp.getRequestHandler();
 const port = config.port || parseInt(process.env.PORT ?? '3000');
 
+process.env.NEXTAUTH_URL = config.applicationURL;
+
 // update leaderboard every day at 23:58
 logger.info(`Current timezone used for the cron: "${Intl.DateTimeFormat().resolvedOptions().timeZone}"`);
 job(
