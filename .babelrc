@@ -8,9 +8,7 @@
         "ast": true
       }
     ],
-    "babel-plugin-styled-components",
-    "babel-plugin-transform-typescript-metadata",
-    ["@babel/plugin-proposal-decorators", { "legacy": true }]
+    "babel-plugin-styled-components"
   ],
   "env": {
     "prod": {

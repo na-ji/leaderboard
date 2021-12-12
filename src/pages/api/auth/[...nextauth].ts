@@ -1,18 +1,42 @@
 import DiscordProvider from 'next-auth/providers/discord';
 import NextAuth from 'next-auth';
 import { config } from 'node-config-ts';
-import { TypeORMLegacyAdapter } from '@next-auth/typeorm-legacy-adapter';
+import SequelizeAdapter, { models } from '@next-auth/sequelize-adapter';
+import { Sequelize, DataTypes } from 'sequelize';
 
-import * as entities from '@/features/auth/entities';
 import { getTrainerName } from '@/features/auth/api';
 import { leaderboardConnectionString } from '@/database';
 import { userHasAccess } from '@/features/auth/api/discord';
 
+export const sequelize = new Sequelize(leaderboardConnectionString, { logging: false });
+export const adapter = SequelizeAdapter(sequelize, {
+  models: {
+    User: sequelize.define(
+      'user',
+      {
+        ...models.User,
+        trainerId: {
+          type: DataTypes.CHAR,
+          allowNull: true,
+        },
+      },
+      { tableName: 'pogo_leaderboard_users' },
+    ),
+    Account: sequelize.define('account', { ...models.Account }, { tableName: 'pogo_leaderboard_accounts' }),
+    Session: sequelize.define('session', { ...models.Session }, { tableName: 'pogo_leaderboard_sessions' }),
+    VerificationToken: sequelize.define(
+      'verificationToken',
+      { ...models.VerificationToken },
+      { tableName: 'pogo_leaderboard_verification_tokens' },
+    ),
+  },
+});
+
+sequelize.sync({ alter: true });
+
 export default NextAuth({
   secret: config.secret,
-  adapter: config.enableAuth
-    ? TypeORMLegacyAdapter({ type: 'mysql', url: leaderboardConnectionString, synchronize: true }, { entities })
-    : undefined,
+  adapter: config.enableAuth ? adapter : undefined,
   session: {
     strategy: 'jwt',
   },

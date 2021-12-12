@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import next from 'next';
 import { config } from 'node-config-ts';
 import { createServer } from 'http';
