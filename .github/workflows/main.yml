@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+
+env:
+  DB_DATABASE_NAME: test_db
+  DB_USER: root
+  DB_PASSWORD: root
+
 jobs:
   release:
     name: Build & release
@@ -29,14 +35,17 @@ jobs:
         run: npm ci --prefer-offline
         env:
           HUSKY: 0
+      - name: Set up MySQL
+        run: |
+          sudo /etc/init.d/mysql start
+          mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE_NAME }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
       - name: Build app
         run: npm run build
         env:
-          DB_MAD_DATABASE_NAME: ${{ secrets.DB_DATABASE_NAME }}
-          DB_LEADERBOARD_DATABASE_NAME: ${{ secrets.DB_DATABASE_NAME }}
-          DB_HOST: ${{ secrets.DB_HOST }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_USER: ${{ secrets.DB_USER }}
+          DB_MAD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
+          DB_LEADERBOARD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
+          DB_PASSWORD: ${{ env.DB_PASSWORD }}
+          DB_USER: ${{ env.DB_USER }}
       # Send webpack stats and build information to RelativeCI
       - name: Send webpack stats to RelativeCI
         uses: relative-ci/agent-action@v1.1.0
