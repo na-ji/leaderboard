@@ -12,9 +12,10 @@
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
     "postinstall": "node-config-ts",
-    "prebuild": "node-config-ts",
+    "prebuild": "node-config-ts && npm run schema:create",
     "prepare": "husky install",
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
+    "schema:create": "ts-node --project tsconfig.server.json server/create-schema.ts",
     "start": "cross-env NODE_ENV=production node dist/server/index.js"
   },
   "eslintConfig": {

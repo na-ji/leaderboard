@@ -32,6 +32,7 @@ export const adapter = SequelizeAdapter(sequelize, {
   },
 });
 
+// TODO: handle migrations
 sequelize.sync({ alter: true });
 
 export default NextAuth({

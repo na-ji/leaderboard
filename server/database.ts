@@ -6,7 +6,7 @@ import { logger } from './logger';
 const schemaCreationQuery = `
     CREATE TABLE IF NOT EXISTS ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
     (
-        \`date\`                date                                    NOT NULL DEFAULT curdate(),
+        \`date\`                date                                    NOT NULL DEFAULT (curdate()),
         \`RPL\`                 smallint(6)                             NOT NULL,
         \`name\`                varchar(50) COLLATE utf8mb4_unicode_ci  NOT NULL,
         \`team\`                smallint(6)                             DEFAULT NULL,
