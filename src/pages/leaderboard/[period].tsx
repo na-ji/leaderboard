@@ -39,11 +39,13 @@ const PeriodLeaderboardPage: NextPage<PeriodLeaderboardProps> = ({ initialTraine
   const intl = useIntl();
   const description = intl.formatMessage({
     defaultMessage: 'Pokémon Go Leaderboard',
+    id: 'app.description',
     description: 'Index page meta description',
   });
   const title = intl.formatMessage(
     {
       defaultMessage: '{period} leaderboard',
+      id: 'period_leaderboard.title',
       description: 'Period leaderboard title',
     },
     {
@@ -74,6 +76,7 @@ const PeriodLeaderboardPage: NextPage<PeriodLeaderboardProps> = ({ initialTraine
           <Typography variant="subtitle1">
             <FormattedMessage
               defaultMessage="No data :("
+              id="period_leaderboard.no_data"
               description="Error message when leaderboard is not available"
             />
           </Typography>

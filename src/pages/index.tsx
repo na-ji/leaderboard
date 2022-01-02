@@ -18,10 +18,12 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
   const intl = useIntl();
   const description = intl.formatMessage({
     defaultMessage: 'Pokémon Go Leaderboard',
+    id: 'app.description',
     description: 'Index page meta description',
   });
   const title = intl.formatMessage({
     defaultMessage: 'General leaderboard',
+    id: 'index.title',
     description: 'Index page title',
   });
   const { data: trainers } = useSWR<Trainer[]>('/api/trainers', { fallbackData: initialTrainers });

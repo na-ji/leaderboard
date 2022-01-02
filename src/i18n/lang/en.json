@@ -1,79 +1,7 @@
 {
-  "/QraCb": {
-    "defaultMessage": "Medals",
-    "description": "Subtitle in the profile page"
-  },
-  "1//nJO": {
-    "defaultMessage": "GBL rating of {gblRating}",
-    "description": "GBL rating line in the profile page"
-  },
-  "7kbB5s": {
-    "defaultMessage": "{period} leaderboard",
-    "description": "Period leaderboard title"
-  },
-  "9HzRoL": {
-    "defaultMessage": "Level {level}",
-    "description": "Level line in the profile page"
-  },
-  "9jdj/d": {
-    "defaultMessage": "General leaderboard",
-    "description": "Index page title"
-  },
-  "A68Z7x": {
-    "defaultMessage": "Day leaderboard",
-    "description": "Day leaderboard link in drawer"
-  },
-  "AgaA1s": {
-    "defaultMessage": "Battles",
-    "description": "Battles leaderboards title"
-  },
-  "K/Gmya": {
-    "defaultMessage": "Types",
-    "description": "Types leaderboard title"
-  },
-  "MmC1e+": {
-    "defaultMessage": "{battlesWon, number} battles won",
-    "description": "Battle won line in the profile page"
-  },
-  "NGXzup": {
-    "defaultMessage": "General information",
-    "description": "Subtitle in the profile page"
-  },
-  "Pj5Al+": {
-    "defaultMessage": "GBL rank {gblRank}",
-    "description": "GBL rank line in the profile page"
-  },
-  "Px/bnb": {
-    "defaultMessage": "Raids",
-    "description": "Raids leaderboard title"
-  },
-  "R3FVKv": {
-    "defaultMessage": "Miscellaneous",
-    "description": "Miscellaneous leaderboard title"
-  },
-  "RnS/Qw": {
-    "defaultMessage": "General leaderboard",
-    "description": "General leaderboard link in drawer"
-  },
-  "SKR+e5": {
-    "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
-    "description": "Last updated line in the profile page"
-  },
-  "V4w7Jo": {
-    "defaultMessage": "No data :(",
-    "description": "Error message when leaderboard is not available"
-  },
-  "X+pFuG": {
-    "defaultMessage": "Gyms",
-    "description": "Gyms leaderboard title"
-  },
-  "Xl2OHD": {
-    "defaultMessage": "Logout",
-    "description": "Logout button"
-  },
-  "b950ya": {
-    "defaultMessage": "Pokédex",
-    "description": "Pokédex leaderboard title"
+  "app.description": {
+    "defaultMessage": "Pokémon Go Leaderboard",
+    "description": "Index page meta description"
   },
   "badge_7_day_streaks": {
     "defaultMessage": "7 day streaks",
@@ -259,11 +187,23 @@
     "defaultMessage": "XS Rattata",
     "description": "Badge XS_RATS"
   },
-  "cXT0f/": {
-    "defaultMessage": "{name}'s Profile",
-    "description": "Profile page title"
+  "drawer.day_leaderboard": {
+    "defaultMessage": "Day leaderboard",
+    "description": "Day leaderboard link in drawer"
   },
-  "fNPruO": {
+  "drawer.general_leaderboard": {
+    "defaultMessage": "General leaderboard",
+    "description": "General leaderboard link in drawer"
+  },
+  "drawer.logout": {
+    "defaultMessage": "Logout",
+    "description": "Logout button"
+  },
+  "drawer.month_leaderboard": {
+    "defaultMessage": "Month leaderboard",
+    "description": "Month leaderboard link in drawer"
+  },
+  "drawer.week_leaderboard": {
     "defaultMessage": "Week leaderboard",
     "description": "Week leaderboard link in drawer"
   },
@@ -295,9 +235,53 @@
     "defaultMessage": "to",
     "description": "Pagination indicator"
   },
-  "jyjtCj": {
+  "index.title": {
+    "defaultMessage": "General leaderboard",
+    "description": "Index page title"
+  },
+  "leaderboard.battle": {
+    "defaultMessage": "Battles",
+    "description": "Battles leaderboards title"
+  },
+  "leaderboard.collection": {
+    "defaultMessage": "Collection",
+    "description": "Collection leaderboards title"
+  },
+  "leaderboard.general": {
     "defaultMessage": "General",
     "description": "General leaderboard title"
+  },
+  "leaderboard.gym": {
+    "defaultMessage": "Gyms",
+    "description": "Gyms leaderboard title"
+  },
+  "leaderboard.miscellaneous": {
+    "defaultMessage": "Miscellaneous",
+    "description": "Miscellaneous leaderboard title"
+  },
+  "leaderboard.pokedex": {
+    "defaultMessage": "Pokédex",
+    "description": "Pokédex leaderboard title"
+  },
+  "leaderboard.pvp": {
+    "defaultMessage": "PVP",
+    "description": "PVP leaderboard title"
+  },
+  "leaderboard.raid": {
+    "defaultMessage": "Raids",
+    "description": "Raids leaderboard title"
+  },
+  "leaderboard.rocket": {
+    "defaultMessage": "Team Rocket",
+    "description": "Team Rocket leaderboard title"
+  },
+  "leaderboard.specific": {
+    "defaultMessage": "Specific",
+    "description": "Specific leaderboard title"
+  },
+  "leaderboard.type": {
+    "defaultMessage": "Types",
+    "description": "Types leaderboard title"
   },
   "leaderboard_header.7_day_streaks": {
     "defaultMessage": "7 day streaks",
@@ -472,7 +456,7 @@
     "description": "Leaderboard total raids column header"
   },
   "leaderboard_header.trade_km": {
-    "defaultMessage": "Trade distance",
+    "defaultMessage": "Trade KM",
     "description": "Leaderboard Trade KM column header"
   },
   "leaderboard_header.trades": {
@@ -519,10 +503,6 @@
     "defaultMessage": "Rattata",
     "description": "Leaderboard rattata column header"
   },
-  "m8XKTs": {
-    "defaultMessage": "PVP",
-    "description": "PVP leaderboard title"
-  },
   "period_leaderboard.last_day": {
     "defaultMessage": "Today's",
     "description": "Last day period"
@@ -535,13 +515,45 @@
     "defaultMessage": "Last week's",
     "description": "Last day period"
   },
-  "qw3fld": {
-    "defaultMessage": "Month leaderboard",
-    "description": "Month leaderboard link in drawer"
+  "period_leaderboard.no_data": {
+    "defaultMessage": "No data :(",
+    "description": "Error message when leaderboard is not available"
   },
-  "t5Ktnw": {
-    "defaultMessage": "Pokémon Go Leaderboard",
-    "description": "Index page meta description"
+  "period_leaderboard.title": {
+    "defaultMessage": "{period} leaderboard",
+    "description": "Period leaderboard title"
+  },
+  "profile.battles": {
+    "defaultMessage": "{battlesWon, number} battles won",
+    "description": "Battle won line in the profile page"
+  },
+  "profile.gbl_rank": {
+    "defaultMessage": "GBL rank {gblRank}",
+    "description": "GBL rank line in the profile page"
+  },
+  "profile.gbl_rating": {
+    "defaultMessage": "GBL rating of {gblRating}",
+    "description": "GBL rating line in the profile page"
+  },
+  "profile.general": {
+    "defaultMessage": "General information",
+    "description": "Subtitle in the profile page"
+  },
+  "profile.level": {
+    "defaultMessage": "Level {level}",
+    "description": "Level line in the profile page"
+  },
+  "profile.medals": {
+    "defaultMessage": "Medals",
+    "description": "Subtitle in the profile page"
+  },
+  "profile.title": {
+    "defaultMessage": "{name}'s Profile",
+    "description": "Profile page title"
+  },
+  "profile.updated_at": {
+    "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
+    "description": "Last updated line in the profile page"
   },
   "type_bug": {
     "defaultMessage": "Bug",
@@ -614,17 +626,5 @@
   "type_water": {
     "defaultMessage": "Water",
     "description": "Pokémon type WATER"
-  },
-  "uyrNDD": {
-    "defaultMessage": "Collection",
-    "description": "Collection leaderboards title"
-  },
-  "whxSyO": {
-    "defaultMessage": "Team Rocket",
-    "description": "Team Rocket leaderboard title"
-  },
-  "xmUh29": {
-    "defaultMessage": "Specific",
-    "description": "Specific leaderboard title"
   }
 }

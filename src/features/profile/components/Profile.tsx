@@ -19,12 +19,17 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
         <TeamLogo team={trainer.team} />
       </Typography>
       <Typography variant="h6">
-        <FormattedMessage defaultMessage="General information" description="Subtitle in the profile page" />
+        <FormattedMessage
+          defaultMessage="General information"
+          id="profile.general"
+          description="Subtitle in the profile page"
+        />
       </Typography>
       <ul>
         <li>
           <FormattedMessage
             defaultMessage="Level {level}"
+            id="profile.level"
             description="Level line in the profile page"
             values={{ level: trainer.level }}
           />
@@ -32,6 +37,7 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
         <li>
           <FormattedMessage
             defaultMessage="Last updated the {date, date, short} at {date, time, short}"
+            id="profile.updated_at"
             description="Last updated line in the profile page"
             values={{ date: new Date(trainer.last_seen) }}
           />
@@ -39,6 +45,7 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
         <li>
           <FormattedMessage
             defaultMessage="{battlesWon, number} battles won"
+            id="profile.battles"
             description="Battle won line in the profile page"
             values={{ battlesWon: trainer.battles_won }}
           />
@@ -47,6 +54,7 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
           <li>
             <FormattedMessage
               defaultMessage="GBL rank {gblRank}"
+              id="profile.gbl_rank"
               description="GBL rank line in the profile page"
               values={{ gblRank: trainer.gbl_rank }}
             />
@@ -56,6 +64,7 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
           <li>
             <FormattedMessage
               defaultMessage="GBL rating of {gblRating}"
+              id="profile.gbl_rating"
               description="GBL rating line in the profile page"
               values={{ gblRating: trainer.gbl_rating }}
             />
@@ -63,7 +72,7 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
         )}
       </ul>
       <Typography variant="h6">
-        <FormattedMessage defaultMessage="Medals" description="Subtitle in the profile page" />
+        <FormattedMessage defaultMessage="Medals" id="profile.medals" description="Subtitle in the profile page" />
       </Typography>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg: 16, xl: 20 }}>
         {Object.values(Badge).map(

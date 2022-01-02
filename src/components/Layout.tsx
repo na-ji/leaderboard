@@ -118,6 +118,7 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
                 primary={
                   <FormattedMessage
                     defaultMessage="General leaderboard"
+                    id="drawer.general_leaderboard"
                     description="General leaderboard link in drawer"
                   />
                 }
@@ -131,7 +132,11 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
               </ListItemIcon>
               <ListItemText
                 primary={
-                  <FormattedMessage defaultMessage="Day leaderboard" description="Day leaderboard link in drawer" />
+                  <FormattedMessage
+                    defaultMessage="Day leaderboard"
+                    id="drawer.day_leaderboard"
+                    description="Day leaderboard link in drawer"
+                  />
                 }
               />
             </ListItem>
@@ -143,7 +148,11 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
               </ListItemIcon>
               <ListItemText
                 primary={
-                  <FormattedMessage defaultMessage="Week leaderboard" description="Week leaderboard link in drawer" />
+                  <FormattedMessage
+                    defaultMessage="Week leaderboard"
+                    id="drawer.week_leaderboard"
+                    description="Week leaderboard link in drawer"
+                  />
                 }
               />
             </ListItem>
@@ -155,7 +164,11 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
               </ListItemIcon>
               <ListItemText
                 primary={
-                  <FormattedMessage defaultMessage="Month leaderboard" description="Month leaderboard link in drawer" />
+                  <FormattedMessage
+                    defaultMessage="Month leaderboard"
+                    id="drawer.month_leaderboard"
+                    description="Month leaderboard link in drawer"
+                  />
                 }
               />
             </ListItem>
@@ -165,7 +178,9 @@ export const Layout = ({ children }: { children: JSX.Element }): JSX.Element => 
               <ListItemIcon>
                 <PowerSettingsNewIcon />
               </ListItemIcon>
-              <ListItemText primary={<FormattedMessage defaultMessage="Logout" description="Logout button" />} />
+              <ListItemText
+                primary={<FormattedMessage defaultMessage="Logout" id="drawer.logout" description="Logout button" />}
+              />
             </ListItem>
           )}
         </List>

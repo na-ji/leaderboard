@@ -21,6 +21,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
     ? intl.formatMessage(
         {
           defaultMessage: "{name}'s Profile",
+          id: 'profile.title',
           description: 'Profile page title',
         },
         { name: initialTrainer.name },

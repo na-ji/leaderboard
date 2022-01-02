@@ -49,58 +49,88 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }} component="div">
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab
-            label={<FormattedMessage defaultMessage="General" description="General leaderboard title" />}
+            label={
+              <FormattedMessage
+                defaultMessage="General"
+                id="leaderboard.general"
+                description="General leaderboard title"
+              />
+            }
             {...a11yProps(0)}
           />
           <Tab
-            label={<FormattedMessage defaultMessage="Battles" description="Battles leaderboards title" />}
+            label={
+              <FormattedMessage
+                defaultMessage="Battles"
+                id="leaderboard.battle"
+                description="Battles leaderboards title"
+              />
+            }
             {...a11yProps(1)}
           />
           <Tab
-            label={<FormattedMessage defaultMessage="Collection" description="Collection leaderboards title" />}
+            label={
+              <FormattedMessage
+                defaultMessage="Collection"
+                id="leaderboard.collection"
+                description="Collection leaderboards title"
+              />
+            }
             {...a11yProps(2)}
           />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="General" description="General leaderboard title" />
+          <FormattedMessage defaultMessage="General" id="leaderboard.general" description="General leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={generalLeaderboardColumns} defaultSort="xp" />
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Miscellaneous" description="Miscellaneous leaderboard title" />
+          <FormattedMessage
+            defaultMessage="Miscellaneous"
+            id="leaderboard.miscellaneous"
+            description="Miscellaneous leaderboard title"
+          />
         </Typography>
         <Leaderboard trainers={trainers} columns={miscellaneousLeaderboardColumns} defaultSort="trade_km" />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Raids" description="Raids leaderboard title" />
+          <FormattedMessage defaultMessage="Raids" id="leaderboard.raid" description="Raids leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={raidLeaderboardColumns} defaultSort="total_raids" />
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Team Rocket" description="Team Rocket leaderboard title" />
+          <FormattedMessage
+            defaultMessage="Team Rocket"
+            id="leaderboard.rocket"
+            description="Team Rocket leaderboard title"
+          />
         </Typography>
         <Leaderboard trainers={trainers} columns={rocketLeaderboardColumns} defaultSort="grunts_defeated" />
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Gyms" description="Gyms leaderboard title" />
+          <FormattedMessage defaultMessage="Gyms" id="leaderboard.gym" description="Gyms leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={gymLeaderboardColumns} defaultSort="gym_battles_won" />
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="PVP" description="PVP leaderboard title" />
+          <FormattedMessage defaultMessage="PVP" id="leaderboard.pvp" description="PVP leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={pvpLeaderboardColumns} defaultSort="gbl_rank" />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Pokédex" description="Pokédex leaderboard title" />
+          <FormattedMessage defaultMessage="Pokédex" id="leaderboard.pokedex" description="Pokédex leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={dexLeaderboardColumns} defaultSort="total_dex" />
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Specific" description="Specific leaderboard title" />
+          <FormattedMessage
+            defaultMessage="Specific"
+            id="leaderboard.specific"
+            description="Specific leaderboard title"
+          />
         </Typography>
         <Leaderboard trainers={trainers} columns={specificLeaderboardColumns} defaultSort="pikachu_caught" />
         <Typography variant="h5">
-          <FormattedMessage defaultMessage="Types" description="Types leaderboard title" />
+          <FormattedMessage defaultMessage="Types" id="leaderboard.type" description="Types leaderboard title" />
         </Typography>
         <Leaderboard trainers={trainers} columns={typeLeaderboardColumns} defaultSort="caught_normal" />
       </TabPanel>
