@@ -60,7 +60,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HUSKY: 0
         run: npx semantic-release
-      - uses: amondnet/vercel-action@v20
+      - name: Deploy demo to production
+        uses: amondnet/vercel-action@v20
         if: ${{ github.event_name == 'push' }}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
@@ -70,8 +71,9 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           alias-domains: |
             {{BRANCH}}-pogo-leaderboard.vercel.app
-      - uses: amondnet/vercel-action@v20
-        if: ${{ github.event_name == 'pull_request' }}
+      - name: Deploy PR to pre-preproduction
+        uses: amondnet/vercel-action@v20
+        if: ${{ github.event_name == 'pull_request' && github.actor != 'dependabot[bot]' }}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -79,3 +81,8 @@ jobs:
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           alias-domains: |
             pr-{{PR_NUMBER}}-pogo-leaderboard.vercel.app
+      - name: Auto approve and merge dependabot
+        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        if: ${{ github.event_name == 'pull_request' && github.actor == 'dependabot[bot]' }}
+        with:
+          github-token: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
