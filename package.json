@@ -87,7 +87,8 @@
     "preset": "angular"
   },
   "engines": {
-    "node": ">= 14"
+    "node": ">= 14",
+    "npm": ">= 7"
   },
   "resolutions": {
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.1.0"
