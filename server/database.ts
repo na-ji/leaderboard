@@ -82,7 +82,9 @@ const schemaCreationQuery = `
         \`caught_dragon\`       bigint(8)                               DEFAULT NULL,
         \`caught_dark\`         bigint(8)                               DEFAULT NULL,
         \`caught_fairy\`        bigint(8)                               DEFAULT NULL,
-        PRIMARY KEY (\`date\`, \`name\`)
+        PRIMARY KEY (\`date\`, \`name\`),
+        UNIQUE KEY \`trainer_id_date\` (\`date\`, \`trainer_id\`),
+        KEY \`date\` (\`date\`)
     ) ENGINE = InnoDB
       DEFAULT CHARSET = utf8mb4
       COLLATE = utf8mb4_unicode_ci;
