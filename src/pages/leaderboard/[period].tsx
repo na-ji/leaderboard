@@ -99,13 +99,13 @@ export const getStaticProps = wrapStaticPropsWithLocale<PeriodLeaderboardProps, 
       return { notFound: true };
     }
 
-    const { getPeriodLeaderboard } = await import('@/features/leaderboard/api');
-    const periodLeaderboard = await getPeriodLeaderboard();
+    const { getPeriodTrainers } = await import('@/features/leaderboard/api');
     const period = Paths[params.period];
+    const periodLeaderboard = await getPeriodTrainers(period);
 
     return {
       props: {
-        initialTrainers: periodLeaderboard[period] ?? [],
+        initialTrainers: periodLeaderboard ?? [],
         period: period,
       },
       // rebuild at most every 30 minutes

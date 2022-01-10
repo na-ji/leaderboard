@@ -116,14 +116,3 @@ export const getPeriodTrainers = async (period: keyof PeriodLeaderboard): Promis
     last_seen: (row.last_seen as unknown as Date).getTime(),
   }));
 };
-
-export const getPeriodLeaderboard = async (): Promise<PeriodLeaderboard> => {
-  const leaderboard: PeriodLeaderboard = {};
-
-  for (const key in periodIntervals) {
-    const period = key as keyof typeof periodIntervals;
-    leaderboard[period] = await getPeriodTrainers(period);
-  }
-
-  return leaderboard;
-};
