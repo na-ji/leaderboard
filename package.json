@@ -120,7 +120,7 @@
     "sequelize": "^6.12.5",
     "sharp": "^0.29.3",
     "styled-components": "^5.3.3",
-    "swr": "^1.0.1",
+    "swr": "^1.1.2",
     "tslog": "^3.3.1"
   },
   "devDependencies": {
