@@ -101,7 +101,7 @@
   },
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^26.2.0",
-    "@ag-grid-community/core": "^26.2.0",
+    "@ag-grid-community/core": "^26.2.1",
     "@ag-grid-community/react": "^26.2.0",
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
