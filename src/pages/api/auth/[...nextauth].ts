@@ -62,6 +62,10 @@ export default NextAuth({
         token.trainerName = await getTrainerName(`${token.trainerId}`);
       }
 
+      if (user?.id) {
+        token.userId = user.id;
+      }
+
       if (profile?.id) {
         token.discordId = profile.id;
       }
@@ -72,8 +76,10 @@ export default NextAuth({
       if (token.trainerId) {
         session.trainerId = token.trainerId;
         session.trainerName = token.trainerName;
-        session.discordId = token.discordId;
       }
+
+      session.discordId = token.discordId;
+      session.userId = token.userId;
 
       return session;
     },

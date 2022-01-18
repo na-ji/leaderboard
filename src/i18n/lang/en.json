@@ -555,6 +555,46 @@
     "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
     "description": "Last updated line in the profile page"
   },
+  "registration.already_registered": {
+    "defaultMessage": "You're already registered",
+    "description": "Error message if connected user is already registered"
+  },
+  "registration.description": {
+    "defaultMessage": "Pokémon Go Leaderboard registration",
+    "description": "Registration page meta description"
+  },
+  "registration.generic_error": {
+    "defaultMessage": "An error occurred. Please try again later.",
+    "description": "Registration error when trainer is not found"
+  },
+  "registration.step.add_bot": {
+    "defaultMessage": "1 - Add bot to your friends",
+    "description": "First step to register"
+  },
+  "registration.step.add_bot_instruction": {
+    "defaultMessage": "Add this friend code <code>{trainerCode}</code>",
+    "description": "Instruction of first step"
+  },
+  "registration.step.link_account": {
+    "defaultMessage": "2 - Link your account",
+    "description": "Second step to register"
+  },
+  "registration.submit": {
+    "defaultMessage": "Submit",
+    "description": "Button to validate registration"
+  },
+  "registration.title": {
+    "defaultMessage": "Registration",
+    "description": "Registration page title"
+  },
+  "registration.trainer_name": {
+    "defaultMessage": "Trainer name",
+    "description": "Trainer name input label"
+  },
+  "registration.trainer_not_found": {
+    "defaultMessage": "Trainer not found. Please wait 30 minutes after adding the bot as your friend.",
+    "description": "Registration error when trainer is not found"
+  },
   "type_bug": {
     "defaultMessage": "Bug",
     "description": "Pokémon type BUG"

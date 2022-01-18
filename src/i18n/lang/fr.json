@@ -59,6 +59,46 @@
     "defaultMessage": "Dernière mise à jour le {date, date, short} à {date, time, short}",
     "description": "Last updated line in the profile page"
   },
+  "registration.already_registered": {
+    "defaultMessage": "Vous êtes déjà inscrit",
+    "description": "Error message if connected user is already registered"
+  },
+  "registration.description": {
+    "defaultMessage": "Inscription au classement Pokémon Go",
+    "description": "Registration page meta description"
+  },
+  "registration.generic_error": {
+    "defaultMessage": "Une erreur est survenue, merci de ressayer plus tard.",
+    "description": "Registration error when trainer is not found"
+  },
+  "registration.step.add_bot": {
+    "defaultMessage": "1 - Ajouter le bot comme ami",
+    "description": "First step to register"
+  },
+  "registration.step.add_bot_instruction": {
+    "defaultMessage": "Ajouter ce code ami <code>{trainerCode}</code>",
+    "description": "Instruction of first step"
+  },
+  "registration.step.link_account": {
+    "defaultMessage": "2 - Lier votre compte",
+    "description": "Second step to register"
+  },
+  "registration.submit": {
+    "defaultMessage": "Confirmer",
+    "description": "Button to validate registration"
+  },
+  "registration.title": {
+    "defaultMessage": "Inscription",
+    "description": "Registration page title"
+  },
+  "registration.trainer_name": {
+    "defaultMessage": "Nom de dresseur",
+    "description": "Trainer name input label"
+  },
+  "registration.trainer_not_found": {
+    "defaultMessage": "Dresseur non trouvé. Merci d'attendre 30 minutes après avoir ajouté le bot.",
+    "description": "Registration error when trainer is not found"
+  },
   "period_leaderboard.no_data": {
     "defaultMessage": "Pas de données :(",
     "description": "Error message when leaderboard is not available"
