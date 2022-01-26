@@ -116,7 +116,7 @@
     "node-config-ts": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
-    "react-intl": "^5.24.0",
+    "react-intl": "^5.24.4",
     "sequelize": "^6.12.5",
     "sharp": "^0.29.3",
     "styled-components": "^5.3.3",
@@ -125,7 +125,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
-    "@commitlint/cli": "^16.0.2",
+    "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@formatjs/cli": "^4.7.0",
     "@semantic-release/git": "^10.0.1",
