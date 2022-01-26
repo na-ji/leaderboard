@@ -135,7 +135,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/styled-components": "^5.1.19",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
-    "@typescript-eslint/parser": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.1",
     "babel-plugin-formatjs": "^10.3.17",
     "babel-plugin-styled-components": "^2.0.2",
     "commitizen": "^4.2.4",
