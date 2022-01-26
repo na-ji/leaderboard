@@ -116,7 +116,7 @@
     "node-config-ts": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "17.0.2",
-    "react-intl": "^5.24.0",
+    "react-intl": "^5.24.4",
     "sequelize": "^6.12.5",
     "sharp": "^0.29.3",
     "styled-components": "^5.3.3",
@@ -150,7 +150,7 @@
     "lint-staged": "^12.1.7",
     "prettier": "^2.5.1",
     "semantic-release": "^18.0.1",
-    "sequelize-cli": "^6.3.0",
+    "sequelize-cli": "^6.4.1",
     "ts-node": "^10.4.0",
     "typescript": "4.5.4",
     "webpack-stats-plugin": "^1.0.3"
