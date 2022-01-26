@@ -136,7 +136,7 @@
     "@types/styled-components": "^5.1.19",
     "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.10.0",
-    "babel-plugin-formatjs": "^10.3.15",
+    "babel-plugin-formatjs": "^10.3.17",
     "babel-plugin-styled-components": "^2.0.2",
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
