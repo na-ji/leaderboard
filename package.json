@@ -124,7 +124,7 @@
     "tslog": "^3.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
+    "@babel/core": "^7.16.12",
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@formatjs/cli": "^4.8.1",
