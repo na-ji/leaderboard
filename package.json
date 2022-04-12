@@ -96,6 +96,10 @@
     "node": ">= 14",
     "npm": ">= 7"
   },
+  "volta": {
+    "node": "14.19.1",
+    "npm": "8.6.0"
+  },
   "resolutions": {
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@5.1.0"
   },
