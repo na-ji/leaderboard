@@ -52,6 +52,8 @@ module.exports = withTM({
   experimental: {
     cpus: 1,
     workerThreads: 1,
+  },
+  compiler: {
     // Enables the styled-components SWC transform
     styledComponents: true,
   },
