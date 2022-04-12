@@ -147,7 +147,7 @@
     "eslint-plugin-formatjs": "^2.20.5",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.2",
+    "lint-staged": "^12.3.7",
     "prettier": "^2.5.1",
     "semantic-release": "^19.0.2",
     "sequelize-cli": "^6.4.1",
