@@ -48,15 +48,16 @@ export const userHasAccess = async (userName: string, userAccessToken?: string, 
     }
 
     const guilds = await getGuilds(userAccessToken);
-    const isMemberOfGuild = guilds.some((guild) => guild.id === config.discord.guildId);
+    const guild = guilds.find((membersGuild) => config.discord.guildId.includes(membersGuild.id));
+    const isMemberOfGuild = !!guild;
 
     if (!config.discord.roleId || !userId || !isMemberOfGuild) {
       logUserAccess(userName, { isMemberOfGuild, finaleDecision: isMemberOfGuild });
       return isMemberOfGuild;
     }
 
-    const member = await getGuildMember(config.discord.guildId, userId);
-    const hasRole = member.roles.some((role) => role === config.discord.roleId);
+    const member = await getGuildMember(guild.id, userId);
+    const hasRole = member.roles.some((role) => config.discord.roleId.includes(role));
 
     logUserAccess(userName, { isMemberOfGuild, hasRole, finaleDecision: hasRole });
 
