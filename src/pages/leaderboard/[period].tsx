@@ -1,13 +1,10 @@
-import Container from '@mui/material/Container';
 import Head from 'next/head';
 import type { NextPage } from 'next';
-import Typography from '@mui/material/Typography';
 import useSWR from 'swr';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import { GetStaticPaths, GetStaticPathsResult } from 'next';
 
 import { OverallLeaderboards } from '@/features/leaderboard';
-import { PageTitle } from '@/components/PageTitle';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 import type { PeriodLeaderboard } from '@/features/leaderboard/api';
 import { PeriodTrainer } from '@/types';
@@ -69,20 +66,17 @@ const PeriodLeaderboardPage: NextPage<PeriodLeaderboardProps> = ({ initialTraine
           crossOrigin="anonymous"
         />
       </Head>
-      <PageTitle>{title}</PageTitle>
-      <Container maxWidth={false}>
-        <Typography variant="h3">{title}</Typography>
-        {!(Array.isArray(trainers) && trainers.length > 0) && (
-          <Typography variant="subtitle1">
-            <FormattedMessage
-              defaultMessage="No data :("
-              id="period_leaderboard.no_data"
-              description="Error message when leaderboard is not available"
-            />
-          </Typography>
-        )}
-        {Array.isArray(trainers) && trainers.length > 0 && <OverallLeaderboards trainers={trainers} />}
-      </Container>
+      <h1 className="title-1 mt-2.5 lg:mt-0.5">{title}</h1>
+      {!(Array.isArray(trainers) && trainers.length > 0) && (
+        <h3 className="title-2">
+          <FormattedMessage
+            defaultMessage="No data :("
+            id="period_leaderboard.no_data"
+            description="Error message when leaderboard is not available"
+          />
+        </h3>
+      )}
+      {Array.isArray(trainers) && trainers.length > 0 && <OverallLeaderboards trainers={trainers} />}
     </>
   );
 };

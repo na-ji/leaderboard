@@ -1,12 +1,9 @@
-import Container from '@mui/material/Container';
 import Head from 'next/head';
 import type { NextPage } from 'next';
-import Typography from '@mui/material/Typography';
 import useSWR from 'swr';
 import { useIntl } from 'react-intl';
 
 import { OverallLeaderboards } from '@/features/leaderboard';
-import { PageTitle } from '@/components/PageTitle';
 import { Trainer } from '@/types';
 import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 
@@ -35,11 +32,8 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
         <meta key="description" name="description" content={description} />
         <link key="preload" rel="preload" href="/api/trainers" as="fetch" crossOrigin="anonymous" />
       </Head>
-      <PageTitle>{title}</PageTitle>
-      <Container maxWidth={false}>
-        <Typography variant="h3">{title}</Typography>
-        {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
-      </Container>
+      <h1 className="title-1 mt-2.5 lg:mt-0.5">{title}</h1>
+      {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
     </>
   );
 };

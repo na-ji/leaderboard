@@ -1,4 +1,3 @@
-import Container from '@mui/material/Container';
 import Head from 'next/head';
 import type { NextPage, GetStaticPaths, GetStaticPathsResult } from 'next';
 import useSWR from 'swr';
@@ -8,7 +7,6 @@ import { useRouter } from 'next/router';
 import { Profile } from '@/features/profile';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 import { Trainer } from '@/types';
-import { PageTitle } from '@/components/PageTitle';
 import { config } from 'node-config-ts';
 
 interface ProfileProps {
@@ -48,10 +46,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
               crossOrigin="anonymous"
             />
           </Head>
-          <PageTitle>{title}</PageTitle>
-          <Container maxWidth={false}>
-            <Profile trainer={trainer} />
-          </Container>
+          <Profile trainer={trainer} />
         </>
       )}
     </>
