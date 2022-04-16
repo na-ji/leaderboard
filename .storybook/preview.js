@@ -1,4 +1,7 @@
 import * as jest from 'jest-mock';
+
+import '../src/globals.css';
+
 window.jest = jest;
 
 export const parameters = {

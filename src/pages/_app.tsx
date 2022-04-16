@@ -6,6 +6,7 @@ import { IntlProvider } from 'react-intl';
 import { SessionProvider } from 'next-auth/react';
 import { SWRConfig } from 'swr';
 
+import '@/globals.css';
 import { fetcher } from '@/utils/fetcher';
 import { Auth } from '@/features/auth';
 import { Layout } from '@/components/Layout';
