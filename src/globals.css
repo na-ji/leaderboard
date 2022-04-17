@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer base {
   .title-1 {
     @apply text-m-title-1 lg:text-d-title-1 font-bold;
   }
