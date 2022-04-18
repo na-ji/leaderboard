@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Mulish', 'sans-serif'],
+        sans: ['proxima_nova', 'sans-serif'],
       },
       fontSize: {
         'd-title-1': [
