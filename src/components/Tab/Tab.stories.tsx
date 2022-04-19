@@ -12,7 +12,7 @@ export default {
 const Template: ComponentStory<typeof Tab> = ({ level = 1 }) => {
   return (
     <Group>
-      <List>
+      <List level={level}>
         <Tab level={level}>Tab 1</Tab>
         <Tab level={level} disabled>
           Disabled Tab 2
@@ -29,6 +29,9 @@ const Template: ComponentStory<typeof Tab> = ({ level = 1 }) => {
 };
 
 export const Level1 = Template.bind({});
+Level1.args = {
+  level: 1,
+};
 
 export const Level2 = Template.bind({});
 Level2.args = {
