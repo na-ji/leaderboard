@@ -10,6 +10,7 @@ import { rocketLeaderboardColumns } from './rocketLeaderboardColumns';
 import { specificLeaderboardColumns } from './specificLeaderboardColumns';
 import { typeLeaderboardColumns } from './typeLeaderboardColumns';
 
+export type { ColumnsType };
 export const leaderboardsData: Record<
   MainTab,
   Array<{
