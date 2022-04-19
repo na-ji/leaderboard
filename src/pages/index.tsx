@@ -32,7 +32,7 @@ const Home: NextPage<HomeProps> = ({ initialTrainers }) => {
         <meta key="description" name="description" content={description} />
         <link key="preload" rel="preload" href="/api/trainers" as="fetch" crossOrigin="anonymous" />
       </Head>
-      <h1 className="title-1 mt-2.5 lg:mt-0.5">{title}</h1>
+      <h1 className="title-1 mt-2.5 lg:mt-0.5 mb-4 lg:mb-7.5">{title}</h1>
       {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
     </>
   );
