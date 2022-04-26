@@ -16,12 +16,12 @@
     "description": "Level line in the profile page"
   },
   "index.title": {
-    "defaultMessage": "Classement général",
+    "defaultMessage": "Classement",
     "description": "Index page title"
   },
-  "drawer.day_leaderboard": {
-    "defaultMessage": "Classement du jour",
-    "description": "Day leaderboard link in drawer"
+  "leaderboard.all_time": {
+    "defaultMessage": "Tous les temps",
+    "description": "All time period"
   },
   "leaderboard.battle": {
     "defaultMessage": "Combats",
@@ -51,9 +51,9 @@
     "defaultMessage": "Divers",
     "description": "Miscellaneous leaderboard title"
   },
-  "drawer.general_leaderboard": {
-    "defaultMessage": "Classement général",
-    "description": "General leaderboard link in drawer"
+  "leaderboard.period": {
+    "defaultMessage": "Période",
+    "description": "Period dropdown"
   },
   "profile.updated_at": {
     "defaultMessage": "Dernière mise à jour le {date, date, short} à {date, time, short}",
@@ -106,6 +106,14 @@
   "leaderboard.gym": {
     "defaultMessage": "Arènes",
     "description": "Gyms leaderboard title"
+  },
+  "leaderboard.last_month": {
+    "defaultMessage": "30 derniers jours",
+    "description": "All time period"
+  },
+  "leaderboard.last_week": {
+    "defaultMessage": "7 derniers jours",
+    "description": "All time period"
   },
   "drawer.logout": {
     "defaultMessage": "Déconnexion",
@@ -302,10 +310,6 @@
   "profile.title": {
     "defaultMessage": "Profil de {name}",
     "description": "Profile page title"
-  },
-  "drawer.week_leaderboard": {
-    "defaultMessage": "Classement de la semaine",
-    "description": "Week leaderboard link in drawer"
   },
   "grid.firstPage": {
     "defaultMessage": "Première page",
@@ -563,22 +567,6 @@
     "defaultMessage": "PVP",
     "description": "PVP leaderboard title"
   },
-  "period_leaderboard.last_day": {
-    "defaultMessage": "du jour",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_month": {
-    "defaultMessage": "du mois",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_week": {
-    "defaultMessage": "de la semaine",
-    "description": "Last day period"
-  },
-  "drawer.month_leaderboard": {
-    "defaultMessage": "Classement du mois",
-    "description": "Month leaderboard link in drawer"
-  },
   "app.description": {
     "defaultMessage": "Classement Pokémon Go",
     "description": "Index page meta description"
@@ -666,5 +654,9 @@
   "leaderboard.specific": {
     "defaultMessage": "Spécifique",
     "description": "Specific leaderboard title"
+  },
+  "leaderboard.today": {
+    "defaultMessage": "Aujourd'hui",
+    "description": "All time period"
   }
 }

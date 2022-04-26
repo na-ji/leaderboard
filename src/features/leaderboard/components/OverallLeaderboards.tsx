@@ -8,6 +8,7 @@ import { Trainer } from '@/types';
 import { Tab, Group, List } from '@/components/Tab';
 import { MainTab } from '@/features/leaderboard/types';
 import { leaderboardTabTranslations } from '@/features/leaderboard/lang';
+import { PeriodSelect } from '@/features/leaderboard/components/PeriodSelect';
 
 export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.Element => {
   const router = useRouter();
@@ -34,27 +35,32 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
     <div>
       <Group selectedIndex={selectedMainTab} onChange={handleMainTabChange}>
         <List level={1} className="mb-3 lg:mb-5">
-          <Tab>
-            {intl.formatMessage({
-              defaultMessage: 'General',
-              id: 'leaderboard.general',
-              description: 'General leaderboard title',
-            })}
-          </Tab>
-          <Tab>
-            {intl.formatMessage({
-              defaultMessage: 'Battles',
-              id: 'leaderboard.battle',
-              description: 'Battles leaderboards title',
-            })}
-          </Tab>
-          <Tab>
-            {intl.formatMessage({
-              defaultMessage: 'Collection',
-              id: 'leaderboard.collection',
-              description: 'Collection leaderboards title',
-            })}
-          </Tab>
+          <div className="flex justify-between w-full">
+            <div>
+              <Tab>
+                {intl.formatMessage({
+                  defaultMessage: 'General',
+                  id: 'leaderboard.general',
+                  description: 'General leaderboard title',
+                })}
+              </Tab>
+              <Tab>
+                {intl.formatMessage({
+                  defaultMessage: 'Battles',
+                  id: 'leaderboard.battle',
+                  description: 'Battles leaderboards title',
+                })}
+              </Tab>
+              <Tab>
+                {intl.formatMessage({
+                  defaultMessage: 'Collection',
+                  id: 'leaderboard.collection',
+                  description: 'Collection leaderboards title',
+                })}
+              </Tab>
+            </div>
+            <PeriodSelect visible="desktop" />
+          </div>
         </List>
       </Group>
       <Group selectedIndex={selectedLeaderboardIndex} onChange={setSelectedLeaderboardIndex}>

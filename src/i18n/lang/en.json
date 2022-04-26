@@ -187,25 +187,9 @@
     "defaultMessage": "XS Rattata",
     "description": "Badge XS_RATS"
   },
-  "drawer.day_leaderboard": {
-    "defaultMessage": "Day leaderboard",
-    "description": "Day leaderboard link in drawer"
-  },
-  "drawer.general_leaderboard": {
-    "defaultMessage": "General leaderboard",
-    "description": "General leaderboard link in drawer"
-  },
   "drawer.logout": {
     "defaultMessage": "Logout",
     "description": "Logout button"
-  },
-  "drawer.month_leaderboard": {
-    "defaultMessage": "Month leaderboard",
-    "description": "Month leaderboard link in drawer"
-  },
-  "drawer.week_leaderboard": {
-    "defaultMessage": "Week leaderboard",
-    "description": "Week leaderboard link in drawer"
   },
   "grid.firstPage": {
     "defaultMessage": "First page",
@@ -236,8 +220,12 @@
     "description": "Pagination indicator"
   },
   "index.title": {
-    "defaultMessage": "General leaderboard",
+    "defaultMessage": "Leaderboard",
     "description": "Index page title"
+  },
+  "leaderboard.all_time": {
+    "defaultMessage": "All time",
+    "description": "All time period"
   },
   "leaderboard.battle": {
     "defaultMessage": "Battles",
@@ -255,9 +243,21 @@
     "defaultMessage": "Gyms",
     "description": "Gyms leaderboard title"
   },
+  "leaderboard.last_month": {
+    "defaultMessage": "Last 30 days",
+    "description": "All time period"
+  },
+  "leaderboard.last_week": {
+    "defaultMessage": "Last 7 days",
+    "description": "All time period"
+  },
   "leaderboard.miscellaneous": {
     "defaultMessage": "Miscellaneous",
     "description": "Miscellaneous leaderboard title"
+  },
+  "leaderboard.period": {
+    "defaultMessage": "Period",
+    "description": "Period dropdown"
   },
   "leaderboard.pokedex": {
     "defaultMessage": "Pokédex",
@@ -278,6 +278,10 @@
   "leaderboard.specific": {
     "defaultMessage": "Specific",
     "description": "Specific leaderboard title"
+  },
+  "leaderboard.today": {
+    "defaultMessage": "Today",
+    "description": "All time period"
   },
   "leaderboard.type": {
     "defaultMessage": "Types",
@@ -502,26 +506,6 @@
   "leaderboard_header.xs_rats": {
     "defaultMessage": "Rattata",
     "description": "Leaderboard rattata column header"
-  },
-  "period_leaderboard.last_day": {
-    "defaultMessage": "Today's",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_month": {
-    "defaultMessage": "Last month's",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_week": {
-    "defaultMessage": "Last week's",
-    "description": "Last day period"
-  },
-  "period_leaderboard.no_data": {
-    "defaultMessage": "No data :(",
-    "description": "Error message when leaderboard is not available"
-  },
-  "period_leaderboard.title": {
-    "defaultMessage": "{period} leaderboard",
-    "description": "Period leaderboard title"
   },
   "profile.battles": {
     "defaultMessage": "{battlesWon, number} battles won",
