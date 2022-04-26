@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { leaderboardsData } from '@/features/leaderboard/components/columnDefinitions';
 import { Leaderboard } from '@/features/leaderboard/components/Leaderboard';
 import { Trainer } from '@/types';
-import { Tab, Group, List } from '@/components/Tab';
+import { Tab, Group, List } from '@/components/tab';
 import { MainTab } from '@/features/leaderboard/types';
 import { leaderboardTabTranslations } from '@/features/leaderboard/lang';
 import { PeriodSelect } from '@/features/leaderboard/components/PeriodSelect';

@@ -3,7 +3,7 @@ import { Transition } from '@headlessui/react';
 import { useCallback, useMemo } from 'react';
 import { useRouter } from 'next/router';
 
-import { Button, Label, Option, Options, Select } from '@/components/Select';
+import { Button, Label, Option, Options, Select } from '@/components/select';
 
 const options = [
   {
