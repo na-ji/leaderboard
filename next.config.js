@@ -49,6 +49,25 @@ module.exports = withTM({
     locales: supportedLocales,
     defaultLocale,
   },
+  async redirects() {
+    return [
+      {
+        source: '/leaderboard/day',
+        destination: '/day',
+        permanent: true,
+      },
+      {
+        source: '/leaderboard/week',
+        destination: '/week',
+        permanent: true,
+      },
+      {
+        source: '/leaderboard/month',
+        destination: '/month',
+        permanent: true,
+      },
+    ];
+  },
   experimental: {
     cpus: 1,
     workerThreads: 1,
