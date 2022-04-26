@@ -88,6 +88,9 @@ module.exports = {
         15: '3.75rem', // 60px
         7.5: '1.875rem', // 30px
       },
+      dropShadow: {
+        normal: '0px 2px 10px rgba(223, 228, 234, 0.5)',
+      },
     },
   },
   plugins: [],
