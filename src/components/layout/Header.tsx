@@ -1,7 +1,8 @@
+import Link from 'next/link';
+import { FormattedMessage } from 'react-intl';
 import { signOut } from 'next-auth/react';
 
 import { Logo } from './Logo';
-import Link from 'next/link';
 
 export interface HeaderProps {
   enableAuth: boolean;
@@ -18,7 +19,7 @@ export const Header = ({ enableAuth }: HeaderProps): JSX.Element => {
       </Link>
       {enableAuth && (
         <a href="#!" className="justify-self-end" onClick={() => signOut()}>
-          Sign out
+          <FormattedMessage defaultMessage="Logout" id="drawer.logout" description="Logout button" />
         </a>
       )}
     </header>
