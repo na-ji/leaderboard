@@ -93,3 +93,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default Home;
+
+export const config = {
+  unstable_includeFiles: ['config/**/*.json'],
+};

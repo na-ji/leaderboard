@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import path from 'path';
 
 import { getTrainerProfile } from '@/features/profile/api';
 import { Trainer } from '@/types';
@@ -12,6 +13,7 @@ interface ApiError {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (request: NextApiRequest, response: NextApiResponse<Trainer | ApiError>): Promise<void> => {
+  console.log(path.resolve(process.cwd(), 'config', 'default.json'));
   if (await isUserNotLoggedIn(request, response)) {
     return;
   }

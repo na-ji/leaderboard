@@ -3,11 +3,11 @@ import type { NextPage, GetStaticPaths, GetStaticPathsResult } from 'next';
 import useSWR from 'swr';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
+import { config as projectConfig } from 'node-config-ts';
 
 import { Profile } from '@/features/profile';
 import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
 import { Trainer } from '@/types';
-import { config } from 'node-config-ts';
 
 interface ProfileProps {
   initialTrainer?: Trainer;
@@ -78,7 +78,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: trainers
-      .slice(0, config.numberOfTrainerProfileToPrebuild ?? 30)
+      .slice(0, projectConfig.numberOfTrainerProfileToPrebuild ?? 30)
       .reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
         Object.values(SupportedLocale).forEach((locale) => {
           paths.push({ params: { trainerId: trainer.trainer_id }, locale });
@@ -91,3 +91,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default ProfilePage;
+
+export const config = {
+  unstable_includeFiles: ['config/**/*.json'],
+};

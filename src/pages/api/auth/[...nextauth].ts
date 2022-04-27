@@ -1,8 +1,9 @@
 import DiscordProvider from 'next-auth/providers/discord';
 import NextAuth from 'next-auth';
-import { config } from 'node-config-ts';
+import { config as projectConfig } from 'node-config-ts';
 import SequelizeAdapter, { models } from '@next-auth/sequelize-adapter';
 import { Sequelize, DataTypes } from 'sequelize';
+import path from 'path';
 
 import { getTrainerName } from '@/features/auth/api';
 import { leaderboardConnectionString } from '@/database';
@@ -32,21 +33,21 @@ export const adapter = SequelizeAdapter(sequelize, {
   },
 });
 
-if (config.enableAuth) {
+if (projectConfig.enableAuth) {
   // TODO: handle migrations
   sequelize.sync({ alter: true });
 }
 
 export default NextAuth({
-  secret: config.secret,
-  adapter: config.enableAuth ? adapter : undefined,
+  secret: projectConfig.secret,
+  adapter: projectConfig.enableAuth ? adapter : undefined,
   session: {
     strategy: 'jwt',
   },
   providers: [
     DiscordProvider({
-      clientId: config.discord.clientId,
-      clientSecret: config.discord.clientSecret,
+      clientId: projectConfig.discord.clientId,
+      clientSecret: projectConfig.discord.clientSecret,
       authorization: 'https://discord.com/api/oauth2/authorize?scope=identify+email+guilds',
     }),
   ],
@@ -87,3 +88,5 @@ export default NextAuth({
     },
   },
 });
+
+console.log(path.resolve(process.cwd(), 'config', 'default.json'));
