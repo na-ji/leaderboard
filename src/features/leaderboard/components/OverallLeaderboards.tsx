@@ -9,6 +9,8 @@ import { Tab, Group, List } from '@/components/tab';
 import { MainTab } from '@/features/leaderboard/types';
 import { leaderboardTabTranslations } from '@/features/leaderboard/lang';
 import { PeriodSelect } from '@/features/leaderboard/components/PeriodSelect';
+import { Button } from '@/components/button';
+import { SettingsIcon } from '@/features/leaderboard/components/SettingsIcon';
 
 export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.Element => {
   const router = useRouter();
@@ -23,6 +25,7 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
 
   const [selectedMainTab, setSelectedMainTab] = useState<MainTab>(MainTab.GENERAL);
   const [selectedLeaderboardIndex, setSelectedLeaderboardIndex] = useState<number>(0);
+  const [enableSettings, setEnableSettings] = useState<boolean>(false);
 
   const handleMainTabChange = (newMainTab: MainTab) => {
     setSelectedMainTab(newMainTab);
@@ -59,12 +62,17 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
                 })}
               </Tab>
             </div>
-            <PeriodSelect visible="desktop" />
+            <div className="hidden lg:inline-flex">
+              <PeriodSelect />
+            </div>
+            <Button className="lg:hidden" onClick={() => setEnableSettings(!enableSettings)} active={enableSettings}>
+              <SettingsIcon className="inline" />
+            </Button>
           </div>
         </List>
       </Group>
       <Group selectedIndex={selectedLeaderboardIndex} onChange={setSelectedLeaderboardIndex}>
-        <List className="mb-3 lg:mb-5">
+        <List>
           {leaderboardsData[selectedMainTab].map((leaderboardData) => {
             return (
               <Tab key={leaderboardData.leaderboard} level={2}>
@@ -74,6 +82,13 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
           })}
         </List>
       </Group>
+      <div className="overflow-hidden flex">
+        <div
+          className={`lg:hidden transition-all duration-300 ${enableSettings ? 'max-h-10 mb-3' : 'invisible max-h-0'}`}
+        >
+          <PeriodSelect />
+        </div>
+      </div>
       <Leaderboard
         trainers={trainers}
         columns={currentLeaderboard.columns}

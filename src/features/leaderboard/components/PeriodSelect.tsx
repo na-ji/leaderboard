@@ -40,7 +40,11 @@ const options = [
   },
 ];
 
-export const PeriodSelect = ({ visible }: { visible: 'mobile' | 'desktop' }): JSX.Element => {
+interface PeriodSelectProps {
+  className?: string;
+}
+
+export const PeriodSelect = ({ className }: PeriodSelectProps): JSX.Element => {
   const router = useRouter();
   const intl = useIntl();
 
@@ -62,11 +66,7 @@ export const PeriodSelect = ({ visible }: { visible: 'mobile' | 'desktop' }): JS
   );
 
   return (
-    <Select
-      value={selectedOption}
-      onChange={setOption}
-      className={`justify-self-end ${visible === 'desktop' ? 'hidden lg:inline-flex' : 'inline-flex lg:hidden'}`}
-    >
+    <Select value={selectedOption} onChange={setOption} className={`justify-self-end ${className || ''}`}>
       <Label>
         <FormattedMessage defaultMessage="Period" id="leaderboard.period" description="Period dropdown" />
       </Label>
