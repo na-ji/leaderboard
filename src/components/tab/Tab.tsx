@@ -18,7 +18,7 @@ export const Tab = ({ level = 1, children, ...props }: TabProps): JSX.Element =>
           'bg-blue-20 lg:h-10 h-9 rounded mr-1.5 lg:mr-3 last:mr-0': level === 2,
           'hover:bg-[rgba(68,121,254,0.1)] hover:text-blue-100 hover:font-semibold disabled:text-[#BCC3D7] disabled:hover:font-normal disabled:bg-[#F2F4F9]':
             level === 2,
-          'bg-gradient text-white-100 hover:text-white-100 lg:font-semibold': level === 2 && selected,
+          'bg-gradient !text-white-100 hover:text-white-100 lg:font-semibold': level === 2 && selected,
         });
       }}
       data-text={children}
