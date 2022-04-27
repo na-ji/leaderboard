@@ -1,14 +1,10 @@
-import Alert from '@mui/material/Alert';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Typography from '@mui/material/Typography';
 import { config } from 'node-config-ts';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { signOut, useSession } from 'next-auth/react';
 import { useState, FormEvent, ReactNode } from 'react';
 
 import { fetcher } from '@/utils/fetcher';
+import { Button } from '@/components/button';
 
 export const Registration = (): JSX.Element => {
   const [trainerName, setTrainerName] = useState('');
@@ -60,22 +56,22 @@ export const Registration = (): JSX.Element => {
   return (
     <>
       {isAlreadyRegistered && (
-        <Alert severity="success" sx={{ my: 1 }}>
+        <div className="my-3 rounded bg-green text-black p-2">
           <FormattedMessage
             defaultMessage="You're already registered"
             id="registration.already_registered"
             description="Error message if connected user is already registered"
           />
-        </Alert>
+        </div>
       )}
-      <Typography variant="h4">
+      <h3 className="title-2">
         <FormattedMessage
           defaultMessage="1 - Add bot to your friends"
           id="registration.step.add_bot"
           description="First step to register"
         />
-      </Typography>
-      <Box component="p">
+      </h3>
+      <p>
         <FormattedMessage
           defaultMessage="Add this friend code <code>{trainerCode}</code>"
           id="registration.step.add_bot_instruction"
@@ -85,41 +81,41 @@ export const Registration = (): JSX.Element => {
             trainerCode: config.trainerCode,
           }}
         />
-      </Box>
-      <Typography variant="h4">
+      </p>
+      <h3 className="title-2">
         <FormattedMessage
           defaultMessage="2 - Link your account"
           id="registration.step.link_account"
           description="Second step to register"
         />
-      </Typography>
-      <Box component="form" noValidate autoComplete="off" onSubmit={handleSubmit}>
-        {errorMessage && (
-          <Alert severity="error" sx={{ my: 1 }}>
-            {errorMessage}
-          </Alert>
-        )}
-        <Box sx={{ my: 1 }}>
-          <TextField
-            name="trainerName"
-            required
-            label={intl.formatMessage({
+      </h3>
+      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+        {errorMessage && <div className="my-3 rounded bg-red text-black p-2">{errorMessage}</div>}
+        <div className="my-3">
+          <label>
+            {intl.formatMessage({
               id: 'registration.trainer_name',
               defaultMessage: 'Trainer name',
               description: 'Trainer name input label',
             })}
-            value={trainerName}
-            onChange={(event) => setTrainerName(event.target.value)}
-          />
-        </Box>
-        <Button variant="contained" type="submit" disabled={isSubmitting || isAlreadyRegistered}>
+            <input
+              name="trainerName"
+              required
+              type="text"
+              value={trainerName}
+              onChange={(event) => setTrainerName(event.target.value)}
+              className="ml-2"
+            />
+          </label>
+        </div>
+        <Button type="submit" disabled={isSubmitting || isAlreadyRegistered} className="px-3">
           <FormattedMessage
             defaultMessage="Submit"
             id="registration.submit"
             description="Button to validate registration"
           />
         </Button>
-      </Box>
+      </form>
     </>
   );
 };

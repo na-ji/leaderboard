@@ -1,10 +1,7 @@
-import Container from '@mui/material/Container';
 import Head from 'next/head';
 import type { NextPage } from 'next';
-import Typography from '@mui/material/Typography';
 import { useIntl } from 'react-intl';
 
-import { PageTitle } from '@/components/PageTitle';
 import { Registration } from '@/features/auth';
 import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 
@@ -27,11 +24,8 @@ const RegistrationPage: NextPage = () => {
         <title key="title">{title}</title>
         <meta key="description" name="description" content={description} />
       </Head>
-      <PageTitle>{title}</PageTitle>
-      <Container maxWidth={false}>
-        <Typography variant="h3">{title}</Typography>
-        <Registration />
-      </Container>
+      <h1 className="title-1 mt-2.5 lg:mt-0.5">{title}</h1>
+      <Registration />
     </>
   );
 };
