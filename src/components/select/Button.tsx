@@ -1,6 +1,6 @@
 import { Listbox } from '@headlessui/react';
 
-import { ChevronIcon } from './ChevronIcon';
+import { ChevronIcon } from '@/components/ChevronIcon';
 
 export const Button: typeof Listbox.Button = ({ children, ...props }) => {
   return (
@@ -11,7 +11,7 @@ export const Button: typeof Listbox.Button = ({ children, ...props }) => {
       {({ open }) => (
         <>
           {children}
-          <ChevronIcon reversed={open} className="ml-1 !fill-black" />
+          <ChevronIcon reversed={open} className="ml-1 fill-black" />
         </>
       )}
     </Listbox.Button>

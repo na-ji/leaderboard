@@ -1,9 +1,10 @@
-interface ChevronIconProps {
+import { ComponentPropsWithoutRef } from 'react';
+
+interface ChevronIconProps extends ComponentPropsWithoutRef<'svg'> {
   reversed?: boolean;
-  className?: string;
 }
 
-export const ChevronIcon = ({ reversed, className }: ChevronIconProps): JSX.Element => {
+export const ChevronIcon = ({ reversed, className, ...props }: ChevronIconProps): JSX.Element => {
   return (
     <svg
       width="9"
@@ -11,7 +12,8 @@ export const ChevronIcon = ({ reversed, className }: ChevronIconProps): JSX.Elem
       viewBox="0 0 9 6"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`transition-transform duration-300 fill-grey-70 ${reversed ? 'rotate-180' : 'rotate-0'} ${className}`}
+      {...props}
+      className={`transition-transform duration-300 fill-current ${reversed ? 'rotate-180' : ''} ${className || ''}`}
     >
       <path
         fillRule="evenodd"
