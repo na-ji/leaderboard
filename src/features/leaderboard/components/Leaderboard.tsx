@@ -1,7 +1,5 @@
 import '@ag-grid-community/core/dist/styles/ag-grid.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-material.css';
-import Box from '@mui/material/Box';
-import styled from 'styled-components';
 import type { AgGridEvent } from '@ag-grid-community/core';
 import { AgGridColumn, AgGridReact } from '@ag-grid-community/react';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
@@ -11,8 +9,7 @@ import { useRouter } from 'next/router';
 
 import { columnHeaderTranslations } from '@/features/leaderboard/lang';
 import { ColumnsType } from '@/features/leaderboard/components/columnDefinitions';
-import { getDarkTeamColor, getLightTeamColor } from '@/utils/team-colors';
-import { Team, Trainer } from '@/types';
+import { Trainer } from '@/types';
 import { agGridTranslations } from '@/features/leaderboard/lang/agGridTranslations';
 
 export interface LeaderboardProps {
@@ -20,39 +17,6 @@ export interface LeaderboardProps {
   columns: ColumnsType;
   defaultSort: ColumnsType[0]['field'];
 }
-
-const ColoredTeamRowsContainer = styled(Box)`
-  height: 593px;
-  width: 100%;
-
-  .ag-row:hover {
-    cursor: pointer;
-  }
-
-  .team-${Team.MYSTIC} {
-    background-color: ${getLightTeamColor(Team.MYSTIC)};
-
-    :hover {
-      background-color: ${getDarkTeamColor(Team.MYSTIC)};
-    }
-  }
-
-  .team-${Team.VALOR} {
-    background-color: ${getLightTeamColor(Team.VALOR)};
-
-    :hover {
-      background-color: ${getDarkTeamColor(Team.VALOR)};
-    }
-  }
-
-  .team-${Team.INSTINCT} {
-    background-color: ${getLightTeamColor(Team.INSTINCT)};
-
-    :hover {
-      background-color: ${getDarkTeamColor(Team.INSTINCT)};
-    }
-  }
-`;
 
 const autoSizeColumns = ({ api, columnApi }: AgGridEvent): void => {
   if (typeof window === 'undefined') {
@@ -75,7 +39,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
   const router = useRouter();
 
   return (
-    <ColoredTeamRowsContainer className="ag-theme-material">
+    <div className="ag-theme-material h-[616px] w-full">
       <AgGridReact
         getRowClass={(params) => `team-${params.data.team}`}
         localeTextFunc={(key, defaultValue) => {
@@ -116,7 +80,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
           />
         ))}
       </AgGridReact>
-    </ColoredTeamRowsContainer>
+    </div>
   );
 });
 Leaderboard.displayName = 'MemoizedLeaderboard';
