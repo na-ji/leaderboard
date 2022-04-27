@@ -62,7 +62,7 @@ export const PeriodSelect = ({ className }: PeriodSelectProps): JSX.Element => {
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [router.asPath],
   );
 
   return (
