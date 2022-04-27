@@ -7,6 +7,9 @@ export default {
   title: 'Tab',
   component: Tab,
   args: {},
+  parameters: {
+    chromatic: { viewports: [375, 1024] },
+  },
 } as ComponentMeta<typeof Tab>;
 
 const Template: ComponentStory<typeof Tab> = ({ level = 1 }) => {

@@ -9,6 +9,9 @@ export default {
   args: {
     enableAuth: false,
   },
+  parameters: {
+    chromatic: { viewports: [375, 1024] },
+  },
 } as ComponentMeta<typeof Header>;
 
 const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
