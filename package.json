@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run i18n:compile && cross-env NODE_ENV=production next build && npm run build:server",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook",
     "build:server": "tsc --project tsconfig.server.json",
     "chromatic": "chromatic --exit-zero-on-changes",
     "commit": "git-cz",
@@ -20,7 +20,7 @@
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
     "schema:create": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json server/create-schema.ts",
     "start": "cross-env NODE_ENV=production node dist/server/index.js",
-    "storybook": "start-storybook -p 7349 -s ./public"
+    "storybook": "start-storybook -p 7349"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -180,6 +180,7 @@
     "ts-node": "^10.7.0",
     "typescript": "4.6.3",
     "vite": "^2.9.1",
+    "vite-plugin-environment": "^1.1.1",
     "vite-tsconfig-paths": "^3.4.1",
     "webpack-stats-plugin": "^1.0.3"
   }

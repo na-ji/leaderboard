@@ -1,5 +1,4 @@
 import * as jest from 'jest-mock';
-import * as NextImage from 'next/image';
 import { IntlProvider } from 'react-intl';
 
 import '../src/globals.css';
@@ -36,14 +35,3 @@ export const decorators = [
     </IntlProvider>
   ),
 ];
-
-// de-optimise NextJS images
-const OriginalNextImage = NextImage.default;
-
-Object.defineProperty(NextImage, 'default', {
-  configurable: true,
-  value: (props) => {
-    console.log({ props });
-    return <OriginalNextImage {...props} unoptimized />;
-  },
-});
