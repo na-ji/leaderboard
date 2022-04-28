@@ -1,7 +1,5 @@
-import styled from 'styled-components';
-import type { JSXElementConstructor } from 'react';
+import { Fragment, JSXElementConstructor } from 'react';
 
-import { getDarkTeamColor } from '@/utils/team-colors';
 import { Instinct, Mystic, Valor } from '@/features/profile/components/icons';
 import { Team } from '@/types';
 
@@ -13,25 +11,19 @@ const teamToLogo = (team: Team): JSXElementConstructor<Record<string, unknown>> 
       return Instinct;
     case Team.MYSTIC:
       return Mystic;
+    default:
+      // TODO: handle Harmony
+      return Fragment;
   }
 };
 
-const TeamLogoOverlay = styled.span<{ team: Team }>`
-  svg {
-    width: 60px;
-  }
+interface TeamLogoProps {
+  team: Team;
+  className?: string;
+}
 
-  path {
-    fill: ${({ team }) => getDarkTeamColor(team)};
-  }
-`;
-
-export const TeamLogo = ({ team }: { team: Team }): JSX.Element => {
+export const TeamLogo = ({ team, className }: TeamLogoProps): JSX.Element => {
   const Logo = teamToLogo(team);
 
-  return (
-    <TeamLogoOverlay team={team}>
-      <Logo />
-    </TeamLogoOverlay>
-  );
+  return <Logo className={className} />;
 };
