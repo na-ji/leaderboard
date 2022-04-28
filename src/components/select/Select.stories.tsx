@@ -5,7 +5,7 @@ import { Transition } from '@headlessui/react';
 import { Select, Label, Button, Options, Option } from '.';
 
 export default {
-  title: 'Select',
+  title: 'UI Kit/Select',
   component: Select,
   args: {},
   parameters: {

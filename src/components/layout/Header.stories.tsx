@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Header } from './Header';
 
 export default {
-  title: 'Header',
+  title: 'UI Kit/Header',
   component: Header,
   args: {
     enableAuth: false,

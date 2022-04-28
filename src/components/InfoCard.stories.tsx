@@ -6,7 +6,7 @@ import { TeamLogo } from '@/features/profile/components/TeamLogo';
 import { Team } from '@/types';
 
 export default {
-  title: 'InfoCard',
+  title: 'UI Kit/InfoCard',
   component: InfoCard,
   args: {},
   parameters: {

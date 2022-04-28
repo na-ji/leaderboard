@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Tab, Group, List, Panel, Panels } from '.';
 
 export default {
-  title: 'Tab',
+  title: 'UI Kit/Tab',
   component: Tab,
   args: {},
   parameters: {

@@ -5,7 +5,7 @@ import { OverviewCards } from './OverviewCards';
 import { trainer } from '@/utils/fixtures';
 
 export default {
-  title: 'OverviewCards',
+  title: 'Profile/OverviewCards',
   component: OverviewCards,
   args: {
     trainer,

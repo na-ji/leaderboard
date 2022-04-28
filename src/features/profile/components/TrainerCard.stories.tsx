@@ -5,7 +5,7 @@ import { TrainerCard } from './TrainerCard';
 import { trainer } from '@/utils/fixtures';
 
 export default {
-  title: 'TrainerCard',
+  title: 'Profile/TrainerCard',
   component: TrainerCard,
   args: {
     trainer,

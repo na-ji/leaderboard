@@ -5,7 +5,7 @@ import { Button } from './Button';
 import { ChevronIcon } from '@/components/ChevronIcon';
 
 export default {
-  title: 'Button',
+  title: 'UI Kit/Button',
   component: Button,
   args: {},
 } as ComponentMeta<typeof Button>;
