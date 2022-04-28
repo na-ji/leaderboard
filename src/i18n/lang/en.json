@@ -508,35 +508,43 @@
     "description": "Leaderboard rattata column header"
   },
   "profile.battles": {
-    "defaultMessage": "{battlesWon, number} battles won",
-    "description": "Battle won line in the profile page"
+    "defaultMessage": "Battles",
+    "description": "Battles info card title in the profile page"
   },
   "profile.gbl_rank": {
-    "defaultMessage": "GBL rank {gblRank}",
-    "description": "GBL rank line in the profile page"
+    "defaultMessage": "GBL Rank",
+    "description": "GBL rank info card title in the profile page"
   },
-  "profile.gbl_rating": {
-    "defaultMessage": "GBL rating of {gblRating}",
-    "description": "GBL rating line in the profile page"
-  },
-  "profile.general": {
-    "defaultMessage": "General information",
-    "description": "Subtitle in the profile page"
+  "profile.last_update": {
+    "defaultMessage": "Last Update",
+    "description": "Last update info card title in the profile page"
   },
   "profile.level": {
-    "defaultMessage": "Level {level}",
+    "defaultMessage": "Level: {level}",
     "description": "Level line in the profile page"
   },
   "profile.medals": {
     "defaultMessage": "Medals",
     "description": "Subtitle in the profile page"
   },
+  "profile.pokemon_caught": {
+    "defaultMessage": "Catches",
+    "description": "Pokemon caught info card title in the profile page"
+  },
+  "profile.team": {
+    "defaultMessage": "Team",
+    "description": "Team info card title in the profile page"
+  },
   "profile.title": {
     "defaultMessage": "{name}'s Profile",
     "description": "Profile page title"
   },
+  "profile.total_xp": {
+    "defaultMessage": "XP",
+    "description": "Total XP info card title in the profile page"
+  },
   "profile.updated_at": {
-    "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
+    "defaultMessage": "{date, time, short}",
     "description": "Last updated line in the profile page"
   },
   "registration.already_registered": {
@@ -578,6 +586,18 @@
   "registration.trainer_not_found": {
     "defaultMessage": "Trainer not found. Please wait 30 minutes after adding the bot as your friend.",
     "description": "Registration error when trainer is not found"
+  },
+  "team.instinct": {
+    "defaultMessage": "Instinct",
+    "description": "Team Instinct"
+  },
+  "team.mystic": {
+    "defaultMessage": "Mystic",
+    "description": "Team Mystic"
+  },
+  "team.valor": {
+    "defaultMessage": "Valor",
+    "description": "Team Valor"
   },
   "type_bug": {
     "defaultMessage": "Bug",

@@ -4,8 +4,8 @@ import { FormattedMessage } from 'react-intl';
 
 import { Badge, Trainer } from '@/types';
 import { BadgeCard } from '@/features/profile/components/BadgeCard';
-import { getDarkTeamColor } from '@/utils/team-colors';
-import { TeamLogo } from '@/features/profile/components/TeamLogo';
+import { TrainerCard } from '@/features/profile/components/TrainerCard';
+import { OverviewCards } from '@/features/profile/components/OverviewCards';
 
 interface ProfileProps {
   trainer: Trainer;
@@ -14,63 +14,10 @@ interface ProfileProps {
 export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
   return (
     <>
-      <Typography variant="h3" sx={{ color: getDarkTeamColor(trainer.team) }}>
-        {trainer.name}
-        <TeamLogo team={trainer.team} />
-      </Typography>
-      <Typography variant="h6">
-        <FormattedMessage
-          defaultMessage="General information"
-          id="profile.general"
-          description="Subtitle in the profile page"
-        />
-      </Typography>
-      <ul>
-        <li>
-          <FormattedMessage
-            defaultMessage="Level {level}"
-            id="profile.level"
-            description="Level line in the profile page"
-            values={{ level: trainer.level }}
-          />
-        </li>
-        <li>
-          <FormattedMessage
-            defaultMessage="Last updated the {date, date, short} at {date, time, short}"
-            id="profile.updated_at"
-            description="Last updated line in the profile page"
-            values={{ date: new Date(trainer.last_seen) }}
-          />
-        </li>
-        <li>
-          <FormattedMessage
-            defaultMessage="{battlesWon, number} battles won"
-            id="profile.battles"
-            description="Battle won line in the profile page"
-            values={{ battlesWon: trainer.battles_won }}
-          />
-        </li>
-        {trainer.gbl_rank && (
-          <li>
-            <FormattedMessage
-              defaultMessage="GBL rank {gblRank}"
-              id="profile.gbl_rank"
-              description="GBL rank line in the profile page"
-              values={{ gblRank: trainer.gbl_rank }}
-            />
-          </li>
-        )}
-        {trainer.gbl_rating && (
-          <li>
-            <FormattedMessage
-              defaultMessage="GBL rating of {gblRating}"
-              id="profile.gbl_rating"
-              description="GBL rating line in the profile page"
-              values={{ gblRating: trainer.gbl_rating }}
-            />
-          </li>
-        )}
-      </ul>
+      <div className="lg:grid lg:grid-cols-12 lg:gap-5">
+        <TrainerCard trainer={trainer} className="lg:col-span-7 flex" />
+        <OverviewCards trainer={trainer} className="hidden lg:grid lg:col-span-5" />
+      </div>
       <Typography variant="h6">
         <FormattedMessage defaultMessage="Medals" id="profile.medals" description="Subtitle in the profile page" />
       </Typography>

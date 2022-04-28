@@ -3,6 +3,14 @@
     "defaultMessage": "Médailles",
     "description": "Subtitle in the profile page"
   },
+  "profile.pokemon_caught": {
+    "defaultMessage": "Captures",
+    "description": "Pokemon caught info card title in the profile page"
+  },
+  "profile.team": {
+    "defaultMessage": "Équipe",
+    "description": "Team info card title in the profile page"
+  },
   "profile.gbl_rating": {
     "defaultMessage": "{gblRating, number}",
     "description": "GBL rating line in the profile page"
@@ -12,7 +20,7 @@
     "description": "Period leaderboard title"
   },
   "profile.level": {
-    "defaultMessage": "Niveau {level}",
+    "defaultMessage": "Niveau : {level}",
     "description": "Level line in the profile page"
   },
   "index.title": {
@@ -32,16 +40,12 @@
     "description": "Types leaderboard title"
   },
   "profile.battles": {
-    "defaultMessage": "{battlesWon, number} combats gagnés",
-    "description": "Battle won line in the profile page"
-  },
-  "profile.general": {
-    "defaultMessage": "Informations générales",
-    "description": "Subtitle in the profile page"
+    "defaultMessage": "Combats",
+    "description": "Battles info card title in the profile page"
   },
   "profile.gbl_rank": {
-    "defaultMessage": "Rang {gblRank} sur la Ligue de Combat GO",
-    "description": "GBL rank line in the profile page"
+    "defaultMessage": "Rang LCG",
+    "description": "GBL rank info card title in the profile page"
   },
   "leaderboard.raid": {
     "defaultMessage": "Raids",
@@ -56,7 +60,7 @@
     "description": "Period dropdown"
   },
   "profile.updated_at": {
-    "defaultMessage": "Dernière mise à jour le {date, date, short} à {date, time, short}",
+    "defaultMessage": "{date, time, short}",
     "description": "Last updated line in the profile page"
   },
   "registration.already_registered": {
@@ -98,6 +102,18 @@
   "registration.trainer_not_found": {
     "defaultMessage": "Dresseur non trouvé. Merci d'attendre 30 minutes après avoir ajouté le bot.",
     "description": "Registration error when trainer is not found"
+  },
+  "team.instinct": {
+    "defaultMessage": "Intuition",
+    "description": "Team Instinct"
+  },
+  "team.mystic": {
+    "defaultMessage": "Sagesse",
+    "description": "Team Mystic"
+  },
+  "team.valor": {
+    "defaultMessage": "Bravoure",
+    "description": "Team Valor"
   },
   "period_leaderboard.no_data": {
     "defaultMessage": "Pas de données :(",
@@ -310,6 +326,10 @@
   "profile.title": {
     "defaultMessage": "Profil de {name}",
     "description": "Profile page title"
+  },
+  "profile.total_xp": {
+    "defaultMessage": "PX",
+    "description": "Total XP info card title in the profile page"
   },
   "grid.firstPage": {
     "defaultMessage": "Première page",
