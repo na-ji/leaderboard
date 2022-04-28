@@ -15,13 +15,7 @@ export const TrainerCard = ({ className, trainer }: TrainerCardProps): JSX.Eleme
   return (
     <Card className={`flex h-[102px] lg:h-[172px] p-4 lg:px-[30px] lg:py-[26px] ${className || ''}`}>
       <div className="h-[70px] w-[70px] lg:h-[120px] lg:w-[120px]">
-        <NextImage
-          src={avatarPicture}
-          alt="Avatar"
-          width={120}
-          height={120}
-          unoptimized={'IS_STORYBOOK' in process.env}
-        />
+        <NextImage src={avatarPicture} alt="Avatar" width={120} height={120} unoptimized={!!process.env.IS_STORYBOOK} />
       </div>
       <div className="grow ml-3.5 lg:ml-6 flex flex-col">
         <h3 className="title-2 lg:title-1">{trainer.name}</h3>

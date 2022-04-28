@@ -62,6 +62,7 @@ jobs:
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
