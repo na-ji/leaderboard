@@ -2,7 +2,6 @@ import Head from 'next/head';
 import type { NextPage, GetStaticPaths, GetStaticPathsResult } from 'next';
 import useSWR from 'swr';
 import { useIntl } from 'react-intl';
-import { useRouter } from 'next/router';
 import { config as projectConfig } from 'node-config-ts';
 
 import { Profile } from '@/features/profile';
@@ -11,9 +10,10 @@ import { Trainer } from '@/types';
 
 interface ProfileProps {
   initialTrainer?: Trainer;
+  trainerId: string;
 }
 
-const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
+const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer, trainerId }) => {
   const intl = useIntl();
   const title = initialTrainer
     ? intl.formatMessage(
@@ -25,15 +25,17 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
         { name: initialTrainer.name },
       )
     : '';
-  const { trainerId } = useRouter().query;
 
-  const { data: trainer } = useSWR<Trainer>(`/api/trainers/${encodeURIComponent(trainerId as string)}`, {
-    fallbackData: initialTrainer,
-  });
+  const { data: trainer } = useSWR<Trainer>(
+    trainerId ? `/api/trainers/${encodeURIComponent(trainerId as string)}` : null,
+    {
+      fallbackData: initialTrainer,
+    },
+  );
 
   return (
     <>
-      {trainer && (
+      {trainer && trainerId && (
         <>
           <Head>
             <title key="title">{title}</title>
@@ -54,7 +56,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer }) => {
 };
 
 export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainerId: string }>(async ({ params }) => {
-  if (!params) {
+  if (!params || !params.trainerId) {
     return { notFound: true };
   }
 
@@ -66,7 +68,7 @@ export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainerI
   }
 
   return {
-    props: { initialTrainer: trainer },
+    props: { initialTrainer: trainer, trainerId: params.trainerId },
     // rebuild at most every 30 minutes
     revalidate: 1800,
   };
