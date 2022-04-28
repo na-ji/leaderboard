@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "npm run i18n:compile && cross-env NODE_ENV=production next build && npm run build:server",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s public",
     "build:server": "tsc --project tsconfig.server.json",
     "chromatic": "chromatic --exit-zero-on-changes",
     "commit": "git-cz",
@@ -20,7 +20,7 @@
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
     "schema:create": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json server/create-schema.ts",
     "start": "cross-env NODE_ENV=production node dist/server/index.js",
-    "storybook": "start-storybook -p 7349"
+    "storybook": "start-storybook -p 7349 -s ./public"
   },
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -145,7 +145,7 @@
     "@storybook/addon-interactions": "^6.4.21",
     "@storybook/addon-links": "^6.4.21",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/builder-vite": "^0.1.28",
+    "@storybook/builder-vite": "^0.1.30",
     "@storybook/react": "^6.4.21",
     "@storybook/testing-library": "^0.0.9",
     "@types/cron": "^1.7.3",

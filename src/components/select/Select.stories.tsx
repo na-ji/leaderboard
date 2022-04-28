@@ -8,6 +8,11 @@ export default {
   title: 'Select',
   component: Select,
   args: {},
+  parameters: {
+    backgrounds: {
+      default: 'white',
+    },
+  },
 } as ComponentMeta<typeof Select>;
 
 const options = [

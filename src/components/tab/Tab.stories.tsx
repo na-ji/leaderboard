@@ -9,6 +9,9 @@ export default {
   args: {},
   parameters: {
     chromatic: { viewports: [375, 1024] },
+    backgrounds: {
+      default: 'white',
+    },
   },
 } as ComponentMeta<typeof Tab>;
 
