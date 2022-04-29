@@ -3,6 +3,7 @@ import '@ag-grid-community/core/dist/styles/ag-theme-material.css';
 import type { AgGridEvent } from '@ag-grid-community/core';
 import { AgGridColumn, AgGridReact } from '@ag-grid-community/react';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+import { ValueFormatterFunc, ValueGetterFunc } from '@ag-grid-community/core/dist/cjs/es5/entities/colDef';
 import { memo } from 'react';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
@@ -42,7 +43,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
     <div className="ag-theme-material h-[616px] w-full">
       <AgGridReact
         getRowClass={(params) => `team-${params.data.team}`}
-        localeTextFunc={(key, defaultValue) => {
+        getLocaleText={({ key, defaultValue }) => {
           return key in agGridTranslations
             ? intl.formatMessage(agGridTranslations[key as keyof typeof agGridTranslations])
             : defaultValue;
@@ -59,7 +60,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
       >
         <AgGridColumn
           headerName={intl.formatMessage(columnHeaderTranslations.rank)}
-          valueGetter={({ node }) => (node?.rowIndex ?? 0) + 1}
+          valueGetter={(({ node }) => (node?.rowIndex ?? 0) + 1) as ValueGetterFunc}
         />
         {columns.map((column, index) => (
           <AgGridColumn
@@ -75,7 +76,9 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
             key={index}
             sortable={true}
             suppressMovable={true}
-            valueFormatter={column.type === 'number' ? ({ value }) => intl.formatNumber(value) : undefined}
+            valueFormatter={
+              column.type === 'number' ? ((({ value }) => intl.formatNumber(value)) as ValueFormatterFunc) : undefined
+            }
             valueGetter={column.valueGetter}
           />
         ))}
