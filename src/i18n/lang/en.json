@@ -160,7 +160,7 @@
     "description": "Badge TRAININGS_WON"
   },
   "badge_unique_mega_evos": {
-    "defaultMessage": "Unique mega evolutions",
+    "defaultMessage": "Unique mega evos",
     "description": "Badge UNIQUE_MEGA_EVOS"
   },
   "badge_unique_raid_bosses": {
@@ -522,10 +522,6 @@
   "profile.level": {
     "defaultMessage": "Level: {level}",
     "description": "Level line in the profile page"
-  },
-  "profile.medals": {
-    "defaultMessage": "Medals",
-    "description": "Subtitle in the profile page"
   },
   "profile.pokemon_caught": {
     "defaultMessage": "Catches",

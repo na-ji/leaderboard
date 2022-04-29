@@ -1,8 +1,4 @@
 {
-  "profile.medals": {
-    "defaultMessage": "Médailles",
-    "description": "Subtitle in the profile page"
-  },
   "profile.pokemon_caught": {
     "defaultMessage": "Captures",
     "description": "Pokemon caught info card title in the profile page"
@@ -212,7 +208,7 @@
     "description": "Badge GRUNTS_DEFEATED"
   },
   "badge_gym_battles_won": {
-    "defaultMessage": "Combats d'arènes gagnés",
+    "defaultMessage": "Combats d'arènes",
     "description": "Badge GYM_BATTLES_WON"
   },
   "badge_hatched": {
@@ -228,19 +224,19 @@
     "description": "Badge KM_WALKED"
   },
   "badge_league_great_won": {
-    "defaultMessage": "Ligue super remportés",
+    "defaultMessage": "Ligue super",
     "description": "Badge LEAGUE_GREAT_WON"
   },
   "badge_league_master_won": {
-    "defaultMessage": "Ligue master remportés",
+    "defaultMessage": "Ligue master",
     "description": "Badge LEAGUE_MASTER_WON"
   },
   "badge_league_ultra_won": {
-    "defaultMessage": "Ligue hyper remportés",
+    "defaultMessage": "Ligue hyper",
     "description": "Badge LEAGUE_ULTRA_WON"
   },
   "badge_legendary_raids_won": {
-    "defaultMessage": "Raids légendaires remportés",
+    "defaultMessage": "Raids légendaires",
     "description": "Badge LEGENDARY_RAIDS_WON"
   },
   "badge_mega_evos": {
