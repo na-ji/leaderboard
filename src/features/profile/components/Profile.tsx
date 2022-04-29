@@ -19,7 +19,7 @@ export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
   const [selectedTabIndex, setSelectedTabIndex] = useState(0);
 
   useEffect(() => {
-    setSelectedTabIndex(1);
+    setSelectedTabIndex(0);
   }, [isDesktop, setSelectedTabIndex]);
 
   return (
