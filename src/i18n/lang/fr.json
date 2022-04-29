@@ -43,6 +43,10 @@
     "defaultMessage": "Rang LCG",
     "description": "GBL rank info card title in the profile page"
   },
+  "profile.last_update": {
+    "defaultMessage": "Mis à jour",
+    "description": "Last update info card title in the profile page"
+  },
   "leaderboard.raid": {
     "defaultMessage": "Raids",
     "description": "Raids leaderboard title"
