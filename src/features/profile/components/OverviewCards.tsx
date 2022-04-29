@@ -18,7 +18,7 @@ export const OverviewCards = ({ className, trainer }: OverviewCardsProps): JSX.E
   const intl = useIntl();
 
   return (
-    <div className={`grid grid-cols-2 xl:grid-cols-3 gap-3 ${className || ''}`}>
+    <div className={`grid grid-cols-2 xl:grid-cols-3 gap-3 content-start ${className || ''}`}>
       <InfoCard
         icon={<TeamLogo team={trainer.team} />}
         title={intl.formatMessage({
