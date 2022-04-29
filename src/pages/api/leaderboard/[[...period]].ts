@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
 
 import {
   getOverallLeaderboard,
@@ -10,6 +9,7 @@ import {
 import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
 import { Trainer } from '@/types';
 import { setCacheControlHeader } from '@/utils/apiCacheControl';
+import { resolveConfig } from '@/utils/resolveConfig';
 
 interface ApiError {
   code: number;
@@ -18,7 +18,7 @@ interface ApiError {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (request: NextApiRequest, response: NextApiResponse<Trainer[] | ApiError>): Promise<void> => {
-  console.log(path.resolve(process.cwd(), 'config', 'default.json'));
+  resolveConfig();
   if (await isUserNotLoggedIn(request, response)) {
     return;
   }

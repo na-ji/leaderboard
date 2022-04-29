@@ -3,11 +3,11 @@ import NextAuth from 'next-auth';
 import { config as projectConfig } from 'node-config-ts';
 import SequelizeAdapter, { models } from '@next-auth/sequelize-adapter';
 import { Sequelize, DataTypes } from 'sequelize';
-import path from 'path';
 
 import { getTrainerName } from '@/features/auth/api';
 import { leaderboardConnectionString } from '@/database';
 import { userHasAccess } from '@/features/auth/api/discord';
+import { resolveConfig } from '@/utils/resolveConfig';
 
 export const sequelize = new Sequelize(leaderboardConnectionString, { logging: false });
 export const adapter = SequelizeAdapter(sequelize, {
@@ -89,4 +89,4 @@ export default NextAuth({
   },
 });
 
-console.log(path.resolve(process.cwd(), 'config', 'default.json'));
+resolveConfig();

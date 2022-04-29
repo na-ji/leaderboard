@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import path from 'path';
 
 import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
 import { getTrainerByName, setUserTrainerId } from '@/features/auth/api';
 import { getSession } from 'next-auth/react';
+import { resolveConfig } from '@/utils/resolveConfig';
 
 export interface Response {
   error?: 'invalid_request' | 'trainer_not_found';
@@ -12,7 +12,7 @@ export interface Response {
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (request: NextApiRequest, response: NextApiResponse<Response>): Promise<void> => {
-  console.log(path.resolve(process.cwd(), 'config', 'default.json'));
+  resolveConfig();
   if (await isUserNotLoggedIn(request, response)) {
     return;
   }
