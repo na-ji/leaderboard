@@ -523,6 +523,14 @@
     "defaultMessage": "Level: {level}",
     "description": "Level line in the profile page"
   },
+  "profile.medals": {
+    "defaultMessage": "Medals",
+    "description": "Tab in the profile page"
+  },
+  "profile.overview": {
+    "defaultMessage": "Overview",
+    "description": "Tab in the profile page"
+  },
   "profile.pokemon_caught": {
     "defaultMessage": "Catches",
     "description": "Pokemon caught info card title in the profile page"

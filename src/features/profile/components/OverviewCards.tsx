@@ -1,4 +1,5 @@
 import { useIntl } from 'react-intl';
+import { memo } from 'react';
 
 import { Trainer } from '@/types';
 import { InfoCard } from '@/components/InfoCard';
@@ -14,7 +15,7 @@ interface OverviewCardsProps {
   trainer: Trainer;
 }
 
-export const OverviewCards = ({ className, trainer }: OverviewCardsProps): JSX.Element => {
+export const OverviewCards = memo(({ className, trainer }: OverviewCardsProps): JSX.Element => {
   const intl = useIntl();
 
   return (
@@ -82,4 +83,5 @@ export const OverviewCards = ({ className, trainer }: OverviewCardsProps): JSX.E
       />
     </div>
   );
-};
+});
+OverviewCards.displayName = 'OverviewCards';

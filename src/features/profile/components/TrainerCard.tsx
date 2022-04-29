@@ -1,5 +1,6 @@
 import NextImage from 'next/image';
 import { FormattedMessage } from 'react-intl';
+import { memo } from 'react';
 
 import { Card } from '@/components/Card';
 import { Trainer } from '@/types';
@@ -11,7 +12,7 @@ interface TrainerCardProps {
   trainer: Trainer;
 }
 
-export const TrainerCard = ({ className, trainer }: TrainerCardProps): JSX.Element => {
+export const TrainerCard = memo(({ className, trainer }: TrainerCardProps): JSX.Element => {
   return (
     <Card className={`flex h-[102px] lg:h-[172px] p-4 lg:px-[30px] lg:py-[26px] ${className || ''}`}>
       <div className="h-[70px] w-[70px] lg:h-[120px] lg:w-[120px]">
@@ -34,4 +35,5 @@ export const TrainerCard = ({ className, trainer }: TrainerCardProps): JSX.Eleme
       </div>
     </Card>
   );
-};
+});
+TrainerCard.displayName = 'TrainerCard';

@@ -19,6 +19,14 @@
     "defaultMessage": "Niveau : {level}",
     "description": "Level line in the profile page"
   },
+  "profile.medals": {
+    "defaultMessage": "Médailles",
+    "description": "Tab in the profile page"
+  },
+  "profile.overview": {
+    "defaultMessage": "Général",
+    "description": "Tab in the profile page"
+  },
   "index.title": {
     "defaultMessage": "Classement",
     "description": "Index page title"
