@@ -23,6 +23,5 @@ export const commonColumns: ColumnsType = [
     field: 'team',
     cellRenderer: TeamCell,
     minWidth: 56,
-    pinned: true,
   },
 ];
