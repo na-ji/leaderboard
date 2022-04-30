@@ -44,13 +44,16 @@ export default NextAuth({
   session: {
     strategy: 'jwt',
   },
-  providers: [
-    DiscordProvider({
-      clientId: projectConfig.discord.clientId,
-      clientSecret: projectConfig.discord.clientSecret,
-      authorization: 'https://discord.com/api/oauth2/authorize?scope=identify+email+guilds',
-    }),
-  ],
+  providers:
+    projectConfig.enableAuth && projectConfig.discord.clientId && projectConfig.discord.clientSecret
+      ? [
+          DiscordProvider({
+            clientId: projectConfig.discord.clientId,
+            clientSecret: projectConfig.discord.clientSecret,
+            authorization: 'https://discord.com/api/oauth2/authorize?scope=identify+email+guilds',
+          }),
+        ]
+      : [],
   callbacks: {
     async signIn({ account, profile }) {
       return userHasAccess(
