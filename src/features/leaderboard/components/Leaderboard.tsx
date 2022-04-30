@@ -1,25 +1,27 @@
 import '@ag-grid-community/core/dist/styles/ag-grid.css';
-import '@ag-grid-community/core/dist/styles/ag-theme-material.css';
 import type { AgGridEvent } from '@ag-grid-community/core';
 import { AgGridColumn, AgGridReact } from '@ag-grid-community/react';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { ValueFormatterFunc, ValueGetterFunc } from '@ag-grid-community/core/dist/cjs/es5/entities/colDef';
-import { memo } from 'react';
+import { memo, useCallback, useEffect, useRef } from 'react';
 import { useIntl } from 'react-intl';
 import { useRouter } from 'next/router';
+import { ValueFormatterFunc, ValueGetterFunc } from '@ag-grid-community/core/dist/cjs/es5/entities/colDef';
 
+import { agGridTranslations } from '@/features/leaderboard/lang/agGridTranslations';
 import { columnHeaderTranslations } from '@/features/leaderboard/lang';
 import { ColumnsType } from '@/features/leaderboard/components/columnDefinitions';
+import { LeaderboardPagination } from '@/features/leaderboard/components/LeaderboardPagination';
+import { MedalCell } from '@/features/leaderboard/components/MedalCell';
 import { Trainer } from '@/types';
-import { agGridTranslations } from '@/features/leaderboard/lang/agGridTranslations';
+import { useLeaderboardPaginationContext } from '@/features/leaderboard/components/LeaderbordPaginationContext';
 
 export interface LeaderboardProps {
-  trainers: Trainer[];
   columns: ColumnsType;
   defaultSort: ColumnsType[0]['field'];
+  trainers: Trainer[];
 }
 
-const autoSizeColumns = ({ api, columnApi }: AgGridEvent): void => {
+const autoSizeColumns = ({ api, columnApi }: Pick<AgGridEvent, 'api' | 'columnApi'>): void => {
   if (typeof window === 'undefined') {
     return api.sizeColumnsToFit();
   }
@@ -39,51 +41,99 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
   const intl = useIntl();
   const router = useRouter();
 
+  const { setGridApi, setPagination } = useLeaderboardPaginationContext();
+  const gridRef = useRef<AgGridReact>(null);
+
+  const onPaginationChanged = useCallback(
+    ({ api }: AgGridEvent) => {
+      setGridApi(api);
+
+      const nextPagination = {
+        currentPage: api.paginationGetCurrentPage(),
+        totalPage: api.paginationGetTotalPages(),
+      };
+
+      setPagination((currentPagination) => {
+        if (
+          currentPagination.currentPage !== nextPagination.currentPage ||
+          currentPagination.totalPage !== nextPagination.totalPage
+        ) {
+          return nextPagination;
+        }
+
+        return currentPagination;
+      });
+    },
+    [setGridApi, setPagination],
+  );
+
+  useEffect(() => {
+    if (gridRef.current && gridRef.current.api && gridRef.current.columnApi) {
+      autoSizeColumns({ api: gridRef.current.api, columnApi: gridRef.current.columnApi });
+    }
+  }, [columns]);
+
   return (
-    <div className="ag-theme-material h-[616px] w-full">
-      <AgGridReact
-        getRowClass={(params) => `team-${params.data.team}`}
-        getLocaleText={({ key, defaultValue }) => {
-          return key in agGridTranslations
-            ? intl.formatMessage(agGridTranslations[key as keyof typeof agGridTranslations])
-            : defaultValue;
-        }}
-        modules={[ClientSideRowModelModule]}
-        onGridReady={autoSizeColumns}
-        onPaginationChanged={autoSizeColumns}
-        onRowClicked={({ data }) => router.push(`/profile/${encodeURIComponent(data.trainer_id)}`)}
-        onSortChanged={({ api }) => api.refreshCells()}
-        pagination={true}
-        paginationPageSize={10}
-        rowData={trainers}
-        sortingOrder={['desc', 'asc']}
-      >
-        <AgGridColumn
-          headerName={intl.formatMessage(columnHeaderTranslations.rank)}
-          valueGetter={(({ node }) => (node?.rowIndex ?? 0) + 1) as ValueGetterFunc}
-        />
-        {columns.map((column, index) => (
+    <>
+      <div className="ag-theme-leaderboard h-[606px] w-full">
+        <AgGridReact
+          getLocaleText={({ key, defaultValue }) => {
+            return key in agGridTranslations
+              ? intl.formatMessage(agGridTranslations[key as keyof typeof agGridTranslations])
+              : defaultValue;
+          }}
+          headerHeight={45}
+          modules={[ClientSideRowModelModule]}
+          onGridReady={autoSizeColumns}
+          onPaginationChanged={onPaginationChanged}
+          onRowClicked={({ data }) => router.push(`/profile/${encodeURIComponent(data.trainer_id)}`)}
+          onSortChanged={({ api }) => api.refreshCells()}
+          pagination={true}
+          paginationPageSize={10}
+          ref={gridRef}
+          rowData={trainers}
+          rowHeight={56}
+          sortingOrder={['desc', 'asc']}
+          suppressHorizontalScroll={true}
+          suppressPaginationPanel={true}
+        >
           <AgGridColumn
-            field={column.field}
-            headerName={
-              column.field in columnHeaderTranslations
-                ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                  // @ts-ignore
-                  intl.formatMessage(columnHeaderTranslations[column.field])
-                : column.field
-            }
-            initialSort={column.field === defaultSort ? 'desc' : undefined}
-            key={index}
-            sortable={true}
-            suppressMovable={true}
-            valueFormatter={
-              column.type === 'number' ? ((({ value }) => intl.formatNumber(value)) as ValueFormatterFunc) : undefined
-            }
-            valueGetter={column.valueGetter}
+            cellRenderer={MedalCell}
+            headerName={intl.formatMessage(columnHeaderTranslations.rank)}
+            maxWidth={64}
+            minWidth={64}
+            pinned={true}
+            valueGetter={(({ node }) => (node?.rowIndex ?? 0) + 1) as ValueGetterFunc}
+            width={64}
           />
-        ))}
-      </AgGridReact>
-    </div>
+          {columns.map((column, index) => (
+            <AgGridColumn
+              cellRenderer={column.cellRenderer}
+              field={column.field}
+              headerName={
+                column.field in columnHeaderTranslations
+                  ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                    // @ts-ignore
+                    intl.formatMessage(columnHeaderTranslations[column.field])
+                  : column.field
+              }
+              initialSort={column.field === defaultSort ? 'desc' : undefined}
+              key={index}
+              pinned={column.pinned}
+              sortable={true}
+              suppressMovable={true}
+              valueFormatter={
+                column.type === 'number' ? ((({ value }) => intl.formatNumber(value)) as ValueFormatterFunc) : undefined
+              }
+              valueGetter={column.valueGetter}
+            />
+          ))}
+        </AgGridReact>
+      </div>
+      <div className="flex justify-end mt-7.5">
+        <LeaderboardPagination />
+      </div>
+    </>
   );
 });
 Leaderboard.displayName = 'MemoizedLeaderboard';

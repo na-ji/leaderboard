@@ -16,6 +16,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Trainer',
     description: 'Leaderboard trainer column header',
   },
+  team: {
+    id: 'leaderboard_header.team',
+    defaultMessage: 'Team',
+    description: 'Leaderboard team column header',
+  },
   level: {
     id: 'leaderboard_header.level',
     defaultMessage: 'Level',

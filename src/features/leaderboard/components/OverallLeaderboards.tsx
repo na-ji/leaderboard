@@ -11,6 +11,8 @@ import { leaderboardTabTranslations } from '@/features/leaderboard/lang';
 import { PeriodSelect } from '@/features/leaderboard/components/PeriodSelect';
 import { Button } from '@/components/button';
 import { SettingsIcon } from '@/features/leaderboard/components/SettingsIcon';
+import { LeaderboardPagination } from '@/features/leaderboard/components/LeaderboardPagination';
+import { LeaderboardPaginationContextProvider } from '@/features/leaderboard/components/LeaderbordPaginationContext';
 
 export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.Element => {
   const router = useRouter();
@@ -71,29 +73,35 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
           </div>
         </List>
       </Group>
-      <Group selectedIndex={selectedLeaderboardIndex} onChange={setSelectedLeaderboardIndex}>
-        <List>
-          {leaderboardsData[selectedMainTab].map((leaderboardData) => {
-            return (
-              <Tab key={leaderboardData.leaderboard} level={2}>
-                {intl.formatMessage(leaderboardTabTranslations[leaderboardData.leaderboard])}
-              </Tab>
-            );
-          })}
-        </List>
-      </Group>
-      <div className="overflow-hidden flex">
-        <div
-          className={`lg:hidden transition-all duration-300 ${enableSettings ? 'max-h-10 mb-3' : 'invisible max-h-0'}`}
-        >
-          <PeriodSelect />
+      <LeaderboardPaginationContextProvider>
+        <Group selectedIndex={selectedLeaderboardIndex} onChange={setSelectedLeaderboardIndex}>
+          <List>
+            {leaderboardsData[selectedMainTab].map((leaderboardData) => {
+              return (
+                <Tab key={leaderboardData.leaderboard} level={2}>
+                  {intl.formatMessage(leaderboardTabTranslations[leaderboardData.leaderboard])}
+                </Tab>
+              );
+            })}
+            <div className="grow" />
+            <LeaderboardPagination className="hidden lg:flex" />
+          </List>
+        </Group>
+        <div className="overflow-hidden flex">
+          <div
+            className={`lg:hidden transition-all duration-300 ${
+              enableSettings ? 'max-h-10 mb-3' : 'invisible max-h-0'
+            }`}
+          >
+            <PeriodSelect />
+          </div>
         </div>
-      </div>
-      <Leaderboard
-        trainers={trainers}
-        columns={currentLeaderboard.columns}
-        defaultSort={currentLeaderboard.defaultSort}
-      />
+        <Leaderboard
+          columns={currentLeaderboard.columns}
+          defaultSort={currentLeaderboard.defaultSort}
+          trainers={trainers}
+        />
+      </LeaderboardPaginationContextProvider>
     </div>
   );
 };
