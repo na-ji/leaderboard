@@ -7,3 +7,4 @@ export const Label: typeof Listbox.Label = ({ children, ...props }) => {
     </Listbox.Label>
   );
 };
+Label.displayName = 'Label';
