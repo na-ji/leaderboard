@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { InfoCard } from './InfoCard';
-import { TeamLogo } from '@/features/profile/components/TeamLogo';
+import { TeamLogo } from '@/components/TeamLogo';
 import { Team } from '@/types';
 
 export default {

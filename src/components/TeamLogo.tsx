@@ -1,6 +1,8 @@
-import { Fragment, JSXElementConstructor } from 'react';
+import { JSXElementConstructor } from 'react';
 
-import { Instinct, Mystic, Valor } from '@/features/profile/components/icons';
+import { Instinct } from '@/components/icons/Instinct';
+import { Mystic } from '@/components/icons/Mystic';
+import { Valor } from '@/components/icons/Valor';
 import { Team } from '@/types';
 
 const teamToLogo = (team: Team): JSXElementConstructor<Record<string, unknown>> => {
@@ -13,7 +15,8 @@ const teamToLogo = (team: Team): JSXElementConstructor<Record<string, unknown>> 
       return Mystic;
     default:
       // TODO: handle Harmony
-      return Fragment;
+      // eslint-disable-next-line react/display-name
+      return () => <div />;
   }
 };
 

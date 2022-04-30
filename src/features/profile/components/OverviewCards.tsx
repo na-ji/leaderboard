@@ -3,7 +3,7 @@ import { memo } from 'react';
 
 import { Trainer } from '@/types';
 import { InfoCard } from '@/components/InfoCard';
-import { TeamLogo } from '@/features/profile/components/TeamLogo';
+import { TeamLogo } from '@/components/TeamLogo';
 import { LastUpdateIcon, RankIcon } from '@/features/profile/components/icons';
 import { FightIcon } from '@/components/icons/FightIcon';
 import { PokeballIcon } from '@/components/icons/PokeballIcon';

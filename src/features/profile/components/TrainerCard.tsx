@@ -19,7 +19,7 @@ const avatarBackgroundColors = {
 
 export const TrainerCard = memo(({ className, trainer }: TrainerCardProps): JSX.Element => {
   return (
-    <Card className={`flex h-[102px] lg:h-[172px] p-4 lg:px-[30px] lg:py-[26px] ${className || ''}`}>
+    <Card className={`flex h-[102px] lg:h-[172px] p-4 lg:px-7.5 lg:py-[26px] ${className || ''}`}>
       <div
         className="h-[70px] w-[70px] lg:h-[120px] lg:w-[120px] rounded-full overflow-hidden"
         style={{ backgroundColor: avatarBackgroundColors[trainer.team] }}
