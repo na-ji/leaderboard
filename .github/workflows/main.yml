@@ -16,14 +16,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
-          cache: npm
+      - name: Install Volta
+        uses: volta-cli/action@v1
+      - name: Echo versions
+        run: |
+          node --version
+          npm --version
       - name: Cache next js build output
         uses: actions/cache@v2
         with:
@@ -55,6 +56,13 @@ jobs:
           key: ${{ secrets.RELATIVE_CI_KEY }}
       - name: Lint
         run: npm run lint
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}

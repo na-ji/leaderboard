@@ -1,35 +1,22 @@
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
-import Typography from '@mui/material/Typography';
-import { FormattedMessage } from 'react-intl';
-import { SyntheticEvent, useEffect, useState } from 'react';
+import { useIntl } from 'react-intl';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import {
-  dexLeaderboardColumns,
-  generalLeaderboardColumns,
-  gymLeaderboardColumns,
-  miscellaneousLeaderboardColumns,
-  pvpLeaderboardColumns,
-  raidLeaderboardColumns,
-  rocketLeaderboardColumns,
-  specificLeaderboardColumns,
-  typeLeaderboardColumns,
-} from '@/features/leaderboard/components/columnDefinitions';
+import { leaderboardsData } from '@/features/leaderboard/components/columnDefinitions';
 import { Leaderboard } from '@/features/leaderboard/components/Leaderboard';
-import { TabPanel } from '@/features/leaderboard/components/TabPanel';
 import { Trainer } from '@/types';
-
-const a11yProps = (index: number) => {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-};
+import { Tab, Group, List } from '@/components/tab';
+import { MainTab } from '@/features/leaderboard/types';
+import { leaderboardTabTranslations } from '@/features/leaderboard/lang';
+import { PeriodSelect } from '@/features/leaderboard/components/PeriodSelect';
+import { Button } from '@/components/button';
+import { SettingsIcon } from '@/features/leaderboard/components/SettingsIcon';
+import { LeaderboardPagination } from '@/features/leaderboard/components/LeaderboardPagination';
+import { LeaderboardPaginationContextProvider } from '@/features/leaderboard/components/LeaderbordPaginationContext';
 
 export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.Element => {
   const router = useRouter();
+  const intl = useIntl();
 
   useEffect(() => {
     if (trainers.length > 0) {
@@ -38,102 +25,83 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const [value, setValue] = useState(0);
+  const [selectedMainTab, setSelectedMainTab] = useState<MainTab>(MainTab.GENERAL);
+  const [selectedLeaderboardIndex, setSelectedLeaderboardIndex] = useState<number>(0);
+  const [enableSettings, setEnableSettings] = useState<boolean>(false);
 
-  const handleChange = (event: SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  const handleMainTabChange = (newMainTab: MainTab) => {
+    setSelectedMainTab(newMainTab);
+    setSelectedLeaderboardIndex(0);
   };
 
+  const currentLeaderboard = leaderboardsData[selectedMainTab][selectedLeaderboardIndex];
+
   return (
-    <Box sx={{ width: '100%', position: 'relative' }} component="div">
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }} component="div">
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab
-            label={
-              <FormattedMessage
-                defaultMessage="General"
-                id="leaderboard.general"
-                description="General leaderboard title"
-              />
-            }
-            {...a11yProps(0)}
-          />
-          <Tab
-            label={
-              <FormattedMessage
-                defaultMessage="Battles"
-                id="leaderboard.battle"
-                description="Battles leaderboards title"
-              />
-            }
-            {...a11yProps(1)}
-          />
-          <Tab
-            label={
-              <FormattedMessage
-                defaultMessage="Collection"
-                id="leaderboard.collection"
-                description="Collection leaderboards title"
-              />
-            }
-            {...a11yProps(2)}
-          />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <Typography variant="h5">
-          <FormattedMessage defaultMessage="General" id="leaderboard.general" description="General leaderboard title" />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={generalLeaderboardColumns} defaultSort="xp" />
-        <Typography variant="h5">
-          <FormattedMessage
-            defaultMessage="Miscellaneous"
-            id="leaderboard.miscellaneous"
-            description="Miscellaneous leaderboard title"
-          />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={miscellaneousLeaderboardColumns} defaultSort="trade_km" />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Typography variant="h5">
-          <FormattedMessage defaultMessage="Raids" id="leaderboard.raid" description="Raids leaderboard title" />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={raidLeaderboardColumns} defaultSort="total_raids" />
-        <Typography variant="h5">
-          <FormattedMessage
-            defaultMessage="Team Rocket"
-            id="leaderboard.rocket"
-            description="Team Rocket leaderboard title"
-          />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={rocketLeaderboardColumns} defaultSort="grunts_defeated" />
-        <Typography variant="h5">
-          <FormattedMessage defaultMessage="Gyms" id="leaderboard.gym" description="Gyms leaderboard title" />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={gymLeaderboardColumns} defaultSort="gym_battles_won" />
-        <Typography variant="h5">
-          <FormattedMessage defaultMessage="PVP" id="leaderboard.pvp" description="PVP leaderboard title" />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={pvpLeaderboardColumns} defaultSort="gbl_rank" />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <Typography variant="h5">
-          <FormattedMessage defaultMessage="Pokédex" id="leaderboard.pokedex" description="Pokédex leaderboard title" />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={dexLeaderboardColumns} defaultSort="total_dex" />
-        <Typography variant="h5">
-          <FormattedMessage
-            defaultMessage="Specific"
-            id="leaderboard.specific"
-            description="Specific leaderboard title"
-          />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={specificLeaderboardColumns} defaultSort="pikachu_caught" />
-        <Typography variant="h5">
-          <FormattedMessage defaultMessage="Types" id="leaderboard.type" description="Types leaderboard title" />
-        </Typography>
-        <Leaderboard trainers={trainers} columns={typeLeaderboardColumns} defaultSort="caught_normal" />
-      </TabPanel>
-    </Box>
+    <div>
+      <Group selectedIndex={selectedMainTab} onChange={handleMainTabChange}>
+        <List level={1} className="mb-3 lg:mb-5">
+          <div className="flex justify-between w-full">
+            <div>
+              <Tab>
+                {intl.formatMessage({
+                  defaultMessage: 'General',
+                  id: 'leaderboard.general',
+                  description: 'General leaderboard title',
+                })}
+              </Tab>
+              <Tab>
+                {intl.formatMessage({
+                  defaultMessage: 'Battles',
+                  id: 'leaderboard.battle',
+                  description: 'Battles leaderboards title',
+                })}
+              </Tab>
+              <Tab>
+                {intl.formatMessage({
+                  defaultMessage: 'Collection',
+                  id: 'leaderboard.collection',
+                  description: 'Collection leaderboards title',
+                })}
+              </Tab>
+            </div>
+            <div className="hidden lg:inline-flex">
+              <PeriodSelect />
+            </div>
+            <Button className="lg:hidden" onClick={() => setEnableSettings(!enableSettings)} active={enableSettings}>
+              <SettingsIcon className="inline" />
+            </Button>
+          </div>
+        </List>
+      </Group>
+      <LeaderboardPaginationContextProvider>
+        <Group selectedIndex={selectedLeaderboardIndex} onChange={setSelectedLeaderboardIndex}>
+          <List>
+            {leaderboardsData[selectedMainTab].map((leaderboardData) => {
+              return (
+                <Tab key={leaderboardData.leaderboard} level={2}>
+                  {intl.formatMessage(leaderboardTabTranslations[leaderboardData.leaderboard])}
+                </Tab>
+              );
+            })}
+            <div className="grow" />
+            <LeaderboardPagination className="hidden lg:flex" />
+          </List>
+        </Group>
+        <div className="overflow-hidden flex">
+          <div
+            className={`lg:hidden transition-all duration-300 ${
+              enableSettings ? 'max-h-10 mb-3' : 'invisible max-h-0'
+            }`}
+          >
+            <PeriodSelect />
+          </div>
+        </div>
+        <Leaderboard
+          columns={currentLeaderboard.columns}
+          defaultSort={currentLeaderboard.defaultSort}
+          trainers={trainers}
+        />
+      </LeaderboardPaginationContextProvider>
+    </div>
   );
 };

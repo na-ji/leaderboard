@@ -44,6 +44,7 @@ export const badgeToAssetId: Partial<Record<Badge, string | number>> = {
   [Badge.MEGA_EVOS]: 69,
   [Badge.UNIQUE_MEGA_EVOS]: 70,
   [Badge.TRAINERS_REFERRED]: 73,
+  [Badge.RAID_ACHIEVEMENTS]: 76,
   [Badge.COLLECTIONS_DONE]: '1002_01',
   [Badge.CAUGHT_NORMAL]: 'ico_0_normal',
   [Badge.CAUGHT_FIGHTING]: 'ico_1_fighting',

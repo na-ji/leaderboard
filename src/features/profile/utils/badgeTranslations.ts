@@ -115,7 +115,7 @@ export const badgeTranslations = defineMessages({
   },
   [Badge.UNIQUE_MEGA_EVOS]: {
     id: 'badge_unique_mega_evos',
-    defaultMessage: 'Unique mega evolutions',
+    defaultMessage: 'Unique mega evos',
     description: 'Badge UNIQUE_MEGA_EVOS',
   },
   [Badge.UNIQUE_RAID_BOSSES]: {

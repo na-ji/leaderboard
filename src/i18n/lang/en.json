@@ -160,7 +160,7 @@
     "description": "Badge TRAININGS_WON"
   },
   "badge_unique_mega_evos": {
-    "defaultMessage": "Unique mega evolutions",
+    "defaultMessage": "Unique mega evos",
     "description": "Badge UNIQUE_MEGA_EVOS"
   },
   "badge_unique_raid_bosses": {
@@ -187,25 +187,9 @@
     "defaultMessage": "XS Rattata",
     "description": "Badge XS_RATS"
   },
-  "drawer.day_leaderboard": {
-    "defaultMessage": "Day leaderboard",
-    "description": "Day leaderboard link in drawer"
-  },
-  "drawer.general_leaderboard": {
-    "defaultMessage": "General leaderboard",
-    "description": "General leaderboard link in drawer"
-  },
   "drawer.logout": {
     "defaultMessage": "Logout",
     "description": "Logout button"
-  },
-  "drawer.month_leaderboard": {
-    "defaultMessage": "Month leaderboard",
-    "description": "Month leaderboard link in drawer"
-  },
-  "drawer.week_leaderboard": {
-    "defaultMessage": "Week leaderboard",
-    "description": "Week leaderboard link in drawer"
   },
   "grid.firstPage": {
     "defaultMessage": "First page",
@@ -236,8 +220,12 @@
     "description": "Pagination indicator"
   },
   "index.title": {
-    "defaultMessage": "General leaderboard",
+    "defaultMessage": "Leaderboard",
     "description": "Index page title"
+  },
+  "leaderboard.all_time": {
+    "defaultMessage": "All time",
+    "description": "All time period"
   },
   "leaderboard.battle": {
     "defaultMessage": "Battles",
@@ -255,9 +243,21 @@
     "defaultMessage": "Gyms",
     "description": "Gyms leaderboard title"
   },
+  "leaderboard.last_month": {
+    "defaultMessage": "Last 30 days",
+    "description": "All time period"
+  },
+  "leaderboard.last_week": {
+    "defaultMessage": "Last 7 days",
+    "description": "All time period"
+  },
   "leaderboard.miscellaneous": {
     "defaultMessage": "Miscellaneous",
     "description": "Miscellaneous leaderboard title"
+  },
+  "leaderboard.period": {
+    "defaultMessage": "Period",
+    "description": "Period dropdown"
   },
   "leaderboard.pokedex": {
     "defaultMessage": "Pokédex",
@@ -278,6 +278,10 @@
   "leaderboard.specific": {
     "defaultMessage": "Specific",
     "description": "Specific leaderboard title"
+  },
+  "leaderboard.today": {
+    "defaultMessage": "Today",
+    "description": "All time period"
   },
   "leaderboard.type": {
     "defaultMessage": "Types",
@@ -447,6 +451,10 @@
     "defaultMessage": "Pokéstops",
     "description": "Leaderboard Pokéstops spun column header"
   },
+  "leaderboard_header.team": {
+    "defaultMessage": "Team",
+    "description": "Leaderboard team column header"
+  },
   "leaderboard_header.total_dex": {
     "defaultMessage": "Total",
     "description": "Leaderboard total pokedex column header"
@@ -503,56 +511,48 @@
     "defaultMessage": "Rattata",
     "description": "Leaderboard rattata column header"
   },
-  "period_leaderboard.last_day": {
-    "defaultMessage": "Today's",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_month": {
-    "defaultMessage": "Last month's",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_week": {
-    "defaultMessage": "Last week's",
-    "description": "Last day period"
-  },
-  "period_leaderboard.no_data": {
-    "defaultMessage": "No data :(",
-    "description": "Error message when leaderboard is not available"
-  },
-  "period_leaderboard.title": {
-    "defaultMessage": "{period} leaderboard",
-    "description": "Period leaderboard title"
-  },
   "profile.battles": {
-    "defaultMessage": "{battlesWon, number} battles won",
-    "description": "Battle won line in the profile page"
+    "defaultMessage": "Battles",
+    "description": "Battles info card title in the profile page"
   },
   "profile.gbl_rank": {
-    "defaultMessage": "GBL rank {gblRank}",
-    "description": "GBL rank line in the profile page"
+    "defaultMessage": "GBL Rank",
+    "description": "GBL rank info card title in the profile page"
   },
-  "profile.gbl_rating": {
-    "defaultMessage": "GBL rating of {gblRating}",
-    "description": "GBL rating line in the profile page"
-  },
-  "profile.general": {
-    "defaultMessage": "General information",
-    "description": "Subtitle in the profile page"
+  "profile.last_update": {
+    "defaultMessage": "Last Update",
+    "description": "Last update info card title in the profile page"
   },
   "profile.level": {
-    "defaultMessage": "Level {level}",
+    "defaultMessage": "Level: {level}",
     "description": "Level line in the profile page"
   },
   "profile.medals": {
     "defaultMessage": "Medals",
-    "description": "Subtitle in the profile page"
+    "description": "Tab in the profile page"
+  },
+  "profile.overview": {
+    "defaultMessage": "Overview",
+    "description": "Tab in the profile page"
+  },
+  "profile.pokemon_caught": {
+    "defaultMessage": "Catches",
+    "description": "Pokemon caught info card title in the profile page"
+  },
+  "profile.team": {
+    "defaultMessage": "Team",
+    "description": "Team info card title in the profile page"
   },
   "profile.title": {
     "defaultMessage": "{name}'s Profile",
     "description": "Profile page title"
   },
+  "profile.total_xp": {
+    "defaultMessage": "XP",
+    "description": "Total XP info card title in the profile page"
+  },
   "profile.updated_at": {
-    "defaultMessage": "Last updated the {date, date, short} at {date, time, short}",
+    "defaultMessage": "{date, time, short}",
     "description": "Last updated line in the profile page"
   },
   "registration.already_registered": {
@@ -594,6 +594,18 @@
   "registration.trainer_not_found": {
     "defaultMessage": "Trainer not found. Please wait 30 minutes after adding the bot as your friend.",
     "description": "Registration error when trainer is not found"
+  },
+  "team.instinct": {
+    "defaultMessage": "Instinct",
+    "description": "Team Instinct"
+  },
+  "team.mystic": {
+    "defaultMessage": "Mystic",
+    "description": "Team Mystic"
+  },
+  "team.valor": {
+    "defaultMessage": "Valor",
+    "description": "Team Valor"
   },
   "type_bug": {
     "defaultMessage": "Bug",

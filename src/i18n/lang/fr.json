@@ -1,7 +1,11 @@
 {
-  "profile.medals": {
-    "defaultMessage": "Médailles",
-    "description": "Subtitle in the profile page"
+  "profile.pokemon_caught": {
+    "defaultMessage": "Captures",
+    "description": "Pokemon caught info card title in the profile page"
+  },
+  "profile.team": {
+    "defaultMessage": "Équipe",
+    "description": "Team info card title in the profile page"
   },
   "profile.gbl_rating": {
     "defaultMessage": "{gblRating, number}",
@@ -12,16 +16,24 @@
     "description": "Period leaderboard title"
   },
   "profile.level": {
-    "defaultMessage": "Niveau {level}",
+    "defaultMessage": "Niveau : {level}",
     "description": "Level line in the profile page"
   },
+  "profile.medals": {
+    "defaultMessage": "Médailles",
+    "description": "Tab in the profile page"
+  },
+  "profile.overview": {
+    "defaultMessage": "Général",
+    "description": "Tab in the profile page"
+  },
   "index.title": {
-    "defaultMessage": "Classement général",
+    "defaultMessage": "Classement",
     "description": "Index page title"
   },
-  "drawer.day_leaderboard": {
-    "defaultMessage": "Classement du jour",
-    "description": "Day leaderboard link in drawer"
+  "leaderboard.all_time": {
+    "defaultMessage": "Tous les temps",
+    "description": "All time period"
   },
   "leaderboard.battle": {
     "defaultMessage": "Combats",
@@ -32,16 +44,16 @@
     "description": "Types leaderboard title"
   },
   "profile.battles": {
-    "defaultMessage": "{battlesWon, number} combats gagnés",
-    "description": "Battle won line in the profile page"
-  },
-  "profile.general": {
-    "defaultMessage": "Informations générales",
-    "description": "Subtitle in the profile page"
+    "defaultMessage": "Combats",
+    "description": "Battles info card title in the profile page"
   },
   "profile.gbl_rank": {
-    "defaultMessage": "Rang {gblRank} sur la Ligue de Combat GO",
-    "description": "GBL rank line in the profile page"
+    "defaultMessage": "Rang LCG",
+    "description": "GBL rank info card title in the profile page"
+  },
+  "profile.last_update": {
+    "defaultMessage": "Mis à jour",
+    "description": "Last update info card title in the profile page"
   },
   "leaderboard.raid": {
     "defaultMessage": "Raids",
@@ -51,12 +63,12 @@
     "defaultMessage": "Divers",
     "description": "Miscellaneous leaderboard title"
   },
-  "drawer.general_leaderboard": {
-    "defaultMessage": "Classement général",
-    "description": "General leaderboard link in drawer"
+  "leaderboard.period": {
+    "defaultMessage": "Période",
+    "description": "Period dropdown"
   },
   "profile.updated_at": {
-    "defaultMessage": "Dernière mise à jour le {date, date, short} à {date, time, short}",
+    "defaultMessage": "{date, time, short}",
     "description": "Last updated line in the profile page"
   },
   "registration.already_registered": {
@@ -99,6 +111,18 @@
     "defaultMessage": "Dresseur non trouvé. Merci d'attendre 30 minutes après avoir ajouté le bot.",
     "description": "Registration error when trainer is not found"
   },
+  "team.instinct": {
+    "defaultMessage": "Intuition",
+    "description": "Team Instinct"
+  },
+  "team.mystic": {
+    "defaultMessage": "Sagesse",
+    "description": "Team Mystic"
+  },
+  "team.valor": {
+    "defaultMessage": "Bravoure",
+    "description": "Team Valor"
+  },
   "period_leaderboard.no_data": {
     "defaultMessage": "Pas de données :(",
     "description": "Error message when leaderboard is not available"
@@ -106,6 +130,14 @@
   "leaderboard.gym": {
     "defaultMessage": "Arènes",
     "description": "Gyms leaderboard title"
+  },
+  "leaderboard.last_month": {
+    "defaultMessage": "30 derniers jours",
+    "description": "All time period"
+  },
+  "leaderboard.last_week": {
+    "defaultMessage": "7 derniers jours",
+    "description": "All time period"
   },
   "drawer.logout": {
     "defaultMessage": "Déconnexion",
@@ -188,7 +220,7 @@
     "description": "Badge GRUNTS_DEFEATED"
   },
   "badge_gym_battles_won": {
-    "defaultMessage": "Combats d'arènes gagnés",
+    "defaultMessage": "Combats d'arènes",
     "description": "Badge GYM_BATTLES_WON"
   },
   "badge_hatched": {
@@ -204,19 +236,19 @@
     "description": "Badge KM_WALKED"
   },
   "badge_league_great_won": {
-    "defaultMessage": "Ligue super remportés",
+    "defaultMessage": "Ligue super",
     "description": "Badge LEAGUE_GREAT_WON"
   },
   "badge_league_master_won": {
-    "defaultMessage": "Ligue master remportés",
+    "defaultMessage": "Ligue master",
     "description": "Badge LEAGUE_MASTER_WON"
   },
   "badge_league_ultra_won": {
-    "defaultMessage": "Ligue hyper remportés",
+    "defaultMessage": "Ligue hyper",
     "description": "Badge LEAGUE_ULTRA_WON"
   },
   "badge_legendary_raids_won": {
-    "defaultMessage": "Raids légendaires remportés",
+    "defaultMessage": "Raids légendaires",
     "description": "Badge LEGENDARY_RAIDS_WON"
   },
   "badge_mega_evos": {
@@ -303,9 +335,9 @@
     "defaultMessage": "Profil de {name}",
     "description": "Profile page title"
   },
-  "drawer.week_leaderboard": {
-    "defaultMessage": "Classement de la semaine",
-    "description": "Week leaderboard link in drawer"
+  "profile.total_xp": {
+    "defaultMessage": "PX",
+    "description": "Total XP info card title in the profile page"
   },
   "grid.firstPage": {
     "defaultMessage": "Première page",
@@ -503,6 +535,10 @@
     "defaultMessage": "Pokéstops",
     "description": "Leaderboard Pokéstops spun column header"
   },
+  "leaderboard_header.team": {
+    "defaultMessage": "Équipe",
+    "description": "Leaderboard team column header"
+  },
   "leaderboard_header.total_dex": {
     "defaultMessage": "Total",
     "description": "Leaderboard total pokedex column header"
@@ -562,22 +598,6 @@
   "leaderboard.pvp": {
     "defaultMessage": "PVP",
     "description": "PVP leaderboard title"
-  },
-  "period_leaderboard.last_day": {
-    "defaultMessage": "du jour",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_month": {
-    "defaultMessage": "du mois",
-    "description": "Last day period"
-  },
-  "period_leaderboard.last_week": {
-    "defaultMessage": "de la semaine",
-    "description": "Last day period"
-  },
-  "drawer.month_leaderboard": {
-    "defaultMessage": "Classement du mois",
-    "description": "Month leaderboard link in drawer"
   },
   "app.description": {
     "defaultMessage": "Classement Pokémon Go",
@@ -666,5 +686,9 @@
   "leaderboard.specific": {
     "defaultMessage": "Spécifique",
     "description": "Specific leaderboard title"
+  },
+  "leaderboard.today": {
+    "defaultMessage": "Aujourd'hui",
+    "description": "All time period"
   }
 }

@@ -1,91 +1,69 @@
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import { FormattedMessage } from 'react-intl';
+import { useIntl } from 'react-intl';
+import { useEffect, useState } from 'react';
 
-import { Badge, Trainer } from '@/types';
-import { BadgeCard } from '@/features/profile/components/BadgeCard';
-import { getDarkTeamColor } from '@/utils/team-colors';
-import { TeamLogo } from '@/features/profile/components/TeamLogo';
+import { Trainer } from '@/types';
+import { TrainerCard } from '@/features/profile/components/TrainerCard';
+import { OverviewCards } from '@/features/profile/components/OverviewCards';
+import { Group, List, Panel, Panels, Tab } from '@/components/tab';
+import { BadgeList } from '@/features/profile/components/BadgeList';
+import { useBreakpoint } from '@/utils/useBreakpoint';
 
 interface ProfileProps {
   trainer: Trainer;
 }
 
 export const Profile = ({ trainer }: ProfileProps): JSX.Element => {
+  const intl = useIntl();
+  const isDesktop = useBreakpoint('lg');
+  const isMobile = !isDesktop;
+  const [selectedTabIndex, setSelectedTabIndex] = useState(0);
+
+  useEffect(() => {
+    setSelectedTabIndex(0);
+  }, [isDesktop, setSelectedTabIndex]);
+
   return (
     <>
-      <Typography variant="h3" sx={{ color: getDarkTeamColor(trainer.team) }}>
-        {trainer.name}
-        <TeamLogo team={trainer.team} />
-      </Typography>
-      <Typography variant="h6">
-        <FormattedMessage
-          defaultMessage="General information"
-          id="profile.general"
-          description="Subtitle in the profile page"
-        />
-      </Typography>
-      <ul>
-        <li>
-          <FormattedMessage
-            defaultMessage="Level {level}"
-            id="profile.level"
-            description="Level line in the profile page"
-            values={{ level: trainer.level }}
-          />
-        </li>
-        <li>
-          <FormattedMessage
-            defaultMessage="Last updated the {date, date, short} at {date, time, short}"
-            id="profile.updated_at"
-            description="Last updated line in the profile page"
-            values={{ date: new Date(trainer.last_seen) }}
-          />
-        </li>
-        <li>
-          <FormattedMessage
-            defaultMessage="{battlesWon, number} battles won"
-            id="profile.battles"
-            description="Battle won line in the profile page"
-            values={{ battlesWon: trainer.battles_won }}
-          />
-        </li>
-        {trainer.gbl_rank && (
-          <li>
-            <FormattedMessage
-              defaultMessage="GBL rank {gblRank}"
-              id="profile.gbl_rank"
-              description="GBL rank line in the profile page"
-              values={{ gblRank: trainer.gbl_rank }}
-            />
-          </li>
-        )}
-        {trainer.gbl_rating && (
-          <li>
-            <FormattedMessage
-              defaultMessage="GBL rating of {gblRating}"
-              id="profile.gbl_rating"
-              description="GBL rating line in the profile page"
-              values={{ gblRating: trainer.gbl_rating }}
-            />
-          </li>
-        )}
-      </ul>
-      <Typography variant="h6">
-        <FormattedMessage defaultMessage="Medals" id="profile.medals" description="Subtitle in the profile page" />
-      </Typography>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12, lg: 16, xl: 20 }}>
-        {Object.values(Badge).map(
-          (badge) =>
-            badge in trainer &&
-            trainer[badge] !== undefined &&
-            trainer[badge] !== null && (
-              <Grid item xs={4} sm={4} md={4} xl={4} key={badge}>
-                <BadgeCard badge={badge} value={trainer[badge] as number} />
-              </Grid>
-            ),
-        )}
-      </Grid>
+      <div className="lg:grid lg:grid-cols-12 lg:gap-5">
+        <div className="lg:col-span-7">
+          <TrainerCard trainer={trainer} />
+          <div className="mt-7">
+            <Group selectedIndex={selectedTabIndex} onChange={setSelectedTabIndex}>
+              <List level={1}>
+                {isMobile && (
+                  <Tab level={1}>
+                    {intl.formatMessage({
+                      defaultMessage: 'Overview',
+                      id: 'profile.overview',
+                      description: 'Tab in the profile page',
+                    })}
+                  </Tab>
+                )}
+                <Tab level={1}>
+                  {intl.formatMessage({
+                    defaultMessage: 'Medals',
+                    id: 'profile.medals',
+                    description: 'Tab in the profile page',
+                  })}
+                </Tab>
+              </List>
+              <Panels className="mt-5">
+                {isMobile && (
+                  <Panel>
+                    <OverviewCards trainer={trainer} />
+                  </Panel>
+                )}
+                <Panel>
+                  <BadgeList trainer={trainer} />
+                </Panel>
+              </Panels>
+            </Group>
+          </div>
+        </div>
+        <div className="hidden lg:grid lg:col-span-5">
+          <OverviewCards trainer={trainer} />
+        </div>
+      </div>
     </>
   );
 };

@@ -1,3 +1,2 @@
-export * from './Instinct';
-export * from './Mystic';
-export * from './Valor';
+export * from './LastUpdateIcon';
+export * from './RankIcon';

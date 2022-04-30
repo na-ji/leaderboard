@@ -1,4 +1,3 @@
-import CssBaseline from '@mui/material/CssBaseline';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import { config } from 'node-config-ts';
@@ -6,9 +5,10 @@ import { IntlProvider } from 'react-intl';
 import { SessionProvider } from 'next-auth/react';
 import { SWRConfig } from 'swr';
 
+import '@/globals.css';
 import { fetcher } from '@/utils/fetcher';
 import { Auth } from '@/features/auth';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout';
 
 const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element => {
   return (
@@ -17,7 +17,6 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): J
         <Head>
           <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
-        <CssBaseline />
         <SWRConfig
           value={{
             fetcher,
