@@ -65,7 +65,7 @@ jobs:
           exitOnceUploaded: true
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
+          GH_TOKEN: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
           HUSKY: 0
         run: npx semantic-release
       - name: Deploy demo to production
