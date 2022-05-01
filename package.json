@@ -77,6 +77,7 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
       [
         "@semantic-release/npm",
         {
@@ -88,6 +89,7 @@
         "@semantic-release/git",
         {
           "assets": [
+            "CHANGELOG.md",
             "package.json",
             "package-lock.json"
           ],
@@ -133,6 +135,7 @@
     "@commitlint/config-conventional": "^16.2.4",
     "@formatjs/cli": "^4.8.4",
     "@mdx-js/preact": "^2.1.1",
+    "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
