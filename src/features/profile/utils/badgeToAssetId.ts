@@ -7,6 +7,7 @@ export const badgeToAssetId: Partial<Record<Badge, string | number>> = {
   [Badge.EVOLVED]: 5,
   [Badge.HATCHED]: 6,
   [Badge.STOPS_SPUN]: 8,
+  [Badge.UNIQUE_STOPS_SPUN]: 9,
   [Badge.XL_KARPS]: 11,
   [Badge.GYM_BATTLES_WON]: 13,
   [Badge.TRAININGS_WON]: 14,
