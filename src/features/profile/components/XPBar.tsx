@@ -1,7 +1,8 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 
 import { ProgressBar } from '@/features/profile/components/ProgressBar';
 import { Trainer } from '@/types';
+import { useBreakpoint } from '@/utils/useBreakpoint';
 
 const XPRequirements: Record<number, { needed: number; total: number }> = {
   1: { needed: 1000, total: 0 },
@@ -56,10 +57,15 @@ const XPRequirements: Record<number, { needed: number; total: number }> = {
   50: { needed: 0, total: 176000000 },
 };
 
+const MAX_LEVEL = 50;
+
 export const XPBar = ({ trainer }: { trainer: Trainer }): JSX.Element | null => {
+  const intl = useIntl();
+  const isMobile = !useBreakpoint('xs');
+
   const requiredXP = XPRequirements[trainer.level].needed;
-  const levelProgression = trainer.level === 50 ? 100 : trainer.xp - XPRequirements[trainer.level].total;
-  const levelPercent = trainer.level === 50 ? 100 : Math.min(100, (levelProgression / requiredXP) * 100);
+  const levelProgression = trainer.level === MAX_LEVEL ? 100 : trainer.xp - XPRequirements[trainer.level].total;
+  const levelPercent = trainer.level === MAX_LEVEL ? 100 : Math.min(100, (levelProgression / requiredXP) * 100);
 
   return (
     <>
@@ -72,13 +78,16 @@ export const XPBar = ({ trainer }: { trainer: Trainer }): JSX.Element | null => 
             values={{ level: trainer.level }}
           />
         </div>
-        {trainer.level !== 50 && (
+        {trainer.level !== MAX_LEVEL && (
           <div>
             <FormattedMessage
-              defaultMessage="{levelProgression, number} / {requiredXP, number} XP"
+              defaultMessage="{levelProgression} / {requiredXP} XP"
               id="profile.level_progression"
               description="Level progression sub line in the profile page"
-              values={{ levelProgression, requiredXP }}
+              values={{
+                levelProgression: intl.formatNumber(levelProgression, isMobile ? { notation: 'compact' } : undefined),
+                requiredXP: intl.formatNumber(requiredXP, isMobile ? { notation: 'compact' } : undefined),
+              }}
             />
           </div>
         )}
