@@ -1,10 +1,9 @@
 import NextImage from 'next/image';
-import { FormattedMessage } from 'react-intl';
 import { memo } from 'react';
 
 import { Card } from '@/components/Card';
 import { Team, Trainer } from '@/types';
-import { ProgressBar } from '@/features/profile/components/ProgressBar';
+import { XPBar } from '@/features/profile/components/XPBar';
 
 interface TrainerCardProps {
   className?: string;
@@ -34,18 +33,7 @@ export const TrainerCard = memo(({ className, trainer }: TrainerCardProps): JSX.
       </div>
       <div className="grow ml-3.5 lg:ml-6 flex flex-col">
         <h3 className="title-2 lg:title-1">{trainer.name}</h3>
-        <div className="flex justify-between my-2.5 lg:my-4 text-secondary text-grey-70 lg:title-3">
-          <div>
-            <FormattedMessage
-              defaultMessage="Level: {level}"
-              id="profile.level"
-              description="Level line in the profile page"
-              values={{ level: trainer.level }}
-            />
-          </div>
-          <div>2 500 / 5 000 XP</div>
-        </div>
-        <ProgressBar value={60} />
+        <XPBar trainer={trainer} />
       </div>
     </Card>
   );

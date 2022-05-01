@@ -527,6 +527,10 @@
     "defaultMessage": "Level: {level}",
     "description": "Level line in the profile page"
   },
+  "profile.level_progression": {
+    "defaultMessage": "{levelProgression, number} / {requiredXP, number} XP",
+    "description": "Level progression sub line in the profile page"
+  },
   "profile.medals": {
     "defaultMessage": "Medals",
     "description": "Tab in the profile page"

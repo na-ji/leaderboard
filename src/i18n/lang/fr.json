@@ -19,6 +19,10 @@
     "defaultMessage": "Niveau : {level}",
     "description": "Level line in the profile page"
   },
+  "profile.level_progression": {
+    "defaultMessage": "{levelProgression, number} / {requiredXP, number} PX",
+    "description": "Level progression sub line in the profile page"
+  },
   "profile.medals": {
     "defaultMessage": "Médailles",
     "description": "Tab in the profile page"
