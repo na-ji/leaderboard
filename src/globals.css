@@ -75,7 +75,7 @@
 
 @layer components {
   .ag-theme-leaderboard {
-    @apply text-black;
+    @apply text-black z-0;
 
     .ag-root-wrapper {
       @apply bg-white-100;

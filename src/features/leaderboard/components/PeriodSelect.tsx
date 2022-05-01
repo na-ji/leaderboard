@@ -72,10 +72,10 @@ export const PeriodSelect = ({ className }: PeriodSelectProps): JSX.Element => {
       </Label>
       <Button>{intl.formatMessage(selectedOption.label)}</Button>
       <Transition
-        enter="transition-opacity duration-300"
+        enter="transition-opacity duration-300 z-10"
         enterFrom="opacity-0"
         enterTo="opacity-100"
-        leave="transition-opacity duration-300"
+        leave="transition-opacity duration-300 z-10"
         leaveFrom="opacity-100"
         leaveTo="opacity-0"
       >

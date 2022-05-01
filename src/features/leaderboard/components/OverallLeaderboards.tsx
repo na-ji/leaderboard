@@ -67,7 +67,11 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
             <div className="hidden lg:inline-flex">
               <PeriodSelect />
             </div>
-            <Button className="lg:hidden" onClick={() => setEnableSettings(!enableSettings)} active={enableSettings}>
+            <Button
+              className="lg:hidden inline-flex items-center justify-center"
+              onClick={() => setEnableSettings(!enableSettings)}
+              active={enableSettings}
+            >
               <SettingsIcon className="inline" />
             </Button>
           </div>
@@ -87,7 +91,7 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
             <LeaderboardPagination className="hidden lg:flex" />
           </List>
         </Group>
-        <div className="overflow-hidden flex">
+        <div className="flex">
           <div
             className={`lg:hidden transition-all duration-300 ${
               enableSettings ? 'max-h-10 mb-3' : 'invisible max-h-0'
