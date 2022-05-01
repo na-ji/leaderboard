@@ -4,6 +4,7 @@ import { ParsedUrlQuery } from 'querystring';
 export enum SupportedLocale {
   EN = 'en',
   FR = 'fr',
+  DE = 'de',
 }
 
 interface I18nProps {

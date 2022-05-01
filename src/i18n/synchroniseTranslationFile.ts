@@ -3,8 +3,9 @@ import { writeFileSync } from 'fs';
 
 import en from './lang/en.json';
 import oldFr from './lang/fr.json';
+import oldDe from './lang/de.json';
 
-const synchroniseTranslationFile = (name: 'fr', oldTranslations: typeof en): void => {
+const synchroniseTranslationFile = (name: 'fr' | 'de', oldTranslations: typeof en): void => {
   const newTranslations: Partial<typeof en> = {};
 
   (Object.keys(en) as Array<keyof typeof en>).forEach((translationId) => {
@@ -23,3 +24,4 @@ const synchroniseTranslationFile = (name: 'fr', oldTranslations: typeof en): voi
 };
 
 synchroniseTranslationFile('fr', oldFr);
+synchroniseTranslationFile('de', oldDe);

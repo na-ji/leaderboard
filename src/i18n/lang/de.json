@@ -1,0 +1,686 @@
+{
+  "app.description": {
+    "defaultMessage": "Pokémon Go Rangliste",
+    "description": "Index page meta description"
+  },
+  "badge_7_day_streaks": {
+    "defaultMessage": "7 day streaks",
+    "description": "Badge 7_DAY_STREAKS"
+  },
+  "badge_berries_fed": {
+    "defaultMessage": "Berries fed",
+    "description": "Badge BERRIES_FED"
+  },
+  "badge_best_buddies": {
+    "defaultMessage": "Best buddies",
+    "description": "Badge BEST_BUDDIES"
+  },
+  "badge_best_friends": {
+    "defaultMessage": "Best friends",
+    "description": "Badge BEST_FRIENDS"
+  },
+  "badge_caught_at_lure": {
+    "defaultMessage": "Caught at lure",
+    "description": "Badge CAUGHT_AT_LURE"
+  },
+  "badge_caught_pokemon": {
+    "defaultMessage": "Caught pokemon",
+    "description": "Badge CAUGHT_POKEMON"
+  },
+  "badge_collections_done": {
+    "defaultMessage": "Collections done",
+    "description": "Badge COLLECTIONS_DONE"
+  },
+  "badge_dex_gen_1": {
+    "defaultMessage": "Gen 1",
+    "description": "Badge DEX_GEN_1"
+  },
+  "badge_dex_gen_2": {
+    "defaultMessage": "Gen 2",
+    "description": "Badge DEX_GEN_2"
+  },
+  "badge_dex_gen_3": {
+    "defaultMessage": "Gen 3",
+    "description": "Badge DEX_GEN_3"
+  },
+  "badge_dex_gen_4": {
+    "defaultMessage": "Gen 4",
+    "description": "Badge DEX_GEN_4"
+  },
+  "badge_dex_gen_5": {
+    "defaultMessage": "Gen 5",
+    "description": "Badge DEX_GEN_5"
+  },
+  "badge_dex_gen_6": {
+    "defaultMessage": "Gen 6",
+    "description": "Badge DEX_GEN_6"
+  },
+  "badge_dex_gen_7": {
+    "defaultMessage": "Dex gen 7",
+    "description": "Badge DEX_GEN_7"
+  },
+  "badge_dex_gen_8": {
+    "defaultMessage": "Dex gen 8",
+    "description": "Badge DEX_GEN_8"
+  },
+  "badge_evolved": {
+    "defaultMessage": "Evolved",
+    "description": "Badge EVOLVED"
+  },
+  "badge_giovanni_defeated": {
+    "defaultMessage": "Giovanni defeated",
+    "description": "Badge GIOVANNI_DEFEATED"
+  },
+  "badge_grunts_defeated": {
+    "defaultMessage": "Grunts defeated",
+    "description": "Badge GRUNTS_DEFEATED"
+  },
+  "badge_gym_battles_won": {
+    "defaultMessage": "Gym battles won",
+    "description": "Badge GYM_BATTLES_WON"
+  },
+  "badge_hatched": {
+    "defaultMessage": "Hatched",
+    "description": "Badge HATCHED"
+  },
+  "badge_hours_defended": {
+    "defaultMessage": "Hours defended",
+    "description": "Badge HOURS_DEFENDED"
+  },
+  "badge_km_walked": {
+    "defaultMessage": "Km walked",
+    "description": "Badge KM_WALKED"
+  },
+  "badge_league_great_won": {
+    "defaultMessage": "Great league won",
+    "description": "Badge LEAGUE_GREAT_WON"
+  },
+  "badge_league_master_won": {
+    "defaultMessage": "Master league won",
+    "description": "Badge LEAGUE_MASTER_WON"
+  },
+  "badge_league_ultra_won": {
+    "defaultMessage": "Ultra league won",
+    "description": "Badge LEAGUE_ULTRA_WON"
+  },
+  "badge_legendary_raids_won": {
+    "defaultMessage": "Legendary raids won",
+    "description": "Badge LEGENDARY_RAIDS_WON"
+  },
+  "badge_mega_evos": {
+    "defaultMessage": "Mega evolutions",
+    "description": "Badge MEGA_EVOS"
+  },
+  "badge_normal_raids_won": {
+    "defaultMessage": "Normal raids won",
+    "description": "Badge NORMAL_RAIDS_WON"
+  },
+  "badge_photobombs": {
+    "defaultMessage": "Photobombs",
+    "description": "Badge PHOTOBOMBS"
+  },
+  "badge_pikachu_caught": {
+    "defaultMessage": "Pikachu caught",
+    "description": "Badge PIKACHU_CAUGHT"
+  },
+  "badge_purified": {
+    "defaultMessage": "Purified",
+    "description": "Badge PURIFIED"
+  },
+  "badge_quests": {
+    "defaultMessage": "Quests",
+    "description": "Badge QUESTS"
+  },
+  "badge_raid_achievements": {
+    "defaultMessage": "Raid achievements",
+    "description": "Badge RAID_ACHIEVEMENTS"
+  },
+  "badge_raids_with_friends": {
+    "defaultMessage": "Raids with friends",
+    "description": "Badge RAIDS_WITH_FRIENDS"
+  },
+  "badge_stops_spun": {
+    "defaultMessage": "Stops spun",
+    "description": "Badge STOPS_SPUN"
+  },
+  "badge_trade_km": {
+    "defaultMessage": "Trade km",
+    "description": "Badge TRADE_KM"
+  },
+  "badge_trades": {
+    "defaultMessage": "Trades",
+    "description": "Badge TRADES"
+  },
+  "badge_trainers_referred": {
+    "defaultMessage": "Trainers referred",
+    "description": "Badge TRAINERS_REFERRED"
+  },
+  "badge_trainings_won": {
+    "defaultMessage": "Trainings won",
+    "description": "Badge TRAININGS_WON"
+  },
+  "badge_unique_mega_evos": {
+    "defaultMessage": "Unique mega evos",
+    "description": "Badge UNIQUE_MEGA_EVOS"
+  },
+  "badge_unique_raid_bosses": {
+    "defaultMessage": "Unique raid bosses",
+    "description": "Badge UNIQUE_RAID_BOSSES"
+  },
+  "badge_unique_stops_spun": {
+    "defaultMessage": "Unique stops spun",
+    "description": "Badge UNIQUE_STOPS_SPUN"
+  },
+  "badge_unique_unown": {
+    "defaultMessage": "Unique Unown",
+    "description": "Badge UNIQUE_UNOWN"
+  },
+  "badge_wayfarer_agreements": {
+    "defaultMessage": "Wayfarer agreements",
+    "description": "Badge WAYFARER_AGREEMENTS"
+  },
+  "badge_xl_karps": {
+    "defaultMessage": "XL Magikarp",
+    "description": "Badge XL_KARPS"
+  },
+  "badge_xs_rats": {
+    "defaultMessage": "XS Rattata",
+    "description": "Badge XS_RATS"
+  },
+  "drawer.logout": {
+    "defaultMessage": "Logout",
+    "description": "Logout button"
+  },
+  "grid.firstPage": {
+    "defaultMessage": "First page",
+    "description": "Pagination indicator"
+  },
+  "grid.lastPage": {
+    "defaultMessage": "Last page",
+    "description": "Pagination indicator"
+  },
+  "grid.nextPage": {
+    "defaultMessage": "Next page",
+    "description": "Pagination indicator"
+  },
+  "grid.of": {
+    "defaultMessage": "of",
+    "description": "Pagination indicator"
+  },
+  "grid.page": {
+    "defaultMessage": "Page",
+    "description": "Pagination indicator"
+  },
+  "grid.previousPage": {
+    "defaultMessage": "Previous page",
+    "description": "Pagination indicator"
+  },
+  "grid.to": {
+    "defaultMessage": "to",
+    "description": "Pagination indicator"
+  },
+  "index.title": {
+    "defaultMessage": "Rangliste",
+    "description": "Index page title"
+  },
+  "leaderboard.all_time": {
+    "defaultMessage": "All time",
+    "description": "All time period"
+  },
+  "leaderboard.battle": {
+    "defaultMessage": "Battles",
+    "description": "Battles leaderboards title"
+  },
+  "leaderboard.collection": {
+    "defaultMessage": "Collection",
+    "description": "Collection leaderboards title"
+  },
+  "leaderboard.general": {
+    "defaultMessage": "General",
+    "description": "General leaderboard title"
+  },
+  "leaderboard.gym": {
+    "defaultMessage": "Gyms",
+    "description": "Gyms leaderboard title"
+  },
+  "leaderboard.last_month": {
+    "defaultMessage": "Last 30 days",
+    "description": "All time period"
+  },
+  "leaderboard.last_week": {
+    "defaultMessage": "Last 7 days",
+    "description": "All time period"
+  },
+  "leaderboard.miscellaneous": {
+    "defaultMessage": "Miscellaneous",
+    "description": "Miscellaneous leaderboard title"
+  },
+  "leaderboard.period": {
+    "defaultMessage": "Period",
+    "description": "Period dropdown"
+  },
+  "leaderboard.pokedex": {
+    "defaultMessage": "Pokédex",
+    "description": "Pokédex leaderboard title"
+  },
+  "leaderboard.pvp": {
+    "defaultMessage": "PVP",
+    "description": "PVP leaderboard title"
+  },
+  "leaderboard.raid": {
+    "defaultMessage": "Raids",
+    "description": "Raids leaderboard title"
+  },
+  "leaderboard.rocket": {
+    "defaultMessage": "Team Rocket",
+    "description": "Team Rocket leaderboard title"
+  },
+  "leaderboard.specific": {
+    "defaultMessage": "Specific",
+    "description": "Specific leaderboard title"
+  },
+  "leaderboard.today": {
+    "defaultMessage": "Today",
+    "description": "All time period"
+  },
+  "leaderboard.type": {
+    "defaultMessage": "Types",
+    "description": "Types leaderboard title"
+  },
+  "leaderboard_header.7_day_streaks": {
+    "defaultMessage": "7 day streaks",
+    "description": "Leaderboard 7 day streaks column header"
+  },
+  "leaderboard_header.battles_won": {
+    "defaultMessage": "Battles won",
+    "description": "Leaderboard battles won column header"
+  },
+  "leaderboard_header.berries_fed": {
+    "defaultMessage": "Berries",
+    "description": "Leaderboard berries column header"
+  },
+  "leaderboard_header.best_buddies": {
+    "defaultMessage": "Best buddies",
+    "description": "Leaderboard best buddies column header"
+  },
+  "leaderboard_header.best_friends": {
+    "defaultMessage": "Best friends",
+    "description": "Leaderboard best friends column header"
+  },
+  "leaderboard_header.caught_at_lure": {
+    "defaultMessage": "Caught at lure",
+    "description": "Leaderboard caught at lure column header"
+  },
+  "leaderboard_header.caught_pokemon": {
+    "defaultMessage": "Caught",
+    "description": "Leaderboard caught pokemon column header"
+  },
+  "leaderboard_header.collections_done": {
+    "defaultMessage": "Collections",
+    "description": "Leaderboard collections column header"
+  },
+  "leaderboard_header.dex_gen1": {
+    "defaultMessage": "Gen 1",
+    "description": "Leaderboard gen 1 column header"
+  },
+  "leaderboard_header.dex_gen2": {
+    "defaultMessage": "Gen 2",
+    "description": "Leaderboard gen 2 column header"
+  },
+  "leaderboard_header.dex_gen3": {
+    "defaultMessage": "Gen 3",
+    "description": "Leaderboard gen 3 column header"
+  },
+  "leaderboard_header.dex_gen4": {
+    "defaultMessage": "Gen 4",
+    "description": "Leaderboard gen 4 column header"
+  },
+  "leaderboard_header.dex_gen5": {
+    "defaultMessage": "Gen 5",
+    "description": "Leaderboard gen 5 column header"
+  },
+  "leaderboard_header.dex_gen6": {
+    "defaultMessage": "Gen 6",
+    "description": "Leaderboard gen 6 column header"
+  },
+  "leaderboard_header.dex_gen7": {
+    "defaultMessage": "Gen 7",
+    "description": "Leaderboard gen 7 column header"
+  },
+  "leaderboard_header.dex_gen8": {
+    "defaultMessage": "Gen 8",
+    "description": "Leaderboard gen 8 column header"
+  },
+  "leaderboard_header.evolved": {
+    "defaultMessage": "Evolved",
+    "description": "Leaderboard evolved column header"
+  },
+  "leaderboard_header.gbl_rank": {
+    "defaultMessage": "GBL Rank",
+    "description": "Leaderboard gbl rank column header"
+  },
+  "leaderboard_header.gbl_rating": {
+    "defaultMessage": "GBL rating",
+    "description": "Leaderboard gbl rating column header"
+  },
+  "leaderboard_header.giovanni_defeated": {
+    "defaultMessage": "Giovanni",
+    "description": "Leaderboard giovanni defeated column header"
+  },
+  "leaderboard_header.grunts_defeated": {
+    "defaultMessage": "Grunts",
+    "description": "Leaderboard grunts defeated column header"
+  },
+  "leaderboard_header.gym_battles_won": {
+    "defaultMessage": "Battles",
+    "description": "Leaderboard battles won column header"
+  },
+  "leaderboard_header.hatched": {
+    "defaultMessage": "Hatched",
+    "description": "Leaderboard eggs hatched column header"
+  },
+  "leaderboard_header.hours_defended": {
+    "defaultMessage": "Hours",
+    "description": "Leaderboard hours defended column header"
+  },
+  "leaderboard_header.km_walked": {
+    "defaultMessage": "KM",
+    "description": "Leaderboard km waled column header"
+  },
+  "leaderboard_header.league_great_won": {
+    "defaultMessage": "Great",
+    "description": "Leaderboard great league column header"
+  },
+  "leaderboard_header.league_master_won": {
+    "defaultMessage": "Master",
+    "description": "Leaderboard master league column header"
+  },
+  "leaderboard_header.league_ultra_won": {
+    "defaultMessage": "Ultra",
+    "description": "Leaderboard ultra league column header"
+  },
+  "leaderboard_header.legendary_raids_won": {
+    "defaultMessage": "Legendary",
+    "description": "Leaderboard legendary raids column header"
+  },
+  "leaderboard_header.level": {
+    "defaultMessage": "Level",
+    "description": "Leaderboard level column header"
+  },
+  "leaderboard_header.mega_evos": {
+    "defaultMessage": "Mega evolutions",
+    "description": "Leaderboard Mega evolutions column header"
+  },
+  "leaderboard_header.name": {
+    "defaultMessage": "Trainer",
+    "description": "Leaderboard trainer column header"
+  },
+  "leaderboard_header.normal_raids_won": {
+    "defaultMessage": "Normal",
+    "description": "Leaderboard normal raids column header"
+  },
+  "leaderboard_header.photobombs": {
+    "defaultMessage": "Photobombs",
+    "description": "Leaderboard Photobombs column header"
+  },
+  "leaderboard_header.pikachu_caught": {
+    "defaultMessage": "Pikachu",
+    "description": "Leaderboard pikachu caught column header"
+  },
+  "leaderboard_header.purified": {
+    "defaultMessage": "Purified",
+    "description": "Leaderboard purified column header"
+  },
+  "leaderboard_header.quests": {
+    "defaultMessage": "Quests",
+    "description": "Leaderboard quests column header"
+  },
+  "leaderboard_header.raid_achievements": {
+    "defaultMessage": "Achievements",
+    "description": "Leaderboard raid achievements column header"
+  },
+  "leaderboard_header.raids_with_friends": {
+    "defaultMessage": "With friends",
+    "description": "Leaderboard with friends raids column header"
+  },
+  "leaderboard_header.rank": {
+    "defaultMessage": "Rank",
+    "description": "Leaderboard rank column header"
+  },
+  "leaderboard_header.stops_spun": {
+    "defaultMessage": "Pokéstops",
+    "description": "Leaderboard Pokéstops spun column header"
+  },
+  "leaderboard_header.team": {
+    "defaultMessage": "Team",
+    "description": "Leaderboard team column header"
+  },
+  "leaderboard_header.total_dex": {
+    "defaultMessage": "Total",
+    "description": "Leaderboard total pokedex column header"
+  },
+  "leaderboard_header.total_raids": {
+    "defaultMessage": "Total",
+    "description": "Leaderboard total raids column header"
+  },
+  "leaderboard_header.trade_km": {
+    "defaultMessage": "Trade KM",
+    "description": "Leaderboard Trade KM column header"
+  },
+  "leaderboard_header.trades": {
+    "defaultMessage": "Trades",
+    "description": "Leaderboard trades column header"
+  },
+  "leaderboard_header.trainers_referred": {
+    "defaultMessage": "Trainers referred",
+    "description": "Leaderboard Trainers referred column header"
+  },
+  "leaderboard_header.trainings_won": {
+    "defaultMessage": "Trainings",
+    "description": "Leaderboard trainings won column header"
+  },
+  "leaderboard_header.unique_mega_evos": {
+    "defaultMessage": "Unique mega",
+    "description": "Leaderboard unique Mega evolutions column header"
+  },
+  "leaderboard_header.unique_raid_bosses": {
+    "defaultMessage": "Unique",
+    "description": "Leaderboard unique raids column header"
+  },
+  "leaderboard_header.unique_stops_spun": {
+    "defaultMessage": "Unique Pokéstops",
+    "description": "Leaderboard Unique Pokéstops spun column header"
+  },
+  "leaderboard_header.unique_unown": {
+    "defaultMessage": "Unown",
+    "description": "Leaderboard unique unown column header"
+  },
+  "leaderboard_header.wayfarer_agreements": {
+    "defaultMessage": "Wayfarer",
+    "description": "Leaderboard wayfarer agreements column header"
+  },
+  "leaderboard_header.xl_karps": {
+    "defaultMessage": "Magikarp",
+    "description": "Leaderboard magikarp column header"
+  },
+  "leaderboard_header.xp": {
+    "defaultMessage": "XP",
+    "description": "Leaderboard xp column header"
+  },
+  "leaderboard_header.xs_rats": {
+    "defaultMessage": "Rattata",
+    "description": "Leaderboard rattata column header"
+  },
+  "profile.battles": {
+    "defaultMessage": "Battles",
+    "description": "Battles info card title in the profile page"
+  },
+  "profile.gbl_rank": {
+    "defaultMessage": "GBL Rank",
+    "description": "GBL rank info card title in the profile page"
+  },
+  "profile.last_update": {
+    "defaultMessage": "Last Update",
+    "description": "Last update info card title in the profile page"
+  },
+  "profile.level": {
+    "defaultMessage": "Level: {level}",
+    "description": "Level line in the profile page"
+  },
+  "profile.level_progression": {
+    "defaultMessage": "{levelProgression, number} / {requiredXP, number} XP",
+    "description": "Level progression sub line in the profile page"
+  },
+  "profile.medals": {
+    "defaultMessage": "Medals",
+    "description": "Tab in the profile page"
+  },
+  "profile.overview": {
+    "defaultMessage": "Overview",
+    "description": "Tab in the profile page"
+  },
+  "profile.pokemon_caught": {
+    "defaultMessage": "Catches",
+    "description": "Pokemon caught info card title in the profile page"
+  },
+  "profile.team": {
+    "defaultMessage": "Team",
+    "description": "Team info card title in the profile page"
+  },
+  "profile.title": {
+    "defaultMessage": "{name}'s Profile",
+    "description": "Profile page title"
+  },
+  "profile.total_xp": {
+    "defaultMessage": "XP",
+    "description": "Total XP info card title in the profile page"
+  },
+  "profile.updated_at": {
+    "defaultMessage": "{date, time, short}",
+    "description": "Last updated line in the profile page"
+  },
+  "registration.already_registered": {
+    "defaultMessage": "You're already registered",
+    "description": "Error message if connected user is already registered"
+  },
+  "registration.description": {
+    "defaultMessage": "Rangliste registration",
+    "description": "Registration page meta description"
+  },
+  "registration.generic_error": {
+    "defaultMessage": "An error occurred. Please try again later.",
+    "description": "Registration error when trainer is not found"
+  },
+  "registration.step.add_bot": {
+    "defaultMessage": "1 - Add bot to your friends",
+    "description": "First step to register"
+  },
+  "registration.step.add_bot_instruction": {
+    "defaultMessage": "Add this friend code <code>{trainerCode}</code>",
+    "description": "Instruction of first step"
+  },
+  "registration.step.link_account": {
+    "defaultMessage": "2 - Link your account",
+    "description": "Second step to register"
+  },
+  "registration.submit": {
+    "defaultMessage": "Submit",
+    "description": "Button to validate registration"
+  },
+  "registration.title": {
+    "defaultMessage": "Registration",
+    "description": "Registration page title"
+  },
+  "registration.trainer_name": {
+    "defaultMessage": "Trainer name",
+    "description": "Trainer name input label"
+  },
+  "registration.trainer_not_found": {
+    "defaultMessage": "Trainer not found. Please wait 30 minutes after adding the bot as your friend.",
+    "description": "Registration error when trainer is not found"
+  },
+  "team.instinct": {
+    "defaultMessage": "Instinct",
+    "description": "Team Instinct"
+  },
+  "team.mystic": {
+    "defaultMessage": "Mystic",
+    "description": "Team Mystic"
+  },
+  "team.valor": {
+    "defaultMessage": "Valor",
+    "description": "Team Valor"
+  },
+  "type_bug": {
+    "defaultMessage": "Bug",
+    "description": "Pokémon type BUG"
+  },
+  "type_dark": {
+    "defaultMessage": "Dark",
+    "description": "Pokémon type DARK"
+  },
+  "type_dragon": {
+    "defaultMessage": "Dragon",
+    "description": "Pokémon type DRAGON"
+  },
+  "type_electric": {
+    "defaultMessage": "Electric",
+    "description": "Pokémon type ELECTRIC"
+  },
+  "type_fairy": {
+    "defaultMessage": "Fairy",
+    "description": "Pokémon type FAIRY"
+  },
+  "type_fighting": {
+    "defaultMessage": "Fighting",
+    "description": "Pokémon type FIGHTING"
+  },
+  "type_fire": {
+    "defaultMessage": "Fire",
+    "description": "Pokémon type FIRE"
+  },
+  "type_flying": {
+    "defaultMessage": "Flying",
+    "description": "Pokémon type FLYING"
+  },
+  "type_ghost": {
+    "defaultMessage": "Ghost",
+    "description": "Pokémon type GHOST"
+  },
+  "type_grass": {
+    "defaultMessage": "Grass",
+    "description": "Pokémon type GRASS"
+  },
+  "type_ground": {
+    "defaultMessage": "Ground",
+    "description": "Pokémon type GROUND"
+  },
+  "type_ice": {
+    "defaultMessage": "Ice",
+    "description": "Pokémon type ICE"
+  },
+  "type_normal": {
+    "defaultMessage": "Normal",
+    "description": "Pokémon type NORMAL"
+  },
+  "type_poison": {
+    "defaultMessage": "Poison",
+    "description": "Pokémon type POISON"
+  },
+  "type_psychic": {
+    "defaultMessage": "Psychic",
+    "description": "Pokémon type PSYCHIC"
+  },
+  "type_rock": {
+    "defaultMessage": "Rock",
+    "description": "Pokémon type ROCK"
+  },
+  "type_steel": {
+    "defaultMessage": "Steel",
+    "description": "Pokémon type STEEL"
+  },
+  "type_water": {
+    "defaultMessage": "Water",
+    "description": "Pokémon type WATER"
+  }
+}
