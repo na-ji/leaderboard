@@ -22,7 +22,7 @@ Simple app displaying a leaderboard of Pokémon Go trainers.
 
 ```shell
 npm ci
-cp config/default.json config/env/production.json
+cp config/env/config.example config/env/production.json
 ```
 
 Then edit the file `config/env/production.json` to put your configuration.

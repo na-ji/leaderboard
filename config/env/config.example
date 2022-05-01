@@ -1,0 +1,22 @@
+{
+  "database": {
+    "host": "localhost",
+    "madDatabase": "mad_database",
+    "leaderboardDatabase": "mad_database",
+    "password": "password",
+    "port": "3306",
+    "user": "user"
+  },
+  "defaultLocale": "en",
+  "applicationURL": "https://leaderboard.mymap.fr",
+  "enableAuth": false,
+  "secret": "ChangeThisToARandomStringPlease",
+  "trainerCode": "XXXX XXXX XXXX",
+  "discord": {
+    "clientId": "Fill this only if you enable auth",
+    "clientSecret": "secret",
+    "botToken": "token",
+    "guildId": [""],
+    "roleId": [""]
+  }
+}
