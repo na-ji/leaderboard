@@ -95,7 +95,7 @@
 
     .ag-cell,
     .ag-header-cell {
-      @apply inline-flex items-center p-4 box-border;
+      @apply inline-flex items-center px-4 box-border;
     }
 
     .ag-cell {
@@ -104,6 +104,10 @@
 
     .ag-header-cell {
       @apply headline;
+
+      .ag-header-cell-text {
+        overflow: initial;
+      }
     }
 
     .ag-icon {
