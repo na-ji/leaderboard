@@ -1,155 +1,7 @@
 {
-  "profile.pokemon_caught": {
-    "defaultMessage": "Captures",
-    "description": "Pokemon caught info card title in the profile page"
-  },
-  "profile.team": {
-    "defaultMessage": "Équipe",
-    "description": "Team info card title in the profile page"
-  },
-  "profile.gbl_rating": {
-    "defaultMessage": "{gblRating, number}",
-    "description": "GBL rating line in the profile page"
-  },
-  "period_leaderboard.title": {
-    "defaultMessage": "Classement {period}",
-    "description": "Period leaderboard title"
-  },
-  "profile.level": {
-    "defaultMessage": "Niveau : {level}",
-    "description": "Level line in the profile page"
-  },
-  "profile.level_progression": {
-    "defaultMessage": "{levelProgression, number} / {requiredXP, number} PX",
-    "description": "Level progression sub line in the profile page"
-  },
-  "profile.medals": {
-    "defaultMessage": "Médailles",
-    "description": "Tab in the profile page"
-  },
-  "profile.overview": {
-    "defaultMessage": "Général",
-    "description": "Tab in the profile page"
-  },
-  "index.title": {
-    "defaultMessage": "Classement",
-    "description": "Index page title"
-  },
-  "leaderboard.all_time": {
-    "defaultMessage": "Tous les temps",
-    "description": "All time period"
-  },
-  "leaderboard.battle": {
-    "defaultMessage": "Combats",
-    "description": "Battles leaderboards title"
-  },
-  "leaderboard.type": {
-    "defaultMessage": "Types",
-    "description": "Types leaderboard title"
-  },
-  "profile.battles": {
-    "defaultMessage": "Combats",
-    "description": "Battles info card title in the profile page"
-  },
-  "profile.gbl_rank": {
-    "defaultMessage": "Rang LCG",
-    "description": "GBL rank info card title in the profile page"
-  },
-  "profile.last_update": {
-    "defaultMessage": "Mis à jour",
-    "description": "Last update info card title in the profile page"
-  },
-  "leaderboard.raid": {
-    "defaultMessage": "Raids",
-    "description": "Raids leaderboard title"
-  },
-  "leaderboard.miscellaneous": {
-    "defaultMessage": "Divers",
-    "description": "Miscellaneous leaderboard title"
-  },
-  "leaderboard.period": {
-    "defaultMessage": "Période",
-    "description": "Period dropdown"
-  },
-  "profile.updated_at": {
-    "defaultMessage": "{date, time, short}",
-    "description": "Last updated line in the profile page"
-  },
-  "registration.already_registered": {
-    "defaultMessage": "Vous êtes déjà inscrit",
-    "description": "Error message if connected user is already registered"
-  },
-  "registration.description": {
-    "defaultMessage": "Inscription au classement Pokémon Go",
-    "description": "Registration page meta description"
-  },
-  "registration.generic_error": {
-    "defaultMessage": "Une erreur est survenue, merci de ressayer plus tard.",
-    "description": "Registration error when trainer is not found"
-  },
-  "registration.step.add_bot": {
-    "defaultMessage": "1 - Ajouter le bot comme ami",
-    "description": "First step to register"
-  },
-  "registration.step.add_bot_instruction": {
-    "defaultMessage": "Ajouter ce code ami <code>{trainerCode}</code>",
-    "description": "Instruction of first step"
-  },
-  "registration.step.link_account": {
-    "defaultMessage": "2 - Lier votre compte",
-    "description": "Second step to register"
-  },
-  "registration.submit": {
-    "defaultMessage": "Confirmer",
-    "description": "Button to validate registration"
-  },
-  "registration.title": {
-    "defaultMessage": "Inscription",
-    "description": "Registration page title"
-  },
-  "registration.trainer_name": {
-    "defaultMessage": "Nom de dresseur",
-    "description": "Trainer name input label"
-  },
-  "registration.trainer_not_found": {
-    "defaultMessage": "Dresseur non trouvé. Merci d'attendre 30 minutes après avoir ajouté le bot.",
-    "description": "Registration error when trainer is not found"
-  },
-  "team.instinct": {
-    "defaultMessage": "Intuition",
-    "description": "Team Instinct"
-  },
-  "team.mystic": {
-    "defaultMessage": "Sagesse",
-    "description": "Team Mystic"
-  },
-  "team.valor": {
-    "defaultMessage": "Bravoure",
-    "description": "Team Valor"
-  },
-  "period_leaderboard.no_data": {
-    "defaultMessage": "Pas de données :(",
-    "description": "Error message when leaderboard is not available"
-  },
-  "leaderboard.gym": {
-    "defaultMessage": "Arènes",
-    "description": "Gyms leaderboard title"
-  },
-  "leaderboard.last_month": {
-    "defaultMessage": "30 derniers jours",
-    "description": "All time period"
-  },
-  "leaderboard.last_week": {
-    "defaultMessage": "7 derniers jours",
-    "description": "All time period"
-  },
-  "drawer.logout": {
-    "defaultMessage": "Déconnexion",
-    "description": "Logout button"
-  },
-  "leaderboard.pokedex": {
-    "defaultMessage": "Pokédex",
-    "description": "Pokédex leaderboard title"
+  "app.description": {
+    "defaultMessage": "Classement Pokémon Go",
+    "description": "Index page meta description"
   },
   "badge_7_day_streaks": {
     "defaultMessage": "Séries de 7 jours",
@@ -335,13 +187,9 @@
     "defaultMessage": "Rattata XS",
     "description": "Badge XS_RATS"
   },
-  "profile.title": {
-    "defaultMessage": "Profil de {name}",
-    "description": "Profile page title"
-  },
-  "profile.total_xp": {
-    "defaultMessage": "PX",
-    "description": "Total XP info card title in the profile page"
+  "drawer.logout": {
+    "defaultMessage": "Déconnexion",
+    "description": "Logout button"
   },
   "grid.firstPage": {
     "defaultMessage": "Première page",
@@ -371,9 +219,73 @@
     "defaultMessage": "à",
     "description": "Pagination indicator"
   },
+  "index.title": {
+    "defaultMessage": "Classement",
+    "description": "Index page title"
+  },
+  "leaderboard.all_time": {
+    "defaultMessage": "Tous les temps",
+    "description": "All time period"
+  },
+  "leaderboard.battle": {
+    "defaultMessage": "Combats",
+    "description": "Battles leaderboards title"
+  },
+  "leaderboard.collection": {
+    "defaultMessage": "Collection",
+    "description": "Collection leaderboards title"
+  },
   "leaderboard.general": {
     "defaultMessage": "Général",
     "description": "General leaderboard title"
+  },
+  "leaderboard.gym": {
+    "defaultMessage": "Arènes",
+    "description": "Gyms leaderboard title"
+  },
+  "leaderboard.last_month": {
+    "defaultMessage": "30 derniers jours",
+    "description": "All time period"
+  },
+  "leaderboard.last_week": {
+    "defaultMessage": "7 derniers jours",
+    "description": "All time period"
+  },
+  "leaderboard.miscellaneous": {
+    "defaultMessage": "Divers",
+    "description": "Miscellaneous leaderboard title"
+  },
+  "leaderboard.period": {
+    "defaultMessage": "Période",
+    "description": "Period dropdown"
+  },
+  "leaderboard.pokedex": {
+    "defaultMessage": "Pokédex",
+    "description": "Pokédex leaderboard title"
+  },
+  "leaderboard.pvp": {
+    "defaultMessage": "PVP",
+    "description": "PVP leaderboard title"
+  },
+  "leaderboard.raid": {
+    "defaultMessage": "Raids",
+    "description": "Raids leaderboard title"
+  },
+  "leaderboard.rocket": {
+    "defaultMessage": "Team Rocket",
+    "description": "Team Rocket leaderboard title"
+  },
+  "leaderboard.specific": {
+    "defaultMessage": "Spécifique",
+    "description": "Specific leaderboard title"
+  },
+  "leaderboard.today": {
+    "defaultMessage": "Aujourd'hui",
+    "description": "All time period"
+  },
+  "leaderboard.type": {
+    "defaultMessage": "Types",
+    "description": "Types leaderboard title"
   },
   "leaderboard_header.7_day_streaks": {
     "defaultMessage": "Séries 7 jours",
@@ -599,13 +511,105 @@
     "defaultMessage": "Rattata",
     "description": "Leaderboard rattata column header"
   },
-  "leaderboard.pvp": {
-    "defaultMessage": "PVP",
-    "description": "PVP leaderboard title"
+  "profile.battles": {
+    "defaultMessage": "Combats",
+    "description": "Battles info card title in the profile page"
   },
-  "app.description": {
-    "defaultMessage": "Classement Pokémon Go",
-    "description": "Index page meta description"
+  "profile.gbl_rank": {
+    "defaultMessage": "Rang LCG",
+    "description": "GBL rank info card title in the profile page"
+  },
+  "profile.last_update": {
+    "defaultMessage": "Mis à jour",
+    "description": "Last update info card title in the profile page"
+  },
+  "profile.level": {
+    "defaultMessage": "Niveau : {level}",
+    "description": "Level line in the profile page"
+  },
+  "profile.level_progression": {
+    "defaultMessage": "{levelProgression, number} / {requiredXP, number} PX",
+    "description": "Level progression sub line in the profile page"
+  },
+  "profile.medals": {
+    "defaultMessage": "Médailles",
+    "description": "Tab in the profile page"
+  },
+  "profile.overview": {
+    "defaultMessage": "Général",
+    "description": "Tab in the profile page"
+  },
+  "profile.pokemon_caught": {
+    "defaultMessage": "Captures",
+    "description": "Pokemon caught info card title in the profile page"
+  },
+  "profile.team": {
+    "defaultMessage": "Équipe",
+    "description": "Team info card title in the profile page"
+  },
+  "profile.title": {
+    "defaultMessage": "Profil de {name}",
+    "description": "Profile page title"
+  },
+  "profile.total_xp": {
+    "defaultMessage": "PX",
+    "description": "Total XP info card title in the profile page"
+  },
+  "profile.updated_at": {
+    "defaultMessage": "{date, time, short}",
+    "description": "Last updated line in the profile page"
+  },
+  "registration.already_registered": {
+    "defaultMessage": "Vous êtes déjà inscrit",
+    "description": "Error message if connected user is already registered"
+  },
+  "registration.description": {
+    "defaultMessage": "Inscription au classement Pokémon Go",
+    "description": "Registration page meta description"
+  },
+  "registration.generic_error": {
+    "defaultMessage": "Une erreur est survenue, merci de ressayer plus tard.",
+    "description": "Registration error when trainer is not found"
+  },
+  "registration.step.add_bot": {
+    "defaultMessage": "1 - Ajouter le bot comme ami",
+    "description": "First step to register"
+  },
+  "registration.step.add_bot_instruction": {
+    "defaultMessage": "Ajouter ce code ami <code>{trainerCode}</code>",
+    "description": "Instruction of first step"
+  },
+  "registration.step.link_account": {
+    "defaultMessage": "2 - Lier votre compte",
+    "description": "Second step to register"
+  },
+  "registration.submit": {
+    "defaultMessage": "Confirmer",
+    "description": "Button to validate registration"
+  },
+  "registration.title": {
+    "defaultMessage": "Inscription",
+    "description": "Registration page title"
+  },
+  "registration.trainer_name": {
+    "defaultMessage": "Nom de dresseur",
+    "description": "Trainer name input label"
+  },
+  "registration.trainer_not_found": {
+    "defaultMessage": "Dresseur non trouvé. Merci d'attendre 30 minutes après avoir ajouté le bot.",
+    "description": "Registration error when trainer is not found"
+  },
+  "team.instinct": {
+    "defaultMessage": "Intuition",
+    "description": "Team Instinct"
+  },
+  "team.mystic": {
+    "defaultMessage": "Sagesse",
+    "description": "Team Mystic"
+  },
+  "team.valor": {
+    "defaultMessage": "Bravoure",
+    "description": "Team Valor"
   },
   "type_bug": {
     "defaultMessage": "Insecte",
@@ -678,21 +682,5 @@
   "type_water": {
     "defaultMessage": "Eau",
     "description": "Pokémon type WATER"
-  },
-  "leaderboard.collection": {
-    "defaultMessage": "Collection",
-    "description": "Collection leaderboards title"
-  },
-  "leaderboard.rocket": {
-    "defaultMessage": "Team Rocket",
-    "description": "Team Rocket leaderboard title"
-  },
-  "leaderboard.specific": {
-    "defaultMessage": "Spécifique",
-    "description": "Specific leaderboard title"
-  },
-  "leaderboard.today": {
-    "defaultMessage": "Aujourd'hui",
-    "description": "All time period"
   }
 }
