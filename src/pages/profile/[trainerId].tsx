@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import type { NextPage, GetStaticPaths, GetStaticPathsResult } from 'next';
 import useSWR from 'swr';
+import { config as appConfig } from 'node-config-ts';
 import { useIntl } from 'react-intl';
-import { config as projectConfig } from 'node-config-ts';
 
 import { Profile } from '@/features/profile';
-import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
+import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 import { Trainer } from '@/types';
 
 interface ProfileProps {
@@ -80,9 +80,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: trainers
-      .slice(0, projectConfig.numberOfTrainerProfileToPrebuild ?? 30)
+      .slice(0, appConfig.numberOfTrainerProfileToPrebuild ?? 30)
       .reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
-        Object.values(SupportedLocale).forEach((locale) => {
+        appConfig.enabledLocales.forEach((locale) => {
           paths.push({ params: { trainerId: trainer.trainer_id }, locale });
         });
 

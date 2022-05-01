@@ -3,15 +3,15 @@ const { config: appConfig } = require('node-config-ts');
 const { NodeConfigTSPlugin } = require('node-config-ts/webpack');
 const { StatsWriterPlugin } = require('webpack-stats-plugin');
 
-const supportedLocales = ['en', 'fr', 'de'];
+const { enabledLocales } = appConfig;
 let defaultLocale = 'en';
 
-if (supportedLocales.includes(appConfig.defaultLocale)) {
+if (enabledLocales.includes(appConfig.defaultLocale)) {
   defaultLocale = appConfig.defaultLocale;
 }
 
 console.log(`Default locale: ${defaultLocale}`);
-console.log(`Supported locales: ${supportedLocales}`);
+console.log(`Enabled locales: ${enabledLocales}`);
 console.log(`Environment: ${process.env.NODE_ENV}`);
 
 /** @type {import('next').NextConfig} */
@@ -35,7 +35,7 @@ module.exports = {
     return NodeConfigTSPlugin(config);
   },
   i18n: {
-    locales: supportedLocales,
+    locales: enabledLocales,
     defaultLocale,
   },
   async redirects() {

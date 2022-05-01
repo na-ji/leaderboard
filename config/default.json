@@ -9,6 +9,7 @@
     "user": "@@DB_USER"
   },
   "defaultLocale": "@@DEFAULT_LOCALE",
+  "enabledLocales": ["en", "fr", "de"],
   "applicationURL": "@@APPLICATION_URL",
   "enableAuth": false,
   "secret": "ChangeThisToARandomString",

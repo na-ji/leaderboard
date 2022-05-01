@@ -8,6 +8,7 @@
     "user": "user"
   },
   "defaultLocale": "en",
+  "enabledLocales": ["en", "fr", "de"],
   "applicationURL": "https://leaderboard.mymap.fr",
   "enableAuth": false,
   "secret": "ChangeThisToARandomStringPlease",

@@ -1,12 +1,13 @@
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import useSWR from 'swr';
-import { useIntl } from 'react-intl';
+import { config as appConfig } from 'node-config-ts';
 import { GetStaticPaths, GetStaticPathsResult } from 'next';
+import { useIntl } from 'react-intl';
 
 import { OverallLeaderboards } from '@/features/leaderboard';
 import { Trainer } from '@/types';
-import { SupportedLocale, wrapStaticPropsWithLocale } from '@/utils/i18n';
+import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 import type { PeriodLeaderboard } from '@/features/leaderboard/api';
 
 interface HomeProps {
@@ -82,7 +83,7 @@ export const getStaticProps = wrapStaticPropsWithLocale<HomeProps, { period?: ['
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: paths.reduce<GetStaticPathsResult['paths']>((paths, path) => {
-      Object.values(SupportedLocale).forEach((locale) => {
+      appConfig.enabledLocales.forEach((locale) => {
         paths.push({ params: { period: path === '' ? [] : [path] }, locale });
       });
 
