@@ -8,6 +8,7 @@
     "port": "@@DB_PORT",
     "user": "@@DB_USER"
   },
+  "title": "Pokémon Go",
   "defaultLocale": "@@DEFAULT_LOCALE",
   "enabledLocales": ["en", "fr", "de"],
   "applicationURL": "@@APPLICATION_URL",

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { config } from 'node-config-ts';
 import { FormattedMessage } from 'react-intl';
 import { signOut } from 'next-auth/react';
 
@@ -14,7 +15,7 @@ export const Header = ({ enableAuth }: HeaderProps): JSX.Element => {
       <Link href="/">
         <a className="flex items-center">
           <Logo />
-          <div className="ml-1.5 lg:ml-2.5">PokemonGo</div>
+          <div className="ml-1.5 lg:ml-2.5">{config.title}</div>
         </a>
       </Link>
       {enableAuth && (

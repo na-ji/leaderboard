@@ -7,6 +7,7 @@
     "port": "3306",
     "user": "user"
   },
+  "title": "My Awesome Community Leaderboard",
   "defaultLocale": "en",
   "enabledLocales": ["en", "fr", "de"],
   "applicationURL": "https://leaderboard.mymap.fr",
