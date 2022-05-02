@@ -271,6 +271,10 @@
     "defaultMessage": "Raids",
     "description": "Raids leaderboard title"
   },
+  "leaderboard.registered_trainers": {
+    "defaultMessage": "Dresseurs inscrits",
+    "description": "Registered Trainers info card title in the leaderboard page"
+  },
   "leaderboard.rocket": {
     "defaultMessage": "Team Rocket",
     "description": "Team Rocket leaderboard title"
@@ -282,6 +286,18 @@
   "leaderboard.today": {
     "defaultMessage": "Aujourd'hui",
     "description": "All time period"
+  },
+  "leaderboard.total_fights": {
+    "defaultMessage": "Total combats",
+    "description": "Total number of fights info card title in the profile page"
+  },
+  "leaderboard.total_players_xp": {
+    "defaultMessage": "Total PX",
+    "description": "Total Players XP info card title in the profile page"
+  },
+  "leaderboard.total_pokemon_caught": {
+    "defaultMessage": "Total Pokémon capturés",
+    "description": "Total Pokémon caught info card title in the profile page"
   },
   "leaderboard.type": {
     "defaultMessage": "Types",

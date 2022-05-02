@@ -59,6 +59,7 @@ const Home: NextPage<HomeProps> = ({ initialTrainers, period, initialGlobalStats
         />
       </Head>
       <h1 className="title-1 mt-2.5 lg:mt-0.5 mb-4 lg:mb-7.5">{title}</h1>
+      {globalStats && <GlobalStats globalStats={globalStats} />}
       {Array.isArray(trainers) && <OverallLeaderboards trainers={trainers} />}
     </>
   );
