@@ -87,10 +87,10 @@
 
     .ag-row {
       @apply h-14 border-t border-grey-20 box-border;
+    }
 
-      &:hover {
-        @apply bg-[#f0f4fa] cursor-pointer;
-      }
+    .ag-row-hover {
+      @apply bg-[#f0f4fa] cursor-pointer;
     }
 
     .ag-cell,
