@@ -14,15 +14,13 @@
     "moduleResolution": "node",
     "noEmit": true,
     "paths": {
-      "@/*": ["src/*"],
-      "node-config-ts": ["./config/Config.d.ts"],
-      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+      "@/*": ["src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "es5"
   },
-  "include": ["next-env.d.ts", "config/**/*", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "server/**/*.ts"]
 }
