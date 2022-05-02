@@ -66,6 +66,7 @@ jobs:
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
+          GIT_CREDENTIALS: na-ji:${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
           HUSKY: 0
         run: npx semantic-release
       - name: Deploy demo to production
