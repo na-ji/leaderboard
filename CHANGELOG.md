@@ -1,3 +1,11 @@
+# [5.5.0](https://github.com/v-mapper/leaderboard/compare/v5.4.0...v5.5.0) (2022-05-02)
+
+
+### Features
+
+* **config:** add `title` option to configure header content ([81cf698](https://github.com/v-mapper/leaderboard/commit/81cf6986f689204d80be529a2c765c7ed766725a))
+* **leaderboard:** add global stats cards ([d15a628](https://github.com/v-mapper/leaderboard/commit/d15a628a68dbf978237b233f6544e486f5c826c3))
+
 # Release notes
 
 # [5.4.0](https://github.com/v-mapper/leaderboard/compare/v5.3.1...v5.4.0) (2022-05-01)
