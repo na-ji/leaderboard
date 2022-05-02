@@ -6,11 +6,13 @@ import { GetStaticPaths, GetStaticPathsResult } from 'next';
 import { useIntl } from 'react-intl';
 
 import { OverallLeaderboards } from '@/features/leaderboard';
-import { Trainer } from '@/types';
+import { GlobalStats as GlobalStatsInterface, Trainer } from '@/types';
 import { wrapStaticPropsWithLocale } from '@/utils/i18n';
 import type { PeriodLeaderboard } from '@/features/leaderboard/api';
+import { GlobalStats } from '@/features/leaderboard/components/GlobalStats';
 
 interface HomeProps {
+  initialGlobalStats: GlobalStatsInterface;
   initialTrainers: Trainer[];
   period: keyof PeriodLeaderboard | null;
 }
@@ -23,7 +25,7 @@ enum Paths {
 
 const paths = Object.keys(Paths).concat('');
 
-const Home: NextPage<HomeProps> = ({ initialTrainers, period }) => {
+const Home: NextPage<HomeProps> = ({ initialTrainers, period, initialGlobalStats }) => {
   const intl = useIntl();
   const description = intl.formatMessage({
     defaultMessage: 'Pokémon Go Leaderboard',
@@ -35,9 +37,13 @@ const Home: NextPage<HomeProps> = ({ initialTrainers, period }) => {
     id: 'index.title',
     description: 'Index page title',
   });
-  const { data: trainers } = useSWR<Trainer[]>(`/api/leaderboard${period ? '/' + period : ''}`, {
-    fallbackData: initialTrainers,
+  const { data: response } = useSWR<{
+    trainers: Trainer[];
+    globalStats: GlobalStatsInterface;
+  }>(`/api/leaderboard${period ? '/' + period : ''}`, {
+    fallbackData: { trainers: initialTrainers, globalStats: initialGlobalStats },
   });
+  const { trainers, globalStats } = response || {};
 
   return (
     <>
@@ -72,8 +78,11 @@ export const getStaticProps = wrapStaticPropsWithLocale<HomeProps, { period?: ['
       trainers = await getOverallLeaderboard();
     }
 
+    const { getGlobalPlayerStats } = await import('@/features/leaderboard/api');
+    const globalStats = await getGlobalPlayerStats();
+
     return {
-      props: { initialTrainers: trainers, period },
+      props: { initialTrainers: trainers, period, initialGlobalStats: globalStats },
       // rebuild at most every 30 minutes
       revalidate: 1800,
     };
