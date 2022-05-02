@@ -1,3 +1,10 @@
+## [5.5.1](https://github.com/v-mapper/leaderboard/compare/v5.5.0...v5.5.1) (2022-05-02)
+
+
+### Bug Fixes
+
+* **leaderboard:** fix split row hover on desktop ([33ff600](https://github.com/v-mapper/leaderboard/commit/33ff600d00b02176ab65dd0c05c3c11667cd3be6))
+
 # [5.5.0](https://github.com/v-mapper/leaderboard/compare/v5.4.0...v5.5.0) (2022-05-02)
 
 
