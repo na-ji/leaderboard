@@ -117,7 +117,7 @@
     "cron": "^1.8.3",
     "discord-api-types": "^0.32.1",
     "mysql2": "^2.3.3",
-    "next": "12.1.5",
+    "next": "12.1.6",
     "next-auth": "^4.3.4",
     "next-transpile-modules": "^9.0.0",
     "node-config-ts": "^3.1.0",
