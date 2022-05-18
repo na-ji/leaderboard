@@ -157,7 +157,7 @@
     "chromatic": "^6.5.4",
     "commitizen": "^4.2.4",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.1.7",
+    "cssnano": "^5.1.8",
     "cz-conventional-commit": "^1.0.6",
     "eslint": "8.15.0",
     "eslint-config-next": "12.1.6",
