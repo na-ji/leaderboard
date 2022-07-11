@@ -108,7 +108,7 @@
     "npm": "7.24.2"
   },
   "dependencies": {
-    "@ag-grid-community/client-side-row-model": "^27.2.1",
+    "@ag-grid-community/client-side-row-model": "^28.0.2",
     "@ag-grid-community/core": "^27.2.1",
     "@ag-grid-community/react": "^27.2.1",
     "@headlessui/react": "^1.6.1",
