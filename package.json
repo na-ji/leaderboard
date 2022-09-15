@@ -104,8 +104,8 @@
     "npm": ">= 7"
   },
   "volta": {
-    "node": "14.19.1",
-    "npm": "7.24.2"
+    "node": "16.17.0",
+    "npm": "8.19.2"
   },
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^28.1.1",
