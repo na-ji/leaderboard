@@ -6,7 +6,7 @@ export type TabProps = Parameters<typeof HeadlessTab>[0] & { level?: 1 | 2 };
 export const Tab = ({ level = 1, children, ...props }: TabProps): JSX.Element => {
   return (
     <HeadlessTab
-      className={({ selected }) => {
+      className={({ selected }: { selected: boolean }) => {
         return clsx({
           'px-3.5 title-3 focus:outline-none text-grey-70 relative': true,
           'before:content-[attr(data-text)] before:h-0 before:invisible before:font-semibold before:overflow-hidden before:pointer-events-none before:block':

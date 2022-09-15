@@ -59,7 +59,6 @@ module.exports = {
   },
   experimental: {
     cpus: 1,
-    workerThreads: 1,
   },
   swcMinify: true,
 };

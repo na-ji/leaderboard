@@ -21,7 +21,7 @@ export interface LeaderboardProps {
   trainers: Trainer[];
 }
 
-const autoSizeColumns = ({ api, columnApi }: Pick<AgGridEvent, 'api' | 'columnApi'>): void => {
+const autoSizeColumns = ({ api, columnApi }: Pick<AgGridEvent<Trainer>, 'api' | 'columnApi'>): void => {
   if (typeof window === 'undefined') {
     return api.sizeColumnsToFit();
   }
@@ -45,7 +45,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
   const gridRef = useRef<AgGridReact>(null);
 
   const onPaginationChanged = useCallback(
-    ({ api }: AgGridEvent) => {
+    ({ api }: AgGridEvent<Trainer>) => {
       setGridApi(api);
 
       const nextPagination = {

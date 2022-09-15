@@ -4,13 +4,20 @@ import { config } from 'node-config-ts';
 import { IntlProvider } from 'react-intl';
 import { SessionProvider } from 'next-auth/react';
 import { SWRConfig } from 'swr';
+import { Session } from 'next-auth';
 
 import '@/globals.css';
 import { fetcher } from '@/utils/fetcher';
 import { Auth } from '@/features/auth';
 import { Layout } from '@/components/layout';
 
-const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element => {
+interface PageProps {
+  locale?: string;
+  messages?: Record<string, string>;
+  session?: Session | null;
+}
+
+const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps<PageProps>): JSX.Element => {
   return (
     <SessionProvider session={session}>
       <IntlProvider messages={pageProps.messages ?? {}} defaultLocale="en-GB" locale={pageProps.locale ?? 'en-GB'}>
