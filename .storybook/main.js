@@ -26,6 +26,7 @@ module.exports = {
       },
       define: {
         __CONFIG__: appConfig,
+        'process.env': { IS_STORYBOOK: '1' },
       },
       plugins: [tsconfigPaths(), new EnvironmentPlugin({ IS_STORYBOOK: '1' })],
     });
