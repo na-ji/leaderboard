@@ -3,7 +3,8 @@
   "version": "5.5.1",
   "private": true,
   "scripts": {
-    "build": "npm run i18n:compile && cross-env NODE_ENV=production next build && npm run build:server",
+    "build": "npm run i18n:compile && npm run build:next && npm run build:server",
+    "build:next": "cross-env NODE_ENV=production next build",
     "build-storybook": "build-storybook",
     "build:server": "tsc --project tsconfig.server.json",
     "chromatic": "chromatic --exit-zero-on-changes",
