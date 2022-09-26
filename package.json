@@ -147,7 +147,7 @@
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
     "@types/cron": "^2.0.0",
-    "@types/node": "^18.7.18",
+    "@types/node": "^18.7.21",
     "@types/react": "17.0.44",
     "@types/react-dom": "^17.0.16",
     "@typescript-eslint/eslint-plugin": "^5.38.0",
