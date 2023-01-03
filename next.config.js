@@ -2,6 +2,13 @@
 const { config: appConfig } = require('node-config-ts');
 const { NodeConfigTSPlugin } = require('node-config-ts/webpack');
 const { StatsWriterPlugin } = require('webpack-stats-plugin');
+const { logger } = require('./dist/server/logger');
+
+if (!appConfig.applicationURL && !process.env.NEXTAUTH_URL) {
+  throw new Error('Missing external application URL (config.applicationUrl)');
+} else if (!process.env.NEXTAUTH_URL) {
+  process.env.NEXTAUTH_URL = appConfig.applicationURL;
+}
 
 const { enabledLocales } = appConfig;
 let defaultLocale = 'en';
@@ -10,14 +17,16 @@ if (enabledLocales.includes(appConfig.defaultLocale)) {
   defaultLocale = appConfig.defaultLocale;
 }
 
-console.log(`Default locale: ${defaultLocale}`);
-console.log(`Enabled locales: ${enabledLocales}`);
-console.log(`Environment: ${process.env.NODE_ENV}`);
+logger.info(`Default locale: ${defaultLocale}`);
+logger.info(`Enabled locales: ${enabledLocales}`);
+logger.info(`Environment: ${process.env.NODE_ENV}`);
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
+  output: 'standalone',
   poweredByHeader: false,
+  reactStrictMode: true,
+  swcMinify: true,
   webpack: (config) => {
     config.plugins.push(
       new StatsWriterPlugin({
@@ -60,5 +69,4 @@ module.exports = {
   experimental: {
     cpus: 1,
   },
-  swcMinify: true,
 };
