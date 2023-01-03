@@ -57,13 +57,13 @@ export default NextAuth({
   callbacks: {
     async signIn({ account, profile }) {
       return userHasAccess(
-        `${profile.username}#${profile.discriminator}`,
-        account.access_token,
-        account.providerAccountId,
+        `${profile?.username}#${profile?.discriminator}`,
+        account?.access_token,
+        account?.providerAccountId,
       );
     },
     async jwt({ token, user, profile }) {
-      if (user?.trainerId) {
+      if (user && 'trainerId' in user && user.trainerId) {
         token.trainerId = user.trainerId;
         token.trainerName = await getTrainerName(`${token.trainerId}`);
       }

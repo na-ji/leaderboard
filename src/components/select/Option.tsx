@@ -1,7 +1,7 @@
 import { Listbox } from '@headlessui/react';
-import { Fragment } from 'react';
+import { Fragment, PropsWithChildren } from 'react';
 
-type OptionProps = Parameters<typeof Listbox.Option>[0];
+type OptionProps = PropsWithChildren<Parameters<typeof Listbox.Option>[0]>;
 
 export const Option = ({ children, ...props }: OptionProps): JSX.Element => {
   return (

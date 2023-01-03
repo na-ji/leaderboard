@@ -1,5 +1,5 @@
 import { GridApi } from '@ag-grid-community/core';
-import { createContext, Dispatch, FC, SetStateAction, useContext, useState } from 'react';
+import { createContext, Dispatch, FC, ReactNode, SetStateAction, useContext, useState } from 'react';
 
 export interface Pagination {
   currentPage: number;
@@ -18,7 +18,7 @@ export const LeaderboardPaginationContext = createContext<PaginationContextInter
   gridApi: null,
 });
 
-export const LeaderboardPaginationContextProvider: FC = ({ children }) => {
+export const LeaderboardPaginationContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [gridApi, setGridApi] = useState<GridApi | null>(null);
   const [currentPagination, setPagination] = useState<Pagination>(() => ({ currentPage: 0, totalPage: 1 }));
 

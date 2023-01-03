@@ -1,7 +1,8 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
 interface CardProps {
   className?: string;
+  children: ReactNode;
 }
 
 export const Card: FC<CardProps> = ({ children, className }) => {
