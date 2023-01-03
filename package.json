@@ -102,12 +102,12 @@
     "preset": "angular"
   },
   "engines": {
-    "node": ">= 14",
-    "npm": ">= 7"
+    "node": ">= 16",
+    "npm": ">= 8"
   },
   "volta": {
-    "node": "16.17.0",
-    "npm": "8.19.2"
+    "node": "18.12.1",
+    "npm": "9.2.0"
   },
   "dependencies": {
     "@ag-grid-community/client-side-row-model": "^28.1.1",
