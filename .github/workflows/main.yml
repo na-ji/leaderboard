@@ -44,8 +44,9 @@ jobs:
       - name: Build app
         run: npm run build
         env:
-          DB_MAD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
+          DB_HOST: localhost
           DB_LEADERBOARD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
+          DB_MAD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
           DB_PASSWORD: ${{ env.DB_PASSWORD }}
           DB_USER: ${{ env.DB_USER }}
       # Send webpack stats and build information to RelativeCI
