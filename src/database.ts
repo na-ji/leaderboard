@@ -6,8 +6,6 @@ const port: number = parseInt(`${config.database.port}`) ?? 3306;
 
 export const leaderboardConnectionString = `mysql://${user}:${password}@${host}:${port}/${database}`;
 
-console.log({ host, user, password, madDatabase, leaderboardDatabase: database });
-
 export const pool = mysql.createPool({
   host,
   user,
