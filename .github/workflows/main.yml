@@ -41,9 +41,6 @@ jobs:
           sudo systemctl start mysql.service;
           mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE_NAME }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }};
           mysql -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} ${{ env.DB_DATABASE_NAME }} < ./trainer.sql
-      - name: Debug MySQL
-        run: |
-          mysql -e 'SHOW TABLES;' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -h 127.0.0.1 ${{ env.DB_DATABASE_NAME }};
       - name: Build app
         run: npm run build
         env:
@@ -52,6 +49,7 @@ jobs:
           DB_MAD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
           DB_PASSWORD: ${{ env.DB_PASSWORD }}
           DB_USER: ${{ env.DB_USER }}
+          NEXTAUTH_URL: 'http://localhost:3000/'
       # Send webpack stats and build information to RelativeCI
       - name: Send webpack stats to RelativeCI
         uses: relative-ci/agent-action@v1.1.0
