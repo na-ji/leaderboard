@@ -43,11 +43,11 @@ jobs:
           mysql -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} ${{ env.DB_DATABASE_NAME }} < ./trainer.sql
       - name: Debug MySQL
         run: |
-          mysql -e 'SHOW TABLES;' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -h localhost ${{ env.DB_DATABASE_NAME }};
+          mysql -e 'SHOW TABLES;' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -h 127.0.0.1 ${{ env.DB_DATABASE_NAME }};
       - name: Build app
         run: npm run build
         env:
-          DB_HOST: localhost
+          DB_HOST: 127.0.0.1
           DB_LEADERBOARD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
           DB_MAD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
           DB_PASSWORD: ${{ env.DB_PASSWORD }}
