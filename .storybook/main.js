@@ -12,9 +12,9 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-postcss',
   ],
-  framework: '@storybook/react',
-  core: {
-    builder: '@storybook/builder-vite',
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
   },
   async viteFinal(config) {
     // return the customized config
@@ -26,9 +26,16 @@ module.exports = {
       },
       define: {
         __CONFIG__: appConfig,
-        'process.env': { IS_STORYBOOK: '1' },
+        'process.env': {
+          IS_STORYBOOK: '1',
+        },
       },
-      plugins: [tsconfigPaths(), new EnvironmentPlugin({ IS_STORYBOOK: '1' })],
+      plugins: [
+        tsconfigPaths(),
+        new EnvironmentPlugin({
+          IS_STORYBOOK: '1',
+        }),
+      ],
     });
   },
 };
