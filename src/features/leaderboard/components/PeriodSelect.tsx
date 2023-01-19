@@ -55,7 +55,7 @@ export const PeriodSelect = ({ className }: PeriodSelectProps): JSX.Element => {
   }, [router.query]);
 
   const setOption = useCallback(
-    (option: typeof options[0]): void => {
+    (option: (typeof options)[0]): void => {
       const nextPath = `/${option.value}`;
       if (nextPath !== router.asPath) {
         router.push(nextPath);

@@ -23,7 +23,7 @@ const options = [
 ];
 
 const Template: ComponentStory<typeof Option> = (): JSX.Element => {
-  const [selectedOption, setSelectedOption] = useState<typeof options[0]>(options[0]);
+  const [selectedOption, setSelectedOption] = useState<(typeof options)[0]>(options[0]);
 
   return (
     <Select value={selectedOption} onChange={setSelectedOption}>
