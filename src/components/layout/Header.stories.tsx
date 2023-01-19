@@ -1,5 +1,4 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Header } from './Header';
 
@@ -12,8 +11,6 @@ export default {
   parameters: {
     chromatic: { viewports: [375, 1024] },
   },
-} as ComponentMeta<typeof Header>;
+} as Meta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
-
-export const Primary = Template.bind({});
+export const Primary: StoryObj<typeof Header> = {};

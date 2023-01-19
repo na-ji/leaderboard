@@ -1,5 +1,4 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { OverviewCards } from './OverviewCards';
 import { trainer } from '@/utils/fixtures';
@@ -13,9 +12,8 @@ export default {
   parameters: {
     chromatic: { viewports: [375, 1024, 1280] },
   },
-} as ComponentMeta<typeof OverviewCards>;
+} as Meta<typeof OverviewCards>;
 
-const Template: ComponentStory<typeof OverviewCards> = (args) => <OverviewCards {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Primary: StoryObj<typeof OverviewCards> = {
+  args: {},
+};

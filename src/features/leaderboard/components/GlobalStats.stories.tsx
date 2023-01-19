@@ -1,5 +1,4 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { GlobalStats } from './GlobalStats';
 
@@ -17,9 +16,8 @@ export default {
   parameters: {
     chromatic: { viewports: [375, 1440] },
   },
-} as ComponentMeta<typeof GlobalStats>;
+} as Meta<typeof GlobalStats>;
 
-const Template: ComponentStory<typeof GlobalStats> = (args) => <GlobalStats {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {};
+export const Primary: StoryObj<typeof GlobalStats> = {
+  args: {},
+};

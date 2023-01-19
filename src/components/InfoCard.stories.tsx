@@ -1,5 +1,5 @@
 import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { InfoCard } from './InfoCard';
 import { TeamLogo } from '@/components/TeamLogo';
@@ -12,13 +12,12 @@ export default {
   parameters: {
     chromatic: { viewports: [375, 1024] },
   },
-} as ComponentMeta<typeof InfoCard>;
+} as Meta<typeof InfoCard>;
 
-const Template: ComponentStory<typeof InfoCard> = (args) => <InfoCard {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  title: 'Team',
-  value: 'Valor',
-  icon: <TeamLogo team={Team.VALOR} />,
+export const Primary: StoryObj<typeof InfoCard> = {
+  args: {
+    title: 'Team',
+    value: 'Valor',
+    icon: <TeamLogo team={Team.VALOR} />,
+  },
 };
