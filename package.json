@@ -170,7 +170,7 @@
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
-    "semantic-release": "^19.0.5",
+    "semantic-release": "^20.0.2",
     "sequelize-cli": "^6.5.2",
     "storybook": "^7.0.0-beta.30",
     "tailwindcss": "^3.2.4",
