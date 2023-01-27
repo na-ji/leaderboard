@@ -138,7 +138,7 @@
     "@mdx-js/preact": "^2.2.1",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
-    "@storybook/addon-actions": "^7.0.0-beta.30",
+    "@storybook/addon-actions": "^7.0.0-beta.35",
     "@storybook/addon-essentials": "^7.0.0-beta.30",
     "@storybook/addon-interactions": "^7.0.0-beta.30",
     "@storybook/addon-links": "^7.0.0-beta.30",
