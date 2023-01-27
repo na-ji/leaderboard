@@ -162,7 +162,7 @@
     "cssnano": "^5.1.14",
     "cz-conventional-commit": "^1.0.6",
     "eslint": "8.32.0",
-    "eslint-config-next": "^13.1.4",
+    "eslint-config-next": "^13.1.5",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-formatjs": "^4.3.9",
     "eslint-plugin-prettier": "^4.2.1",
