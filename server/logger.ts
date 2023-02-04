@@ -1,9 +1,6 @@
 import { Logger } from 'tslog';
 
-export const logger: Logger = new Logger({
-  dateTimePattern: 'year-month-day hour:minute:second',
-  dateTimeTimezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-  displayFilePath: 'hidden',
-  displayFunctionName: false,
-  overwriteConsole: true,
+export const logger = new Logger({
+  prettyLogTemplate: '{{yyyy}}-{{mm}}-{{dd}} {{hh}}:{{MM}}:{{ss}}\t{{logLevelName}}\t',
+  prettyLogTimeZone: 'local',
 });
