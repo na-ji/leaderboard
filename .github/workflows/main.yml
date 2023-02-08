@@ -46,7 +46,7 @@ jobs:
         env:
           DB_HOST: 127.0.0.1
           DB_LEADERBOARD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
-          DB_MAD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
+          DB_SCANNER_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
           DB_PASSWORD: ${{ env.DB_PASSWORD }}
           DB_USER: ${{ env.DB_USER }}
           NEXTAUTH_URL: 'http://localhost:3000/'
