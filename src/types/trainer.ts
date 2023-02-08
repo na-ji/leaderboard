@@ -82,5 +82,5 @@ export interface PeriodTrainer extends Trainer {
 }
 
 export interface RawPeriodTrainer extends Trainer {
-  date: Date;
+  date: number;
 }
