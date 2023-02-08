@@ -113,6 +113,5 @@ export const getPeriodTrainers = async (period: keyof PeriodLeaderboard): Promis
   return (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
     ...row,
     date: formatDate(row.date),
-    last_seen: (row.last_seen as unknown as Date).getTime(),
   }));
 };

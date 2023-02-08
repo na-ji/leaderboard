@@ -78,7 +78,7 @@ export interface Trainer {
 }
 
 export interface PeriodTrainer extends Trainer {
-  date: Date;
+  date: string;
 }
 
 export interface RawPeriodTrainer extends Trainer {
