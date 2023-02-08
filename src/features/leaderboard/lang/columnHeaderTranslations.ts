@@ -236,6 +236,21 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Rattata',
     description: 'Leaderboard rattata column header',
   },
+  tiny_pokemon_caught: {
+    id: 'leaderboard_header.tiny_pokemon_caught',
+    defaultMessage: 'Tiny Pokemon',
+    description: 'Leaderboard tiny pokemon column header',
+  },
+  jumbo_pokeon_caught: {
+    id: 'leaderboard_header.jumbo_pokemon_caught',
+    defaultMessage: 'Jumbo Pokemon',
+    description: 'Leaderboard jumbo pokemon column header',
+  },
+  vivillon: {
+    id: 'leaderboard_header.vivillon',
+    defaultMessage: 'Vivillon',
+    description: 'Leaderboard vivillon column header',
+  },
   trade_km: {
     id: 'leaderboard_header.trade_km',
     defaultMessage: 'Trade KM',

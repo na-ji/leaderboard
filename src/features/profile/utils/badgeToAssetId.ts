@@ -12,6 +12,9 @@ export const badgeToAssetId: Partial<Record<Badge, string | number>> = {
   [Badge.GYM_BATTLES_WON]: 13,
   [Badge.TRAININGS_WON]: 14,
   [Badge.XS_RATS]: 36,
+  [Badge.TINY_POKEMON_CAUGHT]: 1, //need to update this badge
+  [Badge.JUMBO_POKEMON_CAUGHT]: 1, //need to update this badge
+  [Badge.VIVILLON]: 1, //need to update this badge
   [Badge.PIKACHU_CAUGHT]: 37,
   [Badge.UNIQUE_UNOWN]: 38,
   [Badge.DEX_GEN_2]: 39,
