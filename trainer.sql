@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `player`
     `giovanni_defeated`     smallint(3) UNSIGNED    DEFAULT NULL,
     `mega_evos`             int(6) UNSIGNED         DEFAULT NULL,
     `collections_done`      smallint(3) UNSIGNED    DEFAULT NULL,
-    `vavillon`              tinyint(2) UNSIGNED     DEFAULT NULL,
+    `vivillon`              tinyint(2) UNSIGNED     DEFAULT NULL,
     `unique_stops_spun`     int(6) UNSIGNED         DEFAULT NULL,
     `unique_mega_evos`      int(3) UNSIGNED         DEFAULT NULL,
     `unique_raid_bosses`    int(4) UNSIGNED         DEFAULT NULL,

@@ -8,6 +8,11 @@ export const miscellaneousLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
+    field: 'vivillon',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
     field: 'collections_done',
     minWidth: 120,
     type: 'number',

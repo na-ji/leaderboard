@@ -32,6 +32,7 @@ export interface Trainer {
   giovanni_defeated?: number;
   mega_evos?: number;
   collections_done?: number;
+  vivillon?: number;
   unique_stops_spun?: number;
   unique_mega_evos?: number;
   unique_raid_bosses?: number;
@@ -45,6 +46,8 @@ export interface Trainer {
   raid_achievements?: number;
   xl_karps?: number;
   xs_rats?: number;
+  tiny_pokemon_caught?: number
+  jumbo_pokemon_caught?: number;
   pikachu_caught?: number;
   league_great_won?: number;
   league_ultra_won?: number;
