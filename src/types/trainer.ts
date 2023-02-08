@@ -46,7 +46,7 @@ export interface Trainer {
   raid_achievements?: number;
   xl_karps?: number;
   xs_rats?: number;
-  tiny_pokemon_caught?: number
+  tiny_pokemon_caught?: number;
   jumbo_pokemon_caught?: number;
   pikachu_caught?: number;
   league_great_won?: number;
