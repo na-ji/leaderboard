@@ -34,7 +34,7 @@ export const trainer = {
   unique_mega_evos: 9,
   unique_raid_bosses: 122,
   unique_unown: 21,
-  'seven_day_streaks': 137,
+  seven_day_streaks: 137,
   trade_km: 38036576,
   raids_with_friends: 1621,
   caught_at_lure: 727,

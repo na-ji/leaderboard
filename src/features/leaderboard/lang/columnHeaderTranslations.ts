@@ -261,7 +261,7 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Unique mega',
     description: 'Leaderboard unique Mega evolutions column header',
   },
-  'seven_day_streaks': {
+  seven_day_streaks: {
     id: 'leaderboard_header.seven_day_streaks',
     defaultMessage: '7 day streaks',
     description: 'Leaderboard 7 day streaks column header',

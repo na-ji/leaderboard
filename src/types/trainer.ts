@@ -36,7 +36,7 @@ export interface Trainer {
   unique_mega_evos?: number;
   unique_raid_bosses?: number;
   unique_unown?: number;
-  'seven_day_streaks'?: number;
+  seven_day_streaks?: number;
   trade_km?: number;
   raids_with_friends?: number;
   caught_at_lure?: number;
