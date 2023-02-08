@@ -4,8 +4,5 @@ import { Trainer } from '@/types';
 export const getOverallLeaderboard = async (): Promise<Trainer[]> => {
   const [rows] = await pool.execute('SELECT * FROM `player` WHERE `friendship_id` IS NOT NULL ORDER BY `xp` DESC;');
 
-  return (rows as unknown as Trainer[]).map<Trainer>((row) => ({
-    ...row,
-    last_seen: (row.last_seen as unknown as Date).getTime(),
-  }));
+  return rows as unknown as Trainer[];
 };
