@@ -168,10 +168,20 @@ export const badgeTranslations = defineMessages({
     defaultMessage: 'XL Magikarp',
     description: 'Badge XL_KARPS',
   },
-  [Badge.XS_RATS]: {
-    id: 'badge_xs_rats',
-    defaultMessage: 'XS Rattata',
-    description: 'Badge XS_RATS',
+  [Badge.TINY_POKEMON_CAUGHT]: {
+    id: 'badge_tiny_pokemon_caught',
+    defaultMessage: 'Tiny Pokemon',
+    description: 'Badge TINY_POKEMON_CAUGHT',
+  },
+  [Badge.JUMBO_POKEMON_CAUGHT]: {
+    id: 'badge_jumbo_pokemon_caught',
+    defaultMessage: 'Jumbo Poemon',
+    description: 'Badge JUMBO_POKEMON_CAUGHT',
+  },
+  [Badge.VIVILLON]: {
+    id: 'badge_vivillon',
+    defaultMessage: 'Vivillon',
+    description: 'Badge VIVILLON',
   },
   [Badge.PIKACHU_CAUGHT]: {
     id: 'badge_pikachu_caught',

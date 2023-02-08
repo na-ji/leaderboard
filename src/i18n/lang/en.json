@@ -187,6 +187,18 @@
     "defaultMessage": "XS Rattata",
     "description": "Badge XS_RATS"
   },
+  "badge_tiny_pokemon_caught": {
+    "defaultMessage": "Tiny Pokemon",
+    "description": "Badge TINY_POKEMON_CAUGHT"
+  },
+  "badge_jumbo_pokemon_caught": {
+    "defaultMessage": "Jumbo Pokemon",
+    "description": "Badge JUMBO_POKEMON_CAUGHT"
+  },
+  "badge_vivillon": {
+    "defaultMessage": "Vivillon",
+    "description": "Badge VIVILLON"
+  },
   "drawer.logout": {
     "defaultMessage": "Logout",
     "description": "Logout button"
@@ -526,6 +538,18 @@
   "leaderboard_header.xs_rats": {
     "defaultMessage": "Rattata",
     "description": "Leaderboard rattata column header"
+  },
+  "leaderboard_header.tiny_pokemon_caught": {
+    "defaultMessage": "Tiny Pokemon",
+    "description": "Leaderboard tiny pokemon column header"
+  },
+  "leaderboard_header.jumbo_pokemon_caught": {
+    "defaultMessage": "Jumbo Pokemon",
+    "description": "Leaderboard jumbo pokemon column header"
+  },
+  "leaderboard_header.vivillon": {
+    "defaultMessage": "Vivillon",
+    "description": "Leaderboard vivillon column header"
   },
   "profile.battles": {
     "defaultMessage": "Battles",
