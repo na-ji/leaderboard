@@ -1,7 +1,7 @@
 import { defineMessages } from 'react-intl';
 
 export const columnHeaderTranslations = defineMessages({
-  trainer_id: {
+  friendship_id: {
     id: 'leaderboard_header.rank',
     defaultMessage: 'Rank',
     description: 'Leaderboard rank column header',
@@ -261,8 +261,8 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Unique mega',
     description: 'Leaderboard unique Mega evolutions column header',
   },
-  '7_day_streaks': {
-    id: 'leaderboard_header.7_day_streaks',
+  'seven_day_streaks': {
+    id: 'leaderboard_header.seven_day_streaks',
     defaultMessage: '7 day streaks',
     description: 'Leaderboard 7 day streaks column header',
   },

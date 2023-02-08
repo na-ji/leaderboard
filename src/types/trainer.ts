@@ -9,10 +9,10 @@ export interface Trainer {
   last_seen: number;
   km_walked?: number;
   caught_pokemon?: number;
-  trainer_id?: string;
+  friendship_id?: string;
   gbl_rank?: number;
   gbl_rating?: number;
-  special_badges?: string;
+  event_badges?: string;
   stops_spun?: number;
   evolved?: number;
   hatched?: number;
@@ -36,7 +36,7 @@ export interface Trainer {
   unique_mega_evos?: number;
   unique_raid_bosses?: number;
   unique_unown?: number;
-  '7_day_streaks'?: number;
+  'seven_day_streaks'?: number;
   trade_km?: number;
   raids_with_friends?: number;
   caught_at_lure?: number;

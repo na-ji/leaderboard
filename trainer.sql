@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS `cev_trainer`
+CREATE TABLE IF NOT EXISTS `player`
 (
     `name`        VARCHAR(50) collate utf8mb4_unicode_ci NOT NULL,
     `team`        SMALLINT(6) DEFAULT NULL,
@@ -8,10 +8,10 @@ CREATE TABLE IF NOT EXISTS `cev_trainer`
     `last_seen`   datetime NOT NULL,
     `km_walked` FLOAT DEFAULT NULL,
     `caught_pokemon`      BIGINT(8) DEFAULT NULL,
-    `trainer_id`          VARCHAR(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `friendship_id`          VARCHAR(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `gbl_rank`            SMALLINT(6) DEFAULT NULL,
     `gbl_rating`          BIGINT(8) DEFAULT NULL,
-    `special_badges`      VARCHAR(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `event_badges`      VARCHAR(500) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
     `stops_spun`          BIGINT(8) DEFAULT NULL,
     `evolved`             BIGINT(8) DEFAULT NULL,
     `hatched`             BIGINT(8) DEFAULT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `cev_trainer`
     `unique_mega_evos`    BIGINT(8) DEFAULT NULL,
     `unique_raid_bosses`  BIGINT(8) DEFAULT NULL,
     `unique_unown`        SMALLINT(6) DEFAULT NULL,
-    `7_day_streaks`       BIGINT(8) DEFAULT NULL,
+    `seven_day_streaks`       BIGINT(8) DEFAULT NULL,
     `trade_km`            BIGINT(8) DEFAULT NULL,
     `raids_with_friends`  BIGINT(8) DEFAULT NULL,
     `caught_at_lure`      BIGINT(8) DEFAULT NULL,
@@ -76,6 +76,6 @@ CREATE TABLE IF NOT EXISTS `cev_trainer`
     `caught_fairy`        BIGINT(8) DEFAULT NULL
 )
     engine=innodb DEFAULT charset=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-ALTER TABLE `cev_trainer` ADD PRIMARY KEY (`name`),
-                          ADD UNIQUE key `trainer_id` (`trainer_id`);
+ALTER TABLE `player` ADD PRIMARY KEY (`name`),
+                          ADD UNIQUE key `friendship_id` (`friendship_id`);
 commit;

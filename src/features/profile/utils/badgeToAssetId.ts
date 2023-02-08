@@ -37,7 +37,7 @@ export const badgeToAssetId: Partial<Record<Badge, string | number>> = {
   [Badge.DEX_GEN_6]: 61,
   [Badge.DEX_GEN_7]: 62,
   [Badge.DEX_GEN_8]: 63,
-  [Badge['7_DAY_STREAKS']]: 64,
+  [Badge['seven_day_streaks']]: 64,
   [Badge.UNIQUE_RAID_BOSSES]: 65,
   [Badge.RAIDS_WITH_FRIENDS]: 66,
   [Badge.CAUGHT_AT_LURE]: 67,

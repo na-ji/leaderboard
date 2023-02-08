@@ -2,7 +2,7 @@
   "port": 3000,
   "database": {
     "host": "@@DB_HOST",
-    "madDatabase": "@@DB_MAD_DATABASE_NAME",
+    "scannerDatabase": "@@DB_SCANNER_DATABASE_NAME",
     "leaderboardDatabase": "@@DB_LEADERBOARD_DATABASE_NAME",
     "password": "@@DB_PASSWORD",
     "port": "@@DB_PORT",

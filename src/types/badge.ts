@@ -24,7 +24,7 @@ export enum Badge {
   UNIQUE_MEGA_EVOS = 'unique_mega_evos',
   UNIQUE_RAID_BOSSES = 'unique_raid_bosses',
   UNIQUE_UNOWN = 'unique_unown',
-  '7_DAY_STREAKS' = '7_day_streaks',
+  'seven_day_streaks' = 'seven_day_streaks',
   TRADE_KM = 'trade_km',
   RAIDS_WITH_FRIENDS = 'raids_with_friends',
   CAUGHT_AT_LURE = 'caught_at_lure',

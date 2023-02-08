@@ -28,7 +28,7 @@ export const miscellaneousLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
-    field: '7_day_streaks',
+    field: 'seven_day_streaks',
     minWidth: 120,
     type: 'number',
   },

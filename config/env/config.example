@@ -1,8 +1,8 @@
 {
   "database": {
     "host": "localhost",
-    "madDatabase": "mad_database",
-    "leaderboardDatabase": "mad_database",
+    "scannerDatabase": "scanner_database",
+    "leaderboardDatabase": "scanner_database",
     "password": "password",
     "port": "3306",
     "user": "user"

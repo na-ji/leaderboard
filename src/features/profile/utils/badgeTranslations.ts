@@ -128,10 +128,10 @@ export const badgeTranslations = defineMessages({
     defaultMessage: 'Unique Unown',
     description: 'Badge UNIQUE_UNOWN',
   },
-  [Badge['7_DAY_STREAKS']]: {
-    id: 'badge_7_day_streaks',
+  [Badge['seven_day_streaks']]: {
+    id: 'badge_seven_day_streaks',
     defaultMessage: '7 day streaks',
-    description: 'Badge 7_DAY_STREAKS',
+    description: 'Badge seven_day_streaks',
   },
   [Badge.TRADE_KM]: {
     id: 'badge_trade_km',

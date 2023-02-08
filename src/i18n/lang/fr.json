@@ -3,9 +3,9 @@
     "defaultMessage": "Classement Pokémon Go",
     "description": "Index page meta description"
   },
-  "badge_7_day_streaks": {
+  "badge_seven_day_streaks": {
     "defaultMessage": "Séries de 7 jours",
-    "description": "Badge 7_DAY_STREAKS"
+    "description": "Badge seven_day_streaks"
   },
   "badge_berries_fed": {
     "defaultMessage": "Baies nourries",
@@ -303,7 +303,7 @@
     "defaultMessage": "Types",
     "description": "Types leaderboard title"
   },
-  "leaderboard_header.7_day_streaks": {
+  "leaderboard_header.seven_day_streaks": {
     "defaultMessage": "Séries 7 jours",
     "description": "Leaderboard 7 day streaks column header"
   },
