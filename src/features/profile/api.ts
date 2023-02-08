@@ -12,8 +12,6 @@ export const getTrainerProfile = async (trainerId: string): Promise<Trainer | un
     return undefined;
   }
 
-  return {
-    ...result[0],
-    last_seen: (result[0].last_seen as unknown as Date).getTime(),
-  };
+  return result[0];
+
 };
