@@ -13,5 +13,4 @@ export const getTrainerProfile = async (trainerId: string): Promise<Trainer | un
   }
 
   return result[0];
-
 };
