@@ -16,7 +16,7 @@ Simple app displaying a leaderboard of Pokémon Go trainers.
 ### Requirements
 
 - node > 14
-- modded MAD
+- golbat
 
 ## Installation
 

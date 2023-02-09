@@ -1,3 +1,13 @@
+## 6.0.0 (2023-02-09)
+- **BREAKING CHANGE** - config changes
+
+**Initial release** 
+* Supporting Golbat Database as scanner type (MAD removed)
+* Adjusted scanner and leaderboard table schema and types
+* Added new table columns: `vivillon`, `tiny_pokemon_caught`, `jumbo_pokemon_caught`.
+* Support for new columns in table
+* Fixed leaderboard history sql to populate historic stats
+
 ## [5.5.1](https://github.com/v-mapper/leaderboard/compare/v5.5.0...v5.5.1) (2022-05-02)
 
 
@@ -257,7 +267,7 @@
 ### BREAKING CHANGES
 
 - The two database config are now merged into a single `database` config. It's still
-  possible to separate leaderboard and MAD's table into two databases.
+  possible to separate leaderboard and Scanner's table into two databases.
 
 # [2.1.0](https://github.com/v-mapper/leaderboard/compare/v2.0.0...v2.1.0) (2021-09-19)
 
