@@ -1,8 +1,9 @@
 {
+  "port": 3000,
   "database": {
     "host": "localhost",
-    "scannerDatabase": "scanner_database",
-    "leaderboardDatabase": "scanner_database",
+    "scannerDatabase": "scanner_db",
+    "leaderboardDatabase": "leaderboard_db",
     "password": "password",
     "port": "3306",
     "user": "user"
