@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS `player`
     `caught_ice`            int(6) UNSIGNED         DEFAULT NULL,
     `caught_dragon`         int(6) UNSIGNED         DEFAULT NULL,
     `caught_dark`           int(6) UNSIGNED         DEFAULT NULL,
-    `caught_fairy`          int(6) UNSIGNED         DEFAULT NULL,
+    `caught_fairy`          int(6) UNSIGNED         DEFAULT NULL
 )
     ENGINE = InnoDB
     DEFAULT CHARSET = utf8mb4
