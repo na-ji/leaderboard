@@ -78,7 +78,9 @@ CREATE TABLE IF NOT EXISTS `player`
     `caught_dark`           int(6) UNSIGNED         DEFAULT NULL,
     `caught_fairy`          int(6) UNSIGNED         DEFAULT NULL,
 )
-    engine=innodb DEFAULT charset=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+    ENGINE = InnoDB
+    DEFAULT CHARSET = utf8mb4
+    COLLATE = utf8mb4_unicode_ci;
 ALTER TABLE `player` ADD PRIMARY KEY (`name`),
-                          ADD UNIQUE key `friendship_id` (`friendship_id`);
+                     ADD UNIQUE key `friendship_id` (`friendship_id`);
 commit;
