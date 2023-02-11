@@ -40,7 +40,7 @@ const periodLeaderboardQuery = `
          trainer.unique_mega_evos    - trainer_history.unique_mega_evos    AS unique_mega_evos,
          trainer.unique_raid_bosses  - trainer_history.unique_raid_bosses  AS unique_raid_bosses,
          trainer.unique_unown        - trainer_history.unique_unown        AS unique_unown,
-         trainer.seven_day_streaks       - trainer_history.seven_day_streaks       AS seven_day_streaks,
+         trainer.seven_day_streaks   - trainer_history.seven_day_streaks   AS seven_day_streaks,
          trainer.trade_km            - trainer_history.trade_km            AS trade_km,
          trainer.raids_with_friends  - trainer_history.raids_with_friends  AS raids_with_friends,
          trainer.caught_at_lure      - trainer_history.caught_at_lure      AS caught_at_lure,
