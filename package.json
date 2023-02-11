@@ -128,7 +128,7 @@
     "sequelize": "^6.28.0",
     "sharp": "^0.31.3",
     "swr": "^2.0.3",
-    "tslog": "^4.7.1"
+    "tslog": "^4.7.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
