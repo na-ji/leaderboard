@@ -78,7 +78,15 @@
     @apply text-black z-0;
 
     .ag-root-wrapper {
+      --ag-borders: none;
+      --ag-borders-critical: none;
+      --ag-row-border-style: none;
+      --ag-font-family: proxima_nova, sans-serif;
       @apply bg-white-100;
+
+      .ag-root {
+        font-family: proxima_nova, sans-serif !important;
+      }
     }
 
     .ag-header {
@@ -99,7 +107,7 @@
     }
 
     .ag-cell {
-      @apply text-secondary;
+      @apply text-secondary border-0;
     }
 
     .ag-header-cell {
@@ -128,6 +136,10 @@
       &.ag-icon-asc::before {
         content: '\2191';
       }
+    }
+
+    .ag-sort-indicator-icon {
+      --ag-grid-size: 0;
     }
   }
 }
