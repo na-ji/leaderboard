@@ -1,27 +1,15 @@
-## 6.0.0 (2023-02-09)
-- **BREAKING CHANGE** - config changes
-
-**Initial release** 
-* Supporting Golbat Database as scanner type (MAD removed)
-* Adjusted scanner and leaderboard table schema and types
-* Added new table columns: `vivillon`, `tiny_pokemon_caught`, `jumbo_pokemon_caught`.
-* Support for new columns in table
-* Fixed leaderboard history sql to populate historic stats
-
 ## [5.5.1](https://github.com/v-mapper/leaderboard/compare/v5.5.0...v5.5.1) (2022-05-02)
-
 
 ### Bug Fixes
 
-* **leaderboard:** fix split row hover on desktop ([33ff600](https://github.com/v-mapper/leaderboard/commit/33ff600d00b02176ab65dd0c05c3c11667cd3be6))
+- **leaderboard:** fix split row hover on desktop ([33ff600](https://github.com/v-mapper/leaderboard/commit/33ff600d00b02176ab65dd0c05c3c11667cd3be6))
 
 # [5.5.0](https://github.com/v-mapper/leaderboard/compare/v5.4.0...v5.5.0) (2022-05-02)
 
-
 ### Features
 
-* **config:** add `title` option to configure header content ([81cf698](https://github.com/v-mapper/leaderboard/commit/81cf6986f689204d80be529a2c765c7ed766725a))
-* **leaderboard:** add global stats cards ([d15a628](https://github.com/v-mapper/leaderboard/commit/d15a628a68dbf978237b233f6544e486f5c826c3))
+- **config:** add `title` option to configure header content ([81cf698](https://github.com/v-mapper/leaderboard/commit/81cf6986f689204d80be529a2c765c7ed766725a))
+- **leaderboard:** add global stats cards ([d15a628](https://github.com/v-mapper/leaderboard/commit/d15a628a68dbf978237b233f6544e486f5c826c3))
 
 # Release notes
 
