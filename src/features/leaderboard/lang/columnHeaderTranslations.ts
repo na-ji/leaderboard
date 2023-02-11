@@ -126,6 +126,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Gen 8',
     description: 'Leaderboard gen 8 column header',
   },
+  dex_gen8a: {
+    id: 'leaderboard_header.dex_gen8a',
+    defaultMessage: 'Hisui',
+    description: 'Leaderboard hisui column header',
+  },
   gym_battles_won: {
     id: 'leaderboard_header.gym_battles_won',
     defaultMessage: 'Battles',

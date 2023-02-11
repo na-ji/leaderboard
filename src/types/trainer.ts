@@ -60,6 +60,7 @@ export interface Trainer {
   dex_gen6?: number;
   dex_gen7?: number;
   dex_gen8?: number;
+  dex_gen8a?: number;
   caught_normal?: number;
   caught_fighting?: number;
   caught_flying?: number;

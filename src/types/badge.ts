@@ -48,6 +48,7 @@ export enum Badge {
   DEX_GEN_6 = 'dex_gen6',
   DEX_GEN_7 = 'dex_gen7',
   DEX_GEN_8 = 'dex_gen8',
+  DEX_GEN_8A = 'dex_gen8a',
   CAUGHT_NORMAL = 'caught_normal',
   CAUGHT_FIGHTING = 'caught_fighting',
   CAUGHT_FLYING = 'caught_flying',

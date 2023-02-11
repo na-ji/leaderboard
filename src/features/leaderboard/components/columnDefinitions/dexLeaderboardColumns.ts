@@ -16,7 +16,8 @@ export const dexLeaderboardColumns: ColumnsType = [
         data.dex_gen5 +
         data.dex_gen6 +
         data.dex_gen7 +
-        data.dex_gen8
+        data.dex_gen8 +
+        data.dex_gen8a
       );
     },
   },
@@ -57,6 +58,11 @@ export const dexLeaderboardColumns: ColumnsType = [
   },
   {
     field: 'dex_gen8',
+    minWidth: 130,
+    type: 'number',
+  },
+  {
+    field: 'dex_gen8a',
     minWidth: 130,
     type: 'number',
   },
