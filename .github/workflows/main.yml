@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install Volta
-        uses: volta-cli/action@v1
+        uses: volta-cli/action@v4
       - name: Echo versions
         run: |
           node --version
@@ -72,7 +72,7 @@ jobs:
           HUSKY: 0
         run: npx semantic-release
       - name: Deploy demo to production
-        uses: amondnet/vercel-action@v20
+        uses: amondnet/vercel-action@v25
         if: ${{ github.event_name == 'push' }}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
@@ -83,7 +83,7 @@ jobs:
           alias-domains: |
             {{BRANCH}}-pogo-leaderboard.vercel.app
       - name: Deploy PR to pre-preproduction
-        uses: amondnet/vercel-action@v20
+        uses: amondnet/vercel-action@v25
         if: ${{ github.event_name == 'pull_request' && github.actor != 'dependabot[bot]' }}
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
