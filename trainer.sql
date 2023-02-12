@@ -59,6 +59,7 @@ CREATE TABLE IF NOT EXISTS `player`
     `dex_gen6`              tinyint(3) UNSIGNED     DEFAULT NULL,
     `dex_gen7`              tinyint(3) UNSIGNED     DEFAULT NULL,
     `dex_gen8`              tinyint(3) UNSIGNED     DEFAULT NULL,
+    `dex_gen8a`             tinyint(3) UNSIGNED     DEFAULT NULL,
     `caught_normal`         int(6) UNSIGNED         DEFAULT NULL,
     `caught_fighting`       int(6) UNSIGNED         DEFAULT NULL,
     `caught_flying`         int(6) UNSIGNED         DEFAULT NULL,
@@ -80,5 +81,5 @@ CREATE TABLE IF NOT EXISTS `player`
 )
     engine=innodb DEFAULT charset=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 ALTER TABLE `player` ADD PRIMARY KEY (`name`),
-                          ADD UNIQUE key `friendship_id` (`friendship_id`);
+                     ADD UNIQUE key `friendship_id` (`friendship_id`);
 commit;
