@@ -4,7 +4,7 @@ const EnvironmentPlugin = require('vite-plugin-environment').default;
 const { config: appConfig } = require('node-config-ts');
 
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   staticDirs: ['../public'],
   addons: [
     '@storybook/addon-links',
@@ -37,5 +37,8 @@ module.exports = {
         }),
       ],
     });
+  },
+  docs: {
+    autodocs: true,
   },
 };
