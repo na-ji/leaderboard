@@ -128,10 +128,10 @@ export const badgeTranslations = defineMessages({
     defaultMessage: 'Unique Unown',
     description: 'Badge UNIQUE_UNOWN',
   },
-  [Badge['7_DAY_STREAKS']]: {
-    id: 'badge_7_day_streaks',
+  [Badge.SEVEN_DAY_STREAKS]: {
+    id: 'badge_seven_day_streaks',
     defaultMessage: '7 day streaks',
-    description: 'Badge 7_DAY_STREAKS',
+    description: 'Badge seven_day_streaks',
   },
   [Badge.TRADE_KM]: {
     id: 'badge_trade_km',
@@ -172,6 +172,21 @@ export const badgeTranslations = defineMessages({
     id: 'badge_xs_rats',
     defaultMessage: 'XS Rattata',
     description: 'Badge XS_RATS',
+  },
+  [Badge.TINY_POKEMON_CAUGHT]: {
+    id: 'badge_tiny_pokemon_caught',
+    defaultMessage: 'Tiny Pokémon',
+    description: 'Badge TINY_POKEMON_CAUGHT',
+  },
+  [Badge.JUMBO_POKEMON_CAUGHT]: {
+    id: 'badge_jumbo_pokemon_caught',
+    defaultMessage: 'Jumbo Pokémon',
+    description: 'Badge JUMBO_POKEMON_CAUGHT',
+  },
+  [Badge.VIVILLON]: {
+    id: 'badge_vivillon',
+    defaultMessage: 'Vivillon',
+    description: 'Badge VIVILLON',
   },
   [Badge.PIKACHU_CAUGHT]: {
     id: 'badge_pikachu_caught',
@@ -225,13 +240,18 @@ export const badgeTranslations = defineMessages({
   },
   [Badge.DEX_GEN_7]: {
     id: 'badge_dex_gen_7',
-    defaultMessage: 'Dex gen 7',
+    defaultMessage: 'Gen 7',
     description: 'Badge DEX_GEN_7',
   },
   [Badge.DEX_GEN_8]: {
     id: 'badge_dex_gen_8',
-    defaultMessage: 'Dex gen 8',
+    defaultMessage: 'Gen 8',
     description: 'Badge DEX_GEN_8',
+  },
+  [Badge.DEX_GEN_8A]: {
+    id: 'badge_dex_gen_8a',
+    defaultMessage: 'Hisui',
+    description: 'Badge DEX_GEN_8A',
   },
   [Badge.CAUGHT_NORMAL]: {
     id: 'type_normal',

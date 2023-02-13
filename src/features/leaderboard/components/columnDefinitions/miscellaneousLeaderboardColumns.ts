@@ -8,6 +8,11 @@ export const miscellaneousLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
+    field: 'vivillon',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
     field: 'collections_done',
     minWidth: 120,
     type: 'number',
@@ -28,7 +33,7 @@ export const miscellaneousLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
-    field: '7_day_streaks',
+    field: 'seven_day_streaks',
     minWidth: 120,
     type: 'number',
   },

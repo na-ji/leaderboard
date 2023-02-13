@@ -7,7 +7,7 @@ import { pool } from '@/database';
 const periodLeaderboardQuery = `
   SELECT trainer_history.date                                              AS date,
          trainer.name                                                      AS name,
-         trainer.trainer_id                                                AS trainer_id,
+         trainer.friendship_id                                                AS friendship_id,
          trainer.team                                                      AS team,
          trainer.last_seen                                                 AS last_seen,
          trainer.level               - trainer_history.level               AS level,
@@ -40,7 +40,7 @@ const periodLeaderboardQuery = `
          trainer.unique_mega_evos    - trainer_history.unique_mega_evos    AS unique_mega_evos,
          trainer.unique_raid_bosses  - trainer_history.unique_raid_bosses  AS unique_raid_bosses,
          trainer.unique_unown        - trainer_history.unique_unown        AS unique_unown,
-         trainer.7_day_streaks       - trainer_history.7_day_streaks       AS 7_day_streaks,
+         trainer.seven_day_streaks   - trainer_history.seven_day_streaks   AS seven_day_streaks,
          trainer.trade_km            - trainer_history.trade_km            AS trade_km,
          trainer.raids_with_friends  - trainer_history.raids_with_friends  AS raids_with_friends,
          trainer.caught_at_lure      - trainer_history.caught_at_lure      AS caught_at_lure,
@@ -79,19 +79,19 @@ const periodLeaderboardQuery = `
          trainer.caught_dragon       - trainer_history.caught_dragon       AS caught_dragon,
          trainer.caught_dark         - trainer_history.caught_dark         AS caught_dark,
          trainer.caught_fairy        - trainer_history.caught_fairy        AS caught_fairy
-  FROM   cev_trainer trainer
+  FROM   player trainer
   JOIN   ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history trainer_history
-    ON   trainer.trainer_id = trainer_history.trainer_id
+    ON   trainer.friendship_id = trainer_history.friendship_id
    AND   trainer_history.date =
          (
                 SELECT   sub_trainer_history.date
                 FROM     ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history sub_trainer_history
                 WHERE    sub_trainer_history.date >= curdate() - INTERVAL __INTERVAL__ DAY
-                AND      sub_trainer_history.trainer_id = trainer.trainer_id
+                AND      sub_trainer_history.friendship_id = trainer.friendship_id
                 ORDER BY sub_trainer_history.date
                 LIMIT 1
          )
-  ORDER BY date DESC, trainer_id;
+  ORDER BY date DESC, friendship_id;
 `;
 
 export interface PeriodLeaderboard {
@@ -113,6 +113,5 @@ export const getPeriodTrainers = async (period: keyof PeriodLeaderboard): Promis
   return (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
     ...row,
     date: formatDate(row.date),
-    last_seen: (row.last_seen as unknown as Date).getTime(),
   }));
 };

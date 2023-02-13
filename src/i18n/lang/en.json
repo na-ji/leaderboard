@@ -3,10 +3,6 @@
     "defaultMessage": "Pokémon Go Leaderboard",
     "description": "Index page meta description"
   },
-  "badge_7_day_streaks": {
-    "defaultMessage": "7 day streaks",
-    "description": "Badge 7_DAY_STREAKS"
-  },
   "badge_berries_fed": {
     "defaultMessage": "Berries fed",
     "description": "Badge BERRIES_FED"
@@ -56,12 +52,16 @@
     "description": "Badge DEX_GEN_6"
   },
   "badge_dex_gen_7": {
-    "defaultMessage": "Dex gen 7",
+    "defaultMessage": "Gen 7",
     "description": "Badge DEX_GEN_7"
   },
   "badge_dex_gen_8": {
-    "defaultMessage": "Dex gen 8",
+    "defaultMessage": "Gen 8",
     "description": "Badge DEX_GEN_8"
+  },
+  "badge_dex_gen_8a": {
+    "defaultMessage": "Hisui",
+    "description": "Badge DEX_GEN_8A"
   },
   "badge_evolved": {
     "defaultMessage": "Evolved",
@@ -86,6 +86,10 @@
   "badge_hours_defended": {
     "defaultMessage": "Hours defended",
     "description": "Badge HOURS_DEFENDED"
+  },
+  "badge_jumbo_pokemon_caught": {
+    "defaultMessage": "Jumbo Pokémon",
+    "description": "Badge JUMBO_POKEMON_CAUGHT"
   },
   "badge_km_walked": {
     "defaultMessage": "Km walked",
@@ -139,9 +143,17 @@
     "defaultMessage": "Raids with friends",
     "description": "Badge RAIDS_WITH_FRIENDS"
   },
+  "badge_seven_day_streaks": {
+    "defaultMessage": "7 day streaks",
+    "description": "Badge seven_day_streaks"
+  },
   "badge_stops_spun": {
     "defaultMessage": "Stops spun",
     "description": "Badge STOPS_SPUN"
+  },
+  "badge_tiny_pokemon_caught": {
+    "defaultMessage": "Tiny Pokémon",
+    "description": "Badge TINY_POKEMON_CAUGHT"
   },
   "badge_trade_km": {
     "defaultMessage": "Trade km",
@@ -174,6 +186,10 @@
   "badge_unique_unown": {
     "defaultMessage": "Unique Unown",
     "description": "Badge UNIQUE_UNOWN"
+  },
+  "badge_vivillon": {
+    "defaultMessage": "Vivillon",
+    "description": "Badge VIVILLON"
   },
   "badge_wayfarer_agreements": {
     "defaultMessage": "Wayfarer agreements",
@@ -303,10 +319,6 @@
     "defaultMessage": "Types",
     "description": "Types leaderboard title"
   },
-  "leaderboard_header.7_day_streaks": {
-    "defaultMessage": "7 day streaks",
-    "description": "Leaderboard 7 day streaks column header"
-  },
   "leaderboard_header.battles_won": {
     "defaultMessage": "Battles won",
     "description": "Leaderboard battles won column header"
@@ -367,6 +379,10 @@
     "defaultMessage": "Gen 8",
     "description": "Leaderboard gen 8 column header"
   },
+  "leaderboard_header.dex_gen8a": {
+    "defaultMessage": "Hisui",
+    "description": "Leaderboard hisui column header"
+  },
   "leaderboard_header.evolved": {
     "defaultMessage": "Evolved",
     "description": "Leaderboard evolved column header"
@@ -398,6 +414,10 @@
   "leaderboard_header.hours_defended": {
     "defaultMessage": "Hours",
     "description": "Leaderboard hours defended column header"
+  },
+  "leaderboard_header.jumbo_pokemon_caught": {
+    "defaultMessage": "Jumbo",
+    "description": "Leaderboard jumbo pokemon column header"
   },
   "leaderboard_header.km_walked": {
     "defaultMessage": "KM",
@@ -463,6 +483,10 @@
     "defaultMessage": "Rank",
     "description": "Leaderboard rank column header"
   },
+  "leaderboard_header.seven_day_streaks": {
+    "defaultMessage": "7 day streaks",
+    "description": "Leaderboard 7 day streaks column header"
+  },
   "leaderboard_header.stops_spun": {
     "defaultMessage": "Pokéstops",
     "description": "Leaderboard Pokéstops spun column header"
@@ -470,6 +494,10 @@
   "leaderboard_header.team": {
     "defaultMessage": "Team",
     "description": "Leaderboard team column header"
+  },
+  "leaderboard_header.tiny_pokemon_caught": {
+    "defaultMessage": "Tiny",
+    "description": "Leaderboard tiny pokemon column header"
   },
   "leaderboard_header.total_dex": {
     "defaultMessage": "Total",
@@ -510,6 +538,10 @@
   "leaderboard_header.unique_unown": {
     "defaultMessage": "Unown",
     "description": "Leaderboard unique unown column header"
+  },
+  "leaderboard_header.vivillon": {
+    "defaultMessage": "Vivillon",
+    "description": "Leaderboard vivillon column header"
   },
   "leaderboard_header.wayfarer_agreements": {
     "defaultMessage": "Wayfarer",

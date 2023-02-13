@@ -22,4 +22,14 @@ export const specificLeaderboardColumns: ColumnsType = [
     minWidth: 140,
     type: 'number',
   },
+  {
+    field: 'tiny_pokemon_caught',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
+    field: 'jumbo_pokemon_caught',
+    minWidth: 120,
+    type: 'number',
+  },
 ];

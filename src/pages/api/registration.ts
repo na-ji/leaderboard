@@ -27,7 +27,7 @@ export default async (request: NextApiRequest, response: NextApiResponse<Respons
   const { trainerName } = request.body;
   const trainer = await getTrainerByName(trainerName);
 
-  if (!trainer || typeof trainer.trainer_id !== 'string') {
+  if (!trainer || typeof trainer.friendship_id !== 'string') {
     response.status(404).json({ error: 'trainer_not_found' });
     response.end();
 
@@ -42,8 +42,8 @@ export default async (request: NextApiRequest, response: NextApiResponse<Respons
     return;
   }
 
-  await setUserTrainerId(session.userId, trainer.trainer_id);
-  session.trainerId = trainer.trainer_id;
+  await setUserTrainerId(session.userId, trainer.friendship_id);
+  session.trainerId = trainer.friendship_id;
   session.trainerName = trainer.name;
 
   response.status(200).json({ message: 'gg' });

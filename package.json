@@ -12,7 +12,7 @@
     "dev": "cross-env NODE_ENV=development PORT=4000 NEXTAUTH_URL=http://localhost:4000 next dev",
     "dev:cron": "cross-env NODE_ENV=development ts-node --project tsconfig.server.json server/index.ts",
     "i18n:compile": "formatjs compile-folder --ast src/i18n/lang src/i18n/compiled-lang",
-    "i18n:extract": "formatjs extract 'src/**/*.{js,ts,tsx}' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file src/i18n/lang/en.json",
+    "i18n:extract": "formatjs extract --ignore 'src/**/*.d.ts' --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file src/i18n/lang/en.json 'src/**/*.{js,ts,tsx}'",
     "i18n:sync": "ts-node --project tsconfig.server.json server/synchroniseTranslationFile.ts",
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
@@ -22,6 +22,7 @@
     "prepare": "husky install",
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
     "schema:create": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json server/create-schema.ts",
+    "schema:migrate": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json server/migrate-schema-to-golbat.ts",
     "start": "cross-env NODE_ENV=production concurrently --kill-others --names next,back \"next start\" \"node dist/server/index.js\"",
     "storybook": "storybook dev -p 7349 -h localhost"
   },

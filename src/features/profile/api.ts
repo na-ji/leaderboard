@@ -2,7 +2,7 @@ import { pool } from '@/database';
 import { Trainer } from '@/types';
 
 export const getTrainerProfile = async (trainerId: string): Promise<Trainer | undefined> => {
-  const [rows] = await pool.execute('SELECT * FROM `cev_trainer` WHERE `trainer_id` = ? ORDER BY `xp` DESC;', [
+  const [rows] = await pool.execute('SELECT * FROM `player` WHERE `friendship_id` = ? ORDER BY `xp` DESC;', [
     trainerId,
   ]);
 
@@ -12,8 +12,5 @@ export const getTrainerProfile = async (trainerId: string): Promise<Trainer | un
     return undefined;
   }
 
-  return {
-    ...result[0],
-    last_seen: (result[0].last_seen as unknown as Date).getTime(),
-  };
+  return result[0];
 };

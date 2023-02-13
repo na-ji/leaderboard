@@ -16,7 +16,7 @@ Simple app displaying a leaderboard of Pokémon Go trainers.
 ### Requirements
 
 - node > 14
-- modded MAD
+- Golbat
 
 ## Installation
 
@@ -37,9 +37,9 @@ npm run start
 ## Configuration
 
 | Configuration                    | Default    | Description                                                                                                                                                                                                                                                                                                                     |
-| -------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------- | ---------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | port                             | 3000       | Application port                                                                                                                                                                                                                                                                                                                |
-| database                         | -          | The configuration to connect to the database. You can save the leaderboard tables from a separate database from MAD. But the user must have access to both databases.                                                                                                                                                           |
+| database                         | -          | The configuration to connect to the database. You can save the leaderboard tables from a separate database from your scanner. But the user must have access to both databases.                                                                                                                                                  |
 | title                            | Pokémon Go | The title of the application displayed on the header bar                                                                                                                                                                                                                                                                        |
 | defaultLocale                    | en         | en, de or fr. This will determine which locale will be accessible on the base path. Other locales will be available on the /{locale} path. The user will be automatically redirected to those paths depending on their browser locale                                                                                           |
 | enabledLocales                   | en,fr,de   | Locales to enable                                                                                                                                                                                                                                                                                                               |

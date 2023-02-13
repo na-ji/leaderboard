@@ -1,7 +1,7 @@
 import { defineMessages } from 'react-intl';
 
 export const columnHeaderTranslations = defineMessages({
-  trainer_id: {
+  friendship_id: {
     id: 'leaderboard_header.rank',
     defaultMessage: 'Rank',
     description: 'Leaderboard rank column header',
@@ -126,6 +126,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Gen 8',
     description: 'Leaderboard gen 8 column header',
   },
+  dex_gen8a: {
+    id: 'leaderboard_header.dex_gen8a',
+    defaultMessage: 'Hisui',
+    description: 'Leaderboard hisui column header',
+  },
   gym_battles_won: {
     id: 'leaderboard_header.gym_battles_won',
     defaultMessage: 'Battles',
@@ -236,6 +241,21 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Rattata',
     description: 'Leaderboard rattata column header',
   },
+  vivillon: {
+    id: 'leaderboard_header.vivillon',
+    defaultMessage: 'Vivillon',
+    description: 'Leaderboard vivillon column header',
+  },
+  tiny_pokemon_caught: {
+    id: 'leaderboard_header.tiny_pokemon_caught',
+    defaultMessage: 'Tiny Pokemon',
+    description: 'Leaderboard tiny pokemon column header',
+  },
+  jumbo_pokemon_caught: {
+    id: 'leaderboard_header.jumbo_pokemon_caught',
+    defaultMessage: 'Jumbo Pokemon',
+    description: 'Leaderboard jumbo pokemon column header',
+  },
   trade_km: {
     id: 'leaderboard_header.trade_km',
     defaultMessage: 'Trade KM',
@@ -261,8 +281,8 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Unique mega',
     description: 'Leaderboard unique Mega evolutions column header',
   },
-  '7_day_streaks': {
-    id: 'leaderboard_header.7_day_streaks',
+  seven_day_streaks: {
+    id: 'leaderboard_header.seven_day_streaks',
     defaultMessage: '7 day streaks',
     description: 'Leaderboard 7 day streaks column header',
   },

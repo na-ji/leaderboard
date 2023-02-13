@@ -1,17 +1,15 @@
 ## [5.5.1](https://github.com/v-mapper/leaderboard/compare/v5.5.0...v5.5.1) (2022-05-02)
 
-
 ### Bug Fixes
 
-* **leaderboard:** fix split row hover on desktop ([33ff600](https://github.com/v-mapper/leaderboard/commit/33ff600d00b02176ab65dd0c05c3c11667cd3be6))
+- **leaderboard:** fix split row hover on desktop ([33ff600](https://github.com/v-mapper/leaderboard/commit/33ff600d00b02176ab65dd0c05c3c11667cd3be6))
 
 # [5.5.0](https://github.com/v-mapper/leaderboard/compare/v5.4.0...v5.5.0) (2022-05-02)
 
-
 ### Features
 
-* **config:** add `title` option to configure header content ([81cf698](https://github.com/v-mapper/leaderboard/commit/81cf6986f689204d80be529a2c765c7ed766725a))
-* **leaderboard:** add global stats cards ([d15a628](https://github.com/v-mapper/leaderboard/commit/d15a628a68dbf978237b233f6544e486f5c826c3))
+- **config:** add `title` option to configure header content ([81cf698](https://github.com/v-mapper/leaderboard/commit/81cf6986f689204d80be529a2c765c7ed766725a))
+- **leaderboard:** add global stats cards ([d15a628](https://github.com/v-mapper/leaderboard/commit/d15a628a68dbf978237b233f6544e486f5c826c3))
 
 # Release notes
 
@@ -257,7 +255,7 @@
 ### BREAKING CHANGES
 
 - The two database config are now merged into a single `database` config. It's still
-  possible to separate leaderboard and MAD's table into two databases.
+  possible to separate leaderboard and Scanner's table into two databases.
 
 # [2.1.0](https://github.com/v-mapper/leaderboard/compare/v2.0.0...v2.1.0) (2021-09-19)
 
