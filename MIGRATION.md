@@ -6,6 +6,7 @@ The app now uses [Golbat](https://github.com/UnownHash/Golbat) as backend to pro
 To make it compatible:
 
 - First you need to setup [Golbat](https://github.com/UnownHash/Golbat).
+- Then configure the leaderboard to connect to Golbat. The configuration key `madDatabase` has been renamed to `scannerDatabase`
 - Then, run the command `npm run schema:migrate`
 - Then you can import your trainers from vmad to Golbat by running this query:
 
