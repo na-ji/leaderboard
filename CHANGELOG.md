@@ -1,3 +1,10 @@
+## [6.0.1](https://github.com/na-ji/leaderboard/compare/v6.0.0...v6.0.1) (2023-02-13)
+
+
+### Bug Fixes
+
+* **periodleaderboard:** fix period query breaking because of negative results ([d1f6634](https://github.com/na-ji/leaderboard/commit/d1f663419716d72c55c1d27bfe578ac566f8102c))
+
 # [6.0.0](https://github.com/na-ji/leaderboard/compare/v5.5.1...v6.0.0) (2023-02-13)
 
 
