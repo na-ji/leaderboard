@@ -13,28 +13,53 @@ Simple app displaying a leaderboard of Pokémon Go trainers.
 - [ ] Advanced profile page, with charts
 - [ ] Registration flow where the player has to tell his trainer name
 
-### Requirements
+### Requirements:
 
 - node > 14
 - Golbat
 
-## Installation
+### Installation:
 
 ```shell
 npm ci
 cp config/env/config.example config/env/production.json
 ```
 
+### Configuration:
 Then edit the file `config/env/production.json` to put your configuration.
 
-## Running the application
+### Discord Auth
+* Create a [discord bot](https://discord.com/developers) and fill in the config options below.
+* In Discord's Developer portal, the return url to be used is: `https://yourdomain.com//api/auth/callback/discord`
+```json
+  "enableAuth": true,
+  "secret": "",
+  "trainerCode": "",
+  "discord": {
+    "clientId": "",
+    "clientSecret": "",
+    "botToken": "",
+    "guildId": [""],
+    "roleId": [""]
+  },
+```
+
+```shell
+npm ci
+cp config/env/config.example config/env/production.json
+```
+
+### Running the application
 
 ```shell
 npm run build
 npm run start
 ```
+### Running in PM2 
+From the root of the leaderboard folder.
+`pm2 start npm --name "leaderboard" -- start`
 
-## Configuration
+### Config file explained
 
 | Configuration                    | Default    | Description                                                                                                                                                                                                                                                                                                                     |
 | -------------------------------- | ---------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
