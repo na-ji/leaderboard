@@ -7,13 +7,6 @@
 * migrate to Golbat backend ([26c3cf0](https://github.com/na-ji/leaderboard/commit/26c3cf07221573b82744321e0c8706c305fa71b0))
 
 
-### Reverts
-
-* Revert "Changelog" ([60b1867](https://github.com/na-ji/leaderboard/commit/60b1867158658b8181a335029c04e2817b0ac72b))
-* Revert "remove badge temp" ([623a001](https://github.com/na-ji/leaderboard/commit/623a001efe58e0abccc6fc5450ba103913ea97ba))
-* Revert "date to int" ([fcc6ed5](https://github.com/na-ji/leaderboard/commit/fcc6ed550114532fd7e00630f0a1453cf49902f3))
-
-
 ### BREAKING CHANGES
 
 * The schema is now based on Golbat backend. See the migration guide in
