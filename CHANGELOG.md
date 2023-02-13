@@ -1,3 +1,24 @@
+# [6.0.0](https://github.com/na-ji/leaderboard/compare/v5.5.1...v6.0.0) (2023-02-13)
+
+
+### Features
+
+* add four new badges ([f1f1cc2](https://github.com/na-ji/leaderboard/commit/f1f1cc281a583a28e9325b2393fd0d158e50b4ed))
+* migrate to Golbat backend ([26c3cf0](https://github.com/na-ji/leaderboard/commit/26c3cf07221573b82744321e0c8706c305fa71b0))
+
+
+### Reverts
+
+* Revert "Changelog" ([60b1867](https://github.com/na-ji/leaderboard/commit/60b1867158658b8181a335029c04e2817b0ac72b))
+* Revert "remove badge temp" ([623a001](https://github.com/na-ji/leaderboard/commit/623a001efe58e0abccc6fc5450ba103913ea97ba))
+* Revert "date to int" ([fcc6ed5](https://github.com/na-ji/leaderboard/commit/fcc6ed550114532fd7e00630f0a1453cf49902f3))
+
+
+### BREAKING CHANGES
+
+* The schema is now based on Golbat backend. See the migration guide in
+`MIGRATION.md`.
+
 ## [5.5.1](https://github.com/v-mapper/leaderboard/compare/v5.5.0...v5.5.1) (2022-05-02)
 
 ### Bug Fixes
