@@ -42,7 +42,7 @@ jobs:
           mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE_NAME }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }};
           mysql -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} ${{ env.DB_DATABASE_NAME }} < ./trainer.sql
       - name: Build app
-        run: npx vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }} && npx vercel build
+        run: npx vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }} && npx vercel build ${{ github.event_name == 'push' && "--prod" || "" }}
         env:
           DB_HOST: 127.0.0.1
           DB_LEADERBOARD_DATABASE_NAME: ${{ env.DB_DATABASE_NAME }}
@@ -77,7 +77,7 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          vercel-args: '--prebuilt'
+          vercel-args: '--prebuilt --prod'
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           alias-domains: |
