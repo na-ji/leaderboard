@@ -104,12 +104,18 @@ const schemaUpdateQuery = `
 
 const migrateToGolbatQuery = `
   ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history 
+    ADD COLUMN \`new_last_seen\` INT(10) DEFAULT NULL;
+  UPDATE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
+    SET \`new_last_seen\`=UNIX_TIMESTAMP(\`last_seen\`);
+  ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
+      DROP COLUMN \`last_seen\`;
+  ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history 
     CHANGE \`name\` \`name\`                               VARCHAR(20) NOT NULL,
     CHANGE \`team\` \`team\`                               TINYINT(1) UNSIGNED DEFAULT NULL,
     CHANGE \`level\` \`level\`                             TINYINT(2) UNSIGNED DEFAULT NULL,
     CHANGE \`xp\` \`xp\`                                   BIGINT(9) UNSIGNED DEFAULT NULL,
     CHANGE \`battles_won\` \`battles_won\`                 BIGINT(8) DEFAULT NULL,
-    CHANGE \`last_seen\` \`last_seen\`                     INT(10) NOT NULL,
+    CHANGE \`new_last_seen\` \`last_seen\`                 INT(10) NOT NULL,
     CHANGE \`km_walked\` \`km_walked\`                     FLOAT UNSIGNED DEFAULT NULL,
     CHANGE \`caught_pokemon\` \`caught_pokemon\`           INT(6) UNSIGNED DEFAULT NULL,
     CHANGE \`trainer_id\` \`friendship_id\`                VARCHAR(100) DEFAULT NULL,
