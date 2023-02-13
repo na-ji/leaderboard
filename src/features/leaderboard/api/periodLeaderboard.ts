@@ -7,7 +7,7 @@ import { pool } from '@/database';
 const periodLeaderboardQuery = `
   SELECT trainer_history.date                                              AS date,
          trainer.name                                                      AS name,
-         trainer.friendship_id                                                AS friendship_id,
+         trainer.friendship_id                                             AS friendship_id,
          trainer.team                                                      AS team,
          trainer.last_seen                                                 AS last_seen,
          trainer.level               - trainer_history.level               AS level,
@@ -16,7 +16,7 @@ const periodLeaderboardQuery = `
          trainer.km_walked           - trainer_history.km_walked           AS km_walked,
          trainer.caught_pokemon      - trainer_history.caught_pokemon      AS caught_pokemon,
          trainer.gbl_rank            - trainer_history.gbl_rank            AS gbl_rank,
-         trainer.gbl_rating          - trainer_history.gbl_rating          AS gbl_rating,
+         CAST(trainer.gbl_rating as SIGNED) - CAST(trainer_history.gbl_rating as SIGNED) AS gbl_rating,
          trainer.stops_spun          - trainer_history.stops_spun          AS stops_spun,
          trainer.evolved             - trainer_history.evolved             AS evolved,
          trainer.hatched             - trainer_history.hatched             AS hatched,
