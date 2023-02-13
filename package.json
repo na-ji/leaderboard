@@ -23,7 +23,7 @@
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
     "schema:create": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json server/create-schema.ts",
     "schema:migrate": "cross-env NODE_ENV=production ts-node --project tsconfig.server.json server/migrate-schema-to-golbat.ts",
-    "start": "cross-env NODE_ENV=production concurrently --kill-others --names next,back \"next start\" \"node dist/server/index.js\"",
+    "start": "cross-env NODE_ENV=production concurrently --kill-others --names next,back \"node dist/server/start-next.js\" \"node dist/server/index.js\"",
     "storybook": "storybook dev -p 7349 -h localhost"
   },
   "eslintConfig": {
