@@ -1,6 +1,6 @@
 {
   "name": "pogo-leaderboard",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "private": true,
   "scripts": {
     "build": "npm run i18n:compile && npm run build:server && npm run build:next",

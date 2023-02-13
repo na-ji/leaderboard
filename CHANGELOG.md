@@ -1,3 +1,10 @@
+## [6.0.2](https://github.com/na-ji/leaderboard/compare/v6.0.1...v6.0.2) (2023-02-13)
+
+
+### Bug Fixes
+
+* correctly set PORT before starting nextjs server ([fa9cb22](https://github.com/na-ji/leaderboard/commit/fa9cb22dd524a16919b70b8c23fc18c669af3b82))
+
 ## [6.0.1](https://github.com/na-ji/leaderboard/compare/v6.0.0...v6.0.1) (2023-02-13)
 
 
