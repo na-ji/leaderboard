@@ -161,7 +161,7 @@
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.14",
     "cz-conventional-commit": "^1.0.6",
-    "eslint": "8.33.0",
+    "eslint": "8.34.0",
     "eslint-config-next": "^13.1.6",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-formatjs": "^4.6.0",
