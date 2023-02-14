@@ -29,12 +29,10 @@ cp config/env/config.example config/env/production.json
 Then edit the file `config/env/production.json` to put your configuration.
 
 ### Discord Auth
-* Create a [discord bot](https://discord.com/developers) and fill in the config options below.
-* In Discord's Developer portal, the return url to be used is: `https://yourdomain.com//api/auth/callback/discord`
+* Create a [discord bot](https://discord.com/developers) and fill in the config options below. All variable require a value. 
+* In Discord's Developer portal, the return url to be used is: `https://yourdomain.com/api/auth/callback/discord`
 ```json
   "enableAuth": true,
-  "secret": "",
-  "trainerCode": "",
   "discord": {
     "clientId": "",
     "clientSecret": "",
