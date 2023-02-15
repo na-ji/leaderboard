@@ -167,7 +167,7 @@
     "eslint-plugin-formatjs": "^4.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
-    "lint-staged": "^13.1.1",
+    "lint-staged": "^13.1.2",
     "postcss": "^8.4.21",
     "prettier": "^2.8.4",
     "semantic-release": "^20.1.0",
