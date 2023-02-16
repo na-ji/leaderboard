@@ -159,7 +159,7 @@
     "commitizen": "^4.3.0",
     "concurrently": "^7.6.0",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.1.14",
+    "cssnano": "^5.1.15",
     "cz-conventional-commit": "^1.0.6",
     "eslint": "8.34.0",
     "eslint-config-next": "^13.1.6",
