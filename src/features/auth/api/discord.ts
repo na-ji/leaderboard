@@ -26,14 +26,14 @@ interface UserAccess {
   hasError: boolean;
   hasRole: boolean;
   isMemberOfGuild: boolean;
-  isNotConfigured: boolean;
+  areGuildIdsConfigured: boolean;
+  areRoleIdsConfigured: boolean;
 }
 
 const commonAccess: Partial<UserAccess> = {
   hasError: false,
-  isNotConfigured: false,
-  hasRole: true,
-  isMemberOfGuild: true,
+  hasRole: false,
+  isMemberOfGuild: false,
 };
 
 const logUserAccess = (userName: string, userAccess: Partial<UserAccess>): void => {
@@ -41,9 +41,12 @@ const logUserAccess = (userName: string, userAccess: Partial<UserAccess>): void 
 };
 
 export const userHasAccess = async (userName: string, userAccessToken?: string, userId?: string): Promise<boolean> => {
+  const areGuildIdsConfigured = Array.isArray(config.discord.guildId) && config.discord.guildId.length > 0;
+  const areRoleIdsConfigured = Array.isArray(config.discord.roleId) && config.discord.roleId.length > 0;
+
   try {
-    if (!userAccessToken || !config.discord.guildId) {
-      logUserAccess(userName, { isNotConfigured: true, finaleDecision: true });
+    if (!userAccessToken || !areGuildIdsConfigured) {
+      logUserAccess(userName, { areGuildIdsConfigured, areRoleIdsConfigured, finaleDecision: true });
       return true;
     }
 
@@ -51,20 +54,31 @@ export const userHasAccess = async (userName: string, userAccessToken?: string, 
     const guild = guilds.find((membersGuild) => config.discord.guildId.includes(membersGuild.id));
     const isMemberOfGuild = !!guild;
 
-    if (!config.discord.roleId || !userId || !isMemberOfGuild) {
-      logUserAccess(userName, { isMemberOfGuild, finaleDecision: isMemberOfGuild });
+    if (!areRoleIdsConfigured || !userId || !isMemberOfGuild) {
+      logUserAccess(userName, {
+        areGuildIdsConfigured,
+        areRoleIdsConfigured,
+        isMemberOfGuild,
+        finaleDecision: isMemberOfGuild,
+      });
       return isMemberOfGuild;
     }
 
     const member = await getGuildMember(guild.id, userId);
     const hasRole = member.roles.some((role) => config.discord.roleId.includes(role));
 
-    logUserAccess(userName, { isMemberOfGuild, hasRole, finaleDecision: hasRole });
+    logUserAccess(userName, {
+      areGuildIdsConfigured,
+      areRoleIdsConfigured,
+      isMemberOfGuild,
+      hasRole,
+      finaleDecision: hasRole,
+    });
 
     return hasRole;
   } catch (error) {
     console.error(error);
-    logUserAccess(userName, { hasError: true, finaleDecision: true });
+    logUserAccess(userName, { areGuildIdsConfigured, areRoleIdsConfigured, hasError: true, finaleDecision: false });
 
     return false;
   }
