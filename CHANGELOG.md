@@ -1,3 +1,10 @@
+## [6.0.4](https://github.com/na-ji/leaderboard/compare/v6.0.3...v6.0.4) (2023-02-17)
+
+
+### Bug Fixes
+
+* **period-leaderboard:** fix progression defaulting to 0 when a value is new ([54d36cf](https://github.com/na-ji/leaderboard/commit/54d36cf23b797f415690e1f409accaf1cb8048ff))
+
 ## [6.0.3](https://github.com/na-ji/leaderboard/compare/v6.0.2...v6.0.3) (2023-02-17)
 
 
