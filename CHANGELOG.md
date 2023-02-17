@@ -1,3 +1,12 @@
+## [6.0.3](https://github.com/na-ji/leaderboard/compare/v6.0.2...v6.0.3) (2023-02-17)
+
+
+### Bug Fixes
+
+* **config:** set default role id to empty array ([a76ac33](https://github.com/na-ji/leaderboard/commit/a76ac33c7b5ad32e7d4eee38304239bfcbff8766))
+* **discord-auth:** check if config is correct before taking decision on providing access ([8331275](https://github.com/na-ji/leaderboard/commit/8331275eb3ce291c834f146f582c5cb9aac19db7))
+* **period-leaderboard:** fix missing columns when computing progression ([395a155](https://github.com/na-ji/leaderboard/commit/395a155476b9537e83668cea4ab29d6436d4543c))
+
 ## [6.0.2](https://github.com/na-ji/leaderboard/compare/v6.0.1...v6.0.2) (2023-02-13)
 
 
