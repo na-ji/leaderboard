@@ -19,7 +19,7 @@
     "clientId": "Fill this only if you enable auth",
     "clientSecret": "secret",
     "botToken": "token",
-    "guildId": [""],
-    "roleId": [""]
+    "guildId": ["1234"],
+    "roleId": ["1234"]
   }
 }
