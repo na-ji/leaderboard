@@ -1,3 +1,10 @@
+## [6.0.5](https://github.com/na-ji/leaderboard/compare/v6.0.4...v6.0.5) (2023-02-22)
+
+
+### Bug Fixes
+
+* **auth:** properly log errors when using discord API ([27381b3](https://github.com/na-ji/leaderboard/commit/27381b3199c52214d59c7d5cca0385770a723de1))
+
 ## [6.0.4](https://github.com/na-ji/leaderboard/compare/v6.0.3...v6.0.4) (2023-02-17)
 
 
