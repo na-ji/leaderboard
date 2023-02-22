@@ -1,5 +1,5 @@
 import { config } from 'node-config-ts';
-import type { APIPartialGuild, APIGuildMember } from 'discord-api-types/v9';
+import type { APIPartialGuild, APIGuildMember } from 'discord-api-types/v10';
 
 const getGuilds = async (accessToken: string): Promise<Array<APIPartialGuild>> => {
   const response = await fetch('https://discord.com/api/users/@me/guilds', {
@@ -8,7 +8,13 @@ const getGuilds = async (accessToken: string): Promise<Array<APIPartialGuild>> =
     },
   });
 
-  return response.json();
+  const data = response.json();
+
+  if ('message' in data && typeof data.message === 'string') {
+    throw new Error(`Failed to get guilds: ${JSON.stringify(data)}`);
+  }
+
+  return data;
 };
 
 const getGuildMember = async (guildId: string, userId: string): Promise<APIGuildMember> => {
@@ -18,7 +24,13 @@ const getGuildMember = async (guildId: string, userId: string): Promise<APIGuild
     },
   });
 
-  return response.json();
+  const data = response.json();
+
+  if ('message' in data && typeof data.message === 'string') {
+    throw new Error(`Failed to get user's #${userId} guild #${guildId}: ${JSON.stringify(data)}`);
+  }
+
+  return data;
 };
 
 interface UserAccess {
