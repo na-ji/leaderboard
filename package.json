@@ -135,7 +135,7 @@
     "@babel/core": "^7.20.12",
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "@formatjs/cli": "^6.0.1",
+    "@formatjs/cli": "^6.0.4",
     "@mdx-js/preact": "^2.3.0",
     "@semantic-release/changelog": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
