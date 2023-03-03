@@ -146,7 +146,7 @@
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^7.0.0-beta.57",
     "@storybook/react-vite": "^7.0.0-beta.57",
-    "@storybook/testing-library": "^0.0.14-next.1",
+    "@storybook/testing-library": "^0.0.14--canary.30.5f44d14.0",
     "@types/cron": "^2.0.0",
     "@types/node": "^18.14.2",
     "@types/react": "18.0.28",
