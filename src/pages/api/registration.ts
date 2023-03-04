@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { isUserNotLoggedIn } from '@/features/auth/api/apiGuard';
-import { getTrainerByName, setUserTrainerId } from '@/features/auth/api';
+import { getTrainerByName, setUserTrainerName } from '@/features/auth/api';
 import { getSession } from 'next-auth/react';
 import { resolveConfig } from '@/utils/resolveConfig';
 
@@ -27,7 +27,7 @@ export default async (request: NextApiRequest, response: NextApiResponse<Respons
   const { trainerName } = request.body;
   const trainer = await getTrainerByName(trainerName);
 
-  if (!trainer || typeof trainer.friendship_id !== 'string') {
+  if (!trainer || typeof trainer.name !== 'string') {
     response.status(404).json({ error: 'trainer_not_found' });
     response.end();
 
@@ -42,8 +42,7 @@ export default async (request: NextApiRequest, response: NextApiResponse<Respons
     return;
   }
 
-  await setUserTrainerId(session.userId, trainer.friendship_id);
-  session.trainerId = trainer.friendship_id;
+  await setUserTrainerName(session.userId, trainer.name);
   session.trainerName = trainer.name;
 
   response.status(200).json({ message: 'gg' });

@@ -4,7 +4,6 @@ import { config as projectConfig } from 'node-config-ts';
 import SequelizeAdapter, { models } from '@next-auth/sequelize-adapter';
 import { Sequelize, DataTypes } from 'sequelize';
 
-import { getTrainerName } from '@/features/auth/api';
 import { leaderboardConnectionString } from '@/database';
 import { userHasAccess } from '@/features/auth/api/discord';
 import { resolveConfig } from '@/utils/resolveConfig';
@@ -16,7 +15,7 @@ export const adapter = SequelizeAdapter(sequelize, {
       'user',
       {
         ...models.User,
-        trainerId: {
+        trainerName: {
           type: DataTypes.CHAR,
           allowNull: true,
         },
@@ -63,9 +62,8 @@ export default NextAuth({
       );
     },
     async jwt({ token, user, profile }) {
-      if (user && 'trainerId' in user && user.trainerId) {
-        token.trainerId = user.trainerId;
-        token.trainerName = await getTrainerName(`${token.trainerId}`);
+      if (user && 'trainerName' in user && user.trainerName) {
+        token.trainerName = user.trainerName;
       }
 
       if (user?.id) {
@@ -79,8 +77,7 @@ export default NextAuth({
       return token;
     },
     async session({ session, token }) {
-      if (token.trainerId) {
-        session.trainerId = token.trainerId;
+      if (token.trainerName) {
         session.trainerName = token.trainerName;
       }
 

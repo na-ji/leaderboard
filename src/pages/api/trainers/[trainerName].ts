@@ -19,14 +19,14 @@ export default async (request: NextApiRequest, response: NextApiResponse<Trainer
   }
   setCacheControlHeader(response);
 
-  const { trainerId } = request.query;
+  const { trainerName } = request.query;
 
-  if (typeof trainerId !== 'string') {
+  if (typeof trainerName !== 'string') {
     response.status(400).json({ code: 400, message: 'bad request' });
     return;
   }
 
-  const trainer = await getTrainerProfile(trainerId);
+  const trainer = await getTrainerProfile(trainerName);
 
   if (!trainer) {
     response.status(404).json({ code: 404, message: 'not found' });

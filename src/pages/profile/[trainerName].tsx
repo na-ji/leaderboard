@@ -10,10 +10,10 @@ import { Trainer } from '@/types';
 
 interface ProfileProps {
   initialTrainer?: Trainer;
-  trainerId: string;
+  trainerName: string;
 }
 
-const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer, trainerId }) => {
+const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer, trainerName }) => {
   const intl = useIntl();
   const title = initialTrainer
     ? intl.formatMessage(
@@ -26,16 +26,13 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer, trainerId }) => {
       )
     : '';
 
-  const { data: trainer } = useSWR<Trainer>(
-    trainerId ? `/api/trainers/${encodeURIComponent(trainerId as string)}` : null,
-    {
-      fallbackData: initialTrainer,
-    },
-  );
+  const { data: trainer } = useSWR<Trainer>(trainerName ? `/api/trainers/${encodeURIComponent(trainerName)}` : null, {
+    fallbackData: initialTrainer,
+  });
 
   return (
     <>
-      {trainer && trainerId && (
+      {trainer && trainerName && (
         <>
           <Head>
             <title key="title">{title}</title>
@@ -43,7 +40,7 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer, trainerId }) => {
             <link
               key="preload"
               rel="preload"
-              href={`/api/trainers/${encodeURIComponent(trainerId as string)}`}
+              href={`/api/trainers/${encodeURIComponent(trainerName)}`}
               as="fetch"
               crossOrigin="anonymous"
             />
@@ -55,20 +52,20 @@ const ProfilePage: NextPage<ProfileProps> = ({ initialTrainer, trainerId }) => {
   );
 };
 
-export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainerId: string }>(async ({ params }) => {
-  if (!params || !params.trainerId) {
+export const getStaticProps = wrapStaticPropsWithLocale<ProfileProps, { trainerName: string }>(async ({ params }) => {
+  if (!params || !params.trainerName) {
     return { notFound: true };
   }
 
   const { getTrainerProfile } = await import('@/features/profile/api');
-  const trainer = await getTrainerProfile(params.trainerId);
+  const trainer = await getTrainerProfile(params.trainerName);
 
   if (!trainer) {
     return { notFound: true };
   }
 
   return {
-    props: { initialTrainer: trainer, trainerId: params.trainerId },
+    props: { initialTrainer: trainer, trainerName: params.trainerName },
     // rebuild at most every 30 minutes
     revalidate: 1800,
   };
@@ -83,7 +80,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       .slice(0, appConfig.numberOfTrainerProfileToPrebuild ?? 30)
       .reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
         appConfig.enabledLocales.forEach((locale) => {
-          paths.push({ params: { trainerId: trainer.friendship_id }, locale });
+          paths.push({ params: { trainerName: trainer.name }, locale });
         });
 
         return paths;

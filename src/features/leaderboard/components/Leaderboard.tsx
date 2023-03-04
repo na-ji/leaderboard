@@ -86,7 +86,7 @@ export const Leaderboard = memo(({ trainers, columns, defaultSort }: Leaderboard
           modules={[ClientSideRowModelModule]}
           onGridReady={autoSizeColumns}
           onPaginationChanged={onPaginationChanged}
-          onRowClicked={({ data }) => router.push(`/profile/${encodeURIComponent(data.friendship_id)}`)}
+          onRowClicked={({ data }) => router.push(`/profile/${encodeURIComponent(data.name)}`)}
           onSortChanged={({ api }) => api.refreshCells()}
           pagination={true}
           paginationPageSize={10}

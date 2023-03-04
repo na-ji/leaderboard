@@ -12,7 +12,7 @@ export const Registration = (): JSX.Element => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const intl = useIntl();
   const { data: session } = useSession();
-  const isAlreadyRegistered = !!session?.trainerId;
+  const isAlreadyRegistered = !!session?.trainerName;
 
   const handleSubmit = async (event: FormEvent): Promise<void> => {
     event.preventDefault();
