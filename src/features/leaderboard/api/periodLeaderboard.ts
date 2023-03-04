@@ -15,7 +15,7 @@ const periodLeaderboardQuery = `
          trainer.battles_won - trainer_history.battles_won                               AS battles_won,
          trainer.km_walked - trainer_history.km_walked                                   AS km_walked,
          trainer.caught_pokemon - trainer_history.caught_pokemon                         AS caught_pokemon,
-         trainer.gbl_rank - trainer_history.gbl_rank                                     AS gbl_rank,
+         Cast(trainer.gbl_rank AS SIGNED) - Cast(trainer_history.gbl_rank  AS SIGNED)    AS gbl_rank,
          Cast(trainer.gbl_rating AS SIGNED) - Cast(trainer_history.gbl_rating AS SIGNED) AS gbl_rating,
          trainer.stops_spun - trainer_history.stops_spun                                 AS stops_spun,
          trainer.evolved - trainer_history.evolved                                       AS evolved,
