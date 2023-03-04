@@ -80,7 +80,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       .slice(0, appConfig.numberOfTrainerProfileToPrebuild ?? 30)
       .reduce<GetStaticPathsResult['paths']>((paths, trainer) => {
         appConfig.enabledLocales.forEach((locale) => {
-          paths.push({ params: { trainerName: trainer.name }, locale });
+          paths.push({ params: { trainerName: trainer.name.toLowerCase() }, locale });
         });
 
         return paths;

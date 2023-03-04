@@ -20,7 +20,7 @@ export const OverallLeaderboards = ({ trainers }: { trainers: Trainer[] }): JSX.
 
   useEffect(() => {
     if (trainers.length > 0) {
-      void router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].name)}`);
+      void router.prefetch(`/profile/${encodeURIComponent('' + trainers[0].name.toLowerCase())}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
