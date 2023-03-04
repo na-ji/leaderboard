@@ -1,6 +1,6 @@
 import { job } from 'cron';
 
-import { createTrainerHistoryTable, updateTrainerHistory } from './database';
+import { addFriendCodeToHistoryTable, createTrainerHistoryTable, updateTrainerHistory } from './database';
 import { logger } from './logger';
 
 // update leaderboard every day at 23:58
@@ -18,6 +18,7 @@ job(
 async function bootstrap() {
   try {
     await createTrainerHistoryTable();
+    await addFriendCodeToHistoryTable();
   } catch (err) {
     logger.fatal(err);
   }

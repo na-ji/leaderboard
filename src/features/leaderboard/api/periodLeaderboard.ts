@@ -85,13 +85,17 @@ const periodLeaderboardQuery = `
          trainer.caught_fairy - trainer_history.caught_fairy                             AS caught_fairy
   FROM   player trainer 
   JOIN   ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history trainer_history
-    ON   trainer.friendship_id = trainer_history.friendship_id
+    ON   (
+         trainer.friendship_id = trainer_history.friendship_id
+         OR trainer.friend_code = trainer_history.friend_code
+         )
    AND   trainer_history.date =
          (
                 SELECT   sub_trainer_history.date
                 FROM     ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history sub_trainer_history
                 WHERE    sub_trainer_history.date >= curdate() - INTERVAL __INTERVAL__ DAY
-                AND      sub_trainer_history.friendship_id = trainer.friendship_id
+                  AND    sub_trainer_history.friendship_id = trainer.friendship_id
+                   OR    sub_trainer_history.friend_code = trainer.friend_code
                 ORDER BY sub_trainer_history.date
                 LIMIT 1
          )
