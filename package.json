@@ -119,7 +119,7 @@
     "clsx": "^1.2.1",
     "cron": "^2.2.0",
     "discord-api-types": "^0.37.35",
-    "mysql2": "^3.1.2",
+    "mysql2": "^3.2.0",
     "next": "^13.2.3",
     "next-auth": "^4.20.1",
     "node-config-ts": "3.3.1",
