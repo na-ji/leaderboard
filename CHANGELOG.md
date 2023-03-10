@@ -1,3 +1,10 @@
+## [6.0.6](https://github.com/na-ji/leaderboard/compare/v6.0.5...v6.0.6) (2023-03-10)
+
+
+### Bug Fixes
+
+* prevent build from crashing when GO battle league is over ([ac2e580](https://github.com/na-ji/leaderboard/commit/ac2e5804a8a89a00f844f12cab55849657e85758))
+
 ## [6.0.5](https://github.com/na-ji/leaderboard/compare/v6.0.4...v6.0.5) (2023-02-22)
 
 
