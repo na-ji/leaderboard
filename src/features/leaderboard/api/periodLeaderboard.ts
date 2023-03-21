@@ -8,6 +8,7 @@ const periodLeaderboardQuery = `
   SELECT trainer_history.date                                                            AS date,
          trainer.name                                                                    AS name,
          trainer.friendship_id                                                           AS friendship_id,
+         trainer.friend_code                                                             AS friend_code,
          trainer.team                                                                    AS team,
          trainer.last_seen                                                               AS last_seen,
          trainer.level - trainer_history.level                                           AS level,
@@ -15,7 +16,7 @@ const periodLeaderboardQuery = `
          trainer.battles_won - trainer_history.battles_won                               AS battles_won,
          trainer.km_walked - trainer_history.km_walked                                   AS km_walked,
          trainer.caught_pokemon - trainer_history.caught_pokemon                         AS caught_pokemon,
-         Cast(trainer.gbl_rank AS SIGNED) - Cast(trainer_history.gbl_rank  AS SIGNED)    AS gbl_rank,
+         Cast(trainer.gbl_rank AS SIGNED) - Cast(trainer_history.gbl_rank AS SIGNED)     AS gbl_rank,
          Cast(trainer.gbl_rating AS SIGNED) - Cast(trainer_history.gbl_rating AS SIGNED) AS gbl_rating,
          trainer.stops_spun - trainer_history.stops_spun                                 AS stops_spun,
          trainer.evolved - trainer_history.evolved                                       AS evolved,
@@ -83,22 +84,16 @@ const periodLeaderboardQuery = `
          trainer.caught_dragon - trainer_history.caught_dragon                           AS caught_dragon,
          trainer.caught_dark - trainer_history.caught_dark                               AS caught_dark,
          trainer.caught_fairy - trainer_history.caught_fairy                             AS caught_fairy
-  FROM   player trainer 
+  FROM   player trainer
   JOIN   ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history trainer_history
-    ON   (
-         trainer.friendship_id = trainer_history.friendship_id
-         OR trainer.friend_code = trainer_history.friend_code
-         )
-   AND   trainer_history.date =
-         (
-                SELECT   sub_trainer_history.date
-                FROM     ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history sub_trainer_history
-                WHERE    sub_trainer_history.date >= curdate() - INTERVAL __INTERVAL__ DAY
-                  AND    sub_trainer_history.friendship_id = trainer.friendship_id
-                   OR    sub_trainer_history.friend_code = trainer.friend_code
-                ORDER BY sub_trainer_history.date
-                LIMIT 1
-         )
+  ON     trainer.__JOIN_COLUMN__ = trainer_history.__JOIN_COLUMN__
+  AND trainer_history.date =
+      (SELECT   sub_trainer_history.date
+       FROM     ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history sub_trainer_history
+       WHERE    sub_trainer_history.date >= curdate() - INTERVAL __INTERVAL__ DAY
+         AND    sub_trainer_history.__JOIN_COLUMN__ = trainer.__JOIN_COLUMN__
+       ORDER BY sub_trainer_history.date
+       LIMIT    1)
   ORDER BY date DESC, friendship_id;
 `;
 
@@ -116,10 +111,15 @@ export const periodIntervals = {
 
 export const getPeriodTrainers = async (period: keyof PeriodLeaderboard): Promise<PeriodTrainer[]> => {
   const interval = periodIntervals[period];
-  const [rows] = await pool.execute(periodLeaderboardQuery.replace('__INTERVAL__', `${interval}`));
+  const queryWithInterval = periodLeaderboardQuery.replace('__INTERVAL__', `${interval}`);
 
-  return (rows as unknown as RawPeriodTrainer[]).map<PeriodTrainer>((row) => ({
-    ...row,
-    date: formatDate(row.date),
-  }));
+  const [friendshipIdRows] = await pool.execute(queryWithInterval.replace(/__JOIN_COLUMN__/g, 'friendship_id'));
+  const [friendCodeRows] = await pool.execute(queryWithInterval.replace(/__JOIN_COLUMN__/g, 'friend_code'));
+
+  return (friendshipIdRows as unknown as RawPeriodTrainer[])
+    .concat(friendCodeRows as unknown as RawPeriodTrainer[])
+    .map<PeriodTrainer>((row) => ({
+      ...row,
+      date: formatDate(row.date),
+    }));
 };
