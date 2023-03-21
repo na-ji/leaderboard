@@ -89,6 +89,7 @@ const schemaCreationQuery = `
         \`caught_fairy\`          int(6) UNSIGNED         DEFAULT NULL,
         PRIMARY KEY (\`date\`, \`name\`),
         UNIQUE KEY \`friendship_id_date\` (\`date\`, \`friendship_id\`),
+        UNIQUE KEY \`friend_code_date\` (\`date\`, \`friend_code\`),
         KEY \`date\` (\`date\`)
     ) ENGINE = InnoDB
       DEFAULT CHARSET = utf8mb4
@@ -195,9 +196,9 @@ const migrateToGolbatQuery = `
 `;
 
 const addFriendCodeToHistoryTableQuery = `
-  ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history 
-      ADD COLUMN IF NOT EXISTS friend_code VARCHAR(12) DEFAULT NULL,
-      ADD INDEX IF NOT EXISTS friend_code_date (\`friend_code\`, \`date\`);
+  ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
+    ADD COLUMN IF NOT EXISTS friend_code VARCHAR(12) DEFAULT NULL,
+    ADD UNIQUE \`friend_code_date\` (\`friend_code\`, \`date\`);
 `;
 
 export const createTrainerHistoryTable = async (): Promise<void> => {
@@ -217,5 +218,9 @@ export const migrateTrainerHistoryToGolbat = async (): Promise<void> => {
 
 export const addFriendCodeToHistoryTable = async (): Promise<void> => {
   logger.info('Adding missing friend code to history if needed');
-  await pool.execute(addFriendCodeToHistoryTableQuery);
+  try {
+    await pool.execute(addFriendCodeToHistoryTableQuery);
+  } catch {
+    // nothing
+  }
 };
