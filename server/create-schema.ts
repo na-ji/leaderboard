@@ -1,6 +1,7 @@
-import { createTrainerHistoryTable } from './database';
+import { addFriendCodeToHistoryTable, createTrainerHistoryTable } from './database';
 
 createTrainerHistoryTable()
+  .then(addFriendCodeToHistoryTable)
   .then(() => {
     process.exit(0);
   })

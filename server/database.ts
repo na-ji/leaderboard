@@ -14,6 +14,7 @@ const schemaCreationQuery = `
         \`xp\`                    bigint(9) UNSIGNED      DEFAULT NULL,
         \`battles_won\`           bigint(8)               DEFAULT NULL,
         \`last_seen\`             int(10)                 NOT NULL,
+        \`friend_code\`           varchar(12)             DEFAULT NULL,
         \`km_walked\`             float UNSIGNED          DEFAULT NULL,
         \`caught_pokemon\`        int(6) UNSIGNED         DEFAULT NULL,
         \`friendship_id\`         varchar(100)            DEFAULT NULL,
@@ -113,6 +114,7 @@ const migrateToGolbatQuery = `
       DROP COLUMN \`last_seen\`;
   ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history 
     CHANGE \`name\` \`name\`                               VARCHAR(20) NOT NULL,
+    ADD    \`friend_code\`                                 VARCHAR(12) DEFAULT NULL,
     CHANGE \`team\` \`team\`                               TINYINT(1) UNSIGNED DEFAULT NULL,
     CHANGE \`level\` \`level\`                             TINYINT(2) UNSIGNED DEFAULT NULL,
     CHANGE \`xp\` \`xp\`                                   BIGINT(9) UNSIGNED DEFAULT NULL,
@@ -194,7 +196,8 @@ const migrateToGolbatQuery = `
 
 const addFriendCodeToHistoryTableQuery = `
   ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history 
-      ADD COLUMN IF NOT EXISTS friend_code VARCHAR(12) DEFAULT NULL;
+      ADD COLUMN IF NOT EXISTS friend_code VARCHAR(12) DEFAULT NULL,
+      ADD INDEX IF NOT EXISTS friend_code_date (\`friend_code\`, \`date\`);
 `;
 
 export const createTrainerHistoryTable = async (): Promise<void> => {
