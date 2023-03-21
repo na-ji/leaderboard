@@ -1,3 +1,17 @@
+# [7.0.0](https://github.com/na-ji/leaderboard/compare/v6.0.6...v7.0.0) (2023-03-21)
+
+
+### Features
+
+* add support for friend code scanning ([745b8bf](https://github.com/na-ji/leaderboard/commit/745b8bf2ae23512e1268c28ea56cf64e4bf62921))
+* fetch profile page depending on trainer name instead of friendship id ([d18512b](https://github.com/na-ji/leaderboard/commit/d18512b6a883f772717ab5b9c574d3a24c65f0ad)), closes [#488](https://github.com/na-ji/leaderboard/issues/488)
+
+
+### BREAKING CHANGES
+
+* Player profile URL now uses trainer name instead of friendship ID.
+You will get a 404 page not found on previous URLs.
+
 ## [6.0.6](https://github.com/na-ji/leaderboard/compare/v6.0.5...v6.0.6) (2023-03-10)
 
 
