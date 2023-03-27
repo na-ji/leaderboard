@@ -145,7 +145,7 @@
     "@storybook/addon-links": "^7.0.0-rc.5",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^7.0.0-rc.5",
-    "@storybook/react-vite": "^7.0.0-rc.5",
+    "@storybook/react-vite": "^7.0.0-rc.8",
     "@storybook/testing-library": "^0.0.14-next.1",
     "@types/cron": "^2.0.0",
     "@types/node": "^18.15.5",
