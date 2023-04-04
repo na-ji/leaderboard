@@ -68,3 +68,11 @@ export enum Badge {
   CAUGHT_DARK = 'caught_dark',
   CAUGHT_FAIRY = 'caught_fairy',
 }
+
+export enum BadgeTier {
+  SHADOW,
+  BRONZE,
+  SILVER,
+  GOLD,
+  PLATINUM,
+}

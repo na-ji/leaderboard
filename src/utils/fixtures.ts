@@ -46,6 +46,7 @@ export const trainer = {
   pikachu_caught: 1491,
   tiny_pokemon_caught: 123,
   jumbo_pokemon_caught: 456,
+  vivillon: 15,
   league_great_won: 369,
   league_ultra_won: 337,
   league_master_won: 1025,
