@@ -4,7 +4,7 @@ export const trainer = {
   level: 50,
   xp: 282681280,
   battles_won: 9584,
-  last_seen: 1651074608000,
+  last_seen: 1651074608,
   km_walked: 39040.546875,
   caught_pokemon: 188020,
   friendship_id: 'E:sunI00VFcMh/kvGH5OFTV2Ou0Mma6a1gO5ZnUrv/92wHLcRj1brKFsFZaTHfKQWV',

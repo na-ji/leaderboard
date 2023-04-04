@@ -17,6 +17,7 @@ interface OverviewCardsProps {
 
 export const OverviewCards = memo(({ className, trainer }: OverviewCardsProps): JSX.Element => {
   const intl = useIntl();
+  const lastSeen = new Date(trainer.last_seen * 1000);
 
   return (
     <div className={`grid grid-cols-2 xl:grid-cols-3 gap-3 content-start ${className || ''}`}>
@@ -42,7 +43,7 @@ export const OverviewCards = memo(({ className, trainer }: OverviewCardsProps): 
             id: 'profile.updated_at',
             description: 'Last updated line in the profile page',
           },
-          { date: new Date(trainer.last_seen) },
+          { date: lastSeen },
         )}
       />
       <InfoCard
