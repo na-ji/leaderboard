@@ -1,3 +1,16 @@
+# [7.1.0](https://github.com/na-ji/leaderboard/compare/v7.0.0...v7.1.0) (2023-04-04)
+
+
+### Bug Fixes
+
+* **profile:** fix last seen displaying wrong time ([06b9a5e](https://github.com/na-ji/leaderboard/commit/06b9a5e96e82cf7c87229669e9683ea9d8196113))
+
+
+### Features
+
+* **profile:** add tooltip to last seen displaying full datetime ([3c8ffcc](https://github.com/na-ji/leaderboard/commit/3c8ffccb51f01e7c6189cb1d0fd3d07c1ae6327c))
+* **profile:** display badge icon depending on tier ([d34954f](https://github.com/na-ji/leaderboard/commit/d34954f4d3a56ca5e2f1e4d5fffa7e941fab8e5d)), closes [#489](https://github.com/na-ji/leaderboard/issues/489)
+
 # [7.0.0](https://github.com/na-ji/leaderboard/compare/v6.0.6...v7.0.0) (2023-03-21)
 
 
