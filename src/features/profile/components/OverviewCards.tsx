@@ -45,6 +45,7 @@ export const OverviewCards = memo(({ className, trainer }: OverviewCardsProps): 
           },
           { date: lastSeen },
         )}
+        valueTooltip={intl.formatDate(lastSeen, { dateStyle: 'full', timeStyle: 'short' })}
       />
       <InfoCard
         icon={<RankIcon />}
