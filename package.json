@@ -126,7 +126,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intl": "^6.3.2",
-    "sequelize": "^6.29.3",
+    "sequelize": "^6.30.0",
     "sharp": "^0.32.0",
     "swr": "^2.1.1",
     "tslog": "^4.8.2"
