@@ -66,6 +66,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitOnceUploaded: true
       - name: Release
+        if: ${{ github.event_name != 'pull_request' && github.actor != 'dependabot[bot]' }}
         env:
           GH_TOKEN: ${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
           GIT_CREDENTIALS: na-ji:${{ secrets.DEPENDABOT_AUTO_MERGE_TOKEN }}
