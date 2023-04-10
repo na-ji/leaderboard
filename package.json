@@ -147,7 +147,7 @@
     "@storybook/react-vite": "^7.0.2",
     "@storybook/testing-library": "^0.1.0",
     "@types/cron": "^2.0.0",
-    "@types/node": "^18.15.5",
+    "@types/node": "^18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
