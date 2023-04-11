@@ -2,6 +2,7 @@
   "name": "pogo-leaderboard",
   "version": "7.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "npm run i18n:compile && npm run build:server && npm run build:next",
     "build-storybook": "storybook build",

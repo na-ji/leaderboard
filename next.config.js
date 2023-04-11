@@ -1,8 +1,7 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { config: appConfig } = require('node-config-ts');
-const { NodeConfigTSPlugin } = require('node-config-ts/webpack');
-const { StatsWriterPlugin } = require('webpack-stats-plugin');
-const { logger } = require('./dist/server/logger');
+import { config as appConfig } from 'node-config-ts';
+import { NodeConfigTSPlugin } from 'node-config-ts/webpack.js';
+import { StatsWriterPlugin } from 'webpack-stats-plugin';
+import { logger } from './dist/server/logger.js';
 
 if (!appConfig.applicationURL && !process.env.NEXTAUTH_URL) {
   throw new Error('Missing external application URL (config.applicationUrl)');
@@ -22,7 +21,8 @@ logger.info(`Enabled locales: ${enabledLocales}`);
 logger.info(`Environment: ${process.env.NODE_ENV}`);
 
 /** @type {import('next').NextConfig} */
-module.exports = {
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
   output: 'standalone',
   poweredByHeader: false,
   reactStrictMode: true,

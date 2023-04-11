@@ -4,6 +4,7 @@ node_modules
 npm-debug.log
 README.md
 .next
+.vercel
 .git
 .idea
 .github

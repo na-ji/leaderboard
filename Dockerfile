@@ -69,4 +69,4 @@ ARG DB_USER
 ENV DB_USER=$DB_USER
 ENV NEXT_SHARP_PATH=/app/node_modules/sharp
 
-CMD concurrently --kill-others --names next,back "node server.js" "node dist/server/index.js"
+CMD concurrently --kill-others --names next,back "node server.js" "node --experimental-specifier-resolution=node dist/server/index.js"
