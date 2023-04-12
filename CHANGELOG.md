@@ -1,3 +1,10 @@
+## [7.1.1](https://github.com/na-ji/leaderboard/compare/v7.1.0...v7.1.1) (2023-04-12)
+
+
+### Bug Fixes
+
+* fix server not starting with ESM modules ([00e0904](https://github.com/na-ji/leaderboard/commit/00e090433492c05ff5a27131c22adc0d55db9621))
+
 # [7.1.0](https://github.com/na-ji/leaderboard/compare/v7.0.0...v7.1.0) (2023-04-04)
 
 
