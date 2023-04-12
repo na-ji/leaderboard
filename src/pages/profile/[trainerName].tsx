@@ -90,7 +90,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default ProfilePage;
-
-export const config = {
-  unstable_includeFiles: ['config/**/*.json'],
-};

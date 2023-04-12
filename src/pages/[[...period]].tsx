@@ -104,23 +104,3 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default Home;
-
-export const config = {
-  unstable_includeFiles: [
-    'config/**/*.json',
-    'dist/**/*.js',
-    'node_modules/cron/package.json',
-    'node_modules/cron/lib/*.js',
-    'node_modules/luxon/package.json',
-    'node_modules/luxon/build/node/luxon.js',
-    'node_modules/tslog/package.json',
-    'node_modules/tslog/dist/cjs/*.js',
-    'node_modules/source-map-support/package.json',
-    'node_modules/source-map-support/source-map-support.js',
-    'node_modules/source-map/package.json',
-    'node_modules/source-map/source-map.js',
-    'node_modules/source-map/lib/*.js',
-    'node_modules/buffer-from/package.json',
-    'node_modules/buffer-from/index.js',
-  ],
-};
