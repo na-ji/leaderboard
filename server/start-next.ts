@@ -1,8 +1,6 @@
 import { config } from 'node-config-ts';
+import { config as configureEnv } from 'dotenv';
+import cli from 'next/dist/cli/next-start.js';
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-require('dotenv').config(); // require dotenv
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const cli = require('next/dist/cli/next-start');
-
+configureEnv();
 cli.nextStart(['-p', `${config.port || 3000}`]);
