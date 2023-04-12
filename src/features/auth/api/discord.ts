@@ -62,9 +62,11 @@ export const userHasAccess = async (userName: string, userAccessToken?: string, 
       return true;
     }
 
-    const guilds = await getGuilds(userAccessToken);
-    const guild = guilds.find((membersGuild) => config.discord.guildId.includes(membersGuild.id));
-    const isMemberOfGuild = !!guild;
+    const userGuilds = await getGuilds(userAccessToken);
+    const configuredGuildsTheUserIsMemberOf = userGuilds.filter((membersGuild) =>
+      config.discord.guildId.includes(membersGuild.id),
+    );
+    const isMemberOfGuild = configuredGuildsTheUserIsMemberOf.length > 0;
 
     if (!areRoleIdsConfigured || !userId || !isMemberOfGuild) {
       logUserAccess(userName, {
@@ -76,8 +78,24 @@ export const userHasAccess = async (userName: string, userAccessToken?: string, 
       return isMemberOfGuild;
     }
 
-    const member = await getGuildMember(guild.id, userId);
-    const hasRole = member.roles.some((role) => config.discord.roleId.includes(role));
+    let hasRole = false;
+
+    for (const guild of configuredGuildsTheUserIsMemberOf) {
+      const member = await getGuildMember(guild.id, userId);
+      hasRole = member.roles.some((role) => config.discord.roleId.includes(role));
+
+      if (hasRole) {
+        logUserAccess(userName, {
+          areGuildIdsConfigured,
+          areRoleIdsConfigured,
+          isMemberOfGuild,
+          hasRole,
+          finaleDecision: hasRole,
+        });
+
+        return hasRole;
+      }
+    }
 
     logUserAccess(userName, {
       areGuildIdsConfigured,
