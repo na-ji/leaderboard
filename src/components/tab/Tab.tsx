@@ -1,7 +1,7 @@
 import { Tab as HeadlessTab } from '@headlessui/react';
 import clsx from 'clsx';
 
-export type TabProps = Parameters<typeof HeadlessTab>[0] & { level?: 1 | 2 };
+export type TabProps = Parameters<typeof HeadlessTab<'button'>>[0] & { level?: 1 | 2 };
 
 export const Tab = ({ level = 1, children, ...props }: TabProps): JSX.Element => {
   return (
