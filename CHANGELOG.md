@@ -1,3 +1,10 @@
+## [7.1.2](https://github.com/na-ji/leaderboard/compare/v7.1.1...v7.1.2) (2023-04-20)
+
+
+### Bug Fixes
+
+* **auth:** check role on every guild the user is member of ([5052795](https://github.com/na-ji/leaderboard/commit/50527959007a14d25ce5b43c0a0ad223d406f52e))
+
 ## [7.1.1](https://github.com/na-ji/leaderboard/compare/v7.1.0...v7.1.1) (2023-04-12)
 
 
