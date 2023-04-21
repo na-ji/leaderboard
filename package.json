@@ -164,7 +164,7 @@
     "eslint": "8.38.0",
     "eslint-config-next": "^13.3.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-formatjs": "^4.9.0",
+    "eslint-plugin-formatjs": "^4.10.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
