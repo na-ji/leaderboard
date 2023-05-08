@@ -134,7 +134,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
-    "@commitlint/cli": "^17.6.1",
+    "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.1",
     "@formatjs/cli": "^6.1.0",
     "@mdx-js/preact": "^2.3.0",
