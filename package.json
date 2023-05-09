@@ -121,7 +121,7 @@
     "cron": "^2.3.0",
     "discord-api-types": "^0.37.39",
     "mysql2": "^3.2.0",
-    "next": "^13.3.0",
+    "next": "^13.4.1",
     "next-auth": "^4.20.1",
     "node-config-ts": "3.3.1",
     "react": "^18.2.0",
