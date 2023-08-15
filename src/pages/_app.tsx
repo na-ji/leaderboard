@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import { config } from 'node-config-ts';
 import { IntlProvider } from 'react-intl';
 import { SessionProvider } from 'next-auth/react';
 import { SWRConfig } from 'swr';
@@ -8,7 +7,6 @@ import { Session } from 'next-auth';
 
 import '@/globals.css';
 import { fetcher } from '@/utils/fetcher';
-import { Auth } from '@/features/auth';
 import { Layout } from '@/components/layout';
 
 interface PageProps {
@@ -33,13 +31,7 @@ const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppProps<Pag
           }}
         >
           <Layout>
-            {config.enableAuth ? (
-              <Auth>
-                <Component {...pageProps} />
-              </Auth>
-            ) : (
-              <Component {...pageProps} />
-            )}
+            <Component {...pageProps} />
           </Layout>
         </SWRConfig>
       </IntlProvider>
