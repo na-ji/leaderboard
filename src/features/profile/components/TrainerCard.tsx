@@ -24,7 +24,7 @@ export const TrainerCard = memo(({ className, trainer }: TrainerCardProps): JSX.
         style={{ backgroundColor: avatarBackgroundColors[trainer.team] }}
       >
         <NextImage
-          src={`/avatar_${trainer.team}.png`}
+          src={`/avatars/avatar_${trainer.team}.png`}
           alt="Avatar"
           width={120}
           height={120}

@@ -1,5 +1,5 @@
 import DiscordProvider from 'next-auth/providers/discord';
-import NextAuth from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import { config as projectConfig } from 'node-config-ts';
 import SequelizeAdapter, { models } from '@next-auth/sequelize-adapter';
 import { Sequelize, DataTypes } from 'sequelize';
@@ -37,7 +37,7 @@ if (projectConfig.enableAuth) {
   sequelize.sync({ alter: true });
 }
 
-export default NextAuth({
+export const authOptions: NextAuthOptions = {
   secret: projectConfig.secret,
   adapter: projectConfig.enableAuth ? adapter : undefined,
   session: {
@@ -87,6 +87,8 @@ export default NextAuth({
       return session;
     },
   },
-});
+};
+
+export default NextAuth(authOptions);
 
 resolveConfig();
