@@ -147,7 +147,7 @@
     "@storybook/react": "^7.3.2",
     "@storybook/react-vite": "^7.3.1",
     "@storybook/testing-library": "^0.2.0",
-    "@types/cron": "^2.0.1",
+    "@types/cron": "^2.4.0",
     "@types/node": "^20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "^18.2.7",
