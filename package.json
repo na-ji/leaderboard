@@ -154,7 +154,7 @@
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.1",
     "@vitejs/plugin-react": "^4.0.4",
-    "autoprefixer": "^10.4.15",
+    "autoprefixer": "^10.4.16",
     "chromatic": "^6.23.0",
     "commitizen": "^4.3.0",
     "concurrently": "^8.2.0",
