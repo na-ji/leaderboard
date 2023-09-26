@@ -144,7 +144,7 @@
     "@storybook/addon-essentials": "^7.4.5",
     "@storybook/addon-interactions": "^7.4.2",
     "@storybook/addon-links": "^7.4.5",
-    "@storybook/react": "^7.3.2",
+    "@storybook/react": "^7.4.5",
     "@storybook/react-vite": "^7.3.1",
     "@storybook/testing-library": "^0.2.0",
     "@types/cron": "^2.4.0",
