@@ -1,3 +1,10 @@
+## [7.1.3](https://github.com/na-ji/leaderboard/compare/v7.1.2...v7.1.3) (2023-10-05)
+
+
+### Bug Fixes
+
+* fix server not starting ([239d1f4](https://github.com/na-ji/leaderboard/commit/239d1f428aabce04f31ec7056fbe6b47881b7308))
+
 ## [7.1.2](https://github.com/na-ji/leaderboard/compare/v7.1.1...v7.1.2) (2023-04-20)
 
 
