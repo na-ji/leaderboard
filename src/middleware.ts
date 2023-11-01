@@ -13,5 +13,5 @@ export const middleware = projectConfig.enableAuth
   : passthroughMiddleware;
 
 export const config = {
-  matcher: '/((?!api|_next/static|_next/image|badges|fonts|avatars|favicon.ico).*)',
+  matcher: ['/', '/((?!api|_next/static|_next/image|badges|fonts|avatars|favicon.ico).*)'],
 };
