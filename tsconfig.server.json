@@ -10,13 +10,8 @@
     "outDir": "dist",
     "target": "es2020",
     "paths": {
-      "@/*": ["src/*"],
-      "node-config-ts": ["./config/Config.d.ts"]
+      "@/*": ["src/*"]
     }
-  },
-  "ts-node": {
-    "esm": true,
-    "experimentalSpecifierResolution": "node"
   },
   "include": ["config/**/*", "server/**/*.ts"],
   "exclude": ["node_modules"]

@@ -15,7 +15,7 @@ Simple app displaying a leaderboard of Pokémon Go trainers.
 
 ### Requirements:
 
-- node > 14
+- node > 18
 - Golbat
 
 ### Installation:
@@ -26,14 +26,17 @@ cp config/env/config.example config/env/production.json
 ```
 
 ### Configuration:
+
 Then edit the file `config/env/production.json` to put your configuration.
 
 ### Discord Auth
-* Create a [discord bot](https://discord.com/developers) and fill in the config options below. 
-* Only the `clientId` and the `clientSecret` are required. 
-* The `botToken` is required if the `guildId` or the `roleId` are filled in. 
-* If they are not, the `guildId`/`roleId` should be empty arrays.
-* In Discord's Developer portal, the return url to be used is: `https://yourdomain.com/api/auth/callback/discord`
+
+- Create a [discord bot](https://discord.com/developers) and fill in the config options below.
+- Only the `clientId` and the `clientSecret` are required.
+- The `botToken` is required if the `guildId` or the `roleId` are filled in.
+- If they are not, the `guildId`/`roleId` should be empty arrays.
+- In Discord's Developer portal, the return url to be used is: `https://yourdomain.com/api/auth/callback/discord`
+
 ```json
   "enableAuth": true,
   "discord": {
@@ -56,14 +59,16 @@ cp config/env/config.example config/env/production.json
 npm run build
 npm run start
 ```
-### Running in PM2 
+
+### Running in PM2
+
 From the root of the leaderboard folder.
 `pm2 start npm --name "leaderboard" -- start`
 
 ### Config file explained
 
 | Configuration                    | Default    | Description                                                                                                                                                                                                                                                                                                                     |
-| -------------------------------- | ---------- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| -------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | port                             | 3000       | Application port                                                                                                                                                                                                                                                                                                                |
 | database                         | -          | The configuration to connect to the database. You can save the leaderboard tables from a separate database from your scanner. But the user must have access to both databases.                                                                                                                                                  |
 | title                            | Pokémon Go | The title of the application displayed on the header bar                                                                                                                                                                                                                                                                        |
