@@ -63,6 +63,10 @@
     "defaultMessage": "Hisui",
     "description": "Badge DEX_GEN_8A"
   },
+  "badge_dex_gen_9": {
+    "defaultMessage": "Paldea",
+    "description": "Badge DEX_GEN_9"
+  },
   "badge_evolved": {
     "defaultMessage": "Forscher",
     "description": "Badge EVOLVED"
