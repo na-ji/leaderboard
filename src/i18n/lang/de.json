@@ -88,7 +88,7 @@
     "description": "Badge HOURS_DEFENDED"
   },
   "badge_jumbo_pokemon_caught": {
-    "defaultMessage": "Jumbo Pokémon",
+    "defaultMessage": "Sammler riesiger Pokémon",
     "description": "Badge JUMBO_POKEMON_CAUGHT"
   },
   "badge_km_walked": {
@@ -152,7 +152,7 @@
     "description": "Badge STOPS_SPUN"
   },
   "badge_tiny_pokemon_caught": {
-    "defaultMessage": "Tiny Pokémon",
+    "defaultMessage": "Sammler winziger Pokémon",
     "description": "Badge TINY_POKEMON_CAUGHT"
   },
   "badge_trade_km": {
@@ -344,7 +344,7 @@
     "description": "Leaderboard caught pokemon column header"
   },
   "leaderboard_header.collections_done": {
-    "defaultMessage": "Sammlungen",
+    "defaultMessage": "Top-Sammler",
     "description": "Leaderboard collections column header"
   },
   "leaderboard_header.dex_gen1": {
@@ -416,7 +416,7 @@
     "description": "Leaderboard hours defended column header"
   },
   "leaderboard_header.jumbo_pokemon_caught": {
-    "defaultMessage": "Jumbo",
+    "defaultMessage": "XXL",
     "description": "Leaderboard jumbo pokemon column header"
   },
   "leaderboard_header.km_walked": {
@@ -472,7 +472,7 @@
     "description": "Leaderboard quests column header"
   },
   "leaderboard_header.raid_achievements": {
-    "defaultMessage": "Errungenschaften",
+    "defaultMessage": "Raid-Experte",
     "description": "Leaderboard raid achievements column header"
   },
   "leaderboard_header.raids_with_friends": {
@@ -484,7 +484,7 @@
     "description": "Leaderboard rank column header"
   },
   "leaderboard_header.seven_day_streaks": {
-    "defaultMessage": "7 tages Serie",
+    "defaultMessage": "7-Tages Serie",
     "description": "Leaderboard 7 day streaks column header"
   },
   "leaderboard_header.stops_spun": {
@@ -496,7 +496,7 @@
     "description": "Leaderboard team column header"
   },
   "leaderboard_header.tiny_pokemon_caught": {
-    "defaultMessage": "Tiny",
+    "defaultMessage": "XXS",
     "description": "Leaderboard tiny pokemon column header"
   },
   "leaderboard_header.total_dex": {
