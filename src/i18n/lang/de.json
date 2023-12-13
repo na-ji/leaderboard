@@ -348,40 +348,44 @@
     "description": "Leaderboard collections column header"
   },
   "leaderboard_header.dex_gen1": {
-    "defaultMessage": "Gen 1",
+    "defaultMessage": "Kanto",
     "description": "Leaderboard gen 1 column header"
   },
   "leaderboard_header.dex_gen2": {
-    "defaultMessage": "Gen 2",
+    "defaultMessage": "Johto",
     "description": "Leaderboard gen 2 column header"
   },
   "leaderboard_header.dex_gen3": {
-    "defaultMessage": "Gen 3",
+    "defaultMessage": "Hoenn",
     "description": "Leaderboard gen 3 column header"
   },
   "leaderboard_header.dex_gen4": {
-    "defaultMessage": "Gen 4",
+    "defaultMessage": "Sinnoh",
     "description": "Leaderboard gen 4 column header"
   },
   "leaderboard_header.dex_gen5": {
-    "defaultMessage": "Gen 5",
+    "defaultMessage": "Einall",
     "description": "Leaderboard gen 5 column header"
   },
   "leaderboard_header.dex_gen6": {
-    "defaultMessage": "Gen 6",
+    "defaultMessage": "Kalos",
     "description": "Leaderboard gen 6 column header"
   },
   "leaderboard_header.dex_gen7": {
-    "defaultMessage": "Gen 7",
+    "defaultMessage": "Alola",
     "description": "Leaderboard gen 7 column header"
   },
   "leaderboard_header.dex_gen8": {
-    "defaultMessage": "Gen 8",
+    "defaultMessage": "Galar",
     "description": "Leaderboard gen 8 column header"
   },
   "leaderboard_header.dex_gen8a": {
     "defaultMessage": "Hisui",
     "description": "Leaderboard hisui column header"
+  },
+  "leaderboard_header.dex_gen9": {
+    "defaultMessage": "Paldea",
+    "description": "Leaderboard gen 9 column header"
   },
   "leaderboard_header.evolved": {
     "defaultMessage": "Entwickelt",
