@@ -232,9 +232,10 @@ export const addFriendCodeToHistoryTable = async (): Promise<void> => {
 };
 
 export const addGen9ToHistoryTable = async (): Promise<void> => {
+  logger.info('Adding gen9 and showcase to history if needed');
   try {
     await pool.execute(addGen9ToHistoryTableQuery);
-  } catch {
-    // nothing
+  } catch (error) {
+    logger.warn(error);
   }
 };
