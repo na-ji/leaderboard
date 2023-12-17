@@ -98,8 +98,8 @@ const schemaCreationQuery = `
 
 const schemaUpdateQuery = `
     INSERT ignore 
-    INTO ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history (date, rpl, name, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, friendship_id, friend_code, gbl_rank, gbl_rating, event_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, vivillon, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, seven_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, tiny_pokemon_caught, jumbo_pokemon_caught, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, dex_gen8a, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy)
-    SELECT curdate(), 1440, name, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, friendship_id, friend_code, gbl_rank, gbl_rating, event_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, vivillon, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, seven_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, tiny_pokemon_caught, jumbo_pokemon_caught, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, dex_gen8a, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy
+    INTO ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history (date, rpl, name, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, friendship_id, friend_code, gbl_rank, gbl_rating, event_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, vivillon, showcase_max_size_first_place, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, seven_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, tiny_pokemon_caught, jumbo_pokemon_caught, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, dex_gen8a, dex_gen9, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy)
+    SELECT curdate(), 1440, name, team, level, xp, battles_won, last_seen, km_walked, caught_pokemon, friendship_id, friend_code, gbl_rank, gbl_rating, event_badges, stops_spun, evolved, hatched, quests, trades, photobombs, purified, grunts_defeated, gym_battles_won, normal_raids_won, legendary_raids_won, trainings_won, berries_fed, hours_defended, best_friends, best_buddies, giovanni_defeated, mega_evos, collections_done, vivillon, showcase_max_size_first_place, unique_stops_spun, unique_mega_evos, unique_raid_bosses, unique_unown, seven_day_streaks, trade_km, raids_with_friends, caught_at_lure, wayfarer_agreements, trainers_referred, raid_achievements, xl_karps, xs_rats, tiny_pokemon_caught, jumbo_pokemon_caught, pikachu_caught, league_great_won, league_ultra_won, league_master_won, dex_gen1, dex_gen2, dex_gen3, dex_gen4, dex_gen5, dex_gen6, dex_gen7, dex_gen8, dex_gen8a, dex_gen9, caught_normal, caught_fighting, caught_flying, caught_poison, caught_ground, caught_rock, caught_bug, caught_ghost, caught_steel, caught_fire, caught_water, caught_grass, caught_electric, caught_psychic, caught_ice, caught_dragon, caught_dark, caught_fairy
     FROM player
     WHERE name <> ''
       AND friendship_id IS NOT NULL
@@ -201,6 +201,12 @@ const addFriendCodeToHistoryTableQuery = `
     ADD UNIQUE \`friend_code_date\` (\`friend_code\`, \`date\`);
 `;
 
+const addGen9ToHistoryTableQuery = `
+  ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
+      ADD COLUMN IF NOT EXISTS \`dex_gen9\`                      TINYINT UNSIGNED DEFAULT NULL AFTER \`dex_gen8a\`,
+      ADD COLUMN IF NOT EXISTS \`showcase_max_size_first_place\` INT(6)  UNSIGNED DEFAULT NULL AFTER \`vivillon\`;
+`;
+
 export const createTrainerHistoryTable = async (): Promise<void> => {
   logger.info('Creating leaderboard table if needed');
   await pool.execute(schemaCreationQuery);
@@ -220,6 +226,14 @@ export const addFriendCodeToHistoryTable = async (): Promise<void> => {
   logger.info('Adding missing friend code to history if needed');
   try {
     await pool.execute(addFriendCodeToHistoryTableQuery);
+  } catch {
+    // nothing
+  }
+};
+
+export const addGen9ToHistoryTable = async (): Promise<void> => {
+  try {
+    await pool.execute(addGen9ToHistoryTableQuery);
   } catch {
     // nothing
   }

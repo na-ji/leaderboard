@@ -13,6 +13,11 @@ export const miscellaneousLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
+    field: 'showcase_max_size_first_place',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
     field: 'collections_done',
     minWidth: 120,
     type: 'number',

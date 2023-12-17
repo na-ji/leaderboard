@@ -131,6 +131,11 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Hisui',
     description: 'Leaderboard hisui column header',
   },
+  dex_gen9: {
+    id: 'leaderboard_header.dex_gen9',
+    defaultMessage: 'Gen 9',
+    description: 'Leaderboard gen 9 column header',
+  },
   gym_battles_won: {
     id: 'leaderboard_header.gym_battles_won',
     defaultMessage: 'Battles',
@@ -246,14 +251,19 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Vivillon',
     description: 'Leaderboard vivillon column header',
   },
+  showcase_max_size_first_place: {
+    id: 'leaderboard_header.showcase_max_size_first_place',
+    defaultMessage: 'Showcase',
+    description: 'Leaderboard showcase column header',
+  },
   tiny_pokemon_caught: {
     id: 'leaderboard_header.tiny_pokemon_caught',
-    defaultMessage: 'Tiny Pokemon',
+    defaultMessage: 'Tiny',
     description: 'Leaderboard tiny pokemon column header',
   },
   jumbo_pokemon_caught: {
     id: 'leaderboard_header.jumbo_pokemon_caught',
-    defaultMessage: 'Jumbo Pokemon',
+    defaultMessage: 'Jumbo',
     description: 'Leaderboard jumbo pokemon column header',
   },
   trade_km: {

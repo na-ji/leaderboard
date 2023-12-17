@@ -188,6 +188,11 @@ export const badgeTranslations = defineMessages({
     defaultMessage: 'Vivillon',
     description: 'Badge VIVILLON',
   },
+  [Badge.SHOWCASE_MAX_SIZE_FIRST_PLACE]: {
+    id: 'badge_showcase_max_size_first_place',
+    defaultMessage: 'Showcase Star',
+    description: 'Badge SHOWCASE_MAX_SIZE_FIRST_PLACE',
+  },
   [Badge.PIKACHU_CAUGHT]: {
     id: 'badge_pikachu_caught',
     defaultMessage: 'Pikachu caught',
@@ -252,6 +257,11 @@ export const badgeTranslations = defineMessages({
     id: 'badge_dex_gen_8a',
     defaultMessage: 'Hisui',
     description: 'Badge DEX_GEN_8A',
+  },
+  [Badge.DEX_GEN_9]: {
+    id: 'badge_dex_gen_9',
+    defaultMessage: 'Gen 9',
+    description: 'Badge DEX_GEN_9',
   },
   [Badge.CAUGHT_NORMAL]: {
     id: 'type_normal',

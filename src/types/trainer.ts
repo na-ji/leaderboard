@@ -33,6 +33,7 @@ export interface Trainer {
   mega_evos?: number;
   collections_done?: number;
   vivillon?: number;
+  showcase_max_size_first_place?: number;
   unique_stops_spun?: number;
   unique_mega_evos?: number;
   unique_raid_bosses?: number;
@@ -61,6 +62,7 @@ export interface Trainer {
   dex_gen7?: number;
   dex_gen8?: number;
   dex_gen8a?: number;
+  dex_gen9?: number;
   caught_normal?: number;
   caught_fighting?: number;
   caught_flying?: number;

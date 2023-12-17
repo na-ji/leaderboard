@@ -63,6 +63,10 @@
     "defaultMessage": "Hisui",
     "description": "Badge DEX_GEN_8A"
   },
+  "badge_dex_gen_9": {
+    "defaultMessage": "Gen 9",
+    "description": "Badge DEX_GEN_9"
+  },
   "badge_evolved": {
     "defaultMessage": "Evolved",
     "description": "Badge EVOLVED"
@@ -146,6 +150,10 @@
   "badge_seven_day_streaks": {
     "defaultMessage": "7 day streaks",
     "description": "Badge seven_day_streaks"
+  },
+  "badge_showcase_max_size_first_place": {
+    "defaultMessage": "Showcase Star",
+    "description": "Badge SHOWCASE_MAX_SIZE_FIRST_PLACE"
   },
   "badge_stops_spun": {
     "defaultMessage": "Stops spun",
@@ -383,6 +391,10 @@
     "defaultMessage": "Hisui",
     "description": "Leaderboard hisui column header"
   },
+  "leaderboard_header.dex_gen9": {
+    "defaultMessage": "Gen 9",
+    "description": "Leaderboard gen 9 column header"
+  },
   "leaderboard_header.evolved": {
     "defaultMessage": "Evolved",
     "description": "Leaderboard evolved column header"
@@ -486,6 +498,10 @@
   "leaderboard_header.seven_day_streaks": {
     "defaultMessage": "7 day streaks",
     "description": "Leaderboard 7 day streaks column header"
+  },
+  "leaderboard_header.showcase_max_size_first_place": {
+    "defaultMessage": "Showcase",
+    "description": "Leaderboard showcase column header"
   },
   "leaderboard_header.stops_spun": {
     "defaultMessage": "Pokéstops",

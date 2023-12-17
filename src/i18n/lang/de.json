@@ -151,6 +151,10 @@
     "defaultMessage": "Triathlet",
     "description": "Badge seven_day_streaks"
   },
+  "badge_showcase_max_size_first_place": {
+    "defaultMessage": "Showcase-Star",
+    "description": "Badge SHOWCASE_MAX_SIZE_FIRST_PLACE"
+  },
   "badge_stops_spun": {
     "defaultMessage": "Urlauber",
     "description": "Badge STOPS_SPUN"
@@ -494,6 +498,10 @@
   "leaderboard_header.seven_day_streaks": {
     "defaultMessage": "7-Tages Serie",
     "description": "Leaderboard 7 day streaks column header"
+  },
+  "leaderboard_header.showcase_max_size_first_place": {
+    "defaultMessage": "Showcase",
+    "description": "Leaderboard showcase column header"
   },
   "leaderboard_header.stops_spun": {
     "defaultMessage": "Pokéstops",
