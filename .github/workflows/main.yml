@@ -8,7 +8,7 @@ on:
 env:
   DB_DATABASE_NAME: test_db
   DB_USER: root
-  DB_PASSWORD: root
+  DB_PASSWORD: ''
 
 jobs:
   release:
@@ -36,11 +36,13 @@ jobs:
         run: npm ci --prefer-offline
         env:
           HUSKY: 0
-      - name: Set up MySQL
-        run: |
-          sudo systemctl start mysql.service;
-          mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE_NAME }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }};
-          mysql -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} ${{ env.DB_DATABASE_NAME }} < ./trainer.sql
+      - name: Download Mariadb
+        uses: ankane/setup-mariadb@v1
+        with:
+          mariadb-version: '10.11'
+          database: ${{ env.DB_DATABASE_NAME }}
+      - name: Setup Database
+        run: mysql -h 127.0.0.1 -u${{ env.DB_USER }} ${{ env.DB_DATABASE_NAME }} < ./trainer.sql
       - name: Build app
         run: npx vercel pull --yes --token=${{ secrets.VERCEL_TOKEN }} && npx vercel build ${{ github.event_name == 'push' && '--prod' || '' }}
         env:
