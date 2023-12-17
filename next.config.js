@@ -46,6 +46,7 @@ export default {
   i18n: {
     locales: enabledLocales,
     defaultLocale,
+    localeDetection: false,
   },
   async redirects() {
     return [
