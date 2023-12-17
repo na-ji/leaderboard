@@ -63,6 +63,10 @@
     "defaultMessage": "Hisui",
     "description": "Badge DEX_GEN_8A"
   },
+  "badge_dex_gen_9": {
+    "defaultMessage": "Paldea",
+    "description": "Badge DEX_GEN_9"
+  },
   "badge_evolved": {
     "defaultMessage": "Forscher",
     "description": "Badge EVOLVED"
@@ -88,7 +92,7 @@
     "description": "Badge HOURS_DEFENDED"
   },
   "badge_jumbo_pokemon_caught": {
-    "defaultMessage": "Jumbo Pokémon",
+    "defaultMessage": "Sammler riesiger Pokémon",
     "description": "Badge JUMBO_POKEMON_CAUGHT"
   },
   "badge_km_walked": {
@@ -152,7 +156,7 @@
     "description": "Badge STOPS_SPUN"
   },
   "badge_tiny_pokemon_caught": {
-    "defaultMessage": "Tiny Pokémon",
+    "defaultMessage": "Sammler winziger Pokémon",
     "description": "Badge TINY_POKEMON_CAUGHT"
   },
   "badge_trade_km": {
@@ -344,44 +348,48 @@
     "description": "Leaderboard caught pokemon column header"
   },
   "leaderboard_header.collections_done": {
-    "defaultMessage": "Sammlungen",
+    "defaultMessage": "Top-Sammler",
     "description": "Leaderboard collections column header"
   },
   "leaderboard_header.dex_gen1": {
-    "defaultMessage": "Gen 1",
+    "defaultMessage": "Kanto",
     "description": "Leaderboard gen 1 column header"
   },
   "leaderboard_header.dex_gen2": {
-    "defaultMessage": "Gen 2",
+    "defaultMessage": "Johto",
     "description": "Leaderboard gen 2 column header"
   },
   "leaderboard_header.dex_gen3": {
-    "defaultMessage": "Gen 3",
+    "defaultMessage": "Hoenn",
     "description": "Leaderboard gen 3 column header"
   },
   "leaderboard_header.dex_gen4": {
-    "defaultMessage": "Gen 4",
+    "defaultMessage": "Sinnoh",
     "description": "Leaderboard gen 4 column header"
   },
   "leaderboard_header.dex_gen5": {
-    "defaultMessage": "Gen 5",
+    "defaultMessage": "Einall",
     "description": "Leaderboard gen 5 column header"
   },
   "leaderboard_header.dex_gen6": {
-    "defaultMessage": "Gen 6",
+    "defaultMessage": "Kalos",
     "description": "Leaderboard gen 6 column header"
   },
   "leaderboard_header.dex_gen7": {
-    "defaultMessage": "Gen 7",
+    "defaultMessage": "Alola",
     "description": "Leaderboard gen 7 column header"
   },
   "leaderboard_header.dex_gen8": {
-    "defaultMessage": "Gen 8",
+    "defaultMessage": "Galar",
     "description": "Leaderboard gen 8 column header"
   },
   "leaderboard_header.dex_gen8a": {
     "defaultMessage": "Hisui",
     "description": "Leaderboard hisui column header"
+  },
+  "leaderboard_header.dex_gen9": {
+    "defaultMessage": "Paldea",
+    "description": "Leaderboard gen 9 column header"
   },
   "leaderboard_header.evolved": {
     "defaultMessage": "Entwickelt",
@@ -416,7 +424,7 @@
     "description": "Leaderboard hours defended column header"
   },
   "leaderboard_header.jumbo_pokemon_caught": {
-    "defaultMessage": "Jumbo",
+    "defaultMessage": "XXL",
     "description": "Leaderboard jumbo pokemon column header"
   },
   "leaderboard_header.km_walked": {
@@ -472,7 +480,7 @@
     "description": "Leaderboard quests column header"
   },
   "leaderboard_header.raid_achievements": {
-    "defaultMessage": "Errungenschaften",
+    "defaultMessage": "Raid-Experte",
     "description": "Leaderboard raid achievements column header"
   },
   "leaderboard_header.raids_with_friends": {
@@ -484,7 +492,7 @@
     "description": "Leaderboard rank column header"
   },
   "leaderboard_header.seven_day_streaks": {
-    "defaultMessage": "7 tages Serie",
+    "defaultMessage": "7-Tages Serie",
     "description": "Leaderboard 7 day streaks column header"
   },
   "leaderboard_header.stops_spun": {
@@ -496,7 +504,7 @@
     "description": "Leaderboard team column header"
   },
   "leaderboard_header.tiny_pokemon_caught": {
-    "defaultMessage": "Tiny",
+    "defaultMessage": "XXS",
     "description": "Leaderboard tiny pokemon column header"
   },
   "leaderboard_header.total_dex": {
