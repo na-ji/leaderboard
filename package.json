@@ -17,7 +17,7 @@
     "i18n:sync": "tsx server/synchroniseTranslationFile.cts",
     "lint": "eslint 'src/**/*.{js,ts,tsx}'",
     "lint:fix": "npm run lint -- --fix",
-    "postbuild:next": "cp -r public .next/standalone/public && cp -r .next/static .next/standalone/.next/static",
+    "postbuild:next2": "cp -r public .next/standalone/public && cp -r .next/static .next/standalone/.next/static",
     "postinstall": "node-config-ts",
     "prebuild": "node-config-ts && npm run schema:create",
     "prepare": "husky install",

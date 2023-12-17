@@ -23,7 +23,7 @@ logger.info(`Environment: ${process.env.NODE_ENV}`);
 /** @type {import('next').NextConfig} */
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  output: 'standalone',
+  output: undefined,
   poweredByHeader: false,
   reactStrictMode: true,
   swcMinify: true,
