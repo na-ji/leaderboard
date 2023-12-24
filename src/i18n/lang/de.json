@@ -156,7 +156,7 @@
     "description": "Badge SHOWCASE_MAX_SIZE_FIRST_PLACE"
   },
   "badge_stops_spun": {
-    "defaultMessage": "Urlauber",
+    "defaultMessage": "Backpacker",
     "description": "Badge STOPS_SPUN"
   },
   "badge_tiny_pokemon_caught": {
@@ -188,7 +188,7 @@
     "description": "Badge UNIQUE_RAID_BOSSES"
   },
   "badge_unique_stops_spun": {
-    "defaultMessage": "Backpacker",
+    "defaultMessage": "Urlauber",
     "description": "Badge UNIQUE_STOPS_SPUN"
   },
   "badge_unique_unown": {
