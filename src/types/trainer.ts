@@ -34,6 +34,9 @@ export interface Trainer {
   collections_done?: number;
   vivillon?: number;
   showcase_max_size_first_place?: number;
+  event_check_ins?: number;
+  parties_completed?: number;
+  total_route_play?: number;
   unique_stops_spun?: number;
   unique_mega_evos?: number;
   unique_raid_bosses?: number;
