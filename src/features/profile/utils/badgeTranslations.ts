@@ -193,6 +193,21 @@ export const badgeTranslations = defineMessages({
     defaultMessage: 'Showcase Star',
     description: 'Badge SHOWCASE_MAX_SIZE_FIRST_PLACE',
   },
+  [Badge.EVENT_CHECK_INS]: {
+    id: 'badge_event_check_ins',
+    defaultMessage: 'Community Member',
+    description: 'Badge EVENT_CHECK_INS',
+  },
+  [Badge.PARTIES_COMPLETED]: {
+    id: 'badge_parties_completed',
+    defaultMessage: 'Life of the Party',
+    description: 'Badge PARTIES_COMPLETED',
+  },
+  [Badge.TOTAL_ROUTE_PLAY]: {
+    id: 'badge_total_route_play',
+    defaultMessage: 'Expert Navigator',
+    description: 'Badge TOTAL_ROUTE_PLAY',
+  },
   [Badge.PIKACHU_CAUGHT]: {
     id: 'badge_pikachu_caught',
     defaultMessage: 'Pikachu caught',
