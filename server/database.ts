@@ -207,7 +207,7 @@ const addGen9ToHistoryTableQuery = `
       ADD COLUMN IF NOT EXISTS \`showcase_max_size_first_place\` INT(6)  UNSIGNED DEFAULT NULL AFTER \`vivillon\`;
 `;
 
-const addNewBadgesToHistoryTableQuery = `
+const addRouteTeamAmbassadorBadgesToHistory = `
   ALTER TABLE ${config.database.leaderboardDatabase}.pogo_leaderboard_trainer_history
     ADD COLUMN IF NOT EXISTS \`total_route_play\`   INT(6) UNSIGNED DEFAULT NULL AFTER \`showcase_max_size_first_place\`,
     ADD COLUMN IF NOT EXISTS \`parties_completed\`  INT(6) UNSIGNED DEFAULT NULL AFTER \`showcase_max_size_first_place\`,
@@ -248,9 +248,9 @@ export const addGen9ToHistoryTable = async (): Promise<void> => {
 };
 
 export const addNewBadgesToHistoryTable = async (): Promise<void> => {
-  logger.info('Adding new badges to history if needed');
+  logger.info('Adding new route play, event check-ins and parties completed badges to history if needed');
   try {
-    await pool.execute(addNewBadgesToHistoryTableQuery);
+    await pool.execute(addRouteTeamAmbassadorBadgesToHistory);
   } catch (error) {
     logger.warn(error);
   }
