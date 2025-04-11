@@ -247,7 +247,7 @@ export const addGen9ToHistoryTable = async (): Promise<void> => {
   }
 };
 
-export const addRouteTeamAmbassadorBadgesToHistorytable = async (): Promise<void> => {
+export const addRouteTeamAmbassadorBadgesToHistoryTable = async (): Promise<void> => {
   logger.info('Adding new route play, event check-ins and parties completed badges to history if needed');
   try {
     await pool.execute(addRouteTeamAmbassadorBadgesToHistoryQuery);

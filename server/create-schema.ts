@@ -1,14 +1,14 @@
 import {
   addFriendCodeToHistoryTable,
   addGen9ToHistoryTable,
-  addRouteTeamAmbassadorBadgesToHistorytable,
+  addRouteTeamAmbassadorBadgesToHistoryTable,
   createTrainerHistoryTable,
 } from './database';
 
 createTrainerHistoryTable()
   .then(addFriendCodeToHistoryTable)
   .then(addGen9ToHistoryTable)
-  .then(addRouteTeamAmbassadorBadgesToHistorytable)
+  .then(addRouteTeamAmbassadorBadgesToHistoryTable)
   .then(() => {
     process.exit(0);
   })
