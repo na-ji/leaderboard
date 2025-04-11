@@ -1,9 +1,14 @@
-import { addFriendCodeToHistoryTable, addGen9ToHistoryTable, addNewBadgesToHistoryTable, createTrainerHistoryTable } from './database';
+import {
+  addFriendCodeToHistoryTable,
+  addGen9ToHistoryTable,
+  addRouteTeamAmbassadorBadgesToHistorytable,
+  createTrainerHistoryTable,
+} from './database';
 
 createTrainerHistoryTable()
   .then(addFriendCodeToHistoryTable)
   .then(addGen9ToHistoryTable)
-  .then(addNewBadgesToHistoryTable)
+  .then(addRouteTeamAmbassadorBadgesToHistorytable)
   .then(() => {
     process.exit(0);
   })
