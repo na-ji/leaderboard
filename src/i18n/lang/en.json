@@ -155,6 +155,18 @@
     "defaultMessage": "Showcase Star",
     "description": "Badge SHOWCASE_MAX_SIZE_FIRST_PLACE"
   },
+  "badge_event_check_ins": {
+    "defaultMessage": "Community Member",
+    "description": "Badge EVENT_CHECK_INS"
+  },
+  "badge_parties_completed": {
+    "defaultMessage": "Life of the Party",
+    "description": "Badge PARTIES_COMPLETED"
+  },
+  "badge_total_route_play": {
+    "defaultMessage": "Expert Navigator",
+    "description": "Badge TOTAL_ROUTE_PLAY"
+  },
   "badge_stops_spun": {
     "defaultMessage": "Stops spun",
     "description": "Badge STOPS_SPUN"

@@ -256,6 +256,21 @@ export const columnHeaderTranslations = defineMessages({
     defaultMessage: 'Showcase',
     description: 'Leaderboard showcase column header',
   },
+  event_check_ins: {
+    id: 'leaderboard_header.event_check_ins',
+    defaultMessage: 'Event check-ins',
+    description: 'Leaderboard event check-ins column header',
+  },
+  parties_completed: {
+    id: 'leaderboard_header.parties_completed',
+    defaultMessage: 'Parties completed',
+    description: 'Leaderboard parties completed column header',
+  },
+  total_route_play: {
+    id: 'leaderboard_header.total_route_play',
+    defaultMessage: 'Route play',
+    description: 'Leaderboard route play column header',
+  },
   tiny_pokemon_caught: {
     id: 'leaderboard_header.tiny_pokemon_caught',
     defaultMessage: 'Tiny',
