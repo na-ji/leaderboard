@@ -8,6 +8,7 @@
     "build-storybook": "storybook build",
     "build:next": "cross-env NODE_ENV=production next build",
     "build:server": "tsc --project tsconfig.server.json",
+    "postbuild:server": "fix-esm-import-path dist/server/index.js",
     "chromatic": "chromatic --exit-zero-on-changes",
     "commit": "git-cz",
     "dev": "cross-env NODE_ENV=development PORT=4000 NEXTAUTH_URL=http://localhost:4000 next dev",
@@ -24,7 +25,7 @@
     "prettier": "prettier --write --ignore-unknown 'src/**/*'",
     "schema:create": "cross-env NODE_ENV=production tsx --tsconfig tsconfig.server.json server/create-schema.ts",
     "schema:migrate": "cross-env NODE_ENV=production tsx --tsconfig tsconfig.server.json server/migrate-schema-to-golbat.ts",
-    "start": "cross-env NODE_ENV=production concurrently --kill-others --names next,back \"node dist/server/start-next.js\" \"node --experimental-specifier-resolution=node dist/server/index.js\"",
+    "start": "cross-env NODE_ENV=production concurrently --kill-others --names next,back \"node dist/server/start-next.js\" \"node dist/server/index.js\"",
     "storybook": "storybook dev -p 7349 -h localhost"
   },
   "eslintConfig": {
@@ -165,6 +166,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-formatjs": "^4.10.5",
     "eslint-plugin-prettier": "^5.0.0",
+    "fix-esm-import-path": "^1.10.1",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "postcss": "^8.4.31",
