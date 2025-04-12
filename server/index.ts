@@ -3,6 +3,7 @@ import { job } from 'cron';
 import {
   addFriendCodeToHistoryTable,
   addGen9ToHistoryTable,
+  addRouteTeamAmbassadorBadgesToHistoryTable,
   createTrainerHistoryTable,
   updateTrainerHistory,
 } from './database';
@@ -25,6 +26,7 @@ async function bootstrap() {
     await createTrainerHistoryTable();
     await addFriendCodeToHistoryTable();
     await addGen9ToHistoryTable();
+    await addRouteTeamAmbassadorBadgesToHistoryTable();
   } catch (err) {
     logger.fatal(err);
   }

@@ -18,6 +18,21 @@ export const miscellaneousLeaderboardColumns: ColumnsType = [
     type: 'number',
   },
   {
+    field: 'event_check_ins',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
+    field: 'parties_completed',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
+    field: 'total_route_play',
+    minWidth: 120,
+    type: 'number',
+  },
+  {
     field: 'collections_done',
     minWidth: 120,
     type: 'number',
