@@ -1,3 +1,11 @@
+# [7.3.0](https://github.com/na-ji/leaderboard/compare/v7.2.0...v7.3.0) (2025-04-12)
+
+
+### Features
+
+* add Community Member, Expert Navigator & Life of the Party badges ([299906d](https://github.com/na-ji/leaderboard/commit/299906ddec325992989b48790bb619728ce10811))
+* add missing badge icons ([6f250ba](https://github.com/na-ji/leaderboard/commit/6f250ba155a7bf5ce3a1945683b638815b447382))
+
 # [7.2.0](https://github.com/na-ji/leaderboard/compare/v7.1.3...v7.2.0) (2025-04-12)
 
 
