@@ -1,3 +1,18 @@
+# [7.2.0](https://github.com/na-ji/leaderboard/compare/v7.1.3...v7.2.0) (2025-04-12)
+
+
+### Bug Fixes
+
+* fix german translations ([#761](https://github.com/na-ji/leaderboard/issues/761)) ([4a6341d](https://github.com/na-ji/leaderboard/commit/4a6341d5dea9514f341514212e0af5228375eba7))
+* fix middleware not matching any path ([a3d247c](https://github.com/na-ji/leaderboard/commit/a3d247c328b05b9f5788cdbc9c8ba73f183c574a))
+* overall query ([#774](https://github.com/na-ji/leaderboard/issues/774)) ([4e87268](https://github.com/na-ji/leaderboard/commit/4e872686083f78049c7b8c93387d740e7717d886))
+* prevent infinite redirect loop ([8e18ca2](https://github.com/na-ji/leaderboard/commit/8e18ca2c330ced873057b197856de54716b5d27d))
+
+
+### Features
+
+* add gen 9 and showcase badges support ([b434cfe](https://github.com/na-ji/leaderboard/commit/b434cfe2c4e4fd5c77337dd2a8be3590efc42b26))
+
 ## [7.1.3](https://github.com/na-ji/leaderboard/compare/v7.1.2...v7.1.3) (2023-10-05)
 
 
